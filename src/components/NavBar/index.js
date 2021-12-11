@@ -16,8 +16,6 @@ const Navbar = ({ toggle, toggleMobile }) => {
                     <FaBars />
                 </MobileIcon>
 
-
-
             </NavbarContainer>
         </Nav>
      )
