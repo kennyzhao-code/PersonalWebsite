@@ -54,7 +54,6 @@ export const HeroP2 = styled.p`
     font-size: 24px; 
     text-align: center;
     max-width: 600px; 
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
     font-family: 'Poppins', sans-serif;
 
     @media screen and (max-width: 768px) 
@@ -92,7 +91,6 @@ export const ButtonWrapper = styled.div`
 `
 
 export const Button = styled(Link)`
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
     font-family: 'Poppins', sans-serif;
     color: black;
     text-decoration: none;
