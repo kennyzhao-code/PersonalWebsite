@@ -5,7 +5,6 @@ import {Nav, NavbarContainer,  FullIcon, MobileIcon} from "./NavbarElements"
 
 const Navbar = ({ toggle, toggleMobile }) => {
     return (
-        <>
         <Nav>
             <NavbarContainer>
 
@@ -21,8 +20,7 @@ const Navbar = ({ toggle, toggleMobile }) => {
 
             </NavbarContainer>
         </Nav>
-        </>
-    )
+     )
 }
 
 export default Navbar
