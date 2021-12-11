@@ -1,5 +1,5 @@
 import React from 'react'
-import { BlogContainer, BlogH1, BlogWrapper, BlogIcon, BlogH2} from './blogElements'
+import { BlogContainer, BlogH1, BlogWrapper, BlogIcon} from './blogElements'
 import './blogElements.css'
 import icon1 from '../../images/pic1.svg'
 import icon2 from '../../images/pic2.svg'

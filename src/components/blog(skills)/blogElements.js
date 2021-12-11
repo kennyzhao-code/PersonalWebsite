@@ -78,14 +78,5 @@ export const BlogH1 = styled.h1`
     }
 `
 
-export const BlogH2 = styled.h2`
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem; 
-    margin-top: 25px;
-    font-weight: bold;
-    color: #3D3D3D;
-`
-
 
 
