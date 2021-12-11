@@ -1,6 +1,6 @@
 import React, {useState}from 'react'
 import Sidebar from '../components/Sidebar'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/NavBar'
 import SidebarMobile from '../components/SidebarMobile'
 
 const NavSideTogether = () => {
