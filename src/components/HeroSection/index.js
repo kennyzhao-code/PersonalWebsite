@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 //useState
-import { HeroContainer, HeroP2, VideoBg, Button, ButtonWrapper} from './HeroElements.js'
+import { HeroContainer, HeroP2, VideoBg, Button, ButtonWrapper} from './HeroElements.js';
 //import ProgressBar from './HeroSectionProgressBar'
-import './HeroSection.css' 
-import Video from '../../images/original.mp4'
+import './HeroSection.css';
+import Video from '../../images/original.mp4';
 //import {CgProfile} from "react-icons/cg"
 
 //import TextAnimation from '../animations/TextAnimation'
