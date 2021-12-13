@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Kenny Zhao`,
+    description: `Hello! My name is Kenny Zhao, a student from Ontario, Canada who has a passion for coding and a love for exploring new heights. Welcome to my official Website.`,
+    author: `@KennyZhao`,
+    siteUrl: `https://kennyzhao.dev/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,10 +28,10 @@ module.exports = {
         name: `Kenny Zhao`,
         short_name: `KZ`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#b19cd9`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        theme_color: `black`, //this affects iphone notch and etc, read link for more details super useful!
         display: `minimal-ui`,
         icon: `src/images/kz_logo.png`, // This path is relative to the root of the site. changes icon when site loads 
       },

@@ -1,17 +1,8 @@
-/*
-.heroContent{
-    z-index: 3; 
-    max-width: 1200px; 
-    position: absolute;
-    padding: 8px 24px; 
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
 
+.mobileBG{
+    opacity: 1;
     animation-name: opacityOnandOff; 
-    animation-duration: 6.5s; 
-    animation-delay: 0.5s;
+    animation-duration: 1.5s; 
     animation-fill-mode: forwards; 
     animation-iteration-count: 1;
     
@@ -23,17 +14,17 @@
     }
 
     50% {
-        opacity: 1;
+        opacity: 0;
     }
 
     100% {
-        opacity: 0;
+        opacity: 1;
     }
 
         
 }
 
-*/
+
 
 
 .heroContentP {
@@ -43,6 +34,12 @@
     animation-fill-mode: forwards; 
     animation-iteration-count: 1;
     
+}
+
+@media only screen and (max-width: 480px){
+    .heroContentP{
+        animation-duration: 3s;
+    }
 }
 
 @keyframes opacityOnandOffP{

@@ -20,7 +20,7 @@ export const BlogContainer = styled.div`
 
     @media screen and (max-width: 480px)
     {
-        height: 2300px; 
+        height: 2000px; 
     }
 
 `
@@ -48,6 +48,12 @@ export const BlogWrapper = styled.div`
         grid-template-columns: 1fr; 
         padding: 0 20px; 
     }
+
+    @media screen and (max-width: 480px){
+        margin-top: 1rem;
+        position: relative;
+        top: 5%;
+    }
 `
 
 
@@ -60,7 +66,6 @@ export const BlogIcon = styled.img`
 export const BlogH1 = styled.h1`
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem; 
     color: #b19cd9;
     margin-bottom: 5rem; 
     font-weight: bold;
@@ -72,10 +77,12 @@ export const BlogH1 = styled.h1`
     margin-left: 2rem;
     padding: 5rem calc((100vw - 1300px) /2);
 
-    @media screen and (max-width: 480px)
-    {
-        font-size: 2rem; 
+
+    @media screen and (max-width: 480px){
+        margin-top: 20rem;
+        top: 10%
     }
+
 `
 
 

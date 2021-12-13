@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import {Link} from 'gatsby'
 //import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Seo from "../components/SEO/seo"
+import '../components/LayoutForWeb/layout.css'
 
 const NotFoundPage = () => {
   
@@ -26,17 +27,35 @@ export default NotFoundPage
 
 const MasterDiv = styled.div`
   background-color: black;
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
+  position: relative;
+  left: 0;
+  top: 0;
 
 
   h1{
     color: white;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 45%;
+
+    
   }
 
 
   p{
     color: white;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 45%;
+
+    @media screen and (max-width: 480px)
+    {
+      font-size: 15px; 
+    }
   }
 `
 
@@ -44,19 +63,24 @@ const ButtonWrapper = styled.div`
     position: relative; 
     height: 40px;
     width: 175px;
-    //justify-self: center;
-    //margin: auto;
-    top: 1rem;
+    justify-self: center;
+    margin: auto;
     border-radius: 40px; 
     background-color: #98f5e1;
     display: block;
     z-index: 5;
+    top: 50%;
 
     &:hover{
         background-color: #b9fbc0;
         cursor: pointer;
         color: black;
         transition: 1s ease;
+    }
+
+    @media screen and (max-width: 480px)
+    {
+      width: 150px;
     }
 `
 
@@ -74,6 +98,11 @@ const Button = styled(Link)`
     &:hover{
         cursor: pointer;
         color: black;
+    }
 
+    @media screen and (max-width: 480px)
+    {
+      top: 0.45rem;
+      margin-left: 1.4rem;
     }
 `

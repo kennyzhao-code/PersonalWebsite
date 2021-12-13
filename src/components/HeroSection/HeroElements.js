@@ -15,6 +15,10 @@ export const HeroContainer = styled.div`
     border-style: solid;
     border-width: 20px;
     border-color: black;
+
+    @media screen and (max-width: 480px) {
+        height: 700px;
+    }
 `
 export const HeroBg = styled.div`
     position: absolute;
@@ -42,8 +46,27 @@ export const VideoBg = styled.video`
         top: 45%;
     }
 
-    
+    @media screen and (max-width: 480px){
+        display: none;
+    }
 ` 
+
+export const MobileImage = styled.img`
+    display: none;
+
+    @media screen and (max-width: 480px){
+        display: block;
+        width: 100rem;
+        height: 13rem;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        align-items: center;
+
+    }
+`
+
 
 
 export const HeroP2 = styled.p`
@@ -88,6 +111,10 @@ export const ButtonWrapper = styled.div`
 
     }
 
+    @media screen and (max-width: 480px){
+        width: 105px;
+    }
+
 `
 
 export const Button = styled(Link)`
@@ -104,6 +131,10 @@ export const Button = styled(Link)`
         cursor: pointer;
         color: black;
 
+    }
+
+    @media screen and (max-width: 480px){
+        top: 0.45rem;
     }
     
 `
