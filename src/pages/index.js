@@ -2,15 +2,7 @@ import * as React from "react"
 //import { Link } from "gatsby"
 //import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import HeroSection from "../components/HeroSection"
-import InfoSection from "../components/InfoSection"
-import { aboutMePage } from "../components/InfoSection/Data"
-import Blog from "../components/blog(skills)"
-import Experiences from "../components/Experiences"
-import Projects from "../components/Projects"
-import Language from "../components/Languages(coding)"
+import PreWebsiteLoader from "../components/NavAndPreAni/PreWebsiteLoader"
 
 /*<StaticImage
       src="../images/gatsby-astronaut.png"
@@ -29,16 +21,12 @@ import Language from "../components/Languages(coding)"
     </p> */
 
 
+//gatsby develop -H 0.0.0.0 to run website on phone through local network
+
+
 const IndexPage = () => (
-  <Layout>
-    <Seo title="Kenny Zhao" />
-    <HeroSection/>
-    <InfoSection {...aboutMePage}/>
-    <Language/>
-    <Experiences/>
-    <Blog/>
-    <Projects/>
-  </Layout>
+  <PreWebsiteLoader/>
 )
 
 export default IndexPage
+

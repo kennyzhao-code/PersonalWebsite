@@ -6,6 +6,7 @@ html {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -19,6 +20,8 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  overflow-x: hidden; /*removes hori scroll bar on mobile*/
+  width: 100%; /*removes hori scroll bar on mobile*/
 
 }
 article,

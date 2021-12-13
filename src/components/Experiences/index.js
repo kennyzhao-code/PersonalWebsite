@@ -17,10 +17,10 @@ const Experiences = () => {
                 <Tabs defaultTab="OHSEA" vertical>
 
                   <TabList>
-                    <Tab tabFor="OHSEA">OHSEA</Tab>
-                    <Tab tabFor="AVGL">AVGL</Tab>
-                    <Tab tabFor="PETHS CS">PETHS CS</Tab>
-                    <Tab tabFor="TMC">TMC</Tab>
+                    <Tab className = 'tabTitleColor' tabFor="OHSEA">OHSEA</Tab>
+                    <Tab className = 'tabTitleColor' tabFor="AVGL">AVGL</Tab>
+                    <Tab className = 'tabTitleColor' tabFor="PETHS CS">PETHS CS</Tab>
+                    <Tab className = 'tabTitleColor' tabFor="TMC">TMC</Tab>
                   </TabList>
 
                   <TabPanel tabId="OHSEA">

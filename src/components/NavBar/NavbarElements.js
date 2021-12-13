@@ -5,9 +5,9 @@ export const Nav = styled.nav`
     height: 0.1px; 
     display: flex; 
     font-size: 1rem; 
-    position: sticky; 
+    position: fixed; 
     top: 0; 
-    z-index: 10;
+    z-index: 99;
 
     @media screen and (max-width: 960px)
     {
@@ -31,10 +31,9 @@ export const FullIcon = styled.div`
         top: 1rem; 
         font-size: 1.8rem; 
         cursor: pointer; 
-        color: white; 
+        color: black; 
         margin-left: 31.5px;
         position: relative; 
-        color: black;
         opacity: 0.3;
     
         &:hover {

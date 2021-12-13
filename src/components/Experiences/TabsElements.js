@@ -6,6 +6,10 @@ export const MasterTab = styled.div`
     height: 700px;
     background: #F5F5DC;
     position relative;
+
+    @media screen and (max-width: 480px){
+        height: 800px;
+    }
 `
 
 export const TabContainer = styled.div`
@@ -21,7 +25,12 @@ export const TabContainer = styled.div`
     bottom: 250px;
 
     @media screen and (max-width: 900px) {
+        bottom: 40px;
+    }
+
+    @media screen and (max-width: 480px){
         bottom: 100px;
+        height: 1000px;
     }
 `
 

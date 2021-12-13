@@ -5,7 +5,7 @@ export const ProjectContainer = styled.div`
     background: #F5F5DC; 
     color: #000; 
     padding: 5rem calc((100vw - 1300px) /2); 
-    height: 100%;
+    height: 100%;   
     
 `
 
@@ -17,19 +17,21 @@ export const Description = styled.p`
     margin-left: 0;
     padding-left: 2rem; 
     top: 20rem;
-    font-size: clamp(1.5rem, 5vw, 2rem); 
     font-weight: bold; 
     font-size: 20px;
     color: #b19cd9; 
     letter-spacing: 1.4px; 
     text-transform: uppercase;
 
+    @media screen and (max-width: 480px){
+        top: 23.5rem;
+    }
+
 `
 
 export const ContentWrapper = styled.div`
     margin-top: 25rem;
     display: grid;
-    grid-template-columns: 1fr; 
     padding: 0 2rem; 
 `
 
@@ -40,6 +42,10 @@ export const ProjectRow = styled.div`
 
     @media screen and (max-width: 768px){
         grid-template-columns: 1fr; 
+    }
+
+    @media screen and (max-width: 480px){
+        height: 30%;
     }
 `
 
@@ -67,14 +73,25 @@ export const Project = styled.div`
 export const Images = styled.img`
     border-radius: 10px; 
     height: 100%; 
+    width: 100%;
 
     &:hover {
         transform: scale(1.02); 
         transition: all 0.2s ease-in-out;
     }
 
+    @media screen and (max-width: 950px){
+        height: 250px;
+        width: 400px;
+    } 
+
     @media screen and (max-width: 768px){
         margin-top: 3rem; 
+    }
+
+    @media screen and (max-width: 480px){
+        height: 80%;
+        width: 100%;
     }
 `
 

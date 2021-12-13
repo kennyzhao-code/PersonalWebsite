@@ -46,6 +46,11 @@ export const LanguageContentWrapper = styled.div`
 
     }
 
+    @media screen and (max-width: 480px){
+        top: 0rem;
+        right: 1rem;
+    }
+
 `
 
 export const LanguageRowContainer = styled.div`
@@ -93,6 +98,11 @@ export const PBarContainer = styled.div`
     @media screen and (max-width: 570px)
     {
         width: 300px;
+    }
+
+    @media screen and (max-width: 480px)
+    {
+        width: 250px;
     }
 `
 export const PBar = styled.div`
