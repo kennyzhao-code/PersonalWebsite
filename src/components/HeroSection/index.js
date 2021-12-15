@@ -48,7 +48,7 @@ const HeroSection = () => {
                 <MobileImage src={mobileI}/>
             </div>
                 
-            <VideoBg autoPlay muted src={Video} type = 'video/mp4' />
+            <VideoBg playsinline preload="auto" autoPlay muted src={Video} type = 'video/mp4' />
 
             <div className ='heroContentP delay'>
                 <HeroP2>

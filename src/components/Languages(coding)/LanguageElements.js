@@ -90,7 +90,7 @@ export const PBarContainer = styled.div`
         width: 250px;
     }
 
-    @media screen and (max-width: 765px)
+    @media screen and (max-width: 768px)
     {
         width: 450px;
     }
