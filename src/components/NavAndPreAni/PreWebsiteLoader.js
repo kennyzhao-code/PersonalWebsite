@@ -12,6 +12,7 @@ import Language from "../Languages(coding)"
 import * as preLoadingAnimation from '../../images/9329-loading.json'
 import styled from "styled-components"
 
+
 const defaultPreLoadAnimation = {
     loop: true,
     autoplay: true, 
@@ -36,7 +37,7 @@ const PreWebsiteLoader = () => {
                 <div style={{backgroundColor: 'black', height: '100vh', width: '100vw'}}>
                     <Seo title="Kenny Zhao" />
                     <LottieContainer>
-                        <Lottie options={defaultPreLoadAnimation} height={325} width={325} />
+                        <Lottie style ={{height: '200px', width: '200px', margin: 'auto'}} options={defaultPreLoadAnimation}  />
                     </LottieContainer>
                 </div>
             ) : (
@@ -57,17 +58,7 @@ const PreWebsiteLoader = () => {
 export default PreWebsiteLoader
 
 const LottieContainer = styled.div`
-    height: 50%;
-    width: 40%;
     position: relative;
     margin: auto;
     top: 40%;
-
-    @media screen and (max-width: 768px){
-        right: 12%;
-    }
-
-    @media screen and (max-width: 480px){
-        right: 25%;
-    }
 `
