@@ -19,7 +19,7 @@ const Languages = () => {
 
                     <ProgressBarCss done = '55'/>
 
-                    <ProgressBarJava done = '80'/>
+                    <ProgressBarJava done = '60'/>
 
                     <ProgressBarJavaScript done = '60'/>
 
