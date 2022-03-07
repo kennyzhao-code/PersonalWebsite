@@ -29,7 +29,7 @@ const ProgressBarJava= ({done}) => {
   return (
     <PBarContainer>
       <PBarJava style={style} />
-      <p>Java → <CountUp end={80} duration={3}/>%</p>
+      <p>Java → <CountUp end={60} duration={3}/>%</p>
     </PBarContainer>
   ) 
 }
