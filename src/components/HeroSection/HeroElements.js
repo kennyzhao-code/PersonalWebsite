@@ -91,7 +91,7 @@ export const HeroP2 = styled.p`
 `
 
 //button style 
-export const ButtonWrapper = styled.div`
+export const ButtonWrapper = styled(Link)`
     position: relative; 
     height: 40px;
     width: 120px;
@@ -102,6 +102,7 @@ export const ButtonWrapper = styled.div`
     background-color: #98f5e1;
     display: block;
     z-index: 5;
+    text-decoration: none;
 
     &:hover{
         background-color: #b9fbc0;
@@ -120,12 +121,12 @@ export const ButtonWrapper = styled.div`
 export const Button = styled(Link)`
     font-family: 'Poppins', sans-serif;
     color: black;
-    text-decoration: none;
     justify-content: center;
     text-align: center;
     margin-left: 1.6rem;
     position: relative;
     top: 0.3rem;
+    text-decoration: none;
 
     &:hover{
         cursor: pointer;
