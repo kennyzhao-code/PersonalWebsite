@@ -55,7 +55,7 @@ const HeroSection = () => {
                     My name is Kenny Zhao, a student from Ontario, Canada and welcome to my website.
                 </HeroP2>
 
-                <ButtonWrapper>
+                <ButtonWrapper to = 'aboutMe' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {100}>
                     <Button to = 'aboutMe' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {100}>Explore</Button>
                 </ButtonWrapper>
 
