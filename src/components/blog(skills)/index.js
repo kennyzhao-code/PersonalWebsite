@@ -47,7 +47,7 @@ const Blog = () => {
                         <div className = "overlay">
 
                             <div className ="title"> [Music] </div>
-                            <div className = "text"> Music plays a big role in my life. Right now, I play the bass clarinet for my school band, occasionally play my guitar and piano whenever I want to enjoy some music or even listen to it. </div>
+                            <div className = "text"> Music plays a big role in my life. During my time in high school, I use to play the bass clarinet for my school band. As of now, I occasionally play my guitar and piano whenever I want to enjoy some music or even listen to it. </div>
 
                         </div>
                     </div>
@@ -83,7 +83,7 @@ const Blog = () => {
                         <div className = "overlay">
 
                             <div className ="title"> [Academics] </div>
-                            <div className = "text"> Academics, especially competitions are where I love being in as it forces me to become better and pushes me past my limits. As of now, I am preparing for more contests, such as waterloo’s CCC and Euclid.</div>
+                            <div className = "text"> Academics, especially competitions are where I love being in as it forces me to become better and pushes me past my limits. As of now, I am preparing for many hackathons, including Hack The North this September.</div>
 
                         </div>
                     </div>

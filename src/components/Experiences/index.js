@@ -40,8 +40,8 @@ const Experiences = () => {
 
 
                   <TabPanel tabId="AVGL">
-                    <h1 style={{ fontSize: '26px'}}>Tournament Organizer and Co-Founder of Student Leaders @ <span style={{color: '#a2dcc1', fontSize: '26px'}}>American Video Game League</span></h1>
-                    <h2 style={{fontSize: '20px'}}>May 2021 - Present</h2>
+                    <h1 style={{ fontSize: '26px'}}>Tournament Organizer & Co-Founder of Student Leaders @ <span style={{color: '#a2dcc1', fontSize: '26px'}}>American Video Game League</span></h1>
+                    <h2 style={{fontSize: '20px'}}>May 2021 - June 2022</h2>
                     <p>• Tournament organizer during tournaments and events such as Intel Inspires and TEXSef <br/>
                       • Responsible for all student related events in AVGL <br/>
                       • Aiding other student leaders during events and tournament planning <br/>
@@ -53,7 +53,7 @@ const Experiences = () => {
 
                   <TabPanel tabId="PETHS CS">
                     <h1 style={{fontSize: '26px'}}>Executive @ <span style={{color: '#88A1BD', fontSize: '26px'}}>Trudeau Computer Science Club</span></h1>
-                    <h2 style={{fontSize: '20px'}}>June 2021 - Present</h2>
+                    <h2 style={{fontSize: '20px'}}>June 2021 - June 2022</h2>
                     <p>• Responsible for teaching and preparing lessons <br/>
                       • Aiding and organizing events such as Hackathons and Game Jams <br/>
                       • Aiding other executives and answering questions during their presentation
@@ -62,7 +62,7 @@ const Experiences = () => {
 
                   <TabPanel tabId="TMC">
                     <h1 style={{ fontSize: '26px'}}>WebMaster @ <span style={{color: '#C3B1E1', fontSize: '26px'}}>Trudeau Music Council</span></h1>
-                    <h2 style={{fontSize: '20px'}}>Nov 2020 - Present</h2>
+                    <h2 style={{fontSize: '20px'}}>Nov 2020 - June 2022</h2>
                     <p>• Reponsible for managing the council Website and links <br/>
                       • Aiding other executives and representatives during event planning <br/>
                       • Reponsible for maintaning the quality of instruments and deal with any music related issues

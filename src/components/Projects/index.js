@@ -39,7 +39,7 @@ const Projects = () => {
                     <Project style={{paddingTop: '3rem'}} data-aos-once='true' data-aos="fade-up">
 
                         <h3>OHSEA<IoLogoWebComponent style = {{marginLeft: '0.5rem', marginBottom: '0.5rem', color: '#7371fc'}}/> </h3>
-                        <p> Check out some projects that I helped create for the Ontario High School Esports Association. Most notable creattion that I helped on is the official website of OHSEA.</p>
+                        <p> Check out some projects that I helped create for the Ontario High School Esports Association. Most notable creation that I helped on is the official website of OHSEA.</p>
 
                         <IconsDiv>
                         <IconLinks href = 'https://github.com/ohseagg' target = '_blank' aria-label="Github"> <FaGithub/> </IconLinks>
