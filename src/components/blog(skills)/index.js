@@ -83,7 +83,7 @@ const Blog = () => {
                         <div className = "overlay">
 
                             <div className ="title"> [Academics] </div>
-                            <div className = "text"> Academics, especially competitions are where I love being in as it forces me to become better and pushes me past my limits. As of now, I am preparing for many hackathons, including Hack The North this September.</div>
+                            <div className = "text"> Academics, especially competitions are where I love being in as it forces me to become better and pushes me past my limits. As of now, I am preparing for future events, including hackathons, competitions and etc.</div>
 
                         </div>
                     </div>

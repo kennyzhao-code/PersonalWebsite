@@ -1,10 +1,11 @@
 import React from 'react'
 import {IoLogoWebComponent} from  "react-icons/io5"
-import {GiConsoleController} from "react-icons/gi"
-import { IconLinks, ProjectContainer, Description, ContentWrapper, ProjectRow, Project, Images, IconsDiv } from './ProjectElements'
+import {TbAugmentedReality} from "react-icons/tb"
+import {SiDevpost} from "react-icons/Si"
+import { IconLinks, ProjectContainer, Description, ContentWrapper, ProjectRow, Project, Images, IconsDiv, IconsWrapper } from './ProjectElements'
 import {FaGithub} from 'react-icons/fa'
 import ohseaPro from '../../images/ohsea.jpg'
-import greenPro from '../../images/greenfoot.jpg'
+import greenPro from '../../images/heAR.png'
 
 
 const Projects = () => {
@@ -20,12 +21,20 @@ const Projects = () => {
 
                     <Project data-aos-once='true' data-aos="fade-up">
 
-                        <h3>Greenfoot Project <GiConsoleController style = {{marginLeft: '0.5rem', marginBottom: '0.2rem', color: '#78be79'}}/> </h3>
-                        <p> A video game based on Anagrams built with Greenfoot using Java. Uses the idea of object oriented programming and Greenfoot’s api to create a fun and interactive game. </p>
+                        <h3>Hack The North <TbAugmentedReality style = {{marginLeft: '0.5rem', marginBottom: '0.2rem', color: '#78be79'}}/> </h3>
+                        <p> Using AR and NLP, this project developed in a team of 5 can summarize, translate and analyze conversations and lectures to focus on the details that matter the most. </p>
+
+                        <IconsWrapper>
 
                         <IconsDiv>
-                        <IconLinks href = 'https://github.com/kennyzhao-code/P3E-Word-Match' target = '_blank' aria-label="Github"> <FaGithub/> </IconLinks>
+                        <IconLinks href = 'https://github.com/HTN-heAR' target = '_blank' aria-label="Github"> <FaGithub/> </IconLinks>
                         </IconsDiv>
+
+                        <IconsDiv>
+                        <IconLinks href = 'https://devpost.com/software/hear-1pibsd?ref_content=my-projects-tab&ref_feature=my_projects' target = '_blank' aria-label="Github"> <SiDevpost/> </IconLinks>
+                        </IconsDiv>
+
+                        </IconsWrapper>
 
                     </Project>
 

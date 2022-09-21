@@ -47,7 +47,7 @@ export const LanguageContentWrapper = styled.div`
     }
 
     @media screen and (max-width: 480px){
-        top: 0rem;
+        top: 5rem;
         right: 1rem;
     }
 

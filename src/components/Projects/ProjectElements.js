@@ -72,7 +72,7 @@ export const Project = styled.div`
 
 export const Images = styled.img`
     border-radius: 10px; 
-    height: 100%; 
+    height: 90%; 
     width: 100%;
 
     &:hover {
@@ -87,10 +87,11 @@ export const Images = styled.img`
 
     @media screen and (max-width: 768px){
         margin-top: 3rem; 
+        height: 75%
     }
 
     @media screen and (max-width: 480px){
-        height: 80%;
+        height: 75%;
         width: 100%;
     }
 `
@@ -105,6 +106,14 @@ export const IconLinks = styled.a`
     &:hover {
         color: black;
     }
+`
+
+export const IconsWrapper = styled.div`
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100px; 
+    margin-bottom: 30px;
 `
 
 export const IconsDiv = styled.div`

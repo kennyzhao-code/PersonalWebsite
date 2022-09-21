@@ -52,7 +52,7 @@ const HeroSection = () => {
 
             <div className ='heroContentP delay'>
                 <HeroP2>
-                    My name is Kenny Zhao, a University student from Ontario, Canada and welcome to my website.
+                    My name is Kenny Zhao, a student from Ontario, Canada currently attending McMaster University and welcome to my website.
                 </HeroP2>
 
                 <ButtonWrapper to = 'aboutMe' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {100}>
