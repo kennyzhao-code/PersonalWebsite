@@ -1,7 +1,7 @@
 import React from 'react'
 import {IoLogoWebComponent} from  "react-icons/io5"
 import {TbAugmentedReality} from "react-icons/tb"
-import {SiDevpost} from "react-icons/Si"
+import {SiDevpost} from "react-icons/si"
 import { IconLinks, ProjectContainer, Description, ContentWrapper, ProjectRow, Project, Images, IconsDiv, IconsWrapper } from './ProjectElements'
 import {FaGithub} from 'react-icons/fa'
 import ohseaPro from '../../images/ohsea.jpg'
