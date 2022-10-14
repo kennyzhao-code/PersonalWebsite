@@ -49,12 +49,11 @@ export const TabH1 = styled.h1`
     bottom: 200px;
 
     @media screen and (max-width: 768px){
-        bottom: 0;
+        bottom: 2rem;
     }
 
     @media screen and (max-width: 480px){
-        bottom: 0;
-        top: 3rem;
+        bottom: 0.2rem;
     }
 
 `
@@ -74,7 +73,7 @@ export const ImgOhsea = styled.img`
     margin-top: 1.5rem;
     width: 50px;
     display: inline-block;
-    margin-left: 1.3rem;
+    margin-left: 1.1rem;
     position: relative;
 
     @media screen and (max-width: 768px){
@@ -178,6 +177,32 @@ export const ImgTmc = styled.img`
     @media screen and (max-width: 480px){
         max-width: 130px;
         right: 0.9rem;
+        margin-top: 50px;
+    }
+`
+
+export const ImgMacCss = styled.img`
+    margin-top: 1.3rem;
+    width: 38px;
+    display: inline-block;
+    margin-left: 0.2rem;
+    border-radius: 6px;
+    position: relative;
+
+    @media screen and (max-width: 768px){
+        margin-left: 0;
+        margin-bottom: 2.1rem;
+    }
+
+    
+    @media screen and (max-width: 620px){
+        margin-top: 50px;
+        border-radius: 5px;
+        max-width: 100px;
+    }
+
+    @media screen and (max-width: 480px){
+        max-width: 130px;
         margin-top: 50px;
     }
 `
