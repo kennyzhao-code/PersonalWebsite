@@ -22,7 +22,7 @@ export const TabContainer = styled.div`
     margin: auto;
     height: 100%;
     width: 75%;
-    bottom: 280px;
+    bottom: 15rem;
 
     @media screen and (max-width: 768px){
         bottom: 120px;
@@ -30,7 +30,7 @@ export const TabContainer = styled.div`
 
     @media screen and (max-width: 480px){
         height: 1000px;
-        bottom: 190px;
+        bottom: 5rem;
     }
 `
 
@@ -53,7 +53,7 @@ export const TabH1 = styled.h1`
     }
 
     @media screen and (max-width: 480px){
-        bottom: 0.2rem;
+        top: 5rem;
     }
 
 `
