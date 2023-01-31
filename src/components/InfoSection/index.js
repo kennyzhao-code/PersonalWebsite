@@ -6,9 +6,8 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import './image.css'
 
-//import {FaInstagram, FaLinkedin, FaGithub, FaTwitter} from 'react-icons/fa'
 
-const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, alt, description2}) => {
+const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, description2}) => {
     
     useEffect(() => {
         Aos.init({duration: 1000}); 
@@ -27,7 +26,19 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, alt
                             
                             <TextWrapper>                     
                                 
-                                <TopLine data-aos-once='true' data-aos="fade-up">{topLine}</TopLine>
+                                <TopLine data-aos-once='true' data-aos="fade-up">
+                                    {topLine}
+
+                                    <div class="notification-box">
+                                        <span class="notification-count">1</span>
+                                            <div class="notification-bell">
+                                                <span class="bell-top"></span>
+                                                <span class="bell-middle"></span>
+                                                <span class="bell-bottom"></span>
+                                                <span class="bell-rad"></span>
+                                            </div>
+                                    </div>
+                                </TopLine>
 
                                 <Subtitle data-aos-once='true' data-aos="fade-up" darkText={darkText}>{description}</Subtitle>
                                 <Subtitle2 data-aos-once='true' data-aos="fade-up" darkText={darkText}>{description2}</Subtitle2>
@@ -90,6 +101,7 @@ export default InfoSection
 const InfoContainer = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
+    height: 500px;
 
     @media screen and (max-width: 768px){
         padding: 100px 0; 
@@ -108,18 +120,16 @@ const InfoWrapper = styled.div`
     justify-content: center; 
     position: relative;
     bottom: 7rem;
-    border: 1px solid black;
 `
 
 //main row
 const InfoRow = styled.div`
     display: grid;
-    margin-left: 50px;
+    margin-left: 3rem;
     grid-auto-columns: minmax(auto, 1fr); 
-    grid-column-gap: 100px;
+    grid-column-gap: 3rem;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )}; 
-    border: 1px solid black;
     width: 100%;
 
     @media screen and (max-width: 768px) {
@@ -129,7 +139,7 @@ const InfoRow = styled.div`
 
 //column 1
 const Column1 = styled.div`
-    margin-bottom: 15px; 
+    margin-bottom: 1rem; 
     padding: 0 15px; 
     grid-area: col1; 
 
@@ -138,14 +148,14 @@ const Column1 = styled.div`
 
 //column 2
 const Column2 = styled.div`
-    margin-bottom: 15px; 
+    margin-top: 5rem;
     padding: 0 15px; 
     grid-area: col2; 
 `
 
 //text wrapper
 const TextWrapper = styled.div`
-    padding-top: 50px; 
+    padding-top: 4rem; 
     padding-bottom: 0; 
 
     @media screen and (max-width: 480px){
@@ -154,14 +164,14 @@ const TextWrapper = styled.div`
     }
 `
 
-export const TopLine = styled.p`
+const TopLine = styled.p`
     color: #897CBF; 
     font-size: 80px; 
     position: relative;
-    line-height: 16px; 
     font-weight: 700; 
     letter-spacing: 1.4px; 
     font-style: italic;
+    display: flex;
 
     @media screen and (max-width: 768px){
         top: 0;
@@ -172,28 +182,27 @@ export const TopLine = styled.p`
 
 const Subtitle = styled.p`
     width: 800px; 
-    margin-bottom: 35px;
-    margin-top: 80px; 
-    margin-left: 10px;
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
     font-size: 30px; 
-    line-height: 35px; 
+    line-height: 40px; 
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
 `
 
 const Subtitle2 = styled.p`
     width: 800px; 
-    margin-bottom: 35px;
-    margin-top: 24px; 
-    margin-left: 10px;
+    margin-bottom: 2rem;
+    margin-top: 2rem; 
+    margin-left:  0.5rem;
     font-size: 30px; 
-    line-height: 35px; 
+    line-height: 40px; 
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
 `
 
 
 const ImgWrap = styled.div`
-    max-width: 600px; 
-    height: 350px;
+    width: 680px; 
+    height: 415px;
     border: #897CBF;
     border-radius: 10px;
     background: #897CBF;
@@ -203,47 +212,6 @@ const ImgWrap = styled.div`
 
 `
 
-const AboutMeIcons = styled.div`
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    width: 240px; 
-    margin-bottom: 30px;
-`
 
-//icons 
-
-const AboutMeIconsLinkInsta = styled.a`
-    color: #f08080;
-    font-size: 30px; 
-
-    &:hover {
-        color: #ffc7ad;
-    }
-`
-const AboutMeIconsLinkLink = styled.a`
-    color: #71a5de;
-    font-size: 30px; 
-
-    &:hover {
-        color: #bee1e6;
-    }
-`
-const AboutMeIconsLinkGit = styled.a`
-    color: #9381ff;
-    font-size: 30px; 
-    
-    &:hover {
-        color: #bdb2ff;
-    }
-`
-const AboutMeIconsLinkDis = styled.a`
-    color: #84dcc6;
-    font-size: 30px; 
-
-    &:hover {
-        color: #a5ffd6;
-    }
-`
 
 

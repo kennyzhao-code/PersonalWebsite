@@ -27,7 +27,7 @@ const ProgressBarCss= ({done}) => {
   return (
     <PBarContainer>
       <PBarCss style={style} />
-      <p>HTML/CSS/Boostrap → <CountUp end={55} duration={3}/>%</p>
+      <p>HTML/CSS/Boostrap <span style={{position: 'absolute', right: '0'}}> <CountUp end={52} duration={3}/>%</span> </p>
     </PBarContainer>
   ) 
 }

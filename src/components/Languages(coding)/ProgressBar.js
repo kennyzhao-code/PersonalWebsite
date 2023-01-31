@@ -26,12 +26,14 @@ const ProgressBar= ({done}) => {
   return (
     <PBarContainer>
       <PBar style={style} />
-      <p>Python → <CountUp end={50} duration={3}/>%</p>
+      <p>python <span style={{position: 'absolute', right: '0'}}> <CountUp end={60} duration={3}/>%</span> </p>
     </PBarContainer>
   ) 
 }
 
 export default ProgressBar
+
+
 
 
 

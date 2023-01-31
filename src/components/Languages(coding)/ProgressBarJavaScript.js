@@ -28,7 +28,7 @@ const ProgressBarJavaScript= ({done}) => {
   return (
     <PBarContainer>
       <PBarJavaScript style={style} />
-      <p>JavaScript → <CountUp end={60} duration={3}/>%</p>
+      <p>javascript <span style={{position: 'absolute', right: '0'}}> <CountUp end={68} duration={3}/>% </span> </p>
     </PBarContainer>
   ) 
 }

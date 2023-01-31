@@ -2,10 +2,10 @@ import React, {useState, useEffect} from 'react';
 import CountUp from 'react-countup'
 
 
-import {PBarContainer, PBarJava} from './LanguageElements.js'
+import {PBarContainer, PBarC} from './LanguageElements.js'
 
 
-const ProgressBarJava= ({done}) => {
+const ProgressBarC= ({done}) => {
 
 
   const[style, setStyle] = useState({});
@@ -28,13 +28,13 @@ const ProgressBarJava= ({done}) => {
 
   return (
     <PBarContainer>
-      <PBarJava style={style} />
-      <p>Java → <CountUp end={60} duration={3}/>%</p>
+      <PBarC style={style} />
+      <p>C/C++ <span style={{position: 'absolute', right: '0'}}> <CountUp end={56} duration={3}/>%</span> </p>
     </PBarContainer>
   ) 
 }
 
-export default ProgressBarJava
+export default ProgressBarC
 
 
 

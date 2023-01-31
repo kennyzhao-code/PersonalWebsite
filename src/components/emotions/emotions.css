@@ -1,0 +1,123 @@
+
+/*faces*/
+.face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #6CBB6C;
+    border-radius: 50%;
+    z-index: 2;
+    animation: bounce 1s ease-in infinite;
+    right: 0;
+  }
+
+.faceMeh {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #D5D274;
+    border-radius: 50%;
+    z-index: 2;
+    animation: bounce 1s ease-in infinite;
+    right: 0;
+
+  }
+
+.faceSad {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #D66A6A;
+    border-radius: 50%;
+    z-index: 2;
+    animation: bounce 1s ease-in infinite;
+    right: 0;
+
+}
+
+.eye {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+    top: 40%;
+    left: 35%;
+  }
+  
+.eye.right {
+    left: 55%;
+  }
+  
+.mouth {
+    position:absolute;
+    top: 48%;
+    left: 44%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+.mouth.happy {
+    border: 2px solid;
+    border-color: transparent white white transparent;
+    transform: rotate(45deg);
+}
+
+.mouth.meh {
+    border: 1px solid;
+    border-color: white;
+    border-radius: 0px;
+    height: 1px;
+    width: 12px;
+    left: 43%;
+    top: 51%;
+}
+
+.mouth.sad {
+    border: 2px solid;
+    border-color: transparent white white transparent;
+    transform: rotate(225deg);
+    top: 52%;
+    left: 44.5%;
+}
+
+
+
+
+
+@keyframes bounce {
+    50% {
+       transform: translateY(-10px);
+    }
+  }
+
+
+
+
+
+
+
+/*
+  .shadow {
+    position: absolute;
+    width: 21%;
+    height: 3%;
+    opacity: .5;
+    background: black;
+    left: 40%;
+    top: 43%;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .scale {
+    animation: scale 1s ease-in infinite;
+  }
+
+  @keyframes scale {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+*/
