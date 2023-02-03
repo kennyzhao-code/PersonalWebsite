@@ -10,13 +10,15 @@ export const PBarContainer = styled.div`
     border: 1px; 
     background: #DEDBDB;
     margin-top: 80px;
+    
 
 
     p{
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-        font-family: 'Poppins', sans-serif;
+        font-family: 'OktaNeueLight', sans-serif;
+        font-weight: bold;
         position: relative;
-        bottom: 2.5rem;
+        font-size: 1.5rem;
+        bottom: 3.3rem;
         color: ${colors.mainPurple};
     }
 

@@ -7,8 +7,8 @@ import ProgressBar from "./ProgressBar"
 import ProgressBarCss from "./ProgressBarCss"
 import ProgressBarC from "./ProgressBarC"
 import ProgressBarJavaScript from "./ProgressBarJavaScript"
+import FontStyles from "../Fonts/fontStyles"
 
-//import {FaInstagram, FaLinkedin, FaGithub, FaTwitter} from 'react-icons/fa'
 
 const Language = ({lightBg, id, imgStart, darkText, description}) => {
     
@@ -18,6 +18,7 @@ const Language = ({lightBg, id, imgStart, darkText, description}) => {
     
     return (
         <>
+        <FontStyles />
             <LanguageContainer name ="languages" lightBg = {lightBg} id = {id}>
 
             
@@ -113,7 +114,7 @@ const LanguageWrapper = styled.div`
 const LanguageRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr); 
-    grid-column-gap: 11.5rem;
+    grid-column-gap: 4rem;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )}; 
     width: 100%;
@@ -159,6 +160,8 @@ const Subtitle = styled.p`
     margin-left: 0.8rem;
     font-size: 30px; 
     line-height: 45px; 
+    font-family: 'OktaNeueLight', sans-serif;
+    font-weight: bold;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
 `
 

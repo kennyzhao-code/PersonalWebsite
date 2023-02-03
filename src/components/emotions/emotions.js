@@ -5,6 +5,7 @@ import React, { useEffect } from 'react'
 import styled from "styled-components"
 import {colors} from "../../components/globals/colors"
 import './emotions.css'
+import FontStyles from "../Fonts/fontStyles"
 
 const Emotions = ({lightBg, id}) => {
     
@@ -14,6 +15,7 @@ const Emotions = ({lightBg, id}) => {
     
     return (
         <>
+        <FontStyles />
             <EmotionsContainer name ="emotions" lightBg = {lightBg} id = {id}>
             
                 <EmotionsWrapper>
@@ -36,7 +38,7 @@ const Emotions = ({lightBg, id}) => {
 
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
-                                    <EmotionText>Current Workload:</EmotionText>
+                                    <EmotionText style ={{paddingLeft: '0'}}>Current Workload:</EmotionText>
                                     <div class="faceMeh">
                                             <div class="eye"></div>
                                             <div class="eye right"></div>
@@ -95,7 +97,9 @@ export default Emotions
 const EmotionsContainer = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
-    height: 300px;
+    height: 50px;
+    font-family: 'OktaNeueLight', sans-serif;
+    font-weight: bold;
 
     @media screen and (max-width: 768px){
         padding: 100px 0; 
@@ -120,7 +124,7 @@ const EmotionsRow = styled.div`
     display: grid;
     margin-right: 3rem;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 6rem;
+    grid-column-gap: 3rem;
     align-items: center;
     width: 100%;
     
@@ -133,7 +137,7 @@ const EmotionsRow = styled.div`
 //styling for emotions
 const EmotionsBlock = styled.div`
     width: 450px;
-    height: 210px;
+    height: 175px;
     border-radius: 15px;
     border: 3px solid ${colors.mainPurple};
     align-items: center;
@@ -143,19 +147,22 @@ const EmotionsBlock = styled.div`
 `
 const EmotionSecondBlock = styled.div`
     display: flex;
-    border: 3px solid ${colors.mainPurple};
     justify-content: center;
+    align-items: center;
     position: absolute;
     width: 350px;
+    height: 50px;
     
 `
 
 //text 
 const EmotionText = styled.p`
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: ${colors.mainPurple};
     position: absolute;
     left: 0;
+    padding-left: 1rem;
+    top: 0.2rem;
    
 `
 

@@ -5,6 +5,7 @@ import React, { useEffect } from 'react'
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import './image.css'
+import FontStyles from "../Fonts/fontStyles"
 
 
 const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, description2}) => {
@@ -15,8 +16,11 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
     
     return (
         <>
+        
+            <FontStyles />
             <InfoContainer name ="aboutMe" lightBg = {lightBg} id = {id}>
-
+                
+                
             
                 <InfoWrapper>
                     
@@ -142,6 +146,8 @@ const Column1 = styled.div`
     margin-bottom: 1rem; 
     padding: 0 15px; 
     grid-area: col1; 
+    margin: auto;
+    
 
     
 `
@@ -149,8 +155,9 @@ const Column1 = styled.div`
 //column 2
 const Column2 = styled.div`
     margin-top: 5rem;
-    padding: 0 15px; 
     grid-area: col2; 
+    position: relative;
+    right: 0.7rem;
 `
 
 //text wrapper
@@ -166,9 +173,10 @@ const TextWrapper = styled.div`
 
 const TopLine = styled.p`
     color: #897CBF; 
-    font-size: 80px; 
+    font-size: 65px; 
     position: relative;
-    font-weight: 700; 
+    font-weight: 900;
+    font-family: 'OktaNeueBold', sans-serif; 
     letter-spacing: 1.4px; 
     font-style: italic;
     display: flex;
@@ -181,21 +189,25 @@ const TopLine = styled.p`
 
 
 const Subtitle = styled.p`
-    width: 800px; 
+    width: 750px; 
     margin-bottom: 2rem;
     margin-left: 0.5rem;
     font-size: 30px; 
     line-height: 40px; 
+    font-family: 'OktaNeueLight', sans-serif;
+    font-weight: bold;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
 `
 
 const Subtitle2 = styled.p`
-    width: 800px; 
+    width: 750px; 
     margin-bottom: 2rem;
     margin-top: 2rem; 
     margin-left:  0.5rem;
     font-size: 30px; 
     line-height: 40px; 
+    font-family: 'OktaNeueLight', sans-serif;
+    font-weight: bold;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
 `
 

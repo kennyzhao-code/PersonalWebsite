@@ -1,99 +1,149 @@
 import React from 'react'
-import { BlogContainer, BlogH1, BlogWrapper, BlogIcon} from './blogElements'
-import './blogElements.css'
-import icon1 from '../../images/pic1.svg'
-import icon2 from '../../images/pic2.svg'
-import icon3 from '../../images/pic3.svg'
-import icon4 from '../../images/pic4.svg'
-import icon5 from '../../images/pic5.svg'
-import icon6 from '../../images/pic6.svg'
+import {colors} from '../globals/colors'
+import styled from "styled-components"
 
-const Blog = () => {
+
+const Blog = ({lightBg, id, topLine, darkText, coding, athletics, music, games, academics, personality}) => {
     return (
-        <BlogContainer name = 'skillsHobbies' id ="services">
+        <BlogContainer name = 'skillsHobbies' id ={id} lightBg = {lightBg}>
+            <BlogSecondaryContainer>
 
-            <BlogH1 data-aos-once='true' data-aos="fade-up">My skills and hobbies ⎯⎯</BlogH1>
+                <BlogH1 data-aos-once='true' data-aos="fade-up">{topLine}</BlogH1>
 
-                <BlogWrapper data-aos-once='true' data-aos="fade-up">
+                    <BlogWrapper data-aos-once='true' data-aos="fade-up">
 
-                    <div style = {{background: '#88A1BD', borderRadius: '30px' }} className = "card">
-                        <BlogIcon src={icon1}/>
-                        
+                        <BlogSection>
+                            <BlogSectionCoding>
+                               
 
-                        <div className = "overlay">
+                            </BlogSectionCoding>
 
-                            <div className ="title"> [Coding] </div>
-                            <div className = "text"> I have been learning about computer science for over 4 years and currently I am working on multiple projects from game development, to creating more websites for other extracurriculars that I am proud to be representing. </div>
+                            <BlogSectionMusic></BlogSectionMusic>
+                            <BlogSectionAcademic></BlogSectionAcademic>
+                        </BlogSection>
 
-                        </div>
-                    </div>
+                        <BlogSection>
+                            <BlogSectionAthletic></BlogSectionAthletic>
+                            <BlogSectionGame></BlogSectionGame>
+                            <BlogSectionPersonality></BlogSectionPersonality>
+                        </BlogSection>
 
-                    <div style = {{background: '#ff6961', borderRadius: '30px' }} className = "card">
-                        <BlogIcon src={icon2}/>
-                        
+                    </BlogWrapper>
+            </BlogSecondaryContainer>
 
-                        <div className = "overlay">
-
-                            <div className ="title"> [Athletics] </div>
-                            <div className = "text"> I love being active and playing different sports. As of now, I do my best to be active everyday by going out for walks, hitting the gym, or playing sports such as basketball. </div>
-
-                        </div>
-                    </div>
-
-                    <div style = {{background: '#FAC898', borderRadius: '30px' }} className = "card">
-                        <BlogIcon src={icon3}/>
-                        
-
-                        <div className = "overlay">
-
-                            <div className ="title"> [Music] </div>
-                            <div className = "text"> Music plays a big role in my life. During my time in high school, I use to play the bass clarinet for my school band. As of now, I occasionally play my guitar and piano whenever I want to enjoy some music or even listen to it. </div>
-
-                        </div>
-                    </div>
-
-                    <div style = {{background: '#FDFD96', borderRadius: '30px'  }} className = "card">
-                        <BlogIcon src={icon4}/>
-                        
-
-                        <div className = "overlay">
-
-                            <div className ="title"> [Games] </div>
-                            <div className = "text"> Video games continue to be one of my favorite hobbies to relax and chill with friends. At the moment, I am not playing much because of academics, but if you ever are down to play, just add me on discord: REALLY!? #4206 </div>
-
-                        </div>
-                    </div>
-
-                    <div style = {{background: '#BEE5B0', borderRadius: '30px' }} className = "card">
-                        <BlogIcon src={icon5}/>
-                      
-
-                        <div className = "overlay">
-
-                            <div className ="title"> [Personality] </div>
-                            <div className = "text"> I would say I am a very outgoing and kind person. If you ever do meet me in person, I would love to talk or even shoot me a private message on one of my socials.</div>
-                            
-                        </div>
-                    </div>
-
-                    <div style = {{background: '#C3B1E1', borderRadius: '30px' }} className = "card">
-                        <BlogIcon src={icon6}/>
-                        
-
-                        <div className = "overlay">
-
-                            <div className ="title"> [Academics] </div>
-                            <div className = "text"> Academics, especially competitions are where I love being in as it forces me to become better and pushes me past my limits. As of now, I am preparing for future events, including hackathons, competitions and etc.</div>
-
-                        </div>
-                    </div>
-
-                   
-
-                </BlogWrapper>
-            
         </BlogContainer>
     )
 }
 
 export default Blog
+
+
+//main container 
+const BlogContainer = styled.div`
+    height: 2000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
+    justify-content: center;
+    align-items: center;
+`
+//secondary container
+const BlogSecondaryContainer = styled.div`
+    height: 100%;
+    width: 1510px;
+`
+
+const BlogH1 = styled.h1`
+    color: #897CBF; 
+    font-size: 60px; 
+    position: relative;
+    font-weight: 700; 
+    width: 100%;
+    letter-spacing: 1.4px; 
+    font-style: italic;
+    display: flex;
+
+    @media screen and (max-width: 768px){
+        top: 0;
+    }
+
+`
+//grid-template-columns: 1fr, the amount of fr will determine the items in each row
+const BlogWrapper = styled.div`
+    margin: 0 auto; 
+    margin-top: 2rem;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-column-gap: 4rem;
+    grid-row-gap: 1.5rem;
+    align-items: center; 
+    padding: 0 50px;     
+    justify-content: center;
+
+`
+
+const BlogSection = styled.div`
+    height: 2000px;
+`
+
+//all sections to blog 
+//blog1
+const BlogSectionCoding = styled.div`
+    height: 400px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+
+`
+
+const BlogSectionMusic = styled.div`
+    height: 800px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    margin-top: 2rem;
+
+`
+
+const BlogSectionAcademic = styled.div`
+    height: 450px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    margin-top: 2rem;
+
+`
+
+//blog 2
+const BlogSectionAthletic = styled.div`
+    height: 350px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+
+`
+
+const BlogSectionGame = styled.div`
+    height: 600px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    margin-top: 2rem;
+
+
+`
+
+const BlogSectionPersonality = styled.div`
+    height: 700px;
+    width: 720px;   
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    margin-top: 2rem;
+
+
+`
+
+
+
+
