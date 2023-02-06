@@ -217,7 +217,6 @@ const ImgWrap = styled.div`
     height: 415px;
     border: #897CBF;
     border-radius: 10px;
-    background: #897CBF;
     display: flex;
     justify-content: center;
     align-items: center;

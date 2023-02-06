@@ -1,9 +1,88 @@
-import React from 'react'
-import {colors} from '../globals/colors'
+import React, {useCallback, useState} from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
+import { colors } from '../globals/colors'
 import styled from "styled-components"
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { SocialIcon } from 'react-social-icons'
+import { AiOutlineCopy } from "react-icons/ai"
+//import song from '../../images/doodle.mp3'
+import './icons.css'
+
+const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics, personality}) => {
+    
+    //functions to make copied text dissapear 
+    const [isAlertVisibleGit, setIsAlertVisibleGit] = useState(false);
+    const handleButtonClickGit = () => {
+        setIsAlertVisibleGit(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleGit(false);}, 4000);
+
+    const [isAlertVisibleMac, setIsAlertVisibleMac] = useState(false);
+    const handleButtonClickMac = () => {
+        setIsAlertVisibleMac(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleMac(false);}, 4000);
+
+    const [isAlertVisibleInsta, setIsAlertVisibleInsta] = useState(false);
+    const handleButtonClickInsta = () => {
+        setIsAlertVisibleInsta(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleInsta(false);}, 4000);
+
+        
+    const [isAlertVisibleSnap, setIsAlertVisibleSnap] = useState(false);
+    const handleButtonClickSnap = () => {
+        setIsAlertVisibleSnap(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleSnap(false);}, 4000);
+
+    const [isAlertVisibleTwitter, setIsAlertVisibleTwitter] = useState(false);
+    const handleButtonClickTwitter = () => {
+        setIsAlertVisibleTwitter(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleTwitter(false);}, 4000);
+
+    const [isAlertVisibleDiscord, setIsAlertVisibleDiscord] = useState(false);
+    const handleButtonClickDiscord = () => {
+        setIsAlertVisibleDiscord(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleDiscord(false);}, 4000);
+
+    const [isAlertVisibleLinkedin, setIsAlertVisibleLinkedin] = useState(false);
+    const handleButtonClickLinkedin = () => {
+        setIsAlertVisibleLinkedin(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleLinkedin(false);}, 4000);
+
+    //copy clipboard functions 
+    const [valueGit] = useState("kennyzhao-code");
+    const [valueInsta] = useState("kennyzhao_"); 
+    const [valueSnap] = useState("spider_boy2004");
+    const [valueTwitter] = useState("KennyZhao20");
+    const [valueInstaMac] = useState("mcmastersports");
+    const [valueDiscord] = useState("REALLY!?#4206");
+    const [valueLinkedin] = useState("Kenny Zhao");
+
+    const [copied, setCopied] = useState(false);
+    const onCopy = useCallback(() => {
+        setCopied(true);
+    }, [])
 
 
-const Blog = ({lightBg, id, topLine, darkText, coding, athletics, music, games, academics, personality}) => {
     return (
         <BlogContainer name = 'skillsHobbies' id ={id} lightBg = {lightBg}>
             <BlogSecondaryContainer>
@@ -13,19 +92,206 @@ const Blog = ({lightBg, id, topLine, darkText, coding, athletics, music, games, 
                     <BlogWrapper data-aos-once='true' data-aos="fade-up">
 
                         <BlogSection>
-                            <BlogSectionCoding>
-                               
 
+                            <BlogSectionCoding>
+                                <TitleSocialDivCoding>
+                                    <h1>Coding <span>(duh)</span></h1>
+                                    <p>{coding}</p>
+                                    
+                                    <SocialDivMainCoding>
+                                        <SocialDivCoding>
+                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://github.com/kennyzhao-code" network = "github" bgColor="black" fgColor = "white" style = {{height: 75, width: 75}} />
+                                            <h1>kennyzhao-code</h1>
+                                            <div className = 'copy'>
+                                                <CopyToClipboard onCopy={onCopy} text={valueGit}>
+                                                    <CopyIcon  onClick={handleButtonClickGit}/>
+                                                </CopyToClipboard>
+                                                {copied && isAlertVisibleGit ? 
+                                                <div>
+                                                    <div class="bubble">Copied</div>
+                                                    <div class="pointer"></div>
+                                                </div>
+                                                    : null} 
+                                            </div> 
+                                        </SocialDivCoding>
+                                    </SocialDivMainCoding>
+                                </TitleSocialDivCoding>
                             </BlogSectionCoding>
 
-                            <BlogSectionMusic></BlogSectionMusic>
-                            <BlogSectionAcademic></BlogSectionAcademic>
+                            <BlogSectionMusic>
+                                <TitleSocialDivMusic>
+                                    <h1>Music <span>:3</span></h1>
+                                    <h2>{music}</h2>
+                                    <p>My current favorite song!</p>
+                                    
+                                    <SocialDivMainMusic>
+                                        <StaticImage
+                                            src= '../../images/doodle.jpg'
+                                            alt="doodleAlbum"
+                                            placeholder="blurred"
+                                            formats={["auto", "webp", "avif"]}
+                                            layout="fixed"
+                                            width={290}
+                                            style = {{borderRadius: '10px'}}
+                                        />  
+
+                                        <MusicDetails>
+                                            <h3>Doodle (feat. Yerin Baek)</h3>
+                                            <h4>Punchnello</h4>
+
+                                        </MusicDetails>
+                                    
+                                    </SocialDivMainMusic>
+
+
+                                </TitleSocialDivMusic>
+                            </BlogSectionMusic>
+
+
+                            <BlogSectionAcademic>
+                                <TitleSocialDivAcademics>
+                                        <h1>Academics <span>&gt;:)</span></h1>
+                                        <p>{academics}</p>
+                                        
+                                        <SocialDivMainAcademics>
+                                            <SocialDivAcademics>
+                                                <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.linkedin.com/in/kenny-zhao-283b73213/" network = "linkedin" fgColor = "white" style = {{height: 75, width: 75}} />
+                                                <h1>Kenny Zhao</h1>
+                                                <div className = 'copy'>
+                                                    <CopyToClipboard onCopy={onCopy} text={valueLinkedin}>
+                                                        <CopyIcon  onClick={handleButtonClickLinkedin}/>
+                                                    </CopyToClipboard>
+                                                    {copied && isAlertVisibleLinkedin ? 
+                                                    <div>
+                                                        <div class="bubble">Copied</div>
+                                                        <div class="pointer"></div>
+                                                    </div>
+                                                        : null} 
+                                                </div>                                             
+                                            </SocialDivAcademics>
+                                        </SocialDivMainAcademics>
+                                    </TitleSocialDivAcademics>
+                            </BlogSectionAcademic>
+
                         </BlogSection>
 
                         <BlogSection>
-                            <BlogSectionAthletic></BlogSectionAthletic>
-                            <BlogSectionGame></BlogSectionGame>
-                            <BlogSectionPersonality></BlogSectionPersonality>
+
+                            <BlogSectionPersonality>
+                                <TitleSocialDivPersonality>
+                                    <h1>Personality <span>&lt;3</span></h1>
+                                    <p>{personality}</p>
+                                        
+                                    <SocialDivMainPersonality  style = {{borderRadius: '15px 15px 0 0'}}>
+                                        <SocialDivPersonality>
+                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.instagram.com/kennyzhao_/" network = "instagram" fgColor='white' style = {{height: 75, width: 75}} />
+                                            <h1>kennyzhao_</h1>
+                                            <div className = 'copy'>
+                                                <CopyToClipboard onCopy={onCopy} text={valueInsta}>
+                                                    <CopyIcon  onClick={handleButtonClickInsta}/>
+                                                </CopyToClipboard>
+                                                {copied && isAlertVisibleInsta ? 
+                                                <div>
+                                                    <div class="bubble">Copied</div>
+                                                    <div class="pointer"></div>
+                                                </div>
+                                                    : null}  
+                                            </div>
+                                        </SocialDivPersonality>
+                                    </SocialDivMainPersonality>
+
+
+
+                                    <SocialDivMainPersonality  style = {{borderRadius: '0'}}>
+                                        <SocialDivPersonality>
+                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://t.snapchat.com/EAyH5MmN" network = "snapchat" fgColor = 'white' style = {{height: 75, width: 75}} />
+                                            <h1>spider_boy2004</h1>
+                                            <div className = 'copy'>
+                                                <CopyToClipboard onCopy={onCopy} text={valueSnap}>
+                                                    <CopyIcon  onClick={handleButtonClickSnap}/>
+                                                </CopyToClipboard>
+                                                {copied && isAlertVisibleSnap ? 
+                                                <div>
+                                                    <div class="bubble">Copied</div>
+                                                    <div class="pointer"></div>
+                                                </div>
+                                                    : null}   
+                                            </div>                                       
+                                        </SocialDivPersonality>
+                                    </SocialDivMainPersonality>
+
+                                    <SocialDivMainPersonality  style = {{borderRadius: '0 0 15px 15px'}}>
+                                        <SocialDivPersonality>
+                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://twitter.com/KennyZhao20" network = "twitter" fgColor = "white" style = {{height: 75, width: 75}} />
+                                            <h1>KennyZhao20</h1>
+                                            <div className = 'copy'>
+                                                <CopyToClipboard onCopy={onCopy} text={valueTwitter}>
+                                                    <CopyIcon  onClick={handleButtonClickTwitter}/>
+                                                </CopyToClipboard>
+                                                {copied && isAlertVisibleTwitter ? 
+                                                <div>
+                                                    <div class="bubble">Copied</div>
+                                                    <div class="pointer"></div>
+                                                </div>
+                                                    : null} 
+                                            </div>                                        
+                                        </SocialDivPersonality>
+                                    </SocialDivMainPersonality>
+
+                                        
+                                </TitleSocialDivPersonality>
+                            </BlogSectionPersonality>
+
+                            <BlogSectionAthletic>
+                                <TitleSocialDivAthletics>
+                                        <h1>Atheletics <span>:0</span></h1>
+                                        <p>{athletics}</p>
+                                        
+                                        <SocialDivMainAthletics>
+                                            <SocialDivAthletics>
+                                                <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.instagram.com/mcmastersports/" network = "instagram" fgColor = "white" style = {{height: 75, width: 75}} />
+                                                <h1>mcmastersports</h1>
+                                                <div className = 'copy'>
+                                                    <CopyToClipboard onCopy={onCopy} text={valueInstaMac}>
+                                                    <CopyIcon  onClick={handleButtonClickMac}/>
+                                                    </CopyToClipboard>
+                                                    {copied && isAlertVisibleMac ? 
+                                                    <div>
+                                                        <div class="bubble">Copied</div>
+                                                        <div class="pointer"></div>
+                                                    </div>
+                                                        : null}     
+                                                </div>                                         
+                                            </SocialDivAthletics>
+                                        </SocialDivMainAthletics>
+                                    </TitleSocialDivAthletics>
+                            </BlogSectionAthletic>
+
+                            <BlogSectionGame>
+                                <TitleSocialDivGames>
+                                        <h1>Games <span>:P</span></h1>
+                                        <p>{games}</p>
+                                        
+                                        <SocialDivMainGames>
+                                            <SocialDivGames>
+                                                <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://discord.com/" network = "discord" fgColor = "white" style = {{height: 75, width: 75}} />
+                                                <h1>REALLY!?#4206</h1>
+                                                <div className = 'copy'>
+                                                    <CopyToClipboard onCopy={onCopy} text={valueDiscord}>
+                                                    <CopyIcon  onClick={handleButtonClickDiscord}/>
+                                                    </CopyToClipboard>
+                                                    {copied && isAlertVisibleDiscord ? 
+                                                    <div>
+                                                        <div class="bubble">Copied</div>
+                                                        <div class="pointer"></div>
+                                                    </div>
+                                                        : null}   
+                                                </div>                                          
+                                            </SocialDivGames>
+                                        </SocialDivMainGames>
+                                    </TitleSocialDivGames>
+                            </BlogSectionGame>
+
                         </BlogSection>
 
                     </BlogWrapper>
@@ -40,7 +306,7 @@ export default Blog
 
 //main container 
 const BlogContainer = styled.div`
-    height: 2000px;
+    height: 2100px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -63,6 +329,7 @@ const BlogH1 = styled.h1`
     letter-spacing: 1.4px; 
     font-style: italic;
     display: flex;
+    font-family: 'OktaNeueBold', sans-serif;
 
     @media screen and (max-width: 768px){
         top: 0;
@@ -90,12 +357,17 @@ const BlogSection = styled.div`
 //all sections to blog 
 //blog1
 const BlogSectionCoding = styled.div`
-    height: 400px;
+    height: 550px;
     width: 720px;
     background: ${colors.mainPurple};
     border-radius: 15px;
-
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 `
+
+
+
 
 const BlogSectionMusic = styled.div`
     height: 800px;
@@ -103,47 +375,398 @@ const BlogSectionMusic = styled.div`
     background: ${colors.mainPurple};
     border-radius: 15px;
     margin-top: 2rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 
 `
 
 const BlogSectionAcademic = styled.div`
-    height: 450px;
+    height: 490px;
     width: 720px;
     background: ${colors.mainPurple};
     border-radius: 15px;
     margin-top: 2rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 
 `
 
 //blog 2
-const BlogSectionAthletic = styled.div`
-    height: 350px;
-    width: 720px;
-    background: ${colors.mainPurple};
-    border-radius: 15px;
-
-`
-
-const BlogSectionGame = styled.div`
-    height: 600px;
-    width: 720px;
-    background: ${colors.mainPurple};
-    border-radius: 15px;
-    margin-top: 2rem;
-
-
-`
 
 const BlogSectionPersonality = styled.div`
-    height: 700px;
+    height: 810px;
     width: 720px;   
     background: ${colors.mainPurple};
     border-radius: 15px;
-    margin-top: 2rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+`
 
+const BlogSectionAthletic = styled.div`
+    height: 470px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 
 `
 
 
+const BlogSectionGame = styled.div`
+    height: 560px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+`
 
+
+//copy icon 
+const CopyIcon = styled(AiOutlineCopy)`
+    color: white;
+    width: 30px;
+    height 30px;
+    cursor: pointer;
+    position: fixed;
+    
+    &:hover{
+        scale: 1.1;
+    }
+`
+
+
+//coding boxes 
+const TitleSocialDivCoding = styled.div`
+    height: 460px;
+    width: 620px; 
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+    }
+
+    p{
+        color: white;
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+`
+
+const SocialDivMainCoding = styled.div`
+    height: 150px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+const SocialDivCoding = styled.div`
+    width: 500px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    
+
+    h1{
+        font-family: 'OktaNeueLight', sans-serif;
+        position: relative;
+        margin-left: 2rem;
+        top: 0.7rem;
+    }
+
+`
+
+//personality boxes 
+const TitleSocialDivPersonality = styled.div`
+    height: 720px;
+    width: 620px; 
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+    }
+
+    p{
+        color: white;
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+`
+
+const SocialDivMainPersonality = styled.div`
+    height: 150px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+`
+
+const SocialDivPersonality = styled.div`    
+    width: 500px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    
+    
+
+    h1{
+        font-family: 'OktaNeueLight', sans-serif;
+        position: relative;
+        margin-left: 2rem;
+        top: 0.7rem;
+    }
+
+`
+
+
+//athletics boxes
+const TitleSocialDivAthletics  = styled.div`
+    height: 380px;
+    width: 620px; 
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+    }
+
+    p{
+        color: white;
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+`
+
+const SocialDivMainAthletics = styled.div`
+    height: 150px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+const SocialDivAthletics = styled.div`
+    width: 500px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    
+
+    h1{
+        font-family: 'OktaNeueLight', sans-serif;
+        position: relative;
+        margin-left: 2rem;
+        top: 0.7rem;
+    }
+
+`
+
+//Games boxes
+const TitleSocialDivGames = styled.div`
+    height: 480px;
+    width: 620px; 
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+    }
+
+    p{
+        color: white;
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+`
+
+const SocialDivMainGames = styled.div`
+    height: 150px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+const SocialDivGames = styled.div`
+    width: 500px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    
+
+    h1{
+        font-family: 'OktaNeueLight', sans-serif;
+        position: relative;
+        margin-left: 2rem;
+        top: 0.7rem;
+    }
+
+`
+
+//academics boxes
+const TitleSocialDivAcademics = styled.div`
+    height: 430px;
+    width: 620px; 
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+    }
+
+    p{
+        color: white;
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+`
+
+const SocialDivMainAcademics = styled.div`
+    height: 150px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+const SocialDivAcademics = styled.div`
+    width: 500px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    
+
+    h1{
+        font-family: 'OktaNeueLight', sans-serif;
+        position: relative;
+        margin-left: 2rem;
+        top: 0.7rem;
+    }
+
+`
+
+//Music boxes 
+const TitleSocialDivMusic = styled.div`
+    height: 720px;
+    width: 620px; 
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+    }
+
+    h2{
+        font-family: "OktaNeueLight", sans-serif;
+        color: white;
+        font-weight: bold;
+        font-size: 1.7rem;
+        line-height: 2.9rem;
+    }
+
+    p{
+        color: ${colors.secondaryPurple};
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+`
+
+const SocialDivMainMusic = styled.div`
+    height: 325px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-top: 1rem;
+`
+
+const MusicDetails = styled.div`
+    width: 290px;
+    height: 290px;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    border: 1px solid black;
+
+    h3{
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        color: white;
+        font-size: 1.5rem;
+
+    }
+
+    h4{
+        font-family: "OktaNeueLight", sans-serif;
+        color: ${colors.mainPurple};
+        font-size: 1.5rem;
+        position: relative;
+        padding-top: 0;
+        bottom: 1.1rem;
+
+    }
+`
 

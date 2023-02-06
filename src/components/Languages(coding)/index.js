@@ -114,7 +114,7 @@ const LanguageWrapper = styled.div`
 const LanguageRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr); 
-    grid-column-gap: 4rem;
+    grid-column-gap: 5rem;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )}; 
     width: 100%;
@@ -129,6 +129,8 @@ const Column1 = styled.div`
     margin-bottom: 1rem; 
     padding: 0 15px; 
     grid-area: col1; 
+    position: relative;
+    left: 1rem;
 
     
 `
@@ -138,6 +140,7 @@ const Column2 = styled.div`
     margin-top: 6rem;
     padding: 0 15px; 
     grid-area: col2; 
+
 `
 
 //text wrapper

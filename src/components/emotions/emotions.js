@@ -23,7 +23,7 @@ const Emotions = ({lightBg, id}) => {
                             
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
-                                <EmotionText>Current Status:</EmotionText>
+                                <EmotionText>Status?</EmotionText>
                                     <div class="face">
                                         <div class="eye"></div>
                                         <div class="eye right"></div>
@@ -38,7 +38,7 @@ const Emotions = ({lightBg, id}) => {
 
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
-                                    <EmotionText style ={{paddingLeft: '0'}}>Current Workload:</EmotionText>
+                                    <EmotionText style ={{paddingLeft: '0'}}>Workload?</EmotionText>
                                     <div class="faceMeh">
                                             <div class="eye"></div>
                                             <div class="eye right"></div>
@@ -49,7 +49,7 @@ const Emotions = ({lightBg, id}) => {
 
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
-                                    <EmotionText>Current Bicthes:</EmotionText>
+                                    <EmotionText>Love life?</EmotionText>
                                         <div class="faceSad">
                                             <div class="eye"></div>
                                             <div class="eye right"></div>
@@ -150,7 +150,7 @@ const EmotionSecondBlock = styled.div`
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 350px;
+    width: 280px;
     height: 50px;
     
 `
