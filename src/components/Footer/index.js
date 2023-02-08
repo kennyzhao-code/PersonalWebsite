@@ -114,7 +114,7 @@ export const SocialIcons = styled.div`
     align-items: center;
     width: 120px; 
     margin-bottom: 30px;
-    margin-right: 20px;
+    margin-right: 70px;
 
 `
 

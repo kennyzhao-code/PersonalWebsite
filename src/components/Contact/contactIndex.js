@@ -1,17 +1,49 @@
-import React, { useRef } from 'react';
+import React, { useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import {colors} from '../globals/colors';
 import FontStyles from '../Fonts/fontStyles';
 
 //fix emailjs
-const ContactUs = ({lightBg, id, topLine, darkText, description}) => {
+const ContactUs = ({lightBg, id, topLine, description, quote}) => {
+  
+/*
+//checking for empty entires 
+  const checkForm = (form) => {
+    if (form.user_name.value === "") {
+      //alert("Please enter your name");
+      form.user_name.focus();
+      return false;
+    }
+    if (form.user_email.value === "") {
+      //alert("Please enter your email");
+      form.user_email.focus();
+      return false;
+    }
+    if (form.message.value === "") {
+      //alert("Please enter your message");
+      form.message.focus();
+      return false;
+    }
+    return true;
+  }
+
+  //make warning message disspear after a certain amount of time
+  const [isAlertVisibleForm, setIsAlertVisibleForm] = useState(false);
+    const handleButtonClickForm = () => {
+        setIsAlertVisibleForm(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleForm(false);}, 4000);
+  
+*/
   const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(
+      e.preventDefault();
+      
+      emailjs.sendForm(
         'service_0vs4pmo', 
         'template_r5x6iag', 
         form.current, 
@@ -25,6 +57,9 @@ const ContactUs = ({lightBg, id, topLine, darkText, description}) => {
       }, (error) => {
           console.log(error.text);
       });
+    
+
+   
   };
 
   return (
@@ -37,37 +72,36 @@ const ContactUs = ({lightBg, id, topLine, darkText, description}) => {
             <ContactFormSection>
 
                 <ContactTitle>{topLine}</ContactTitle>
-                <ContactDescription>Feel free to send us an email or message us at any of our social media platforms!</ContactDescription>
+                <ContactDescription>{description}</ContactDescription>
+                <ContactQuote>{quote}</ContactQuote>
 
             </ContactFormSection>
 
-            <ContactFormSection>
+            <ContactFormSectionForm>
 
                 <StyledContactForm>
                     <form ref={form} onSubmit={sendEmail}>
 
                         <label>Name
-                            <input type="text" name="user_name" />
+                            <input type="text" name="user_name" required/>
                         </label>
 
-                        <label>Email
-                            <input type="email" name="user_email" />
+                        <label style = {{marginTop: "1rem"}}>Email
+                            <input type="email" name="user_email" required/>
                         </label>
 
           
-                        <label>Message
-                            <textarea name="message" />
+                        <label style = {{marginTop: "1rem"}}>Message
+                            <textarea name="message" required/>
                         </label>
 
-                        <label>
-                            <input type="submit" value="Send" />
-                        </label>
-
-
+                          <label>
+                              <input type="submit" value="Send" />
+                          </label>
                     </form>
                 </StyledContactForm>
 
-            </ContactFormSection>
+            </ContactFormSectionForm>
 
 
     </ContactFormBox>
@@ -85,7 +119,7 @@ const MainDiv = styled.div`
     justify-content: center;
     flex-direction: column;
     display: flex;
-    height: 1200px;
+    height: 1000px;
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
     @media screen and (max-width: 768px) {
         height: 1500px;
@@ -97,9 +131,13 @@ const MainDiv = styled.div`
 
 const ContactFormSection = styled.div`
     height: 100%;
-    border: 1px solid white;
 `
 
+const ContactFormSectionForm = styled.div`
+    height: 100%;
+    display: flex;
+    align-items: center;
+`
 
 const ContactFormDiv = styled.div`
     margin-top: 5rem;
@@ -120,7 +158,7 @@ const ContactFormBox = styled.div`
 
 `
 const ContactTitle = styled.h1`
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: 'OktaNeueBold', sans-serif;
     font-weight: 700;
     position: relative;
@@ -128,14 +166,22 @@ const ContactTitle = styled.h1`
 `
 
 const ContactDescription = styled.p`
+  font-family: 'OktaNeueLight', sans-serif;
     color: white;
     font-size: 1.8rem;
     margin-top: 2rem;
     position: relative;
-    font-weight: 700;    
+    font-weight: bold;    
     `
-    
-
+const ContactQuote = styled.p`
+    font-family: 'OktaNeueLight', sans-serif;
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    position: relative;
+    font-weight: bold; 
+    font-style: italic;   
+    `
 
 
 const StyledContactForm = styled.div`
@@ -143,12 +189,14 @@ const StyledContactForm = styled.div`
   display: flex;
   font-family: 'OktaNeueLight', sans-serif;
   font-weight: bold;
+  position: relative;
   form {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
     font-size: 16px;
+    margin-top: 1.5rem;
 
     input {
       width: 690px;
@@ -160,7 +208,7 @@ const StyledContactForm = styled.div`
       background: ${colors.secondaryBlue};
 
       &:focus {
-        border: 2px solid ${colors.mainRed};
+        border: 2px solid ${colors.mainPurple};
       }
     }
     textarea {
@@ -174,7 +222,7 @@ const StyledContactForm = styled.div`
       border: 2px solid white;
       background: ${colors.secondaryBlue};
       &:focus {
-        border: 2px solid ${colors.mainRed};
+        border: 2px solid ${colors.mainPurple};
       }
     }
 
@@ -196,10 +244,14 @@ const StyledContactForm = styled.div`
       font-size: 1.3rem;
       border-radius: 10px;
       background: white;
+      position: absolute;
+      right: 0;
    
 
       &:hover {
-        
+        scale: 1.05;
+        transition: all 0.3s ease;
+        color: ${colors.secondaryBlue};
       }
     }
   }

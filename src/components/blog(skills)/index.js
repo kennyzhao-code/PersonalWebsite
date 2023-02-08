@@ -5,8 +5,16 @@ import styled from "styled-components"
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { SocialIcon } from 'react-social-icons'
 import { AiOutlineCopy } from "react-icons/ai"
-//import song from '../../images/doodle.mp3'
+import AudioPlayer from 'react-modern-audio-player';
+import song from '../../images/doodle.mp3'
 import './icons.css'
+
+const playList = [
+    {
+      src: song,
+      id: 1,
+    },
+  ]
 
 const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics, personality}) => {
     
@@ -138,6 +146,33 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                         <MusicDetails>
                                             <h3>Doodle (feat. Yerin Baek)</h3>
                                             <h4>Punchnello</h4>
+                                            <AudioPlayer
+                                                playList={playList}
+                                                audioInitialState={{
+                                                volume: 0.5,
+                                                curPlayId: 1,
+                                                }}
+                                                placement={{
+                                                interface: {
+                                                    templateArea: {
+                                                    trackTimeDuration: "row1-5",
+                                                    progress: "row1-1",
+                                                    playButton: "row2-1",
+                                                    repeatType: "row1-7",
+                                                    volume: "row1-8",
+                                                    },
+                                                },
+                                                }}
+                                                activeUI={{
+                                                progress: true,
+                                                trackTimeDuration: false,
+                                                playButton: true,
+                                                repeatType: false,
+                                                volume: false,
+                                                prevNnext: true,
+                                                }}
+                                            />
+                                            <h5>@kenny-zhao on <span style = {{color: '#1DB954'}}>spotify</span></h5>
 
                                         </MusicDetails>
                                     
@@ -749,13 +784,14 @@ const MusicDetails = styled.div`
     height: 290px;
     padding-top: 1rem;
     padding-left: 0.5rem;
-    border: 1px solid black;
 
     h3{
         font-family: "OktaNeueLight", sans-serif;
         font-weight: bold;
         color: white;
         font-size: 1.5rem;
+        margin-top: 2rem;
+        padding-left: 0.4rem;
 
     }
 
@@ -766,7 +802,20 @@ const MusicDetails = styled.div`
         position: relative;
         padding-top: 0;
         bottom: 1.1rem;
+        padding-left: 0.4rem;
+
 
     }
+
+    h5{
+        font-family: "OktaNeueLight", sans-serif;
+        color: ${colors.mainPurple};
+        font-size: 1.3rem;
+        padding-left: 0.5rem;
+
+
+    }
+
+
 `
 

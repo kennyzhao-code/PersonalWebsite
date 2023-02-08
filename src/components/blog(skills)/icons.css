@@ -40,3 +40,15 @@
 	margin-top: -25px;
 	position: relative;
 }
+
+
+/*Audio styles*/
+#rm-audio-player{
+    margin-bottom: 1rem;
+    position: relative;
+    --rm-audio-player-interface-container: #4F457A;
+    --rm-audio-player-progress-bar: white;
+    --rm-audio-player-progress-bar-background:#897CBF;
+    
+
+}
