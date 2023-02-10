@@ -1,99 +1,1240 @@
-import React from 'react'
-import { BlogContainer, BlogH1, BlogWrapper, BlogIcon} from './blogElements'
-import './blogElements.css'
-import icon1 from '../../images/pic1.svg'
-import icon2 from '../../images/pic2.svg'
-import icon3 from '../../images/pic3.svg'
-import icon4 from '../../images/pic4.svg'
-import icon5 from '../../images/pic5.svg'
-import icon6 from '../../images/pic6.svg'
+import React, {useCallback, useState, useEffect} from 'react'
+import Aos from "aos"
+import { StaticImage } from 'gatsby-plugin-image'
+import { colors } from '../globals/colors'
+import styled from "styled-components"
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { SocialIcon } from 'react-social-icons'
+import { AiOutlineCopy } from "react-icons/ai"
+//import AudioPlayer from 'react-modern-audio-player';
+import song from '../../images/doodle.mp3'
+import './icons.css'
 
-const Blog = () => {
+
+const playList = [
+    {
+      src: song,
+      id: 1,
+    },
+  ]
+
+const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics, personality}) => {
+
+
+    //controls fade in animation time 
+    useEffect(() => {
+        Aos.init({duration: 1000}); 
+    }, []); 
+    
+    
+    //functions to make copied text dissapear 
+    const [isAlertVisibleGit, setIsAlertVisibleGit] = useState(false);
+    const handleButtonClickGit = () => {
+        setIsAlertVisibleGit(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleGit(false);}, 4000);
+
+    const [isAlertVisibleMac, setIsAlertVisibleMac] = useState(false);
+    const handleButtonClickMac = () => {
+        setIsAlertVisibleMac(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleMac(false);}, 4000);
+
+    const [isAlertVisibleInsta, setIsAlertVisibleInsta] = useState(false);
+    const handleButtonClickInsta = () => {
+        setIsAlertVisibleInsta(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleInsta(false);}, 4000);
+
+        
+    const [isAlertVisibleSnap, setIsAlertVisibleSnap] = useState(false);
+    const handleButtonClickSnap = () => {
+        setIsAlertVisibleSnap(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleSnap(false);}, 4000);
+
+    const [isAlertVisibleTwitter, setIsAlertVisibleTwitter] = useState(false);
+    const handleButtonClickTwitter = () => {
+        setIsAlertVisibleTwitter(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleTwitter(false);}, 4000);
+
+    const [isAlertVisibleDiscord, setIsAlertVisibleDiscord] = useState(false);
+    const handleButtonClickDiscord = () => {
+        setIsAlertVisibleDiscord(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleDiscord(false);}, 4000);
+
+    const [isAlertVisibleLinkedin, setIsAlertVisibleLinkedin] = useState(false);
+    const handleButtonClickLinkedin = () => {
+        setIsAlertVisibleLinkedin(true); 
+    }
+
+    setTimeout(() => {
+        setIsAlertVisibleLinkedin(false);}, 4000);
+
+    //copy clipboard functions 
+    const [valueGit] = useState("kennyzhao-code");
+    const [valueInsta] = useState("kennyzhao_"); 
+    const [valueSnap] = useState("spider_boy2004");
+    const [valueTwitter] = useState("KennyZhao20");
+    const [valueInstaMac] = useState("mcmastersports");
+    const [valueDiscord] = useState("REALLY!?#4206");
+    const [valueLinkedin] = useState("Kenny Zhao");
+
+    const [copied, setCopied] = useState(false);
+    const onCopy = useCallback(() => {
+        setCopied(true);
+    }, [])
+
+
     return (
-        <BlogContainer name = 'skillsHobbies' id ="services">
+        <BlogContainer name = 'hobbies' id ={id} lightBg = {lightBg}>
+            <BlogSecondaryContainer>
 
-            <BlogH1 data-aos-once='true' data-aos="fade-up">My skills and hobbies ⎯⎯</BlogH1>
+                <BlogH1 data-aos-once='true' data-aos="fade-up">{topLine}</BlogH1>
 
-                <BlogWrapper data-aos-once='true' data-aos="fade-up">
+                    <BlogWrapper data-aos-once='true' data-aos="fade-up">
 
-                    <div style = {{background: '#88A1BD', borderRadius: '30px' }} className = "card">
-                        <BlogIcon src={icon1}/>
-                        
+                        <BlogSection>
 
-                        <div className = "overlay">
+                            <BlogSectionCoding data-aos-once='true' data-aos="fade-up">
+                                <TitleSocialDivCoding>
+                                    <h1>Coding <span>(duh)</span></h1>
+                                    <p>{coding}</p>
+                                    
+                                    <SocialDivMainCoding>
+                                        <SocialDivCoding>
+                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://github.com/kennyzhao-code" network = "github" bgColor="black" fgColor = "white" style = {{height: 75, width: 75}} />
+                                            <h1>kennyzhao-code</h1>
+                                            <div className = 'copy'>
+                                                <CopyToClipboard onCopy={onCopy} text={valueGit}>
+                                                    <CopyIcon  onClick={handleButtonClickGit}/>
+                                                </CopyToClipboard>
+                                                {copied && isAlertVisibleGit ? 
+                                                <div>
+                                                    <div class="bubble">Copied</div>
+                                                    <div class="pointer"></div>
+                                                </div>
+                                                    : null} 
+                                            </div> 
+                                        </SocialDivCoding>
+                                    </SocialDivMainCoding>
+                                </TitleSocialDivCoding>
+                            </BlogSectionCoding>
 
-                            <div className ="title"> [Coding] </div>
-                            <div className = "text"> I have been learning about computer science for over 4 years and currently I am working on multiple projects from game development, to creating more websites for other extracurriculars that I am proud to be representing. </div>
+                            <BlogSectionMusic data-aos-once='true' data-aos="fade-up">
+                                <TitleSocialDivMusic>
+                                    <h1>Music <span>:3</span></h1>
+                                    <h2>{music}</h2>
+                                    <p>My current favorite song!</p>
+                                    
+                                    <SocialDivMainMusic>
+                                        <StaticImage
+                                            src= '../../images/doodle.jpg'
+                                            alt="doodleAlbum"
+                                            placeholder="blurred"
+                                            formats={["auto", "webp", "avif"]}
+                                            className = "albumCover"
+                                            style = {{borderRadius: '10px'}}
+                                        />  
 
-                        </div>
-                    </div>
+                                        <MusicDetails>
+                                            <h3>Doodle (feat. Yerin Baek)</h3>
+                                            <h4>Punchnello</h4>
+                                          {/*  <AudioPlayer
+                                                playList={playList}
+                                                audioInitialState={{
+                                                volume: 0.5,
+                                                curPlayId: 1,
+                                                }}
+                                                placement={{
+                                                interface: {
+                                                    templateArea: {
+                                                    trackTimeDuration: "row1-5",
+                                                    progress: "row1-1",
+                                                    playButton: "row2-1",
+                                                    repeatType: "row2-2",
+                                                    volume: "row1-8",
+                                                    },
+                                                },
+                                                }}
+                                                activeUI={{
+                                                progress: true,
+                                                trackTimeDuration: false,
+                                                playButton: true,
+                                                repeatType: false,
+                                                volume: false,
+                                                prevNnext: true,
+                                                }}
+                                            /> */}
+                                            <h5>@kenny-zhao on <a href = "https://open.spotify.com/user/kennyzhao2004" target = "_blank" rel='noreferrer' style = {{color: '#1DB954'}}>spotify</a></h5>
 
-                    <div style = {{background: '#ff6961', borderRadius: '30px' }} className = "card">
-                        <BlogIcon src={icon2}/>
-                        
+                                        </MusicDetails>
+                                    
+                                    </SocialDivMainMusic>
 
-                        <div className = "overlay">
 
-                            <div className ="title"> [Athletics] </div>
-                            <div className = "text"> I love being active and playing different sports. As of now, I do my best to be active everyday by going out for walks, hitting the gym, or playing sports such as basketball. </div>
+                                </TitleSocialDivMusic>
+                            </BlogSectionMusic>
 
-                        </div>
-                    </div>
 
-                    <div style = {{background: '#FAC898', borderRadius: '30px' }} className = "card">
-                        <BlogIcon src={icon3}/>
-                        
+                            <BlogSectionAcademic data-aos-once='true' data-aos="fade-up">
+                                <TitleSocialDivAcademics>
+                                        <h1>Academics <span>&gt;:)</span></h1>
+                                        <p>{academics}</p>
+                                        
+                                        <SocialDivMainAcademics>
+                                            <SocialDivAcademics>
+                                                <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.linkedin.com/in/kenny-zhao-283b73213/" network = "linkedin" fgColor = "white" style = {{height: 75, width: 75}} />
+                                                <h1>Kenny Zhao</h1>
+                                                <div className = 'copy'>
+                                                    <CopyToClipboard onCopy={onCopy} text={valueLinkedin}>
+                                                        <CopyIcon  onClick={handleButtonClickLinkedin}/>
+                                                    </CopyToClipboard>
+                                                    {copied && isAlertVisibleLinkedin ? 
+                                                    <div>
+                                                        <div class="bubble">Copied</div>
+                                                        <div class="pointer"></div>
+                                                    </div>
+                                                        : null} 
+                                                </div>                                             
+                                            </SocialDivAcademics>
+                                        </SocialDivMainAcademics>
+                                    </TitleSocialDivAcademics>
+                            </BlogSectionAcademic>
 
-                        <div className = "overlay">
+                        </BlogSection>
 
-                            <div className ="title"> [Music] </div>
-                            <div className = "text"> Music plays a big role in my life. During my time in high school, I use to play the bass clarinet for my school band. As of now, I occasionally play my guitar and piano whenever I want to enjoy some music or even listen to it. </div>
+                        <BlogSection>
 
-                        </div>
-                    </div>
+                            <BlogSectionPersonality data-aos-once='true' data-aos="fade-up">
+                                <TitleSocialDivPersonality>
+                                    <h1>Personality <span>&lt;3</span></h1>
+                                    <p>{personality}</p>
+                                        
+                                    <SocialDivMainPersonality  style = {{borderRadius: '15px 15px 0 0'}}>
+                                        <SocialDivPersonality>
+                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.instagram.com/kennyzhao_/" network = "instagram" fgColor='white' style = {{height: 75, width: 75}} />
+                                            <h1>kennyzhao_</h1>
+                                            <div className = 'copy'>
+                                                <CopyToClipboard onCopy={onCopy} text={valueInsta}>
+                                                    <CopyIcon  onClick={handleButtonClickInsta}/>
+                                                </CopyToClipboard>
+                                                {copied && isAlertVisibleInsta ? 
+                                                <div>
+                                                    <div class="bubble">Copied</div>
+                                                    <div class="pointer"></div>
+                                                </div>
+                                                    : null}  
+                                            </div>
+                                        </SocialDivPersonality>
+                                    </SocialDivMainPersonality>
 
-                    <div style = {{background: '#FDFD96', borderRadius: '30px'  }} className = "card">
-                        <BlogIcon src={icon4}/>
-                        
 
-                        <div className = "overlay">
 
-                            <div className ="title"> [Games] </div>
-                            <div className = "text"> Video games continue to be one of my favorite hobbies to relax and chill with friends. At the moment, I am not playing much because of academics, but if you ever are down to play, just add me on discord: REALLY!? #4206 </div>
+                                    <SocialDivMainPersonality  style = {{borderRadius: '0'}}>
+                                        <SocialDivPersonality>
+                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://t.snapchat.com/EAyH5MmN" network = "snapchat" fgColor = 'white' style = {{height: 75, width: 75}} />
+                                            <h1>spider_boy2004</h1>
+                                            <div className = 'copy'>
+                                                <CopyToClipboard onCopy={onCopy} text={valueSnap}>
+                                                    <CopyIcon  onClick={handleButtonClickSnap}/>
+                                                </CopyToClipboard>
+                                                {copied && isAlertVisibleSnap ? 
+                                                <div>
+                                                    <div class="bubble">Copied</div>
+                                                    <div class="pointer"></div>
+                                                </div>
+                                                    : null}   
+                                            </div>                                       
+                                        </SocialDivPersonality>
+                                    </SocialDivMainPersonality>
 
-                        </div>
-                    </div>
+                                    <SocialDivMainPersonality  style = {{borderRadius: '0 0 15px 15px'}}>
+                                        <SocialDivPersonality>
+                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://twitter.com/KennyZhao20" network = "twitter" fgColor = "white" style = {{height: 75, width: 75}} />
+                                            <h1>KennyZhao20</h1>
+                                            <div className = 'copy'>
+                                                <CopyToClipboard onCopy={onCopy} text={valueTwitter}>
+                                                    <CopyIcon  onClick={handleButtonClickTwitter}/>
+                                                </CopyToClipboard>
+                                                {copied && isAlertVisibleTwitter ? 
+                                                <div>
+                                                    <div class="bubble">Copied</div>
+                                                    <div class="pointer"></div>
+                                                </div>
+                                                    : null} 
+                                            </div>                                        
+                                        </SocialDivPersonality>
+                                    </SocialDivMainPersonality>
 
-                    <div style = {{background: '#BEE5B0', borderRadius: '30px' }} className = "card">
-                        <BlogIcon src={icon5}/>
-                      
+                                        
+                                </TitleSocialDivPersonality>
+                            </BlogSectionPersonality>
 
-                        <div className = "overlay">
+                            <BlogSectionAthletic data-aos-once='true' data-aos="fade-up">
+                                <TitleSocialDivAthletics>
+                                        <h1>Athletics <span>:0</span></h1>
+                                        <p>{athletics}</p>
+                                        
+                                        <SocialDivMainAthletics>
+                                            <SocialDivAthletics>
+                                                <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.instagram.com/mcmastersports/" network = "instagram" fgColor = "white" style = {{height: 75, width: 75}} />
+                                                <h1>mcmastersports</h1>
+                                                <div className = 'copy'>
+                                                    <CopyToClipboard onCopy={onCopy} text={valueInstaMac}>
+                                                    <CopyIcon  onClick={handleButtonClickMac}/>
+                                                    </CopyToClipboard>
+                                                    {copied && isAlertVisibleMac ? 
+                                                    <div>
+                                                        <div class="bubble">Copied</div>
+                                                        <div class="pointer"></div>
+                                                    </div>
+                                                        : null}     
+                                                </div>                                         
+                                            </SocialDivAthletics>
+                                        </SocialDivMainAthletics>
+                                    </TitleSocialDivAthletics>
+                            </BlogSectionAthletic>
 
-                            <div className ="title"> [Personality] </div>
-                            <div className = "text"> I would say I am a very outgoing and kind person. If you ever do meet me in person, I would love to talk or even shoot me a private message on one of my socials.</div>
-                            
-                        </div>
-                    </div>
+                            <BlogSectionGame data-aos-once='true' data-aos="fade-up">
+                                <TitleSocialDivGames>
+                                        <h1>Games <span>:P</span></h1>
+                                        <p>{games}</p>
+                                        
+                                        <SocialDivMainGames>
+                                            <SocialDivGames>
+                                                <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://discord.com/" network = "discord" fgColor = "white" style = {{height: 75, width: 75}} />
+                                                <h1>REALLY!?#4206</h1>
+                                                <div className = 'copy'>
+                                                    <CopyToClipboard onCopy={onCopy} text={valueDiscord}>
+                                                    <CopyIcon  onClick={handleButtonClickDiscord}/>
+                                                    </CopyToClipboard>
+                                                    {copied && isAlertVisibleDiscord ? 
+                                                    <div>
+                                                        <div class="bubble">Copied</div>
+                                                        <div class="pointer"></div>
+                                                    </div>
+                                                        : null}   
+                                                </div>                                          
+                                            </SocialDivGames>
+                                        </SocialDivMainGames>
+                                    </TitleSocialDivGames>
+                            </BlogSectionGame>
 
-                    <div style = {{background: '#C3B1E1', borderRadius: '30px' }} className = "card">
-                        <BlogIcon src={icon6}/>
-                        
+                        </BlogSection>
 
-                        <div className = "overlay">
+                    </BlogWrapper>
+            </BlogSecondaryContainer>
 
-                            <div className ="title"> [Academics] </div>
-                            <div className = "text"> Academics, especially competitions are where I love being in as it forces me to become better and pushes me past my limits. As of now, I am preparing for future events, including hackathons, competitions and etc.</div>
-
-                        </div>
-                    </div>
-
-                   
-
-                </BlogWrapper>
-            
         </BlogContainer>
     )
 }
 
 export default Blog
+
+
+//main container 
+const BlogContainer = styled.div`
+    height: 2100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
+    justify-content: center;
+    align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        height: 2320px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        height: 4600px;
+    }
+`
+
+//secondary container
+const BlogSecondaryContainer = styled.div`
+    height: 100%;
+    width: 1510px;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 1200px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 1050px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
+`
+
+const BlogH1 = styled.h1`
+    color: #897CBF; 
+    font-size: 60px; 
+    position: relative;
+    font-weight: 700; 
+    width: 100%;
+    letter-spacing: 1.4px; 
+    font-style: italic;
+    display: flex;
+    font-family: 'OktaNeueBold', sans-serif;
+
+
+`
+//grid-template-columns: 1fr, the amount of fr will determine the items in each row
+const BlogWrapper = styled.div`
+    margin: 0 auto; 
+    margin-top: 2rem;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-column-gap: 4rem;
+    grid-row-gap: 1.5rem;
+    align-items: center; 
+    padding: 0 50px;     
+    justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        grid-column-gap: 2rem;
+        transition: 0.375s;
+
+    }
+
+    @media screen and (max-width: 1100px){
+        grid-template-columns: 1fr;
+        grid-row-gap: 10.5rem;
+        transition: 0.375s;
+
+    }
+
+`
+
+const BlogSection = styled.div`
+    height: 2000px;
+    transition: 0.375s;
+
+`
+
+//all sections to blog 
+//blog1
+const BlogSectionCoding = styled.div`
+    height: 550px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: 0.375s;
+
+
+    
+    @media screen and (max-width: 1700px){
+        width: 580px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 620px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
+`
+
+
+
+
+const BlogSectionMusic = styled.div`
+    height: 800px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        width: 580px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 900px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
+
+`
+
+const BlogSectionAcademic = styled.div`
+    height: 490px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        width: 580px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 550px;
+    }
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
+
+`
+
+//blog 2
+
+const BlogSectionPersonality = styled.div`
+    height: 810px;
+    width: 720px;   
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        width: 580px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 850px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
+`
+
+const BlogSectionAthletic = styled.div`
+    height: 470px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        width: 580px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 600px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
+
+`
+
+
+const BlogSectionGame = styled.div`
+    height: 560px;
+    width: 720px;
+    background: ${colors.mainPurple};
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 580px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 620px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
+`
+
+
+//copy icon 
+const CopyIcon = styled(AiOutlineCopy)`
+    color: white;
+    width: 30px;
+    height 30px;
+    cursor: pointer;
+    position: fixed;
+    
+    &:hover{
+        scale: 1.1;
+    }
+
+`
+
+
+//coding boxes 
+const TitleSocialDivCoding = styled.div`
+    height: 460px;
+    width: 620px; 
+    transition: 0.375s;
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+
+    }
+
+    p{
+        color: white;
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 530px;
+    }
+
+`
+
+const SocialDivMainCoding = styled.div`
+    height: 150px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 130px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 100px;
+    }
+`
+
+const SocialDivCoding = styled.div`
+    width: 500px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transition: 0.375s;
+    
+
+    h1{
+        font-family: 'OktaNeueLight', sans-serif;
+        position: relative;
+        margin-left: 2rem;
+        top: 0.7rem;
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.6rem;
+        }
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 380px;
+    }
+
+`
+
+//personality boxes 
+const TitleSocialDivPersonality = styled.div`
+    height: 720px;
+    width: 620px; 
+    transition: 0.375s;
+
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+    }
+
+    p{
+        color: white;
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 680px;
+    }
+
+
+`
+
+const SocialDivMainPersonality = styled.div`
+    height: 150px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 140px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 100px;
+    }
+
+`
+
+const SocialDivPersonality = styled.div`    
+    width: 500px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transition: 0.375s;
+
+    
+    
+
+    h1{
+        font-family: 'OktaNeueLight', sans-serif;
+        position: relative;
+        margin-left: 2rem;
+        top: 0.7rem;
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.6rem;
+        }
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 380px;
+    }
+
+`
+
+
+//athletics boxes
+const TitleSocialDivAthletics  = styled.div`
+    height: 380px;
+    width: 620px; 
+    transition: 0.375s;
+
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+    }
+
+    p{
+        color: white;
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 410px;
+    }
+
+`
+
+const SocialDivMainAthletics = styled.div`
+    height: 150px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 140px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 100px;
+    }
+`
+
+const SocialDivAthletics = styled.div`
+    width: 500px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transition: 0.375s;
+
+    
+
+    h1{
+        font-family: 'OktaNeueLight', sans-serif;
+        position: relative;
+        margin-left: 2rem;
+        top: 0.7rem;
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.6rem;
+        }
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 380px;
+    }
+
+
+`
+
+//Games boxes
+const TitleSocialDivGames = styled.div`
+    height: 480px;
+    width: 620px; 
+    transition: 0.375s;
+
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+    }
+
+    p{
+        color: white;
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 490px;
+    }
+
+`
+
+const SocialDivMainGames = styled.div`
+    height: 150px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 140px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 100px;
+    }
+`
+
+const SocialDivGames = styled.div`
+    width: 500px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transition: 0.375s;
+
+    
+
+    h1{
+        font-family: 'OktaNeueLight', sans-serif;
+        position: relative;
+        margin-left: 2rem;
+        top: 0.7rem;
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.6rem;
+        }
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 380px;
+    }
+
+`
+
+//academics boxes
+const TitleSocialDivAcademics = styled.div`
+    height: 430px;
+    width: 620px; 
+    transition: 0.375s;
+
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+    }
+
+    p{
+        color: white;
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 490px;
+    }
+
+`
+
+const SocialDivMainAcademics = styled.div`
+    height: 150px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 130px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 100px;
+    }
+`
+
+const SocialDivAcademics = styled.div`
+    width: 500px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transition: 0.375s;
+
+    
+
+    h1{
+        font-family: 'OktaNeueLight', sans-serif;
+        position: relative;
+        margin-left: 2rem;
+        top: 0.7rem;
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.6rem;
+        }
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 380px;
+    }
+
+`
+
+//Music boxes 
+const TitleSocialDivMusic = styled.div`
+    height: 720px;
+    width: 620px; 
+    transition: 0.375s;
+
+
+
+    h1{
+        font-family: "OktaNeueBold", sans-serif;
+        color: white;
+
+        span{
+            font-family: "OktaNeueLight", sans-serif;
+        }
+    }
+
+    h2{
+        font-family: "OktaNeueLight", sans-serif;
+        color: white;
+        font-weight: bold;
+        font-size: 1.7rem;
+        line-height: 2.9rem;
+    }
+
+    p{
+        color: ${colors.secondaryPurple};
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 850px;
+    }
+
+`
+
+const SocialDivMainMusic = styled.div`
+    height: 325px;
+    width: 620px;
+    border-radius: 15px;
+    background: ${colors.secondaryPurple};
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-top: 1rem;
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 310px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 310px;
+    }
+`
+
+const MusicDetails = styled.div`
+    width: 290px;
+    height: 290px;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    transition: 0.375s;
+
+
+    h3{
+        font-family: "OktaNeueLight", sans-serif;
+        font-weight: bold;
+        color: white;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        padding-left: 0.8rem;
+
+        @media screen and (max-width: 1700px){
+            margin-top: 0;
+        }
+
+    }
+
+    h4{
+        font-family: "OktaNeueLight", sans-serif;
+        color: ${colors.mainPurple};
+        font-size: 1.5rem;
+        position: relative;
+        padding-top: 0;
+        bottom: 1.1rem;
+        padding-left: 0.8rem;
+
+
+    }
+
+    h5{
+        font-family: "OktaNeueLight", sans-serif;
+        color: ${colors.mainPurple};
+        font-size: 1.3rem;
+        padding-left: 0.8rem;
+
+        a{
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.2rem;
+        }
+
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 190px;
+    }
+
+
+
+`
+

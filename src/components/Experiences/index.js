@@ -1,147 +1,128 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react'
-import { Tabs, Tab, TabPanel, TabList} from 'react-web-tabs';
-import 'react-web-tabs/dist/react-web-tabs.css';
-import { TabContainer, TabH1, MasterTab, ImgOhsea, ImgAvgl, ImgPetcs, ImgTmc, TabText, ImgMacCss } from './TabsElements';
-import './TabElementsCss.css'
-import ohsea from '../../images/ohsea.png'
-import avgl from '../../images/avgl.png'
-import petcs from '../../images/petcs.jpeg'
-import tmc from '../../images/tmc.jpeg'
-import MacCss from '../../images/mcmasterCSS.jpeg'
+import React, {useEffect} from 'react'
+import Aos from "aos"
+import styled from "styled-components"
+import { colors } from "../globals/colors"
+import { FiExternalLink } from 'react-icons/fi'
 
-const Experiences = () => {
+
+const Experiences = ({lightBg, id, topLine, description}) => {
+
+
+    //controls fade in animation time 
+    useEffect(() => {
+      Aos.init({duration: 1000}); 
+    }, []); 
+
     return (
-      <MasterTab name = "experiences">
+      <MasterTab name = "skills" id = {id} lightBg = {lightBg}>
 
-        <TabH1 data-aos-once='true' data-aos="fade-up"> Experiences ⎯⎯ </TabH1>
+        <SecondaryTab>
 
-          <TabContainer data-aos-once='true' data-aos="fade-up">
+        <TabH1 data-aos-once='true' data-aos="fade-up"> {topLine} </TabH1>
 
-        <div className = 'CompleteTabsExperience'> 
-          <Tabs defaultTab="OHSEA" vertical>
+        <SecondaryDescription data-aos-once='true' data-aos="fade-up">{description}</SecondaryDescription>
 
-                  <TabList>
-                    <Tab className = 'tabTitleColor' tabFor="MacCss"><TabText style={{right: '0.6rem'}}>Mac CSS</TabText><ImgMacCss src = {MacCss} /></Tab>
-                    <Tab className = 'tabTitleColor' tabFor="OHSEA"><TabText style={{left: '1rem'}}>OHSEA</TabText><ImgOhsea src = {ohsea} /></Tab>
-                    <Tab className = 'tabTitleColor' tabFor="AVGL"><TabText style={{left: '1rem'}}>AVGL</TabText><ImgAvgl src = {avgl} /></Tab>
-                    <Tab className = 'tabTitleColor' tabFor="PETHS CS"><TabText style={{right: '0.6rem'}}>PET CS</TabText><ImgPetcs src = {petcs}/></Tab>
-                    <Tab className = 'tabTitleColor' tabFor="TMC"><TabText style={{left: '0.6rem'}}>TMC</TabText><ImgTmc src = {tmc}/></Tab>
-                  </TabList>
+          <TabContainer>
 
-                  <TabPanel tabId="MacCss">
-                    <h1 style={{fontSize: '26px'}}>First Year Representative @ <span style={{color: '#FAC898', fontSize: '26px'}}>McMaster Computer Science Society</span></h1>
-                    <h2 style={{fontSize: '20px'}}>October 2022 - Present</h2>
-                    <p>• Responible for organizing and aiding in events <br/>
-                      • Responible for communicating with first years about any issues and events<br/>
-                      • Responible for bridging the communication between teachers and students <br/>
-                      • Reponsible for representing all first year students in the society
-                    </p>
-                  </TabPanel>
+            <ExperienceSection>
+                <ExperienceSectionMacCss data-aos-once='true' data-aos="fade-up">
+                  <InnerDivMacCss>
+                      <TitleHeader>McMaster CSS - <span style={{color: `${colors.secondaryRed}` }}>First Year Rep</span></TitleHeader>
+                      <SubTitle>October 2022 - Present</SubTitle>
+                      <SubDescription>• Responible for organizing and aiding in events <br/>
+                                      • Responible for communicating with first years about any issues and events <br/>
+                                      • Responible for bridging the communication between teachers and students <br/>
+                                      • Reponsible for representing all first year students in the society</SubDescription>
+                      <ExternalSource target = "_blank" rel="noreferrer" href = "https://mcmastercs.ca/">
+                          <ExternalLogo/>
+                          <h1>Our Website</h1>
+                      </ExternalSource>
+                  </InnerDivMacCss>
+                </ExperienceSectionMacCss>
 
-                  <TabPanel tabId="OHSEA">
-                    <h1 style={{fontSize: '26px'}}>Co-Founder and Lead Technology Developer @ <span style={{color: '#ff6961', fontSize: '26px'}}>Ontario High School Esports Association</span></h1>
-                    <h2 style={{fontSize: '20px'}}>May 2021 - Present</h2>
-                    <p>• Responible for organizing and preparing tournaments and events <br/>
-                      • Responible for tech related issues during tournaments and events<br/>
-                      • Responible for aiding and managing tech related software such as the Website and Bots <br/>
-                      • Tournament organizer during tournaments and events
-                    </p>
-                  </TabPanel>
+                <ExperienceSectionMusicCouncil data-aos-once='true' data-aos="fade-up">
+                <InnerDivTrudeauMusic>
+                      <TitleHeader>Trudeau Music - <span style={{color: `${colors.secondaryRed}` }}>Web Developer</span></TitleHeader>
+                      <SubTitle>November 2020 - June 2022</SubTitle>
+                      <SubDescription>• Reponsible for managing the council Website and links <br/>
+                                      • Aiding other executives and representatives during event planning <br/>
+                                      • Reponsible for maintaning the quality of instruments and deal with any music related issues <br/>
+                                      • Work with the technology chair on any techology advancements</SubDescription>
+                      <ExternalSource target = "_blank" rel="noreferrer" href = "https://trudeaumusic.wixsite.com/peths">
+                          <ExternalLogo/>
+                          <h1>Our Website</h1>
+                      </ExternalSource>
+                  </InnerDivTrudeauMusic>
+                </ExperienceSectionMusicCouncil>
 
-                  <TabPanel tabId="AVGL">
-                    <h1 style={{ fontSize: '26px'}}>Tournament Organizer & Co-Founder of Student Leaders @ <span style={{color: '#a2dcc1', fontSize: '26px'}}>American Video Game League</span></h1>
-                    <h2 style={{fontSize: '20px'}}>May 2021 - Present</h2>
-                    <p>• Tournament organizer during tournaments and events such as Intel Inspires and TEXSef <br/>
-                      • Responsible for all student related events in AVGL <br/>
-                      • Aiding other student leaders during events and tournament planning <br/>
-                      • Data digging for important information to grow Student Leaders and AVGL <br/>
-                    </p>
-                  </TabPanel>
+                <ExperienceSectionMarketyze data-aos-once='true' data-aos="fade-up">
+                  <InnerDivMarketyze>
+                          <TitleHeader>Marketyze  - <span style={{color: `${colors.secondaryRed}` }}>Head Of Technology</span></TitleHeader>
+                          <SubTitle>October 2022 - Present</SubTitle>
+                          <SubDescription>• Responsible for working with the team UI/UX designer on revamping the organization’s website <br/>
+                                          • Manage and supervise all technology related components from emails, website and equipment for events <br/>
+                                          • Provide any technological advice and implement new technologies during events <br/>
+                                          • Collaborate with the CEO on potential new technologies</SubDescription>
+                          <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/marketyze.ca/">
+                              <ExternalLogo/>
+                              <h1>Instagram</h1>
+                          </ExternalSource>
+                      </InnerDivMarketyze>
+                </ExperienceSectionMarketyze>
+            </ExperienceSection>
 
-                  <TabPanel tabId="PETHS CS">
-                    <h1 style={{fontSize: '26px'}}>Executive @ <span style={{color: '#88A1BD', fontSize: '26px'}}>Trudeau Computer Science Club</span></h1>
-                    <h2 style={{fontSize: '20px'}}>June 2021 - June 2022</h2>
-                    <p>• Responsible for teaching and preparing lessons <br/>
-                      • Aiding and organizing events such as Hackathons and Game Jams <br/>
-                      • Aiding other executives and answering questions during their presentation
-                    </p>
-                  </TabPanel>
+            <ExperienceSection>
+                <ExperienceSectionAvgl data-aos-once='true' data-aos="fade-up">
+                <InnerDivAvgl>
+                      <TitleHeader>AVGL  - <span style={{color: `${colors.secondaryRed}` }}>QA Tester & Tournament Organizer</span></TitleHeader>
+                      <SubTitle>May 2021 - Present</SubTitle>
+                      <SubDescription>• Tournament organizer during tournaments and events such as Intel Inspires and TEXSef <br/>
+                                      • Data digging for important information to grow Student Leaders and AVGL <br/>
+                                      • Helped improve speed and efficiency of the organization’s website as a QA tester <br/>
+                                      • Aiding other tournament organizers during events and tournament planning </SubDescription>
+                      <ExternalSource target = "_blank" rel="noreferrer" href = "https://avgl.org/">
+                          <ExternalLogo/>
+                          <h1>Our Website</h1>
+                      </ExternalSource>
+                  </InnerDivAvgl>
+                </ExperienceSectionAvgl>
 
-                  <TabPanel tabId="TMC">
-                    <h1 style={{ fontSize: '26px'}}>WebMaster @ <span style={{color: '#C3B1E1', fontSize: '26px'}}>Trudeau Music Council</span></h1>
-                    <h2 style={{fontSize: '20px'}}>Nov 2020 - June 2022</h2>
-                    <p>• Reponsible for managing the council Website and links <br/>
-                      • Aiding other executives and representatives during event planning <br/>
-                      • Reponsible for maintaning the quality of instruments and deal with any music related issues
-                    </p>
-                  </TabPanel>
-            </Tabs> 
-          </div>
-                  
-                  
+                <ExperienceSectionOhsea data-aos-once='true' data-aos="fade-up">
+                  <InnerDivOhsea>
+                        <TitleHeader>OHSEA  - <span style={{color: `${colors.secondaryRed}` }}>Co-Founder & Lead Tech Dev</span></TitleHeader>
+                        <SubTitle>May 2021 - Present</SubTitle>
+                        <SubDescription>• Responible for organizing and preparing tournaments and events <br/>
+                                        • Responible for tech related issues during tournaments and events <br/>
+                                        • Responible for aiding and managing tech related software such as tournament bots <br/>
+                                        • Tournament organizer during tournaments and events </SubDescription>
+                        <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/ohseagg/">
+                            <ExternalLogo/>
+                            <h1>Instagram</h1>
+                        </ExternalSource>
+                    </InnerDivOhsea>
+                </ExperienceSectionOhsea>
+
+                <ExperienceSectionTrudeauCs data-aos-once='true' data-aos="fade-up">
+                  <InnerDivPethsCSS>
+                        <TitleHeader>Trudeau CS  - <span style={{color: `${colors.secondaryRed}` }}>Executive</span></TitleHeader>
+                        <SubTitle>June 2021 - June 2022</SubTitle>
+                        <SubDescription>• Responsible for teaching and preparing lessons <br/>
+                                        • Aiding and organizing events such as Hackathons and Game Jams <br/>
+                                        • Aiding other executives and answering questions during their presentation <br/>
+                                        • Collabrate with other executives on creating new and exciting projects</SubDescription>
+                        <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/petcsclub/">
+                            <ExternalLogo/>
+                            <h1>Instagram</h1>
+                        </ExternalSource>
+                    </InnerDivPethsCSS>
+                </ExperienceSectionTrudeauCs>
+            </ExperienceSection>
+
+          </TabContainer>
+
+        </SecondaryTab>
 
 
-            <Tabs className = 'mobileTabsExperience' style ={{margin: 'auto'}} defaultTab="OHSEA">
-                  <TabList>
-                    <Tab className = 'tabTitleColor' tabFor="MacCss"><ImgMacCss src = {MacCss} /></Tab>
-                    <Tab  className ='TabSelector' tabFor="OHSEA"><ImgOhsea src = {ohsea} /></Tab>
-                    <Tab  className ='TabSelector' tabFor="AVGL"><ImgAvgl src = {avgl} /></Tab>
-                    <Tab  className ='TabSelector' tabFor="PETHS CS"><ImgPetcs src = {petcs}/></Tab>
-                    <Tab  className ='TabSelector' tabFor="TMC"><ImgTmc src = {tmc}/></Tab>
-                  </TabList>
-
-                  <TabPanel tabId="MacCss">
-                    <h1 style={{fontSize: '26px',  marginTop: '2.5rem'}}>First Year Representative @ <span style={{color: '#FAC898', fontSize: '26px'}}>McMaster Computer Science Society</span></h1>
-                    <h2 style={{fontSize: '20px'}}>October 2022 - Present</h2>
-                    <p>• Responible for organizing and aiding in events <br/>
-                      • Responible for communicating with first years about any issues and events<br/>
-                      • Responible for bridging the communication between teachers and students <br/>
-                      • Reponsible for representing all first year students in the society
-                    </p>
-                  </TabPanel>
-
-                  <TabPanel className= 'TabPanelSelector'tabId="OHSEA">
-                    <h1 style={{fontSize: '26px', marginTop: '2.5rem'}}>Co-Founder and Lead Technology Developer @ <span style={{color: '#ff6961', fontSize: '26px'}}>Ontario High School Esports Association</span></h1>
-                    <h2 style={{fontSize: '20px'}}>May 2021 - Present</h2>
-                    <p>• Responible for organizing and preparing tournaments and events <br/>
-                      • Responible for tech related issues during tournaments and events<br/>
-                      • Responible for aiding and managing tech related software such as the Website and Bots <br/>
-                      • Tournament organizer during tournaments and events
-
-                    </p>
-                  </TabPanel>
-
-                  <TabPanel className= 'TabPanelSelector' tabId="AVGL">
-                    <h1 style={{ fontSize: '26px', marginTop: '2.5rem'}}>Tournament Organizer and Co-Founder of Student Leaders @ <span style={{color: '#a2dcc1', fontSize: '26px'}}>American Video Game League</span></h1>
-                    <h2 style={{fontSize: '20px'}}>May 2021 - Present</h2>
-                    <p>• Tournament organizer during tournaments and events such as Intel Inspires and TEXSef <br/>
-                      • Responsible for all student related events in AVGL <br/>
-                      • Aiding other student leaders during events and tournament planning <br/>
-                      • Data digging for important information to grow Student Leaders and AVGL <br/>
-                    </p>
-                  </TabPanel>
-
-                  <TabPanel className= 'TabPanelSelector'  tabId="PETHS CS">
-                    <h1 style={{fontSize: '26px', marginTop: '2.5rem'}}>Executive @ <span style={{color: '#88A1BD', fontSize: '26px'}}>Trudeau Computer Science Club</span></h1>
-                    <h2 style={{fontSize: '20px'}}>June 2021 - June 2022</h2>
-                    <p>• Responsible for teaching and preparing lessons <br/>
-                      • Aiding and organizing events such as Hackathons and Game Jams <br/>
-                      • Aiding other executives and answering questions during their presentation
-                    </p>
-                  </TabPanel>
-
-                  <TabPanel className= 'TabPanelSelector' tabId="TMC">
-                    <h1 style={{ fontSize: '26px', marginTop: '2.5rem'}}>WebMaster @ <span style={{color: '#C3B1E1', fontSize: '26px'}}>Trudeau Music Council</span></h1>
-                    <h2 style={{fontSize: '20px'}}>Nov 2020 - June 2022</h2>
-                    <p>• Reponsible for managing the council Website and links <br/>
-                      • Aiding other executives and representatives during event planning <br/>
-                      • Reponsible for maintaning the quality of instruments and deal with any music related issues
-                    </p>
-                  </TabPanel>
-              </Tabs>
-
-            </TabContainer>
         </MasterTab>
 
     )
@@ -149,3 +130,443 @@ const Experiences = () => {
 
 export default Experiences
 
+//Master Tab
+const MasterTab = styled.div`
+    height: 2050px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
+    justify-content: center;
+    align-items: center;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1350px){
+      height: 2270px;
+      transition: 0.375s;
+   }
+
+
+   @media screen and (max-width: 1100px){
+    height: 4500px;
+    transition: 0.375s;
+ }
+`
+
+const SecondaryTab = styled.div`
+  height: 100%;
+  width: 1510px;
+  transition: 0.375s;
+
+  @media screen and (max-width: 1700px){
+    width: 1200px;
+    transition: 0.375s;
+  }
+
+  @media screen and (max-width: 1350px){
+    width: 1050px;
+    transition: 0.375s;
+  }
+
+  @media screen and (max-width: 1100px){
+    width: 480px;
+    transition: 0.375s;
+  }
+`
+
+//Tab inner container 
+const TabContainer = styled.div`
+  margin: 0 auto; 
+  margin-top: 2rem;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-column-gap: 4rem;
+  grid-row-gap: 1.5rem;
+  align-items: center; 
+  padding: 0 50px;     
+  justify-content: center;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    transition: 0.375s;
+    grid-column-gap: 2rem; 
+  }
+
+  @media screen and (max-width: 1100px){
+    transition: 0.375s;
+    grid-template-columns: 1fr; 
+  }
+`
+
+//column sections 
+const ExperienceSection = styled.div`
+  height: 2000px;
+`
+
+//Title
+const TabH1 = styled.h1`
+  color: ${colors.mainRed}; 
+  font-size: 60px; 
+  position: relative;
+  font-weight: 700; 
+  width: 100%;
+  letter-spacing: 1.4px; 
+  font-style: italic;
+  display: flex;
+ 
+
+`
+
+const SecondaryDescription = styled.p`
+    font-size: 1.8rem;
+    font-family: "OktaNeueLight", sans-serif;
+    font-weight: bold;
+    color: ${colors.mainRed}
+`
+
+
+
+//all sections to experience
+//experience
+const ExperienceSectionMacCss = styled.div`
+    height: 520px;
+    width: 720px;
+    background: ${colors.mainRed};
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+       width: 585px;
+       height: 550px;
+       transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+      width: 510px;
+      height: 620px;
+      transition: 0.375s;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 480px;
+    transition: 0.375s;
+ }
+
+`
+
+const ExperienceSectionMusicCouncil = styled.div`
+    height: 620px;
+    width: 720px;
+    background: ${colors.mainRed};
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+      width: 585px;
+      transition: 0.375s;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 510px;
+    height: 620px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 480px;
+  transition: 0.375s;
+`
+
+const ExperienceSectionTrudeauCs = styled.div`
+    height: 540px;
+    width: 720px;
+    background: ${colors.mainRed};
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+      width: 585px;
+      transition: 0.375s;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 510px;
+    height: 630px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 480px;
+  transition: 0.375s;
+
+`
+
+//experience 2
+const ExperienceSectionAvgl = styled.div`
+    height: 600px;
+    width: 720px;
+    background: ${colors.mainRed};
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+      width: 585px;
+      transition: 0.375s;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 510px;
+    height: 660px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 480px;
+  transition: 0.375s;
+
+`
+
+const ExperienceSectionOhsea = styled.div`
+    height: 600px;
+    width: 720px;
+    background: ${colors.mainRed};
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+      width: 585px;
+      height: 630px;
+      transition: 0.375s;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 510px;
+    height: 620px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 480px;
+  transition: 0.375s;
+
+
+`
+
+const ExperienceSectionMarketyze = styled.div`
+    height: 600px;
+    width: 720px;   
+    background: ${colors.mainRed};
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+      width: 585px;
+      transition: 0.375s;
+      height: 600px;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 510px;
+    height: 670px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 480px;
+  transition: 0.375s;
+
+
+`
+
+//inner box components 
+const TitleHeader = styled.h1`
+  font-family: "OktaNeueBold", sans-serif;
+  color: white;
+
+`
+
+const SubTitle = styled.h2`
+  font-family: "OktaNeueLight", sans-serif;
+  color: white;
+`
+
+const SubDescription = styled.p`
+  font-family: "OktaNeueLight", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+`
+
+const ExternalSource = styled.a`
+    height: 70px;
+    border-radius: 10px;
+    background: ${colors.secondaryRed};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+
+    h1{
+      font-family: "OktaNeueLight", sans-serif;
+      color: white;
+      margin-top: 1.5rem;
+      margin-left: 1rem;
+
+    }
+
+    &:hover{
+      scale: 1.01;
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+`
+
+const ExternalLogo = styled(FiExternalLink)`
+    font-size: 2rem;
+    color: white;
+ 
+`
+
+
+const InnerDivMacCss = styled.div`
+  height: 420px;
+  width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    height: 470px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 560px;
+  transition: 0.375s;
+}
+`
+
+const InnerDivTrudeauMusic = styled.div`
+  height: 400px;
+  width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    height: 480px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 540px;
+  transition: 0.375s;
+}
+`
+
+const InnerDivPethsCSS = styled.div`
+  height: 400px;
+  width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    height: 450px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 530px;
+  transition: 0.375s;
+}
+`
+
+const InnerDivAvgl = styled.div`
+  height: 520px;
+  width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 600px;
+  transition: 0.375s;
+}
+`
+
+const InnerDivOhsea = styled.div`
+  height: 450px;
+  width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    height: 520px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 550px;
+  transition: 0.375s;
+}
+`
+
+const InnerDivMarketyze = styled.div`
+  height: 450px;
+  width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    height: 550px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 610px;
+  transition: 0.375s;
+}
+`

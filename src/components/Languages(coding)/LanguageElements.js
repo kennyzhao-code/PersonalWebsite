@@ -1,126 +1,63 @@
 import styled from 'styled-components'
-
-export const LanguageContainer = styled.div`
-    width: 100%;
-    background: #F5F5DC; 
-    color: #000; 
-    padding: 5rem calc((100vw - 1300px) /2); 
-    height: 50%;
-    
-`
-
-export const LanguageDescription = styled.p`
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-    font-family: 'Poppins', sans-serif;     
-    text-align: start; 
-    position: relative;
-    margin-left: 7rem;
-    padding-left: 2rem; 
-    bottom: 1rem;
-    font-size: clamp(1.5rem, 5vw, 2rem); 
-    font-weight: bold; 
-    font-size: 20px;
-    color: #b19cd9; 
-    letter-spacing: 1.4px; 
-    text-transform: uppercase;
-`
-
-
-
-export const LanguageContentWrapper = styled.div`
-    display: flex;
-    position: relative;
-    bottom: 17rem;    
-    margin-left: 4rem;
-
-
-    @media screen and (max-width: 1000px){
-        bottom: 15rem;
-        margin-left: 5rem;
-
-    }
-
-    @media screen and (max-width: 768px){
-        bottom: 0;
-        top: -5rem;
-
-    }
-
-    @media screen and (max-width: 480px){
-        top: 5rem;
-        right: 1rem;
-    }
-
-`
-
-export const LanguageRowContainer = styled.div`
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-gap: 4rem;
-    width: 1000px; 
-    margin: 0 auto; 
-
-    @media screen and (max-width: 768px){
-        grid-template-columns: 1fr;
-    }
-
-
-`
-
+import {colors} from '../globals/colors'
 //progress bar 
 
 export const PBarContainer = styled.div`
     position: relative; 
-    height: 10px;
-    width: 350px;
+    height: 15px;
+    width: 700px;
     border-radius: 50px; 
     border: 1px; 
     background: #DEDBDB;
+    margin-top: 80px;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1700px)
+    {
+        transition: 0.375s;
+        width: 600px;
+    }
+
+    @media screen and (max-width: 1350px)
+    {
+        transition: 0.375s;
+        width: 430px;
+    }
+
+    @media screen and (max-width: 1100px)
+    {
+        transition: 0.375s;
+        width: 450px;
+    }
+    
 
 
     p{
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-        font-family: 'Poppins', sans-serif;
+        font-family: 'OktaNeueLight', sans-serif;
+        font-weight: bold;
         position: relative;
-        bottom: 2.5rem;
+        font-size: 1.5rem;
+        bottom: 3.3rem;
+        color: ${colors.mainPurple};
     }
 
-    @media screen and (max-width: 900px)
-    {
-        width: 250px;
-    }
-
-    @media screen and (max-width: 768px)
-    {
-        width: 450px;
-    }
-
-    @media screen and (max-width: 570px)
-    {
-        width: 300px;
-    }
-
-    @media screen and (max-width: 480px)
-    {
-        width: 250px;
-    }
 `
 export const PBar = styled.div`
-    background: #88A1BD;
+    background: ${colors.mainGreen};
     border-radius: 20px; 
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0; 
     height: 100%; 
     width: 0; 
-    transition: 4s ease; 
+    transition: 4s ease;
+    
 `
-export const PBarCss = styled.div`
-    background: #ff6961;
+
+export const PBarC = styled.div`
+    background: ${colors.mainRed};
     border-radius: 20px; 
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,10 +67,9 @@ export const PBarCss = styled.div`
     transition: 4s ease; 
 `
 
-export const PBarJava = styled.div`
-    background: #FAC898;
+export const PBarCss = styled.div`
+    background: ${colors.mainPurple};
     border-radius: 20px; 
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,9 +80,8 @@ export const PBarJava = styled.div`
 `
 
 export const PBarJavaScript = styled.div`
-    background: #FDFD96;
+    background: ${colors.mainBlue};
     border-radius: 20px; 
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;

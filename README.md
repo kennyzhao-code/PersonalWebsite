@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://kennyzhao.dev/">
-    <img alt="Gatsby" src="./src/images/kz_logo.png" width="60" />
+    <img alt="personalLogo" src="./src/images/kz_logo.png" width="60" />
   </a>
 </p>
 <h1 align="center">
@@ -10,16 +10,19 @@
 
 Welcome to the README.md of my personal website! I am probably going to add in patch notes and to do list in this read me file for personal reasons. This is so I can keep track of what needs to be changed and etc.
 
-**`Patch Notes: 12/11/2021; patch 1.2`**
-  - patched up mobile styling more
-  - restyled tab sections 
+**`Patch Notes: 12/11/2021; V. 2.0.0`**
+  - Brand new redesign 
+  - Restyled everything, except for home page  
   - fixed more bugs
 
-**`TODO for next Patch; patch 1.3`**
-  - fix broken animations and smooth out animations
-  - fix 404 page look better
-  - Added in custom animation for loading screen
-  - fix styling in other browsers 
-  - redesign possibly? (skills section)
+**`TODO for next Version; V. 2.1.0`**
+  - Add in new home page 
+  - some animations here and there (hover for nav?) (smooth out release animations after leaving buttons)
+  - add extra pages for projects 
+  - darkmode??
+  - fix more bugs in other browsers/mobile, mobile styling
+  - add stroke to text (2px)
+  - 404 page
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+

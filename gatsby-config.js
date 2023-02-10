@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Kenny Zhao`,
-    description: `Hello! My name is Kenny Zhao, a student from Ontario, Canada who has a passion for coding and a love for exploring new heights. Welcome to my official Website.`,
+    description: `Hello! My name is Kenny Zhao, a student from McMaster University who has a passion for coding and a love for exploring new heights. Welcome to my official Website.`,
     author: `@KennyZhao`,
     siteUrl: `https://kennyzhao.dev/`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     
@@ -36,8 +37,12 @@ module.exports = {
         icon: `src/images/kz_logo.png`, // This path is relative to the root of the site. changes icon when site loads 
       },
     },
+
+    `gatsby-plugin-offline`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
 }
+
+

@@ -1,7 +1,6 @@
 import React from 'react';
 //useState
 import { HeroContainer, HeroP2, VideoBg, Button, ButtonWrapper, MobileImage} from './HeroElements.js';
-//import ProgressBar from './HeroSectionProgressBar'
 import './HeroSection.css';
 import Video from '../../images/original.mp4';
 import mobileI from '../../images/imageForMobile.png'
