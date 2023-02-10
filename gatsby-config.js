@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://kennyzhao.dev/`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     
