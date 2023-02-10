@@ -22,6 +22,7 @@ Welcome to the README.md of my personal website! I am probably going to add in p
   - darkmode??
   - fix more bugs in other browsers/mobile, mobile styling
   - add stroke to text (2px)
+  - 404 page
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
