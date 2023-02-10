@@ -43,8 +43,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                                     </div>
                                 </TopLine>
 
-                                <Subtitle  darkText={darkText}>{description}</Subtitle>
-                                <Subtitle2 darkText={darkText}>{description2}</Subtitle2>
+                                <Subtitle  darkText={darkText}>{description} <br/><br/> {description2}</Subtitle>
                                     
 
                             </TextWrapper>
@@ -248,7 +247,21 @@ const Subtitle = styled.p`
 
 `
 
-const Subtitle2 = styled.p`
+
+
+const ImgWrap = styled.div`
+    width: 680px; 
+    height: 415px;
+    border: #897CBF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+`
+
+
+/*const Subtitle2 = styled.p`
     width: 750px; 
     margin-bottom: 2rem;
     margin-top: 2rem; 
@@ -257,6 +270,7 @@ const Subtitle2 = styled.p`
     line-height: 40px; 
     font-family: 'OktaNeueLight', sans-serif;
     font-weight: bold;
+    transition: 0.375s;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')};
     
     @media screen and (max-width: 1700px){
@@ -270,19 +284,7 @@ const Subtitle2 = styled.p`
     }
 
   
-`
-
-
-const ImgWrap = styled.div`
-    width: 680px; 
-    height: 415px;
-    border: #897CBF;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-`
+`*/ 
 
 
 
