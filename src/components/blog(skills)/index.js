@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { SocialIcon } from 'react-social-icons'
 import { AiOutlineCopy } from "react-icons/ai"
-import AudioPlayer from 'react-modern-audio-player';
+//import AudioPlayer from 'react-modern-audio-player';
 import song from '../../images/doodle.mp3'
 import './icons.css'
 
