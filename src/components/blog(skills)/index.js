@@ -154,7 +154,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                         <MusicDetails>
                                             <h3>Doodle (feat. Yerin Baek)</h3>
                                             <h4>Punchnello</h4>
-                                            <AudioPlayer
+                                          {/*  <AudioPlayer
                                                 playList={playList}
                                                 audioInitialState={{
                                                 volume: 0.5,
@@ -179,7 +179,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                 volume: false,
                                                 prevNnext: true,
                                                 }}
-                                            />
+                                            /> */}
                                             <h5>@kenny-zhao on <a href = "https://open.spotify.com/user/kennyzhao2004" target = "_blank" rel='noreferrer' style = {{color: '#1DB954'}}>spotify</a></h5>
 
                                         </MusicDetails>
