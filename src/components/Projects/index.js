@@ -1,10 +1,19 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import Aos from "aos"
 import styled from "styled-components"
 import { colors } from "../globals/colors"
 import { StaticImage } from 'gatsby-plugin-image'
-
+import './bg.css'
 
 const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, description}) => {
+
+
+    //controls fade in animation time 
+    useEffect(() => {
+        Aos.init({duration: 1000}); 
+    }, []); 
+
+
     return (
         <ProjectContainer name = "projects"  id = {id} lightBg = {lightBg}>
             
@@ -13,13 +22,13 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                     {topLine}
                 </Description>
 
-                <SecondaryDescription>
+                <SecondaryDescription data-aos-once='true' data-aos="fade-up">
                     {description}
                 </SecondaryDescription>
 
                     <ContentWrapper>
                         
-                        <ProjectRow>
+                        <ProjectRow data-aos-once='true' data-aos="fade-up">
 
                             <ProjectOne>
 
@@ -30,9 +39,8 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             alt="htn"
                                             placeholder="blurred"
                                             formats={["auto", "webp", "avif"]}
-                                            layout="fixed"
                                             quality= {100}
-                                            width={670}
+                                            className = "htn"
                                             style = {{borderRadius: '10px'}}
                                         />                                      
                                     </CoverDiv>
@@ -61,9 +69,8 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             alt="uoft"
                                             placeholder="blurred"
                                             formats={["auto", "webp", "avif"]}
-                                            layout="fixed"
                                             quality= {100}
-                                            width={630}
+                                            className = "uoft"
                                             style = {{borderRadius: '10px'}}
                                         />  
                                     </CoverDiv>
@@ -84,7 +91,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                             
                         </ProjectRow>
 
-                        <ProjectRow>
+                        <ProjectRow data-aos-once='true' data-aos="fade-up">
                             <ProjectThree>
                                 <MainCoverDiv>
                                     <CoverDiv target = "_blank" rel="noreferrer" href = "https://github.com/DeltaHacks-WebOfLife">
@@ -92,10 +99,9 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             src= '../../images/deltaHacks.png'
                                             alt="delta"
                                             placeholder="blurred"
+                                            className='delta'
                                             formats={["auto", "webp", "avif"]}
-                                            layout="fixed"
                                             quality= {100}
-                                            width={550}
                                             style = {{borderRadius: '10px'}}
                                         />  
                                     </CoverDiv>
@@ -122,9 +128,8 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             alt="ohsea"
                                             placeholder="blurred"
                                             formats={["auto", "webp", "avif"]}
-                                            layout="fixed"
+                                            className = "ohsea"
                                             quality= {100}
-                                            width={400}
                                             style = {{borderRadius: '10px'}}
                                         />  
                                     </CoverDiv>
@@ -166,12 +171,35 @@ const ProjectContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1100px){
+        height: 2550px;
+        transition: 0.375s;
     
 `
 
 const SecondaryProjectContainer = styled.div`
     height: 100%;
     width: 1510px;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1700px){
+        width: 1200px;
+        transition: 0.375s;
+
+    }
+
+    @media screen and (max-width: 1350px){
+        width: 1050px;
+        transition: 0.375s;
+
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
 `
 
 const Description = styled.h1`
@@ -184,9 +212,6 @@ const Description = styled.h1`
     font-style: italic;
     display: flex;
 
-    @media screen and (max-width: 768px){
-        top: 0;
-    }
 `
 
 const SecondaryDescription = styled.p`
@@ -194,6 +219,8 @@ const SecondaryDescription = styled.p`
     font-family: "OktaNeueLight", sans-serif;
     font-weight: bold;
     color: ${colors.mainGreen}
+
+
 `
 
 
@@ -231,6 +258,21 @@ const ContentWrapper = styled.div`
     align-items: center; 
     padding: 0 50px;     
     justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        grid-column-gap: 2rem;
+        transition: 0.375s;
+
+    }
+
+    @media screen and (max-width: 1100px){
+        grid-template-columns: 1fr;
+        transition: 0.375s;
+        grid-row-gap: 0rem;
+
+    }
 `
 
 const LogoContainer = styled.div`
@@ -253,6 +295,10 @@ const LogoContainer = styled.div`
 //project sections 
 const ProjectRow = styled.div`
     height: 2000px;
+
+    @media screen and (max-width: 1100px){
+        height: 965px;
+    }
    
 `
 
@@ -264,6 +310,23 @@ const ProjectOne = styled.div`
     justify-content: center;
     display: flex;
     align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        width: 585px; 
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        width: 510px; 
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1100px){
+        width: 480px; 
+        transition: 0.375s;
+    }
 `
 const ProjectTwo = styled.div`
     height: 450px;
@@ -274,6 +337,24 @@ const ProjectTwo = styled.div`
     justify-content: center;
     display: flex;
     align-items: center;
+    transition: 0.375s;
+
+
+
+    @media screen and (max-width: 1700px){
+        width: 585px; 
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        width: 510px; 
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1100px){
+        width: 480px; 
+        transition: 0.375s;
+    }
 `
 const ProjectThree = styled.div`
     height: 450px;
@@ -283,6 +364,24 @@ const ProjectThree = styled.div`
     justify-content: center;
     display: flex;
     align-items: center;
+    transition: 0.375s;
+
+
+
+    @media screen and (max-width: 1700px){
+        width: 585px; 
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        width: 510px; 
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1100px){
+        width: 480px; 
+        transition: 0.375s;
+    }
 `
 const ProjectFour = styled.div`
     height: 450px;
@@ -293,6 +392,22 @@ const ProjectFour = styled.div`
     justify-content: center;
     display: flex;
     align-items: center;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1700px){
+        width: 585px; 
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        width: 510px; 
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1100px){
+        width: 480px; 
+        transition: 0.375s;
+    }
 
 `
 

@@ -1,4 +1,5 @@
-import React, {useCallback, useState} from 'react'
+import React, {useCallback, useState, useEffect} from 'react'
+import Aos from "aos"
 import { StaticImage } from 'gatsby-plugin-image'
 import { colors } from '../globals/colors'
 import styled from "styled-components"
@@ -9,6 +10,7 @@ import AudioPlayer from 'react-modern-audio-player';
 import song from '../../images/doodle.mp3'
 import './icons.css'
 
+
 const playList = [
     {
       src: song,
@@ -17,6 +19,13 @@ const playList = [
   ]
 
 const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics, personality}) => {
+
+
+    //controls fade in animation time 
+    useEffect(() => {
+        Aos.init({duration: 1000}); 
+    }, []); 
+    
     
     //functions to make copied text dissapear 
     const [isAlertVisibleGit, setIsAlertVisibleGit] = useState(false);
@@ -92,7 +101,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
 
 
     return (
-        <BlogContainer name = 'skillsHobbies' id ={id} lightBg = {lightBg}>
+        <BlogContainer name = 'hobbies' id ={id} lightBg = {lightBg}>
             <BlogSecondaryContainer>
 
                 <BlogH1 data-aos-once='true' data-aos="fade-up">{topLine}</BlogH1>
@@ -101,7 +110,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
 
                         <BlogSection>
 
-                            <BlogSectionCoding>
+                            <BlogSectionCoding data-aos-once='true' data-aos="fade-up">
                                 <TitleSocialDivCoding>
                                     <h1>Coding <span>(duh)</span></h1>
                                     <p>{coding}</p>
@@ -126,7 +135,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                 </TitleSocialDivCoding>
                             </BlogSectionCoding>
 
-                            <BlogSectionMusic>
+                            <BlogSectionMusic data-aos-once='true' data-aos="fade-up">
                                 <TitleSocialDivMusic>
                                     <h1>Music <span>:3</span></h1>
                                     <h2>{music}</h2>
@@ -138,8 +147,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                             alt="doodleAlbum"
                                             placeholder="blurred"
                                             formats={["auto", "webp", "avif"]}
-                                            layout="fixed"
-                                            width={290}
+                                            className = "albumCover"
                                             style = {{borderRadius: '10px'}}
                                         />  
 
@@ -158,7 +166,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                     trackTimeDuration: "row1-5",
                                                     progress: "row1-1",
                                                     playButton: "row2-1",
-                                                    repeatType: "row1-7",
+                                                    repeatType: "row2-2",
                                                     volume: "row1-8",
                                                     },
                                                 },
@@ -172,7 +180,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                 prevNnext: true,
                                                 }}
                                             />
-                                            <h5>@kenny-zhao on <span style = {{color: '#1DB954'}}>spotify</span></h5>
+                                            <h5>@kenny-zhao on <a href = "https://open.spotify.com/user/kennyzhao2004" target = "_blank" rel='noreferrer' style = {{color: '#1DB954'}}>spotify</a></h5>
 
                                         </MusicDetails>
                                     
@@ -183,7 +191,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                             </BlogSectionMusic>
 
 
-                            <BlogSectionAcademic>
+                            <BlogSectionAcademic data-aos-once='true' data-aos="fade-up">
                                 <TitleSocialDivAcademics>
                                         <h1>Academics <span>&gt;:)</span></h1>
                                         <p>{academics}</p>
@@ -212,7 +220,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
 
                         <BlogSection>
 
-                            <BlogSectionPersonality>
+                            <BlogSectionPersonality data-aos-once='true' data-aos="fade-up">
                                 <TitleSocialDivPersonality>
                                     <h1>Personality <span>&lt;3</span></h1>
                                     <p>{personality}</p>
@@ -277,9 +285,9 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                 </TitleSocialDivPersonality>
                             </BlogSectionPersonality>
 
-                            <BlogSectionAthletic>
+                            <BlogSectionAthletic data-aos-once='true' data-aos="fade-up">
                                 <TitleSocialDivAthletics>
-                                        <h1>Atheletics <span>:0</span></h1>
+                                        <h1>Athletics <span>:0</span></h1>
                                         <p>{athletics}</p>
                                         
                                         <SocialDivMainAthletics>
@@ -302,7 +310,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                     </TitleSocialDivAthletics>
                             </BlogSectionAthletic>
 
-                            <BlogSectionGame>
+                            <BlogSectionGame data-aos-once='true' data-aos="fade-up">
                                 <TitleSocialDivGames>
                                         <h1>Games <span>:P</span></h1>
                                         <p>{games}</p>
@@ -348,11 +356,40 @@ const BlogContainer = styled.div`
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
     justify-content: center;
     align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        height: 2320px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        height: 4600px;
+    }
 `
+
 //secondary container
 const BlogSecondaryContainer = styled.div`
     height: 100%;
     width: 1510px;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 1200px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 1050px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
 `
 
 const BlogH1 = styled.h1`
@@ -366,9 +403,6 @@ const BlogH1 = styled.h1`
     display: flex;
     font-family: 'OktaNeueBold', sans-serif;
 
-    @media screen and (max-width: 768px){
-        top: 0;
-    }
 
 `
 //grid-template-columns: 1fr, the amount of fr will determine the items in each row
@@ -382,11 +416,28 @@ const BlogWrapper = styled.div`
     align-items: center; 
     padding: 0 50px;     
     justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        grid-column-gap: 2rem;
+        transition: 0.375s;
+
+    }
+
+    @media screen and (max-width: 1100px){
+        grid-template-columns: 1fr;
+        grid-row-gap: 10.5rem;
+        transition: 0.375s;
+
+    }
 
 `
 
 const BlogSection = styled.div`
     height: 2000px;
+    transition: 0.375s;
+
 `
 
 //all sections to blog 
@@ -399,6 +450,25 @@ const BlogSectionCoding = styled.div`
     display: flex; 
     align-items: center;
     justify-content: center;
+    transition: 0.375s;
+
+
+    
+    @media screen and (max-width: 1700px){
+        width: 580px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 620px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
 `
 
 
@@ -413,6 +483,24 @@ const BlogSectionMusic = styled.div`
     display: flex; 
     align-items: center;
     justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        width: 580px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 900px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
 
 `
 
@@ -425,6 +513,23 @@ const BlogSectionAcademic = styled.div`
     display: flex; 
     align-items: center;
     justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        width: 580px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 550px;
+    }
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
 
 `
 
@@ -438,6 +543,24 @@ const BlogSectionPersonality = styled.div`
     display: flex; 
     align-items: center;
     justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        width: 580px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 850px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
 `
 
 const BlogSectionAthletic = styled.div`
@@ -449,6 +572,24 @@ const BlogSectionAthletic = styled.div`
     display: flex; 
     align-items: center;
     justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        width: 580px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 600px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
 
 `
 
@@ -462,6 +603,24 @@ const BlogSectionGame = styled.div`
     display: flex; 
     align-items: center;
     justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 580px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 510px;
+        height: 620px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 480px;
+    }
 `
 
 
@@ -476,6 +635,7 @@ const CopyIcon = styled(AiOutlineCopy)`
     &:hover{
         scale: 1.1;
     }
+
 `
 
 
@@ -483,6 +643,7 @@ const CopyIcon = styled(AiOutlineCopy)`
 const TitleSocialDivCoding = styled.div`
     height: 460px;
     width: 620px; 
+    transition: 0.375s;
 
 
     h1{
@@ -492,6 +653,7 @@ const TitleSocialDivCoding = styled.div`
         span{
             font-family: "OktaNeueLight", sans-serif;
         }
+
     }
 
     p{
@@ -499,6 +661,17 @@ const TitleSocialDivCoding = styled.div`
         font-family: "OktaNeueLight", sans-serif;
         font-weight: bold;
         font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 530px;
     }
 
 `
@@ -511,6 +684,20 @@ const SocialDivMainCoding = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 130px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 100px;
+    }
 `
 
 const SocialDivCoding = styled.div`
@@ -518,6 +705,7 @@ const SocialDivCoding = styled.div`
     position: absolute;
     display: flex;
     align-items: center;
+    transition: 0.375s;
     
 
     h1{
@@ -525,6 +713,20 @@ const SocialDivCoding = styled.div`
         position: relative;
         margin-left: 2rem;
         top: 0.7rem;
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.6rem;
+        }
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 380px;
     }
 
 `
@@ -533,6 +735,8 @@ const SocialDivCoding = styled.div`
 const TitleSocialDivPersonality = styled.div`
     height: 720px;
     width: 620px; 
+    transition: 0.375s;
+
 
 
     h1{
@@ -550,6 +754,19 @@ const TitleSocialDivPersonality = styled.div`
         font-weight: bold;
         font-size: 1.7rem;
     }
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 680px;
+    }
+
 
 `
 
@@ -562,8 +779,20 @@ const SocialDivMainPersonality = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.375s;
 
 
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 140px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 100px;
+    }
 
 `
 
@@ -572,6 +801,8 @@ const SocialDivPersonality = styled.div`
     display: flex;
     align-items: center;
     position: absolute;
+    transition: 0.375s;
+
     
     
 
@@ -580,6 +811,20 @@ const SocialDivPersonality = styled.div`
         position: relative;
         margin-left: 2rem;
         top: 0.7rem;
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.6rem;
+        }
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 380px;
     }
 
 `
@@ -589,6 +834,8 @@ const SocialDivPersonality = styled.div`
 const TitleSocialDivAthletics  = styled.div`
     height: 380px;
     width: 620px; 
+    transition: 0.375s;
+
 
 
     h1{
@@ -605,6 +852,17 @@ const TitleSocialDivAthletics  = styled.div`
         font-family: "OktaNeueLight", sans-serif;
         font-weight: bold;
         font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 410px;
     }
 
 `
@@ -617,6 +875,20 @@ const SocialDivMainAthletics = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 140px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 100px;
+    }
 `
 
 const SocialDivAthletics = styled.div`
@@ -624,6 +896,8 @@ const SocialDivAthletics = styled.div`
     position: absolute;
     display: flex;
     align-items: center;
+    transition: 0.375s;
+
     
 
     h1{
@@ -631,7 +905,22 @@ const SocialDivAthletics = styled.div`
         position: relative;
         margin-left: 2rem;
         top: 0.7rem;
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.6rem;
+        }
     }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 380px;
+    }
+
 
 `
 
@@ -639,6 +928,8 @@ const SocialDivAthletics = styled.div`
 const TitleSocialDivGames = styled.div`
     height: 480px;
     width: 620px; 
+    transition: 0.375s;
+
 
 
     h1{
@@ -655,6 +946,17 @@ const TitleSocialDivGames = styled.div`
         font-family: "OktaNeueLight", sans-serif;
         font-weight: bold;
         font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 490px;
     }
 
 `
@@ -667,6 +969,20 @@ const SocialDivMainGames = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 140px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 100px;
+    }
 `
 
 const SocialDivGames = styled.div`
@@ -674,6 +990,8 @@ const SocialDivGames = styled.div`
     position: absolute;
     display: flex;
     align-items: center;
+    transition: 0.375s;
+
     
 
     h1{
@@ -681,6 +999,20 @@ const SocialDivGames = styled.div`
         position: relative;
         margin-left: 2rem;
         top: 0.7rem;
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.6rem;
+        }
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 380px;
     }
 
 `
@@ -689,6 +1021,8 @@ const SocialDivGames = styled.div`
 const TitleSocialDivAcademics = styled.div`
     height: 430px;
     width: 620px; 
+    transition: 0.375s;
+
 
 
     h1{
@@ -707,6 +1041,17 @@ const TitleSocialDivAcademics = styled.div`
         font-size: 1.7rem;
     }
 
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 490px;
+    }
+
 `
 
 const SocialDivMainAcademics = styled.div`
@@ -717,6 +1062,20 @@ const SocialDivMainAcademics = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 130px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 100px;
+    }
 `
 
 const SocialDivAcademics = styled.div`
@@ -724,6 +1083,8 @@ const SocialDivAcademics = styled.div`
     position: absolute;
     display: flex;
     align-items: center;
+    transition: 0.375s;
+
     
 
     h1{
@@ -731,6 +1092,20 @@ const SocialDivAcademics = styled.div`
         position: relative;
         margin-left: 2rem;
         top: 0.7rem;
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.6rem;
+        }
+    }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 470px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 380px;
     }
 
 `
@@ -739,6 +1114,8 @@ const SocialDivAcademics = styled.div`
 const TitleSocialDivMusic = styled.div`
     height: 720px;
     width: 620px; 
+    transition: 0.375s;
+
 
 
     h1{
@@ -765,6 +1142,17 @@ const TitleSocialDivMusic = styled.div`
         font-size: 1.7rem;
     }
 
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 850px;
+    }
+
 `
 
 const SocialDivMainMusic = styled.div`
@@ -777,6 +1165,18 @@ const SocialDivMainMusic = styled.div`
     justify-content: center;
     padding-left: 1rem;
     padding-top: 1rem;
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 500px;
+        height: 310px;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 400px;
+        height: 310px;
+    }
 `
 
 const MusicDetails = styled.div`
@@ -784,6 +1184,8 @@ const MusicDetails = styled.div`
     height: 290px;
     padding-top: 1rem;
     padding-left: 0.5rem;
+    transition: 0.375s;
+
 
     h3{
         font-family: "OktaNeueLight", sans-serif;
@@ -791,7 +1193,11 @@ const MusicDetails = styled.div`
         color: white;
         font-size: 1.5rem;
         margin-top: 2rem;
-        padding-left: 0.4rem;
+        padding-left: 0.8rem;
+
+        @media screen and (max-width: 1700px){
+            margin-top: 0;
+        }
 
     }
 
@@ -802,7 +1208,7 @@ const MusicDetails = styled.div`
         position: relative;
         padding-top: 0;
         bottom: 1.1rem;
-        padding-left: 0.4rem;
+        padding-left: 0.8rem;
 
 
     }
@@ -811,10 +1217,23 @@ const MusicDetails = styled.div`
         font-family: "OktaNeueLight", sans-serif;
         color: ${colors.mainPurple};
         font-size: 1.3rem;
-        padding-left: 0.5rem;
+        padding-left: 0.8rem;
 
+        a{
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 1350px){
+            font-size: 1.2rem;
+        }
 
     }
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 190px;
+    }
+
 
 
 `

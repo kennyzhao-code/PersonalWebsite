@@ -14,4 +14,22 @@ export const colors = {
     sadFaceRed: '#D66A6A',
 
     backfill: '#F8FCFF ',
+
+    navHome: "#D5BB77", 
+    navHomeDark: "#BFA45C", 
+
+    navIntro: "#7D9BD6", 
+    navIntroDark: "#5F80C3", 
+
+    navHobbies: "#897CBF", 
+    navHobbiesDark: "#4F457A", 
+
+    navProject: "#A2BF7C", 
+    navProjectDark: "#577B4D", 
+
+    navSkills: "#BF7C7C", 
+    navSkillsDark: "#7E3C3C", 
+
+    navContact: "#7CBABF",
+    navContactDark: "#5C9297",
 }

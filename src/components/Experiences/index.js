@@ -1,23 +1,31 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import Aos from "aos"
 import styled from "styled-components"
 import { colors } from "../globals/colors"
 import { FiExternalLink } from 'react-icons/fi'
 
 
 const Experiences = ({lightBg, id, topLine, description}) => {
+
+
+    //controls fade in animation time 
+    useEffect(() => {
+      Aos.init({duration: 1000}); 
+    }, []); 
+
     return (
-      <MasterTab name = "experiences" id = {id} lightBg = {lightBg}>
+      <MasterTab name = "skills" id = {id} lightBg = {lightBg}>
 
         <SecondaryTab>
 
         <TabH1 data-aos-once='true' data-aos="fade-up"> {topLine} </TabH1>
 
-        <SecondaryDescription>{description}</SecondaryDescription>
+        <SecondaryDescription data-aos-once='true' data-aos="fade-up">{description}</SecondaryDescription>
 
-          <TabContainer data-aos-once='true' data-aos="fade-up">
+          <TabContainer>
 
             <ExperienceSection>
-                <ExperienceSectionMacCss>
+                <ExperienceSectionMacCss data-aos-once='true' data-aos="fade-up">
                   <InnerDivMacCss>
                       <TitleHeader>McMaster CSS - <span style={{color: `${colors.secondaryRed}` }}>First Year Rep</span></TitleHeader>
                       <SubTitle>October 2022 - Present</SubTitle>
@@ -32,7 +40,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                   </InnerDivMacCss>
                 </ExperienceSectionMacCss>
 
-                <ExperienceSectionMusicCouncil>
+                <ExperienceSectionMusicCouncil data-aos-once='true' data-aos="fade-up">
                 <InnerDivTrudeauMusic>
                       <TitleHeader>Trudeau Music - <span style={{color: `${colors.secondaryRed}` }}>Web Developer</span></TitleHeader>
                       <SubTitle>November 2020 - June 2022</SubTitle>
@@ -47,24 +55,24 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                   </InnerDivTrudeauMusic>
                 </ExperienceSectionMusicCouncil>
 
-                <ExperienceSectionTrudeauCs>
-                <InnerDivPethsCSS>
-                      <TitleHeader>Trudeau CS  - <span style={{color: `${colors.secondaryRed}` }}>Executive</span></TitleHeader>
-                      <SubTitle>June 2021 - June 2022</SubTitle>
-                      <SubDescription>• Responsible for teaching and preparing lessons <br/>
-                                      • Aiding and organizing events such as Hackathons and Game Jams <br/>
-                                      • Aiding other executives and answering questions during their presentation <br/>
-                                      • Collabrate with other executives on creating new and exciting projects</SubDescription>
-                      <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/petcsclub/">
-                          <ExternalLogo/>
-                          <h1>Instagram</h1>
-                      </ExternalSource>
-                  </InnerDivPethsCSS>
-                </ExperienceSectionTrudeauCs>
+                <ExperienceSectionMarketyze data-aos-once='true' data-aos="fade-up">
+                  <InnerDivMarketyze>
+                          <TitleHeader>Marketyze  - <span style={{color: `${colors.secondaryRed}` }}>Head Of Technology</span></TitleHeader>
+                          <SubTitle>October 2022 - Present</SubTitle>
+                          <SubDescription>• Responsible for working with the team UI/UX designer on revamping the organization’s website <br/>
+                                          • Manage and supervise all technology related components from emails, website and equipment for events <br/>
+                                          • Provide any technological advice and implement new technologies during events <br/>
+                                          • Collaborate with the CEO on potential new technologies</SubDescription>
+                          <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/marketyze.ca/">
+                              <ExternalLogo/>
+                              <h1>Instagram</h1>
+                          </ExternalSource>
+                      </InnerDivMarketyze>
+                </ExperienceSectionMarketyze>
             </ExperienceSection>
 
             <ExperienceSection>
-                <ExperienceSectionAvgl>
+                <ExperienceSectionAvgl data-aos-once='true' data-aos="fade-up">
                 <InnerDivAvgl>
                       <TitleHeader>AVGL  - <span style={{color: `${colors.secondaryRed}` }}>QA Tester & Tournament Organizer</span></TitleHeader>
                       <SubTitle>May 2021 - Present</SubTitle>
@@ -79,7 +87,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                   </InnerDivAvgl>
                 </ExperienceSectionAvgl>
 
-                <ExperienceSectionOhsea>
+                <ExperienceSectionOhsea data-aos-once='true' data-aos="fade-up">
                   <InnerDivOhsea>
                         <TitleHeader>OHSEA  - <span style={{color: `${colors.secondaryRed}` }}>Co-Founder & Lead Tech Dev</span></TitleHeader>
                         <SubTitle>May 2021 - Present</SubTitle>
@@ -94,20 +102,20 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                     </InnerDivOhsea>
                 </ExperienceSectionOhsea>
 
-                <ExperienceSectionMarketyze>
-                  <InnerDivMarketyze>
-                          <TitleHeader>Marketyze  - <span style={{color: `${colors.secondaryRed}` }}>Head Of Technology</span></TitleHeader>
-                          <SubTitle>October 2022 - Present</SubTitle>
-                          <SubDescription>• Responsible for working with the team UI/UX designer on revamping the organization’s website <br/>
-                                          • Manage and supervise all technology related components from emails, website and equipment for events <br/>
-                                          • Provide any technological advice and implement new technologies during events <br/>
-                                          • Collaborate with the CEO on potential new technologies</SubDescription>
-                          <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/marketyze.ca/">
-                              <ExternalLogo/>
-                              <h1>Instagram</h1>
-                          </ExternalSource>
-                      </InnerDivMarketyze>
-                </ExperienceSectionMarketyze>
+                <ExperienceSectionTrudeauCs data-aos-once='true' data-aos="fade-up">
+                  <InnerDivPethsCSS>
+                        <TitleHeader>Trudeau CS  - <span style={{color: `${colors.secondaryRed}` }}>Executive</span></TitleHeader>
+                        <SubTitle>June 2021 - June 2022</SubTitle>
+                        <SubDescription>• Responsible for teaching and preparing lessons <br/>
+                                        • Aiding and organizing events such as Hackathons and Game Jams <br/>
+                                        • Aiding other executives and answering questions during their presentation <br/>
+                                        • Collabrate with other executives on creating new and exciting projects</SubDescription>
+                        <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/petcsclub/">
+                            <ExternalLogo/>
+                            <h1>Instagram</h1>
+                        </ExternalSource>
+                    </InnerDivPethsCSS>
+                </ExperienceSectionTrudeauCs>
             </ExperienceSection>
 
           </TabContainer>
@@ -131,11 +139,39 @@ const MasterTab = styled.div`
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
     justify-content: center;
     align-items: center;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1350px){
+      height: 2270px;
+      transition: 0.375s;
+   }
+
+
+   @media screen and (max-width: 1100px){
+    height: 4500px;
+    transition: 0.375s;
+ }
 `
 
 const SecondaryTab = styled.div`
   height: 100%;
   width: 1510px;
+  transition: 0.375s;
+
+  @media screen and (max-width: 1700px){
+    width: 1200px;
+    transition: 0.375s;
+  }
+
+  @media screen and (max-width: 1350px){
+    width: 1050px;
+    transition: 0.375s;
+  }
+
+  @media screen and (max-width: 1100px){
+    width: 480px;
+    transition: 0.375s;
+  }
 `
 
 //Tab inner container 
@@ -149,6 +185,18 @@ const TabContainer = styled.div`
   align-items: center; 
   padding: 0 50px;     
   justify-content: center;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    transition: 0.375s;
+    grid-column-gap: 2rem; 
+  }
+
+  @media screen and (max-width: 1100px){
+    transition: 0.375s;
+    grid-template-columns: 1fr; 
+  }
 `
 
 //column sections 
@@ -166,10 +214,7 @@ const TabH1 = styled.h1`
   letter-spacing: 1.4px; 
   font-style: italic;
   display: flex;
-
-  @media screen and (max-width: 768px){
-      top: 0;
-  }
+ 
 
 `
 
@@ -192,6 +237,25 @@ const ExperienceSectionMacCss = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+       width: 585px;
+       height: 550px;
+       transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+      width: 510px;
+      height: 620px;
+      transition: 0.375s;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 480px;
+    transition: 0.375s;
+ }
 
 `
 
@@ -204,11 +268,27 @@ const ExperienceSectionMusicCouncil = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.375s;
 
+
+    @media screen and (max-width: 1700px){
+      width: 585px;
+      transition: 0.375s;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 510px;
+    height: 620px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 480px;
+  transition: 0.375s;
 `
 
 const ExperienceSectionTrudeauCs = styled.div`
-    height: 610px;
+    height: 540px;
     width: 720px;
     background: ${colors.mainRed};
     border-radius: 15px;
@@ -216,6 +296,23 @@ const ExperienceSectionTrudeauCs = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+      width: 585px;
+      transition: 0.375s;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 510px;
+    height: 630px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 480px;
+  transition: 0.375s;
 
 `
 
@@ -228,6 +325,23 @@ const ExperienceSectionAvgl = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+      width: 585px;
+      transition: 0.375s;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 510px;
+    height: 660px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 480px;
+  transition: 0.375s;
 
 `
 
@@ -240,12 +354,30 @@ const ExperienceSectionOhsea = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+      width: 585px;
+      height: 630px;
+      transition: 0.375s;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 510px;
+    height: 620px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 480px;
+  transition: 0.375s;
 
 
 `
 
 const ExperienceSectionMarketyze = styled.div`
-    height: 550px;
+    height: 600px;
     width: 720px;   
     background: ${colors.mainRed};
     border-radius: 15px;
@@ -253,6 +385,24 @@ const ExperienceSectionMarketyze = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+      width: 585px;
+      transition: 0.375s;
+      height: 600px;
+   }
+
+   @media screen and (max-width: 1350px){
+    width: 510px;
+    height: 670px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 480px;
+  transition: 0.375s;
 
 
 `
@@ -311,29 +461,112 @@ const ExternalLogo = styled(FiExternalLink)`
 const InnerDivMacCss = styled.div`
   height: 420px;
   width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    height: 470px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 560px;
+  transition: 0.375s;
+}
 `
 
 const InnerDivTrudeauMusic = styled.div`
   height: 400px;
   width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    height: 480px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 540px;
+  transition: 0.375s;
+}
 `
 
 const InnerDivPethsCSS = styled.div`
   height: 400px;
   width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    height: 450px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 530px;
+  transition: 0.375s;
+}
 `
 
 const InnerDivAvgl = styled.div`
   height: 520px;
   width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 600px;
+  transition: 0.375s;
+}
 `
 
 const InnerDivOhsea = styled.div`
   height: 450px;
   width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    height: 520px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 550px;
+  transition: 0.375s;
+}
 `
 
 const InnerDivMarketyze = styled.div`
   height: 450px;
   width: 600px;
+  transition: 0.375s;
+
+
+  @media screen and (max-width: 1700px){
+    width: 480px;
+    height: 550px;
+    transition: 0.375s;
+ }
+
+ @media screen and (max-width: 1350px){
+  width: 390px;
+  height: 610px;
+  transition: 0.375s;
+}
 `

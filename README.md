@@ -17,10 +17,11 @@ Welcome to the README.md of my personal website! I am probably going to add in p
 
 **`TODO for next Version; V. 2.1.0`**
   - Add in new home page 
-  - some animations here and there
+  - some animations here and there (hover for nav?) (smooth out release animations after leaving buttons)
   - add extra pages for projects 
   - darkmode??
-  - Redesign navbar 
-  - fix more bugs in other browsers/mobile 
+  - fix more bugs in other browsers/mobile, mobile styling
+  - add stroke to text (2px)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+

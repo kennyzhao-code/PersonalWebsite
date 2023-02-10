@@ -61,6 +61,21 @@ export const FooterWrap = styled.div`
     max-width: 1100px;
     margin: 0 auto; 
     border-top: solid 1px ${colors.mainPurple};
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1100px)
+    {
+        max-width: 800px;
+        transition: 0.375s;
+
+    }
+
+    @media screen and (max-width: 820px)
+    {
+        max-width: 400px;
+        transition: 0.375s;
+    }
 `
 
 export const SocialMedia = styled.section`

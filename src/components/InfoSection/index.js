@@ -10,6 +10,7 @@ import FontStyles from "../Fonts/fontStyles"
 
 const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, description2}) => {
     
+    //controls fade in animation time 
     useEffect(() => {
         Aos.init({duration: 1000}); 
     }, []); 
@@ -20,17 +21,15 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
             <FontStyles />
             <InfoContainer name ="aboutMe" lightBg = {lightBg} id = {id}>
                 
-                
-            
                 <InfoWrapper>
                     
                     <InfoRow imgStart={imgStart}>
 
-                        <Column1>
+                        <Column1 data-aos-once='true' data-aos="fade-up">
                             
                             <TextWrapper>                     
                                 
-                                <TopLine data-aos-once='true' data-aos="fade-up">
+                                <TopLine >
                                     {topLine}
 
                                     <div class="notification-box">
@@ -44,24 +43,22 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                                     </div>
                                 </TopLine>
 
-                                <Subtitle data-aos-once='true' data-aos="fade-up" darkText={darkText}>{description}</Subtitle>
-                                <Subtitle2 data-aos-once='true' data-aos="fade-up" darkText={darkText}>{description2}</Subtitle2>
+                                <Subtitle  darkText={darkText}>{description}</Subtitle>
+                                <Subtitle2 darkText={darkText}>{description2}</Subtitle2>
                                     
 
                             </TextWrapper>
                         </Column1>
                         
-                        <Column2>
-                            <ImgWrap data-aos-once='true' data-aos="fade-up">
+                        <Column2 data-aos-once='true' data-aos="fade-up">
+                            <ImgWrap>
                             <StaticImage
                                 className = 'Myself'
-                                src= '../../images/myself.png'
+                                src= '../../images/myself.jpg'
                                 alt="me"
                                 placeholder="blurred"
                                 formats={["auto", "webp", "avif"]}
-                                layout="fixed"
                                 quality= {100}
-                                width={650}
                
                                 />
                             </ImgWrap>
@@ -106,9 +103,21 @@ const InfoContainer = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
     height: 500px;
+    transition: 0.375s;
 
-    @media screen and (max-width: 768px){
-        padding: 100px 0; 
+    @media screen and (max-width: 1700px){
+        height: 700px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        height: 850px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1100px){
+        height: 1550px;
+        transition: 0.375s;
     }
 `
 
@@ -124,6 +133,21 @@ const InfoWrapper = styled.div`
     justify-content: center; 
     position: relative;
     bottom: 7rem;
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1100px){
+        margin-left: 4rem;
+        transition: 0.375s;
+
+    }
+
+    @media screen and (max-width: 700px){
+        margin-left: 0;
+        right: 4.5rem;
+        padding-right: 0;
+        transition: 0.375s;
+    }
 `
 
 //main row
@@ -131,12 +155,21 @@ const InfoRow = styled.div`
     display: grid;
     margin-left: 3rem;
     grid-auto-columns: minmax(auto, 1fr); 
-    grid-column-gap: 3rem;
+    grid-column-gap: 0.7rem;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )}; 
     width: 100%;
+    transition: 0.375s;
 
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: 1700px) {
+        grid-column-gap: 0;
+        transition: 0.375s;
+
+    }
+
+    @media screen and (max-width: 1100px) {
+        transition: 0.375s;
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
     }
 `
@@ -146,7 +179,10 @@ const Column1 = styled.div`
     margin-bottom: 1rem; 
     padding: 0 15px; 
     grid-area: col1; 
-    margin: auto;
+    
+    @media screen and (max-width: 1700px){
+        margin-top: 5rem;
+    }
     
 
     
@@ -158,6 +194,7 @@ const Column2 = styled.div`
     grid-area: col2; 
     position: relative;
     right: 0.7rem;
+
 `
 
 //text wrapper
@@ -181,9 +218,7 @@ const TopLine = styled.p`
     font-style: italic;
     display: flex;
 
-    @media screen and (max-width: 768px){
-        top: 0;
-    }
+
 
 `
 
@@ -196,7 +231,21 @@ const Subtitle = styled.p`
     line-height: 40px; 
     font-family: 'OktaNeueLight', sans-serif;
     font-weight: bold;
+    transition: 0.375s;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
+
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 600px;  
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 430px;  
+    }
+
+
 `
 
 const Subtitle2 = styled.p`
@@ -208,7 +257,19 @@ const Subtitle2 = styled.p`
     line-height: 40px; 
     font-family: 'OktaNeueLight', sans-serif;
     font-weight: bold;
-    color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
+    color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')};
+    
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        width: 600px;  
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        width: 430px;  
+    }
+
+  
 `
 
 

@@ -10,6 +10,25 @@ export const PBarContainer = styled.div`
     border: 1px; 
     background: #DEDBDB;
     margin-top: 80px;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1700px)
+    {
+        transition: 0.375s;
+        width: 600px;
+    }
+
+    @media screen and (max-width: 1350px)
+    {
+        transition: 0.375s;
+        width: 430px;
+    }
+
+    @media screen and (max-width: 1100px)
+    {
+        transition: 0.375s;
+        width: 450px;
+    }
     
 
 
@@ -22,25 +41,6 @@ export const PBarContainer = styled.div`
         color: ${colors.mainPurple};
     }
 
-    @media screen and (max-width: 900px)
-    {
-        width: 250px;
-    }
-
-    @media screen and (max-width: 768px)
-    {
-        width: 450px;
-    }
-
-    @media screen and (max-width: 570px)
-    {
-        width: 300px;
-    }
-
-    @media screen and (max-width: 480px)
-    {
-        width: 250px;
-    }
 `
 export const PBar = styled.div`
     background: ${colors.mainGreen};

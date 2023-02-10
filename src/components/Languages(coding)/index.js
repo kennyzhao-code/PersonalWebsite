@@ -12,6 +12,7 @@ import FontStyles from "../Fonts/fontStyles"
 
 const Language = ({lightBg, id, imgStart, darkText, description}) => {
     
+    //controls fade in animation time 
     useEffect(() => {
         Aos.init({duration: 1000}); 
     }, []); 
@@ -26,19 +27,19 @@ const Language = ({lightBg, id, imgStart, darkText, description}) => {
                     
                     <LanguageRow imgStart={imgStart}>
 
-                        <Column1>
+                        <Column1 data-aos-once='true' data-aos="fade-up">
                             
                             <TextWrapper>                     
                                 
 
-                                <Subtitle data-aos-once='true' data-aos="fade-up" darkText={darkText}>{description}</Subtitle>
+                                <Subtitle darkText={darkText}>{description}</Subtitle>
                                     
 
                             </TextWrapper>
                         </Column1>
                         
-                        <Column2>
-                            <LanguageWrap data-aos-once='true' data-aos="fade-up">
+                        <Column2 data-aos-once='true' data-aos="fade-up">
+                            <LanguageWrap>
 
                                 <ProgressBar done='60'/> 
 
@@ -88,11 +89,14 @@ export default Language
 
 //main container 
 const LanguageContainer = styled.div`
-    color: #fff;
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
+    transition: 0.375s;
 
-    @media screen and (max-width: 768px){
-        padding: 100px 0; 
+
+    @media screen and (max-width: 1100px){
+        width: 100%;
+        height: 1350px;
+        transition: 0.375s;
     }
 `
 
@@ -108,19 +112,34 @@ const LanguageWrapper = styled.div`
     justify-content: center; 
     position: relative;
     bottom: 7rem;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1100px){
+        margin-left: 4rem;
+        transition: 0.375s;
+    }
 `
 
 //main row
 const LanguageRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr); 
-    grid-column-gap: 5rem;
+    grid-column-gap: 2rem;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )}; 
     width: 100%;
+    transition: 0.375s;
 
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: 1100px) {
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+        transition: 0.375s;
+    }
+
+
+    @media screen and (max-width: 1700px){
+        grid-column-gap: 0;
+        transition: 0.375s;
     }
 `
 
@@ -131,6 +150,26 @@ const Column1 = styled.div`
     grid-area: col1; 
     position: relative;
     left: 1rem;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        left: 0;
+        margin-right: 6.5rem;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        margin-right: 10rem;
+
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        margin-right: 0;
+        margin-right: 0;
+
+    }
 
     
 `
@@ -140,6 +179,29 @@ const Column2 = styled.div`
     margin-top: 6rem;
     padding: 0 15px; 
     grid-area: col2; 
+    position: relative;
+    right: 0.8rem;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1700px){
+        transition: 0.375s;
+        right: 0;
+        left: 1rem;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        right: 2rem;
+        left: 0;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        right: 0;
+        left: 0;
+        margin-top: 0;
+        bottom: 3rem;
+    }
 
 `
 
@@ -147,10 +209,24 @@ const Column2 = styled.div`
 const TextWrapper = styled.div`
     padding-top: 3rem; 
     padding-bottom: 0; 
+    transition: 0.375s;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 1700px){
         position: relative;
-        right: 1rem;
+        bottom: 2rem;
+    }
+
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        right: 6rem;
+        bottom: 7rem;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        right: 0rem;
+        left: 3rem; 
+        bottom: 0rem;
     }
 `
 
@@ -166,19 +242,35 @@ const Subtitle = styled.p`
     font-family: 'OktaNeueLight', sans-serif;
     font-weight: bold;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
+    transition: 0.375s;
+
+
+    @media screen and (max-width: 1700px){
+        width: 500px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        width: 430px;
+        transition: 0.375s;
+    }
 `
 
 
 const LanguageWrap = styled.div`
     width: 700px; 
     height: 430px;
-    border: #897CBF;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-bottom: 4rem;
+
+    @media screen and (max-width: 1100px){
+        position: relative;
+        right: 4rem;
+    }
 
 `
 

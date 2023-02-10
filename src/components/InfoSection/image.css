@@ -1,8 +1,48 @@
 /*image styling*/
 .Myself{
     border-radius: 10px;
+    height: 400px;
+    width: 640px;
+    transition: 0.375s;
+    position: relative;
+    top: 5%;
 
 }
+
+@media screen and (max-width: 1700px) {
+    .Myself{
+        transition: 0.375;
+        width: 500px;
+        height: 550px;
+        position: relative;
+        right: 10%;
+        top: 19%;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+  .Myself{
+      transition: 0.375;
+      width: 500px;
+      height: 550px;
+      position: relative;
+      right: 10%;
+      top: 0;
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  .Myself{
+      transition: 0.375;
+      width: 400px;
+      height: 450px;
+      position: relative;
+      right: 15%;
+      top: 0;
+  }
+}
+  
 
 /*notification animation*/
 .notification-box {

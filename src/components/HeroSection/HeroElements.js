@@ -92,15 +92,15 @@ export const HeroP2 = styled.p`
 
 //button style 
 export const ButtonWrapper = styled(Link)`
-    position: relative; 
     height: 40px;
     width: 120px;
     justify-self: center;
     margin: auto;
+    align-items: center;
     top: 1rem;
     border-radius: 40px; 
     background-color: #98f5e1;
-    display: block;
+    display: flex;
     z-index: 5;
     text-decoration: none;
 
@@ -121,12 +121,12 @@ export const ButtonWrapper = styled(Link)`
 export const Button = styled(Link)`
     font-family: 'Poppins', sans-serif;
     color: black;
-    justify-content: center;
-    text-align: center;
-    margin-left: 1.6rem;
+    display: flex;
     position: relative;
-    top: 0.3rem;
     text-decoration: none;
+    text-align: center;
+    align-items: center; 
+    margin-left: 2rem;
 
     &:hover{
         cursor: pointer;
@@ -140,6 +140,7 @@ export const Button = styled(Link)`
     
 `
 
+/*
 //progress bar 
 
 export const HeroPBarContainer = styled.div`
@@ -161,8 +162,9 @@ export const HeroPBar = styled.div`
     height: 100%; 
     width: 0; 
     transition: 3s ease; 
+    border: 1px solid white;
 `
-
+*/
 /* export const HeroBtnWrapper = styled.div`
     margin-top: 32px; 
     display: flex;

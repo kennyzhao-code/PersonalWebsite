@@ -52,3 +52,34 @@
     
 
 }
+
+.albumCover{
+    position: relative;
+    bottom: 0.4rem;
+    width: 300px;
+    height: 300px;
+    transition: 0.375s;
+}
+
+@media screen and (max-width: 1700px) {
+    .albumCover{
+        position: relative;
+        bottom: 0.2rem;
+        width: 280px;
+        height: 280px;
+        transition: 0.375s;
+
+    }
+}
+    
+
+@media screen and (max-width: 1350px) {
+    .albumCover{
+        position: relative;
+        top: 3rem;
+        width: 180px;
+        height: 180px;
+        transition: 0.375s;
+
+    }
+}

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Kenny Zhao`,
-    description: `Hello! My name is Kenny Zhao, a student from Ontario, Canada who has a passion for coding and a love for exploring new heights. Welcome to my official Website.`,
+    description: `Hello! My name is Kenny Zhao, a student from McMaster University who has a passion for coding and a love for exploring new heights. Welcome to my official Website.`,
     author: `@KennyZhao`,
     siteUrl: `https://kennyzhao.dev/`,
   },

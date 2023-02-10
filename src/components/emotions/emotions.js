@@ -9,6 +9,7 @@ import FontStyles from "../Fonts/fontStyles"
 
 const Emotions = ({lightBg, id}) => {
     
+    //controls fade in animation time 
     useEffect(() => {
         Aos.init({duration: 1000}); 
     }, []); 
@@ -18,7 +19,7 @@ const Emotions = ({lightBg, id}) => {
         <FontStyles />
             <EmotionsContainer name ="emotions" lightBg = {lightBg} id = {id}>
             
-                <EmotionsWrapper>
+                <EmotionsWrapper data-aos-once='true' data-aos="fade-up">
                         <EmotionsRow>
                             
                             <EmotionsBlock>
@@ -101,8 +102,8 @@ const EmotionsContainer = styled.div`
     font-family: 'OktaNeueLight', sans-serif;
     font-weight: bold;
 
-    @media screen and (max-width: 768px){
-        padding: 100px 0; 
+    @media screen and (max-width: 1100px){
+        height: 500px;
     }
 `
 
@@ -129,7 +130,8 @@ const EmotionsRow = styled.div`
     width: 100%;
     
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1100px) {
+        grid-row-gap: 4rem;
         grid-template-columns: 1fr;
     }
 `
@@ -143,6 +145,17 @@ const EmotionsBlock = styled.div`
     align-items: center;
     display: flex;
     justify-content: center;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1700px) {
+        transition: 0.375s;
+        width: 355px; 
+    }
+
+    @media screen and (max-width: 1350px) {
+        transition: 0.375s;
+        width: 305px; 
+    }
     
 `
 const EmotionSecondBlock = styled.div`

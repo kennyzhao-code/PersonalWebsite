@@ -1,0 +1,76 @@
+.htn{
+    width: 600px;
+    height: 400px;       
+    transition: 0.375s;
+
+}
+
+.uoft{
+    width: 600px;
+    height: 400px;
+    transition: 0.375s;
+
+}
+
+.delta{
+    width: 600px;
+    height: 400px;
+    transition: 0.375s;
+
+}
+
+.ohsea{
+    width: 400px;
+    height: 400px;
+    transition: 0.375s;
+
+}   
+
+
+@media screen and (max-width: 1700px) {
+    .htn{
+        width: 500px;
+        height: 400px;
+        transition: 0.375s;
+
+    }
+    
+    .uoft{
+        width: 500px;
+        height: 400px;
+        transition: 0.375s;
+
+    }
+    
+    .delta{
+        width: 500px;
+        height: 400px;
+        transition: 0.375s;
+
+    }
+    
+}
+    
+
+@media screen and (max-width: 1700px) {
+    .htn{
+        width: 450px;
+        height: 350px;
+        transition: 0.375s;
+
+    }
+    
+    .uoft{
+        width: 450px;
+        height: 350px;
+        transition: 0.375s;
+
+    }
+    
+    .delta{
+        width: 450px;
+        height: 350px;
+        transition: 0.375s;
+    }
+    
+}
