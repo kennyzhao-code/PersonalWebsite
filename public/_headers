@@ -5,8 +5,6 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Referrer-Policy: same-origin
-/component---cache-caches-gatsby-plugin-offline-app-shell-js-e7ffd94a2e0dc219c609.js
-  Cache-Control: public, max-age=31536000, immutable
 /styles.3cb859e20d2e194bc6c1.css
   Cache-Control: public, max-age=31536000, immutable
 /252f366e-daa0fa9eb683905e5c81.js
@@ -25,13 +23,15 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---src-pages-404-js-848521c17ec2caf902ce.js
   Cache-Control: public, max-age=31536000, immutable
-/4be3e580-ae949a43a66bda02f7a0.js
+/4be3e580-a9fb51c3e8bd5bffa158.js
   Cache-Control: public, max-age=31536000, immutable
 /5e2a4920-a838a49d42ed7aab67f3.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-index-js-83867741b6bd300740cb.js
+/component---src-pages-index-js-734cbe3729bd443f4e4d.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-9a76b96d2df3964d0535.js
+/component---cache-caches-gatsby-plugin-offline-app-shell-js-e7ffd94a2e0dc219c609.js
+  Cache-Control: public, max-age=31536000, immutable
+/webpack-runtime-bd4b12e420a63a9a938d.js
   Cache-Control: public, max-age=31536000, immutable
 /framework-b2482544d729c30220bd.js
   Cache-Control: public, max-age=31536000, immutable
