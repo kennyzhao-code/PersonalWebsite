@@ -101,8 +101,11 @@ export default InfoSection
 const InfoContainer = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
-    height: 500px;
+    height: 700px;
     transition: 0.375s;
+
+
+
 
     @media screen and (max-width: 1700px){
         height: 700px;
@@ -115,7 +118,7 @@ const InfoContainer = styled.div`
     }
 
     @media screen and (max-width: 1100px){
-        height: 1550px;
+        height: 1450px;
         transition: 0.375s;
     }
 `
@@ -179,6 +182,7 @@ const Column1 = styled.div`
     padding: 0 15px; 
     grid-area: col1; 
     
+    
     @media screen and (max-width: 1700px){
         margin-top: 5rem;
     }
@@ -231,7 +235,7 @@ const Subtitle = styled.p`
     font-family: 'OktaNeueLight', sans-serif;
     font-weight: bold;
     transition: 0.375s;
-    color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
+    color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')};
 
 
     @media screen and (max-width: 1700px){

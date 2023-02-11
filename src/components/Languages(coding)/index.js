@@ -91,6 +91,15 @@ export default Language
 const LanguageContainer = styled.div`
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
     transition: 0.375s;
+    height: 700px;
+
+    @media screen and (max-width: 1700px){
+        width: 100%;
+        height: 900px;
+        transition: 0.375s;
+    }
+
+
 
 
     @media screen and (max-width: 1100px){
@@ -104,14 +113,13 @@ const LanguageContainer = styled.div`
 const LanguageWrapper = styled.div`
     display: grid; 
     z-index: 1; 
-    height: 900px; 
     width: 100%;
+    height: 100px;
     margin-right: auto; 
     margin-left: auto; 
     padding: 0 24px; 
     justify-content: center; 
     position: relative;
-    bottom: 7rem;
     transition: 0.375s;
 
     @media screen and (max-width: 1100px){
@@ -128,7 +136,11 @@ const LanguageRow = styled.div`
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )}; 
     width: 100%;
+    height: 100%;
     transition: 0.375s;
+    position: relative;
+
+
 
 
     @media screen and (max-width: 1100px) {
@@ -151,10 +163,13 @@ const Column1 = styled.div`
     position: relative;
     left: 1rem;
     transition: 0.375s;
+    bottom: 10rem;
+
 
     @media screen and (max-width: 1700px){
         transition: 0.375s;
         left: 0;
+        top: 0;
         margin-right: 6.5rem;
     }
 
@@ -168,6 +183,7 @@ const Column1 = styled.div`
         transition: 0.375s;
         margin-right: 0;
         margin-right: 0;
+        margin-bottom: 2rem;
 
     }
 
@@ -182,11 +198,15 @@ const Column2 = styled.div`
     position: relative;
     right: 0.8rem;
     transition: 0.375s;
+    height: 400px;
+    bottom: 14rem;
+
 
     @media screen and (max-width: 1700px){
         transition: 0.375s;
         right: 0;
         left: 1rem;
+        bottom: 8rem;
     }
 
     @media screen and (max-width: 1350px){
@@ -200,7 +220,7 @@ const Column2 = styled.div`
         right: 0;
         left: 0;
         margin-top: 0;
-        bottom: 3rem;
+        bottom: 7rem;
     }
 
 `
