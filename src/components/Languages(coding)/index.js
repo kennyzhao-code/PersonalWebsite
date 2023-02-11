@@ -91,6 +91,7 @@ export default Language
 const LanguageContainer = styled.div`
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
     transition: 0.375s;
+    height: 900px;
 
 
     @media screen and (max-width: 1100px){
@@ -104,15 +105,17 @@ const LanguageContainer = styled.div`
 const LanguageWrapper = styled.div`
     display: grid; 
     z-index: 1; 
-    height: 900px; 
     width: 100%;
+    height: 200px;
     margin-right: auto; 
     margin-left: auto; 
     padding: 0 24px; 
     justify-content: center; 
     position: relative;
-    bottom: 7rem;
     transition: 0.375s;
+    top: 15rem;
+    
+
 
     @media screen and (max-width: 1100px){
         margin-left: 4rem;
@@ -129,6 +132,8 @@ const LanguageRow = styled.div`
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )}; 
     width: 100%;
     transition: 0.375s;
+    bottom: 13rem;
+    position: relative;
 
 
     @media screen and (max-width: 1100px) {
@@ -140,6 +145,7 @@ const LanguageRow = styled.div`
     @media screen and (max-width: 1700px){
         grid-column-gap: 0;
         transition: 0.375s;
+        bottom: 17rem;
     }
 `
 
@@ -168,6 +174,7 @@ const Column1 = styled.div`
         transition: 0.375s;
         margin-right: 0;
         margin-right: 0;
+        bottom: 4rem;
 
     }
 
@@ -187,6 +194,7 @@ const Column2 = styled.div`
         transition: 0.375s;
         right: 0;
         left: 1rem;
+        bottom: 2rem;
     }
 
     @media screen and (max-width: 1350px){
@@ -200,7 +208,7 @@ const Column2 = styled.div`
         right: 0;
         left: 0;
         margin-top: 0;
-        bottom: 3rem;
+        bottom: 7rem;
     }
 
 `

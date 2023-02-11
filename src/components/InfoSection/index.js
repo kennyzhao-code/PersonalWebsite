@@ -179,6 +179,7 @@ const Column1 = styled.div`
     padding: 0 15px; 
     grid-area: col1; 
     
+    
     @media screen and (max-width: 1700px){
         margin-top: 5rem;
     }
@@ -231,7 +232,7 @@ const Subtitle = styled.p`
     font-family: 'OktaNeueLight', sans-serif;
     font-weight: bold;
     transition: 0.375s;
-    color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
+    color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')};
 
 
     @media screen and (max-width: 1700px){
