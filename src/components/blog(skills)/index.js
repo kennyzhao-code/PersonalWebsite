@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { SocialIcon } from 'react-social-icons'
 import { AiOutlineCopy } from "react-icons/ai"
-//import AudioPlayer from 'react-modern-audio-player';
+import AudioPlayer from 'react-modern-audio-player';
 import song from '../../images/doodle.mp3'
 import './icons.css'
 
@@ -154,7 +154,11 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                         <MusicDetails>
                                             <h3>Doodle (feat. Yerin Baek)</h3>
                                             <h4>Punchnello</h4>
-                                          {/*  <AudioPlayer
+
+                                        <div>
+
+                                        {typeof window !== 'undefined' && AudioPlayer && 
+                                             <AudioPlayer
                                                 playList={playList}
                                                 audioInitialState={{
                                                 volume: 0.5,
@@ -179,7 +183,9 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                 volume: false,
                                                 prevNnext: true,
                                                 }}
-                                            /> */}
+                                            /> 
+
+                                        } </div>
                                             <h5>@kenny-zhao on <a href = "https://open.spotify.com/user/kennyzhao2004" target = "_blank" rel='noreferrer' style = {{color: '#1DB954'}}>spotify</a></h5>
 
                                         </MusicDetails>
