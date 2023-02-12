@@ -50,7 +50,7 @@ const Emotions = ({lightBg, id}) => {
 
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
-                                    <EmotionText>Love life?</EmotionText>
+                                    <EmotionText>University?</EmotionText>
                                         <div class="faceSad">
                                             <div class="eye"></div>
                                             <div class="eye right"></div>
