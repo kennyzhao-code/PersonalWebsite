@@ -18,7 +18,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
     return (
         <>
         
-            <FontStyles />
+            <FontStyles/>
             <InfoContainer name ="aboutMe" lightBg = {lightBg} id = {id}>
                 
                 <InfoWrapper>
@@ -220,9 +220,6 @@ const TopLine = styled.p`
     letter-spacing: 1.4px; 
     font-style: italic;
     display: flex;
-
-
-
 `
 
 
