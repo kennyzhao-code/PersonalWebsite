@@ -196,7 +196,6 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                 </TitleSocialDivMusic>
                             </BlogSectionMusic>
 
-
                             <BlogSectionAcademic data-aos-once='true' data-aos="fade-up">
                                 <TitleSocialDivAcademics>
                                         <h1>Academics <span>&gt;:)</span></h1>

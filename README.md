@@ -21,7 +21,8 @@ Welcome to the README.md of my personal website! I am probably going to add in p
   - add extra pages for projects 
   - darkmode??
   - fix more bugs in other browsers/mobile, mobile styling
-  - add stroke to text (2px)
+  - add stroke to text (2px), change font completely
+  - fix music player on windows 
   - 404 page
 
 <!-- AUTO-GENERATED-CONTENT:END -->
