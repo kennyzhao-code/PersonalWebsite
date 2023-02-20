@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { colors } from "../globals/colors"
 import { StaticImage } from 'gatsby-plugin-image'
 import './bg.css'
-import '../Globals/font.css'
+import '../globals/font.css'
 
 
 const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, description}) => {

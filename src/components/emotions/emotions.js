@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import styled from "styled-components"
 import {colors} from "../../components/globals/colors"
 import './emotions.css'
-import '../Globals/font.css'
+import '../globals/font.css'
 
 const Emotions = ({lightBg, id}) => {
     

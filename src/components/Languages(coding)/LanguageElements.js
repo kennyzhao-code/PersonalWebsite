@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {colors} from '../globals/colors'
-import '../Globals/font.css'
+import '../globals/font.css'
 //progress bar 
 
 export const PBarContainer = styled.div`

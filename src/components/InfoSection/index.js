@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import './image.css'
-import '../Globals/font.css'
+import '../globals/font.css'
 
 
 const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, description2}) => {

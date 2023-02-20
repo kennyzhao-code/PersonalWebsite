@@ -3,7 +3,7 @@ import Aos from "aos"
 import styled from "styled-components"
 import { colors } from "../globals/colors"
 import { FiExternalLink } from 'react-icons/fi'
-import '../Globals/font.css'
+import '../globals/font.css'
 
 
 const Experiences = ({lightBg, id, topLine, description}) => {

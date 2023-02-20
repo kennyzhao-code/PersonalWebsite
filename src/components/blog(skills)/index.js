@@ -9,7 +9,7 @@ import { AiOutlineCopy } from "react-icons/ai"
 import AudioPlayer from 'react-modern-audio-player';
 import song from '../../images/doodle.mp3'
 import './icons.css'
-import '../Globals/font.css'
+import '../globals/font.css'
 
 const playList = [
     {

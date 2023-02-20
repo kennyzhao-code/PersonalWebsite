@@ -3,7 +3,7 @@ import {FaInstagram, FaLinkedin, FaGithub, FaTwitter, FaSnapchat} from 'react-ic
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import { colors } from '../globals/colors'
-import '../Globals/font.css'
+import '../globals/font.css'
 
 const Footer = () => {
     return (

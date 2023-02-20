@@ -3,7 +3,7 @@ import Aos from "aos"
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import {colors} from '../globals/colors';
-import '../Globals/font.css'
+import '../globals/font.css'
 
 //fix emailjs
 const ContactUs = ({lightBg, id, topLine, description, quote}) => {

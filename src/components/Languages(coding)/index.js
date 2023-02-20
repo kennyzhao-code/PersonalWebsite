@@ -7,7 +7,7 @@ import ProgressBar from "./ProgressBar"
 import ProgressBarCss from "./ProgressBarCss"
 import ProgressBarC from "./ProgressBarC"
 import ProgressBarJavaScript from "./ProgressBarJavaScript"
-import '../Globals/font.css'
+import '../globals/font.css'
 
 
 const Language = ({lightBg, id, imgStart, darkText, description}) => {
