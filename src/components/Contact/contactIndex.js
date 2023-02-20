@@ -3,7 +3,7 @@ import Aos from "aos"
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import {colors} from '../globals/colors';
-import FontStyles from '../Fonts/fontStyles';
+import '../Globals/font.css'
 
 //fix emailjs
 const ContactUs = ({lightBg, id, topLine, description, quote}) => {
@@ -71,7 +71,6 @@ const ContactUs = ({lightBg, id, topLine, description, quote}) => {
 
   return (
   <>
-  <FontStyles />
     <MainDiv name = "contact" id = {id} lightBg = {lightBg}>
       <ContactFormDiv data-aos-once='true' data-aos="fade-up">
         <ContactFormBox>
@@ -127,7 +126,7 @@ const MainDiv = styled.div`
     flex-direction: column;
     align-items: center;
     display: flex;
-    height: 1000px;
+    height: 800px;
     transition: 0.375s;
 
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
@@ -214,7 +213,7 @@ const ContactFormBox = styled.div`
 `
 const ContactTitle = styled.h1`
     font-size: 4rem;
-    font-family: 'OktaNeueBold', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     position: relative;
     color: white;  
@@ -228,12 +227,13 @@ const ContactTitle = styled.h1`
 `
 
 const ContactDescription = styled.p`
-  font-family: 'OktaNeueLight', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: white;
+    line-height: 1.5;
     font-size: 1.8rem;
     margin-top: 2rem;
     position: relative;
-    font-weight: bold;   
+    font-weight: 400;   
     transition: 0.375s;
 
     
@@ -244,12 +244,12 @@ const ContactDescription = styled.p`
     }
     `
 const ContactQuote = styled.p`
-    font-family: 'OktaNeueLight', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 1.8rem;
     margin-top: 2rem;
     position: relative;
-    font-weight: bold; 
+    font-weight: 400; 
     font-style: italic;  
     transition: 0.375s;
 
@@ -265,8 +265,8 @@ const ContactQuote = styled.p`
 const StyledContactForm = styled.div`
   width: 800px;
   display: flex;
-  font-family: 'OktaNeueLight', sans-serif;
-  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
   position: relative;
   transition: 0.375s;
  
@@ -288,6 +288,7 @@ const StyledContactForm = styled.div`
       height: 35px;
       padding: 7px;
       outline: none;
+      margin-top: 0.5rem;
       border-radius: 10px;
       border: 2px solid white;
       background: ${colors.secondaryBlue};
@@ -317,6 +318,7 @@ const StyledContactForm = styled.div`
       max-height: 300px;
       min-height: 200px;
       padding: 7px;
+      margin-top: 0.5rem;
       outline: none;
       border-radius: 10px;
       border: 2px solid white;

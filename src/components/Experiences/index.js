@@ -3,6 +3,7 @@ import Aos from "aos"
 import styled from "styled-components"
 import { colors } from "../globals/colors"
 import { FiExternalLink } from 'react-icons/fi'
+import '../Globals/font.css'
 
 
 const Experiences = ({lightBg, id, topLine, description}) => {
@@ -14,6 +15,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
     }, []); 
 
     return (
+      <>
       <MasterTab name = "skills" id = {id} lightBg = {lightBg}>
 
         <SecondaryTab>
@@ -124,6 +126,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
 
 
         </MasterTab>
+        </>
 
     )
 }
@@ -214,14 +217,16 @@ const TabH1 = styled.h1`
   letter-spacing: 1.4px; 
   font-style: italic;
   display: flex;
+  font-family: "Raleway", sans-serif;
  
 
 `
 
 const SecondaryDescription = styled.p`
     font-size: 1.8rem;
-    font-family: "OktaNeueLight", sans-serif;
-    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
     color: ${colors.mainRed}
 `
 
@@ -409,20 +414,23 @@ const ExperienceSectionMarketyze = styled.div`
 
 //inner box components 
 const TitleHeader = styled.h1`
-  font-family: "OktaNeueBold", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
   color: white;
 
 `
 
 const SubTitle = styled.h2`
-  font-family: "OktaNeueLight", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
   color: white;
 `
 
 const SubDescription = styled.p`
-  font-family: "OktaNeueLight", sans-serif;
+  font-family: "Raleway", sans-serif;
   color: white;
-  font-weight: bold;
+  font-weight: 400;
+  line-height: 1.6;
   font-size: 1.3rem;
 `
 
@@ -437,10 +445,11 @@ const ExternalSource = styled.a`
     text-decoration: none;
 
     h1{
-      font-family: "OktaNeueLight", sans-serif;
+      font-family: "Raleway", sans-serif;
       color: white;
       margin-top: 1.5rem;
       margin-left: 1rem;
+      font-weight: 400;
 
     }
 
@@ -497,7 +506,7 @@ const InnerDivTrudeauMusic = styled.div`
 `
 
 const InnerDivPethsCSS = styled.div`
-  height: 400px;
+  height: 440px;
   width: 600px;
   transition: 0.375s;
 

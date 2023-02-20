@@ -4,6 +4,8 @@ import styled from "styled-components"
 import { colors } from "../globals/colors"
 import { StaticImage } from 'gatsby-plugin-image'
 import './bg.css'
+import '../Globals/font.css'
+
 
 const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, description}) => {
 
@@ -15,7 +17,8 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
 
 
     return (
-        <ProjectContainer name = "projects"  id = {id} lightBg = {lightBg}>
+        <>
+         <ProjectContainer name = "projects"  id = {id} lightBg = {lightBg}>
             
             <SecondaryProjectContainer>
                 <Description data-aos-once='true' data-aos="fade-up">
@@ -154,13 +157,11 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
             </SecondaryProjectContainer>
 
         </ProjectContainer>
+        </>
     )
 }
 
 export default Projects
-
-
-
 
 
 //main container 
@@ -211,13 +212,15 @@ const Description = styled.h1`
     letter-spacing: 1.4px; 
     font-style: italic;
     display: flex;
+    font-family: "Raleway", sans-serif;
 
 `
 
 const SecondaryDescription = styled.p`
     font-size: 1.8rem;
-    font-family: "OktaNeueLight", sans-serif;
-    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
     color: ${colors.mainGreen}
 
 
@@ -284,9 +287,9 @@ const LogoContainer = styled.div`
     width: 390px;
 
     h1{
-        font-family: "OktaNeueLight", sans-serif;
+        font-family: "Raleway", sans-serif;
         color: white;
-        font-weight: bold;
+        font-weight: 400;
         margin-left: 1.5rem;
         margin-top: 1.2rem;
     }

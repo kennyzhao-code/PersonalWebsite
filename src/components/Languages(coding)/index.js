@@ -7,7 +7,7 @@ import ProgressBar from "./ProgressBar"
 import ProgressBarCss from "./ProgressBarCss"
 import ProgressBarC from "./ProgressBarC"
 import ProgressBarJavaScript from "./ProgressBarJavaScript"
-import FontStyles from "../Fonts/fontStyles"
+import '../Globals/font.css'
 
 
 const Language = ({lightBg, id, imgStart, darkText, description}) => {
@@ -19,15 +19,14 @@ const Language = ({lightBg, id, imgStart, darkText, description}) => {
     
     return (
         <>
-        <FontStyles />
             <LanguageContainer name ="languages" lightBg = {lightBg} id = {id}>
 
             
                 <LanguageWrapper>
                     
-                    <LanguageRow imgStart={imgStart}>
+                    <LanguageRow data-aos-once='true' data-aos="fade-up" imgStart={imgStart}>
 
-                        <Column1 data-aos-once='true' data-aos="fade-up">
+                        <Column1 >
                             
                             <TextWrapper>                     
                                 
@@ -38,7 +37,7 @@ const Language = ({lightBg, id, imgStart, darkText, description}) => {
                             </TextWrapper>
                         </Column1>
                         
-                        <Column2 data-aos-once='true' data-aos="fade-up">
+                        <Column2 >
                             <LanguageWrap>
 
                                 <ProgressBar done='60'/> 
@@ -259,8 +258,8 @@ const Subtitle = styled.p`
     margin-left: 0.8rem;
     font-size: 30px; 
     line-height: 45px; 
-    font-family: 'OktaNeueLight', sans-serif;
-    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
     transition: 0.375s;
 
@@ -286,6 +285,7 @@ const LanguageWrap = styled.div`
     align-items: center;
     flex-direction: column;
     margin-bottom: 4rem;
+   
 
     @media screen and (max-width: 1100px){
         position: relative;
