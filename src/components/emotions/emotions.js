@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import styled from "styled-components"
 import {colors} from "../../components/globals/colors"
 import './emotions.css'
-import FontStyles from "../Fonts/fontStyles"
+import '../globals/font.css'
 
 const Emotions = ({lightBg, id}) => {
     
@@ -16,7 +16,6 @@ const Emotions = ({lightBg, id}) => {
     
     return (
         <>
-        <FontStyles />
             <EmotionsContainer name ="emotions" lightBg = {lightBg} id = {id}>
             
                 <EmotionsWrapper data-aos-once='true' data-aos="fade-up">
@@ -39,7 +38,7 @@ const Emotions = ({lightBg, id}) => {
 
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
-                                    <EmotionText style ={{paddingLeft: '0'}}>Workload?</EmotionText>
+                                    <EmotionText>Workload?</EmotionText>
                                     <div class="faceMeh">
                                             <div class="eye"></div>
                                             <div class="eye right"></div>
@@ -99,8 +98,8 @@ const EmotionsContainer = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
     height: 50px;
-    font-family: 'OktaNeueLight', sans-serif;
-    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 
     @media screen and (max-width: 1100px){
         height: 500px;
@@ -175,7 +174,7 @@ const EmotionText = styled.p`
     position: absolute;
     left: 0;
     padding-left: 1rem;
-    top: 0.2rem;
+    top: 0.5rem;
    
 `
 

@@ -51,6 +51,8 @@
     width: 50px;
     height: 50px;
     text-align: center;
+    left: 0.5rem;
+    bottom: 0.7rem;
   }
   .notification-bell {
     animation: bell 1s 1s both infinite;
@@ -109,11 +111,12 @@
     right: -6px;
     width: 30px;
     height: 30px;
-    line-height: 30px;
+    line-height: 27px;
     font-size: 18px;
     border-radius: 50%;
     background-color: #DE6666;
     color: #fff;
+    font-family: 'Raleway', sans-serif;
     animation: zoom 3s 3s both infinite;
   }
   @keyframes bell {

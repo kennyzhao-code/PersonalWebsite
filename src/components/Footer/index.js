@@ -3,6 +3,7 @@ import {FaInstagram, FaLinkedin, FaGithub, FaTwitter, FaSnapchat} from 'react-ic
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import { colors } from '../globals/colors'
+import '../globals/font.css'
 
 const Footer = () => {
     return (
@@ -97,7 +98,7 @@ export const SocialMediaWrap = styled.div`
 `
 
 export const SocialLogo = styled(Link)`
-    font-family: 'OktaNeueLight', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: ${colors.mainPurple};
     justify-self: start; 
     cursor: pointer;
@@ -106,7 +107,7 @@ export const SocialLogo = styled(Link)`
     display: flex; 
     align-items: center; 
     margin-bottom: 16px; 
-    font-weight: bold; 
+    font-weight: 400; 
 
     &:hover {
         color: ${colors.secondaryPurple};
@@ -116,9 +117,10 @@ export const SocialLogo = styled(Link)`
 `
 
 export const WebsiteRights = styled.small`
-    font-family: 'OktaNeueLight', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: ${colors.mainPurple};
     font-size: 1rem;
+    font-weight: 400;
     margin-bottom: 16px; 
 
 `

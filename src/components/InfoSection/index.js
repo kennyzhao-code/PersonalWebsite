@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import './image.css'
-import FontStyles from "../Fonts/fontStyles"
+import '../globals/font.css'
 
 
 const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, description2}) => {
@@ -17,15 +17,13 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
     
     return (
         <>
-        
-            <FontStyles/>
             <InfoContainer name ="aboutMe" lightBg = {lightBg} id = {id}>
                 
                 <InfoWrapper>
                     
-                    <InfoRow imgStart={imgStart}>
+                    <InfoRow data-aos-once='true' data-aos="fade-up" imgStart={imgStart}>
 
-                        <Column1 data-aos-once='true' data-aos="fade-up">
+                        <Column1>
                             
                             <TextWrapper>                     
                                 
@@ -49,7 +47,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                             </TextWrapper>
                         </Column1>
                         
-                        <Column2 data-aos-once='true' data-aos="fade-up">
+                        <Column2 >
                             <ImgWrap>
                             <StaticImage
                                 className = 'Myself'
@@ -215,8 +213,8 @@ const TopLine = styled.p`
     color: #897CBF; 
     font-size: 65px; 
     position: relative;
-    font-weight: 900;
-    font-family: 'OktaNeueBold', sans-serif; 
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif; 
     letter-spacing: 1.4px; 
     font-style: italic;
     display: flex;
@@ -229,8 +227,8 @@ const Subtitle = styled.p`
     margin-left: 0.5rem;
     font-size: 30px; 
     line-height: 40px; 
-    font-family: 'OktaNeueLight', sans-serif;
-    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     transition: 0.375s;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')};
 

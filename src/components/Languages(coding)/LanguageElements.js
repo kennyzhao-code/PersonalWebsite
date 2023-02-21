@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {colors} from '../globals/colors'
+import '../globals/font.css'
 //progress bar 
 
 export const PBarContainer = styled.div`
@@ -33,8 +34,8 @@ export const PBarContainer = styled.div`
 
 
     p{
-        font-family: 'OktaNeueLight', sans-serif;
-        font-weight: bold;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
         position: relative;
         font-size: 1.5rem;
         bottom: 3.3rem;

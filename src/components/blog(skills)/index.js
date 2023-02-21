@@ -9,7 +9,7 @@ import { AiOutlineCopy } from "react-icons/ai"
 import AudioPlayer from 'react-modern-audio-player';
 import song from '../../images/doodle.mp3'
 import './icons.css'
-
+import '../globals/font.css'
 
 const playList = [
     {
@@ -101,6 +101,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
 
 
     return (
+        <>
         <BlogContainer name = 'hobbies' id ={id} lightBg = {lightBg}>
             <BlogSecondaryContainer>
 
@@ -110,7 +111,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
 
                         <BlogSection>
 
-                            <BlogSectionCoding data-aos-once='true' data-aos="fade-up">
+                            <BlogSectionCoding>
                                 <TitleSocialDivCoding>
                                     <h1>Coding <span>(duh)</span></h1>
                                     <p>{coding}</p>
@@ -135,7 +136,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                 </TitleSocialDivCoding>
                             </BlogSectionCoding>
 
-                            <BlogSectionMusic data-aos-once='true' data-aos="fade-up">
+                            <BlogSectionMusic >
                                 <TitleSocialDivMusic>
                                     <h1>Music <span>:3</span></h1>
                                     <h2>{music}</h2>
@@ -196,8 +197,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                 </TitleSocialDivMusic>
                             </BlogSectionMusic>
 
-
-                            <BlogSectionAcademic data-aos-once='true' data-aos="fade-up">
+                            <BlogSectionAcademic >
                                 <TitleSocialDivAcademics>
                                         <h1>Academics <span>&gt;:)</span></h1>
                                         <p>{academics}</p>
@@ -226,7 +226,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
 
                         <BlogSection>
 
-                            <BlogSectionPersonality data-aos-once='true' data-aos="fade-up">
+                            <BlogSectionPersonality >
                                 <TitleSocialDivPersonality>
                                     <h1>Personality <span>&lt;3</span></h1>
                                     <p>{personality}</p>
@@ -291,7 +291,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                 </TitleSocialDivPersonality>
                             </BlogSectionPersonality>
 
-                            <BlogSectionAthletic data-aos-once='true' data-aos="fade-up">
+                            <BlogSectionAthletic>
                                 <TitleSocialDivAthletics>
                                         <h1>Athletics <span>:0</span></h1>
                                         <p>{athletics}</p>
@@ -316,7 +316,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                     </TitleSocialDivAthletics>
                             </BlogSectionAthletic>
 
-                            <BlogSectionGame data-aos-once='true' data-aos="fade-up">
+                            <BlogSectionGame>
                                 <TitleSocialDivGames>
                                         <h1>Games <span>:P</span></h1>
                                         <p>{games}</p>
@@ -347,6 +347,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
             </BlogSecondaryContainer>
 
         </BlogContainer>
+        </>
     )
 }
 
@@ -407,7 +408,7 @@ const BlogH1 = styled.h1`
     letter-spacing: 1.4px; 
     font-style: italic;
     display: flex;
-    font-family: 'OktaNeueBold', sans-serif;
+    font-family: 'Raleway', sans-serif;
 
 
 `
@@ -653,20 +654,23 @@ const TitleSocialDivCoding = styled.div`
 
 
     h1{
-        font-family: "OktaNeueBold", sans-serif;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
         color: white;
 
         span{
-            font-family: "OktaNeueLight", sans-serif;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
         }
 
     }
 
     p{
         color: white;
-        font-family: "OktaNeueLight", sans-serif;
-        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
         font-size: 1.7rem;
+        line-height: 1.6;
     }
 
     @media screen and (max-width: 1700px){
@@ -715,7 +719,8 @@ const SocialDivCoding = styled.div`
     
 
     h1{
-        font-family: 'OktaNeueLight', sans-serif;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
         position: relative;
         margin-left: 2rem;
         top: 0.7rem;
@@ -746,19 +751,23 @@ const TitleSocialDivPersonality = styled.div`
 
 
     h1{
-        font-family: "OktaNeueBold", sans-serif;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
         color: white;
 
         span{
-            font-family: "OktaNeueLight", sans-serif;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
         }
+
     }
 
     p{
         color: white;
-        font-family: "OktaNeueLight", sans-serif;
-        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
         font-size: 1.7rem;
+        line-height: 1.6;
     }
 
 
@@ -813,10 +822,11 @@ const SocialDivPersonality = styled.div`
     
 
     h1{
-        font-family: 'OktaNeueLight', sans-serif;
+        font-family: 'Raleway', sans-serif;
         position: relative;
         margin-left: 2rem;
         top: 0.7rem;
+        font-weight: 400;
 
         @media screen and (max-width: 1350px){
             font-size: 1.6rem;
@@ -838,26 +848,30 @@ const SocialDivPersonality = styled.div`
 
 //athletics boxes
 const TitleSocialDivAthletics  = styled.div`
-    height: 380px;
+    height: 400px;
     width: 620px; 
     transition: 0.375s;
 
 
 
     h1{
-        font-family: "OktaNeueBold", sans-serif;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
         color: white;
 
         span{
-            font-family: "OktaNeueLight", sans-serif;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
         }
+
     }
 
     p{
         color: white;
-        font-family: "OktaNeueLight", sans-serif;
-        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
         font-size: 1.7rem;
+        line-height: 1.6;
     }
 
     @media screen and (max-width: 1700px){
@@ -907,10 +921,11 @@ const SocialDivAthletics = styled.div`
     
 
     h1{
-        font-family: 'OktaNeueLight', sans-serif;
+        font-family: 'Raleway', sans-serif;
         position: relative;
         margin-left: 2rem;
         top: 0.7rem;
+        font-weight: 400;
 
         @media screen and (max-width: 1350px){
             font-size: 1.6rem;
@@ -939,19 +954,23 @@ const TitleSocialDivGames = styled.div`
 
 
     h1{
-        font-family: "OktaNeueBold", sans-serif;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
         color: white;
 
         span{
-            font-family: "OktaNeueLight", sans-serif;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
         }
+
     }
 
     p{
         color: white;
-        font-family: "OktaNeueLight", sans-serif;
-        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
         font-size: 1.7rem;
+        line-height: 1.6;
     }
 
     @media screen and (max-width: 1700px){
@@ -1001,10 +1020,11 @@ const SocialDivGames = styled.div`
     
 
     h1{
-        font-family: 'OktaNeueLight', sans-serif;
+        font-family: 'Raleway', sans-serif;
         position: relative;
         margin-left: 2rem;
         top: 0.7rem;
+        font-weight: 400;
 
         @media screen and (max-width: 1350px){
             font-size: 1.6rem;
@@ -1032,19 +1052,23 @@ const TitleSocialDivAcademics = styled.div`
 
 
     h1{
-        font-family: "OktaNeueBold", sans-serif;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
         color: white;
 
         span{
-            font-family: "OktaNeueLight", sans-serif;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
         }
+
     }
 
     p{
         color: white;
-        font-family: "OktaNeueLight", sans-serif;
-        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
         font-size: 1.7rem;
+        line-height: 1.6;
     }
 
     @media screen and (max-width: 1700px){
@@ -1094,10 +1118,11 @@ const SocialDivAcademics = styled.div`
     
 
     h1{
-        font-family: 'OktaNeueLight', sans-serif;
+        font-family: 'Raleway', sans-serif;
         position: relative;
         margin-left: 2rem;
         top: 0.7rem;
+        font-weight: 400;
 
         @media screen and (max-width: 1350px){
             font-size: 1.6rem;
@@ -1125,26 +1150,28 @@ const TitleSocialDivMusic = styled.div`
 
 
     h1{
-        font-family: "OktaNeueBold", sans-serif;
+        font-family: "Raleway", sans-serif;
         color: white;
+        font-weight: 700;
 
         span{
-            font-family: "OktaNeueLight", sans-serif;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
         }
     }
 
     h2{
-        font-family: "OktaNeueLight", sans-serif;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
         color: white;
-        font-weight: bold;
         font-size: 1.7rem;
         line-height: 2.9rem;
     }
 
     p{
         color: ${colors.secondaryPurple};
-        font-family: "OktaNeueLight", sans-serif;
-        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
         font-size: 1.7rem;
     }
 
@@ -1194,10 +1221,10 @@ const MusicDetails = styled.div`
 
 
     h3{
-        font-family: "OktaNeueLight", sans-serif;
-        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         margin-top: 2rem;
         padding-left: 0.8rem;
 
@@ -1208,8 +1235,9 @@ const MusicDetails = styled.div`
     }
 
     h4{
-        font-family: "OktaNeueLight", sans-serif;
+        font-family: "Raleway", sans-serif;
         color: ${colors.mainPurple};
+        font-weight: 400;
         font-size: 1.5rem;
         position: relative;
         padding-top: 0;
@@ -1220,8 +1248,9 @@ const MusicDetails = styled.div`
     }
 
     h5{
-        font-family: "OktaNeueLight", sans-serif;
+        font-family: "Raleway", sans-serif;
         color: ${colors.mainPurple};
+        font-weight: 400;
         font-size: 1.3rem;
         padding-left: 0.8rem;
 
