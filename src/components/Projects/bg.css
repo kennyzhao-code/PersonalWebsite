@@ -52,7 +52,7 @@
 }
     
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1350px) {
     .htn{
         width: 450px;
         height: 350px;
@@ -72,5 +72,35 @@
         height: 350px;
         transition: 0.375s;
     }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .htn{
+        width: 320px;
+        height: 250px;
+        transition: 0.375s;
+
+    }
+    
+    .uoft{
+        width: 320px;
+        height: 250px;
+        transition: 0.375s;
+
+    }
+    
+    .delta{
+        width: 320px;
+        height: 250px;
+        transition: 0.375s;
+    }
+
+    .ohsea{
+        width: 320px;
+        height: 320px;
+        transition: 0.375s;
+    
+    }   
     
 }

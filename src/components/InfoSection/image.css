@@ -1,6 +1,5 @@
 /*image styling*/
 .Myself{
-    border-radius: 10px;
     height: 400px;
     width: 640px;
     transition: 0.375s;
@@ -40,6 +39,16 @@
       position: relative;
       right: 15%;
       top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Myself{
+      transition: 0.375;
+      width: 300px;
+      height: 350px;
+      position: relative;
+      right: 25%;
   }
 }
   

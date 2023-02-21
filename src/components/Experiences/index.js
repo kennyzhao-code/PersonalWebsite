@@ -24,10 +24,10 @@ const Experiences = ({lightBg, id, topLine, description}) => {
 
         <SecondaryDescription data-aos-once='true' data-aos="fade-up">{description}</SecondaryDescription>
 
-          <TabContainer>
+          <TabContainer data-aos-once='true' data-aos="fade-up">
 
             <ExperienceSection>
-                <ExperienceSectionMacCss data-aos-once='true' data-aos="fade-up">
+                <ExperienceSectionMacCss>
                   <InnerDivMacCss>
                       <TitleHeader>McMaster CSS - <span style={{color: `${colors.secondaryRed}` }}>First Year Rep</span></TitleHeader>
                       <SubTitle>October 2022 - Present</SubTitle>
@@ -42,7 +42,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                   </InnerDivMacCss>
                 </ExperienceSectionMacCss>
 
-                <ExperienceSectionMusicCouncil data-aos-once='true' data-aos="fade-up">
+                <ExperienceSectionMusicCouncil>
                 <InnerDivTrudeauMusic>
                       <TitleHeader>Trudeau Music - <span style={{color: `${colors.secondaryRed}` }}>Web Developer</span></TitleHeader>
                       <SubTitle>November 2020 - June 2022</SubTitle>
@@ -57,7 +57,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                   </InnerDivTrudeauMusic>
                 </ExperienceSectionMusicCouncil>
 
-                <ExperienceSectionMarketyze data-aos-once='true' data-aos="fade-up">
+                <ExperienceSectionMarketyze >
                   <InnerDivMarketyze>
                           <TitleHeader>Marketyze  - <span style={{color: `${colors.secondaryRed}` }}>Head Of Technology</span></TitleHeader>
                           <SubTitle>October 2022 - Present</SubTitle>
@@ -74,7 +74,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
             </ExperienceSection>
 
             <ExperienceSection>
-                <ExperienceSectionAvgl data-aos-once='true' data-aos="fade-up">
+                <ExperienceSectionAvgl>
                 <InnerDivAvgl>
                       <TitleHeader>AVGL  - <span style={{color: `${colors.secondaryRed}` }}>QA Tester & Tournament Organizer</span></TitleHeader>
                       <SubTitle>May 2021 - Present</SubTitle>
@@ -89,7 +89,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                   </InnerDivAvgl>
                 </ExperienceSectionAvgl>
 
-                <ExperienceSectionOhsea data-aos-once='true' data-aos="fade-up">
+                <ExperienceSectionOhsea >
                   <InnerDivOhsea>
                         <TitleHeader>OHSEA  - <span style={{color: `${colors.secondaryRed}` }}>Co-Founder & Lead Tech Dev</span></TitleHeader>
                         <SubTitle>May 2021 - Present</SubTitle>
@@ -104,7 +104,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                     </InnerDivOhsea>
                 </ExperienceSectionOhsea>
 
-                <ExperienceSectionTrudeauCs data-aos-once='true' data-aos="fade-up">
+                <ExperienceSectionTrudeauCs >
                   <InnerDivPethsCSS>
                         <TitleHeader>Trudeau CS  - <span style={{color: `${colors.secondaryRed}` }}>Executive</span></TitleHeader>
                         <SubTitle>June 2021 - June 2022</SubTitle>
@@ -154,6 +154,11 @@ const MasterTab = styled.div`
     height: 4500px;
     transition: 0.375s;
  }
+
+ @media screen and (max-width: 480px){
+  height: 4530px;
+  transition: 0.375s;
+}
 `
 
 const SecondaryTab = styled.div`
@@ -173,6 +178,11 @@ const SecondaryTab = styled.div`
 
   @media screen and (max-width: 1100px){
     width: 480px;
+    transition: 0.375s;
+  }
+
+  @media screen and (max-width: 480px){
+    width: 350px;
     transition: 0.375s;
   }
 `
@@ -208,7 +218,7 @@ const ExperienceSection = styled.div`
 `
 
 //Title
-const TabH1 = styled.h1`
+const TabH1 = styled.p`
   color: ${colors.mainRed}; 
   font-size: 60px; 
   position: relative;
@@ -218,6 +228,12 @@ const TabH1 = styled.h1`
   font-style: italic;
   display: flex;
   font-family: "Raleway", sans-serif;
+  transition: 0.375s;
+
+  @media screen and (max-width: 480px){
+    font-size: 40px;
+    transition: 0.375s;
+  }
  
 
 `
@@ -227,7 +243,14 @@ const SecondaryDescription = styled.p`
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     line-height: 1.5;
-    color: ${colors.mainRed}
+    color: ${colors.mainRed};
+    transition: 0.375s;
+
+    @media screen and (max-width: 480px){
+      font-size: 1.5rem;
+      transition: 0.375s;
+    }
+
 `
 
 
@@ -260,6 +283,11 @@ const ExperienceSectionMacCss = styled.div`
    @media screen and (max-width: 1350px){
     width: 480px;
     transition: 0.375s;
+   }
+
+    @media screen and (max-width: 480px){
+      width: 350px;
+      transition: 0.375s;
  }
 
 `
@@ -290,6 +318,12 @@ const ExperienceSectionMusicCouncil = styled.div`
  @media screen and (max-width: 1350px){
   width: 480px;
   transition: 0.375s;
+ }
+
+ @media screen and (max-width: 480px){
+  width: 350px;
+  transition: 0.375s;
+}
 `
 
 const ExperienceSectionTrudeauCs = styled.div`
@@ -318,6 +352,11 @@ const ExperienceSectionTrudeauCs = styled.div`
  @media screen and (max-width: 1350px){
   width: 480px;
   transition: 0.375s;
+ }
+ @media screen and (max-width: 480px){
+  width: 350px;
+  transition: 0.375s;
+}
 
 `
 
@@ -347,6 +386,12 @@ const ExperienceSectionAvgl = styled.div`
  @media screen and (max-width: 1350px){
   width: 480px;
   transition: 0.375s;
+ }
+ @media screen and (max-width: 480px){
+  width: 350px;
+  height: 720px;
+  transition: 0.375s;
+}
 
 `
 
@@ -377,6 +422,12 @@ const ExperienceSectionOhsea = styled.div`
  @media screen and (max-width: 1350px){
   width: 480px;
   transition: 0.375s;
+ }
+ @media screen and (max-width: 480px){
+  width: 350px;
+  height: 600px;
+  transition: 0.375s;
+}
 
 
 `
@@ -408,6 +459,11 @@ const ExperienceSectionMarketyze = styled.div`
  @media screen and (max-width: 1350px){
   width: 480px;
   transition: 0.375s;
+ }
+ @media screen and (max-width: 480px){
+  width: 350px;
+  transition: 0.375s;
+}
 
 
 `
@@ -417,6 +473,10 @@ const TitleHeader = styled.h1`
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: white;
+  
+  @media screen and (max-width: 480px){
+    font-size: 2rem;
+  }
 
 `
 
@@ -424,6 +484,10 @@ const SubTitle = styled.h2`
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   color: white;
+
+  @media screen and (max-width: 480px){
+    font-size: 1.5rem;
+  }
 `
 
 const SubDescription = styled.p`
@@ -432,6 +496,11 @@ const SubDescription = styled.p`
   font-weight: 400;
   line-height: 1.6;
   font-size: 1.3rem;
+
+  @media screen and (max-width: 480px){
+    font-size: 1.2rem;
+  }
+
 `
 
 const ExternalSource = styled.a`
@@ -450,6 +519,12 @@ const ExternalSource = styled.a`
       margin-top: 1.5rem;
       margin-left: 1rem;
       font-weight: 400;
+      transition: 0.375s;
+
+      @media screen and (max-width: 480px){
+        font-size: 1.5rem;
+        transition: 0.375s;
+      }
 
     }
 
@@ -484,6 +559,12 @@ const InnerDivMacCss = styled.div`
   height: 560px;
   transition: 0.375s;
 }
+
+@media screen and (max-width: 480px){
+  width: 320px;
+  height: 540px;
+  transition: 0.375s;
+}
 `
 
 const InnerDivTrudeauMusic = styled.div`
@@ -494,13 +575,16 @@ const InnerDivTrudeauMusic = styled.div`
 
   @media screen and (max-width: 1700px){
     width: 480px;
-    height: 480px;
+    height: 540px;
     transition: 0.375s;
  }
 
  @media screen and (max-width: 1350px){
   width: 390px;
-  height: 540px;
+  transition: 0.375s;
+}
+@media screen and (max-width: 480px){
+  width: 320px;
   transition: 0.375s;
 }
 `
@@ -522,6 +606,10 @@ const InnerDivPethsCSS = styled.div`
   height: 530px;
   transition: 0.375s;
 }
+@media screen and (max-width: 480px){
+  width: 320px;
+  transition: 0.375s;
+}
 `
 
 const InnerDivAvgl = styled.div`
@@ -538,6 +626,11 @@ const InnerDivAvgl = styled.div`
  @media screen and (max-width: 1350px){
   width: 390px;
   height: 600px;
+  transition: 0.375s;
+}
+@media screen and (max-width: 480px){
+  width: 320px;
+  height: 630px;
   transition: 0.375s;
 }
 `
@@ -559,6 +652,11 @@ const InnerDivOhsea = styled.div`
   height: 550px;
   transition: 0.375s;
 }
+@media screen and (max-width: 480px){
+  width: 320px;
+  height: 500px;
+  transition: 0.375s;
+}
 `
 
 const InnerDivMarketyze = styled.div`
@@ -576,6 +674,10 @@ const InnerDivMarketyze = styled.div`
  @media screen and (max-width: 1350px){
   width: 390px;
   height: 610px;
+  transition: 0.375s;
+}
+@media screen and (max-width: 480px){
+  width: 320px;
   transition: 0.375s;
 }
 `

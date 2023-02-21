@@ -56,6 +56,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                                 placeholder="blurred"
                                 formats={["auto", "webp", "avif"]}
                                 quality= {100}
+                                imgStyle = {{borderRadius: '10px'}}
                
                                 />
                             </ImgWrap>
@@ -119,6 +120,11 @@ const InfoContainer = styled.div`
         height: 1450px;
         transition: 0.375s;
     }
+
+    @media screen and (max-width: 480px){
+        height: 1050px;
+        transition: 0.375s;
+    }
 `
 
 //main wrapper
@@ -179,10 +185,19 @@ const Column1 = styled.div`
     margin-bottom: 1rem; 
     padding: 0 15px; 
     grid-area: col1; 
+    transition: 0.375s;
     
     
     @media screen and (max-width: 1700px){
         margin-top: 5rem;
+        transition: 0.375s;
+    }
+
+    
+    @media screen and (max-width: 480px){
+        margin-top: 7rem;
+        margin-left: 1.8rem;
+        transition: 0.375s;
     }
     
 
@@ -195,6 +210,13 @@ const Column2 = styled.div`
     grid-area: col2; 
     position: relative;
     right: 0.7rem;
+    transition: 0.375s;
+
+    @media screen and (max-width: 480px){
+        margin-top: 0;
+        transition: 0.375s;
+        margin-left: 1.8rem;
+    }
 
 `
 
@@ -202,10 +224,14 @@ const Column2 = styled.div`
 const TextWrapper = styled.div`
     padding-top: 4rem; 
     padding-bottom: 0; 
+    transition: 0.375s;
+
 
     @media screen and (max-width: 480px){
         position: relative;
         right: 1rem;
+        transition: 0.375s;
+
     }
 `
 
@@ -218,6 +244,12 @@ const TopLine = styled.p`
     letter-spacing: 1.4px; 
     font-style: italic;
     display: flex;
+    transition: 0.375s;
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        font-size: 45px;
+    }
 `
 
 
@@ -243,6 +275,12 @@ const Subtitle = styled.p`
         width: 430px;  
     }
 
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;  
+        font-size: 20px;
+        line-height: 30px;     
+    }
 
 `
 

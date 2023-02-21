@@ -30,6 +30,12 @@ export const PBarContainer = styled.div`
         transition: 0.375s;
         width: 450px;
     }
+
+    @media screen and (max-width: 480px)
+    {
+        transition: 0.375s;
+        width: 300px;
+    }
     
 
 

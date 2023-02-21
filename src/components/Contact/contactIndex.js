@@ -132,16 +132,23 @@ const MainDiv = styled.div`
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
     
     @media screen and (max-width: 1700px) {
-        height: 1100px;
+        height: 850px;
         transition: 0.375s;
     }
     @media screen and (max-width: 1350px) {
-        height: 1050px;
+        height: 800px;
+        transition: 0.375s;
     }
 
     @media screen and (max-width: 1100px) {
-      height: 1550px;
+      height: 1350px;
+      transition: 0.375s;
   }
+
+  @media screen and (max-width: 480px) {
+    height: 1200px;
+    transition: 0.375s;
+}
 `
 
 const ContactFormSection = styled.div`
@@ -154,6 +161,12 @@ const ContactFormSection = styled.div`
         position: relative;
         right: 30px;
     }
+
+    @media screen and (max-width: 480px) {
+      width: 320px;
+      transition: 0.375s;
+      right: 55px;
+  }
 `
 
 const ContactFormSectionForm = styled.div`
@@ -168,6 +181,12 @@ const ContactFormSectionForm = styled.div`
       position: relative;
       right: 30px;
   }
+
+  @media screen and (max-width: 480px) {
+    width: 300px;
+    transition: 0.375s;
+    right: 55px;
+}
 `
 
 const ContactFormDiv = styled.div`
@@ -190,6 +209,11 @@ const ContactFormDiv = styled.div`
       width: 480px;
       transition: 0.375s;
     }
+
+    @media screen and (max-width: 480px) {
+      width: 320px;
+      transition: 0.375s;
+    }
   `
 
 const ContactFormBox = styled.div`
@@ -207,6 +231,10 @@ const ContactFormBox = styled.div`
       grid-template-columns: 1fr;
       transition: 0.375s;
       width: 480px;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 350px;
     }
 
 
@@ -242,6 +270,12 @@ const ContactDescription = styled.p`
       transition: 0.375s;
 
     }
+
+    @media screen and (max-width: 480px) {
+      font-size: 1.3rem; 
+      transition: 0.375s;
+
+    }
     `
 const ContactQuote = styled.p`
     font-family: 'Raleway', sans-serif;
@@ -274,6 +308,8 @@ const StyledContactForm = styled.div`
     width: 500px;
     transition: 0.375s;
   }
+
+  
 
   form {
     display: flex;
@@ -311,7 +347,14 @@ const StyledContactForm = styled.div`
 
       }
 
+      @media screen and (max-width: 480px) {
+        width: 300px;
+        transition: 0.375s;
+
+      }
+
     }
+
     textarea {
       min-width: 690px;
       max-width: 690px;
@@ -339,6 +382,13 @@ const StyledContactForm = styled.div`
         transition: 0.375s;
         min-width: 380px;
         max-width: 380px;
+      }
+
+      @media screen and (max-width: 480px) {
+        min-width: 300px;
+        max-width: 300px;
+        transition: 0.375s;
+
       }
 
     }
@@ -370,6 +420,10 @@ const StyledContactForm = styled.div`
         transition: all 0.3s ease;
         color: ${colors.secondaryBlue};
       }
+
+
+
+
     }
   }
 `

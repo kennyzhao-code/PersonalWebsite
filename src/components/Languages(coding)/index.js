@@ -98,12 +98,14 @@ const LanguageContainer = styled.div`
         transition: 0.375s;
     }
 
-
-
-
     @media screen and (max-width: 1100px){
         width: 100%;
         height: 1350px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 480px){
+        height: 1200px;
         transition: 0.375s;
     }
 `
@@ -181,8 +183,13 @@ const Column1 = styled.div`
     @media screen and (max-width: 1100px){
         transition: 0.375s;
         margin-right: 0;
-        margin-right: 0;
         margin-bottom: 2rem;
+
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        margin-left: 4.6rem;
 
     }
 
@@ -231,6 +238,7 @@ const TextWrapper = styled.div`
     transition: 0.375s;
 
     @media screen and (max-width: 1700px){
+        transition: 0.375s;
         position: relative;
         bottom: 2rem;
     }
@@ -257,7 +265,7 @@ const Subtitle = styled.p`
     margin-top: 5rem; 
     margin-left: 0.8rem;
     font-size: 30px; 
-    line-height: 45px; 
+    line-height: 43px; 
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
@@ -272,6 +280,14 @@ const Subtitle = styled.p`
     @media screen and (max-width: 1350px){
         width: 430px;
         transition: 0.375s;
+    }
+
+    
+    @media screen and (max-width: 480px){
+        width: 320px;
+        transition: 0.375s;
+        font-size: 20px;
+        line-height: 30px;
     }
 `
 

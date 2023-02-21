@@ -16,7 +16,7 @@
 
 .bubble {
 	height: 20px;
-    font-family: 'OktaNeueLight', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     font-weight: bold;
 	width: 100px;
@@ -84,3 +84,16 @@
 
     }
 }
+
+@media screen and (max-width: 480px) {
+    .albumCover{
+        position: relative;
+        top: 3rem;
+        width: 140px;
+        height: 140px;
+        transition: 0.375s;
+
+    }
+}
+
+

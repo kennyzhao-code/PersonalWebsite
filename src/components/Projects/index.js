@@ -29,9 +29,9 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                     {description}
                 </SecondaryDescription>
 
-                    <ContentWrapper>
+                    <ContentWrapper data-aos-once='true' data-aos="fade-up">
                         
-                        <ProjectRow data-aos-once='true' data-aos="fade-up">
+                        <ProjectRow>
 
                             <ProjectOne>
 
@@ -44,7 +44,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             formats={["auto", "webp", "avif"]}
                                             quality= {100}
                                             className = "htn"
-                                            style = {{borderRadius: '10px'}}
+                                            imgStyle = {{borderRadius: '10px'}}
                                         />                                      
                                     </CoverDiv>
                                     <LogoContainer>
@@ -56,7 +56,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             layout="fixed"
                                             quality= {100}
                                             width={60}
-                                            style = {{borderRadius: '30px'}}
+                                            imgStyle = {{borderRadius: '30px'}}
                                         />             
                                         <h1>{hackthenorth}</h1>
                                     </LogoContainer>
@@ -74,7 +74,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             formats={["auto", "webp", "avif"]}
                                             quality= {100}
                                             className = "uoft"
-                                            style = {{borderRadius: '10px'}}
+                                            imgStyle = {{borderRadius: '10px'}}
                                         />  
                                     </CoverDiv>
                                     <LogoContainer style = {{width: '330px'}}>
@@ -94,7 +94,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                             
                         </ProjectRow>
 
-                        <ProjectRow data-aos-once='true' data-aos="fade-up">
+                        <ProjectRow>
                             <ProjectThree>
                                 <MainCoverDiv>
                                     <CoverDiv target = "_blank" rel="noreferrer" href = "https://github.com/DeltaHacks-WebOfLife">
@@ -105,7 +105,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             className='delta'
                                             formats={["auto", "webp", "avif"]}
                                             quality= {100}
-                                            style = {{borderRadius: '10px'}}
+                                            imgStyle = {{borderRadius: '10px'}}
                                         />  
                                     </CoverDiv>
                                     <LogoContainer style = {{width: '320px'}}>
@@ -133,7 +133,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             formats={["auto", "webp", "avif"]}
                                             className = "ohsea"
                                             quality= {100}
-                                            style = {{borderRadius: '10px'}}
+                                            imgStyle = {{borderRadius: '10px'}}
                                         />  
                                     </CoverDiv>
                                     <LogoContainer style = {{width: '250px'}}>
@@ -145,7 +145,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             layout="fixed"
                                             quality= {100}
                                             width={60}
-                                            style = {{borderRadius: '10px'}}
+                                            imgStyle = {{borderRadius: '10px'}}
                                         />             
                                         <h1>{ohsea}</h1>
                                     </LogoContainer>
@@ -177,6 +177,12 @@ const ProjectContainer = styled.div`
     @media screen and (max-width: 1100px){
         height: 2550px;
         transition: 0.375s;
+    }
+
+    @media screen and (max-width: 480px){
+        height: 2400px;
+        transition: 0.375s;
+    }
     
 `
 
@@ -201,6 +207,13 @@ const SecondaryProjectContainer = styled.div`
         transition: 0.375s;
         width: 480px;
     }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 350px;
+    }
+
+
 `
 
 const Description = styled.h1`
@@ -214,6 +227,11 @@ const Description = styled.h1`
     display: flex;
     font-family: "Raleway", sans-serif;
 
+    @media screen and (max-width: 480px){
+        font-size: 35px;
+        transition: 0.375s;
+    }
+
 `
 
 const SecondaryDescription = styled.p`
@@ -221,7 +239,14 @@ const SecondaryDescription = styled.p`
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     line-height: 1.5;
-    color: ${colors.mainGreen}
+    color: ${colors.mainGreen};
+
+
+    @media screen and (max-width: 480px){
+        font-size: 1.5rem;
+        transition: 0.375s;
+    }
+
 
 
 `
@@ -292,6 +317,13 @@ const LogoContainer = styled.div`
         font-weight: 400;
         margin-left: 1.5rem;
         margin-top: 1.2rem;
+        transition: 0.375s;
+
+
+        @media screen and (max-width: 480px){
+            font-size: 1.7rem;
+            transition: 0.375s;
+        }
     }
 `
 
@@ -330,6 +362,11 @@ const ProjectOne = styled.div`
         width: 480px; 
         transition: 0.375s;
     }
+
+    @media screen and (max-width: 480px){
+        width: 350px; 
+        transition: 0.375s;
+    }
 `
 const ProjectTwo = styled.div`
     height: 450px;
@@ -356,6 +393,11 @@ const ProjectTwo = styled.div`
 
     @media screen and (max-width: 1100px){
         width: 480px; 
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 480px){
+        width: 350px; 
         transition: 0.375s;
     }
 `
@@ -385,6 +427,11 @@ const ProjectThree = styled.div`
         width: 480px; 
         transition: 0.375s;
     }
+
+    @media screen and (max-width: 480px){
+        width: 350px; 
+        transition: 0.375s;
+    }
 `
 const ProjectFour = styled.div`
     height: 450px;
@@ -409,6 +456,11 @@ const ProjectFour = styled.div`
 
     @media screen and (max-width: 1100px){
         width: 480px; 
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 480px){
+        width: 350px; 
         transition: 0.375s;
     }
 

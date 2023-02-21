@@ -38,32 +38,32 @@ const Navbar = () => {
             <SidebarWrapper>
                 <SidebarMenu>
 
-                    <SidebarLinkHome style = {{background: `${colors.navHome}`, border: `2.5px solid ${colors.navHomeDark}`}} activeClass = "active" to = 'hero' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {-500} >
+                    <SidebarLinkHome style = {{background: `${colors.navHome}`, border: `2.5px solid ${colors.navHomeDark}`}} activeClass = "active" to = 'hero' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-500} >
                         <IoHome />
                         {/*<SideBarText className ='text1'>Home</SideBarText>*/}
                     </SidebarLinkHome>
 
-                    <SidebarLinkIntro style = {{background: `${colors.navIntro}`, border: `2.5px solid ${colors.navIntroDark}`}} activeClass = "active" to = 'aboutMe' smooth = 'linear' duration = {500} spy = {true} exact ='true' >
+                    <SidebarLinkIntro style = {{background: `${colors.navIntro}`, border: `2.5px solid ${colors.navIntroDark}`}} activeClass = "active" to = 'aboutMe' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' >
                         <IoPersonCircleSharp />
                         {/*<SideBarText className ='text1'>About Me</SideBarText>*/}
                     </SidebarLinkIntro>
 
-                    <SidebarLinkHobbies style = {{background: `${colors.navHobbies}`, border: `2.5px solid ${colors.navHobbiesDark}`}} activeClass = "active" to = 'hobbies' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {-100}> 
+                    <SidebarLinkHobbies style = {{background: `${colors.navHobbies}`, border: `2.5px solid ${colors.navHobbiesDark}`}} activeClass = "active" to = 'hobbies' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-100}> 
                         <IoFlash />
                         {/*<SideBarText className ='text1'>Hobbies</SideBarText>*/}
                     </SidebarLinkHobbies>
 
-                    <SidebarLinkProject style = {{background: `${colors.navProject}`, border: `2.5px solid ${colors.navProjectDark}`}} activeClass = "active" to = 'projects' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {-100}>
+                    <SidebarLinkProject style = {{background: `${colors.navProject}`, border: `2.5px solid ${colors.navProjectDark}`}} activeClass = "active" to = 'projects' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-100}>
                         <AiOutlineFundProjectionScreen />
                         {/*<SideBarText className ='text1'>projects</SideBarText>*/}
                     </SidebarLinkProject>
 
-                    <SidebarLinkSkills style = {{background: `${colors.navSkills}`, border: `2.5px solid ${colors.navSkillsDark}`}} activeClass = "active" to = 'skills' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {-100}>
+                    <SidebarLinkSkills style = {{background: `${colors.navSkills}`, border: `2.5px solid ${colors.navSkillsDark}`}} activeClass = "active" to = 'skills' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-100}>
                         <AiFillProject />
                         {/*<SideBarText className ='text1'>Experiences</SideBarText>*/}
                     </SidebarLinkSkills>
 
-                    <SidebarLinkContact style = {{background: `${colors.navContact}`, border: `2.5px solid ${colors.navContactDark}`}} activeClass = "active" to = 'contact' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {50}>
+                    <SidebarLinkContact style = {{background: `${colors.navContact}`, border: `2.5px solid ${colors.navContactDark}`}} activeClass = "active" to = 'contact' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' >
                         <MdContactMail />
                         {/*<SideBarText className ='text1'>Contact</SideBarText>*/}
                     </SidebarLinkContact>
