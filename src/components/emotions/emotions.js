@@ -127,11 +127,18 @@ const EmotionsRow = styled.div`
     grid-column-gap: 3rem;
     align-items: center;
     width: 100%;
+    transition: 0.375s; 
     
 
     @media screen and (max-width: 1100px) {
         grid-row-gap: 4rem;
         grid-template-columns: 1fr;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 480px) {
+        transition: 0.375s;
+        margin-left: 3rem;
     }
 `
 

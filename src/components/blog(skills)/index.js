@@ -149,7 +149,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                             placeholder="blurred"
                                             formats={["auto", "webp", "avif"]}
                                             className = "albumCover"
-                                            style = {{borderRadius: '10px'}}
+                                            imgStyle = {{borderRadius: '10px'}}
                                         />  
 
                                         <MusicDetails>
@@ -375,6 +375,11 @@ const BlogContainer = styled.div`
         transition: 0.375s;
         height: 4600px;
     }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        height: 3700px;
+    }
 `
 
 //secondary container
@@ -397,6 +402,11 @@ const BlogSecondaryContainer = styled.div`
         transition: 0.375s;
         width: 480px;
     }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        width: 350px;
+    }
 `
 
 const BlogH1 = styled.h1`
@@ -409,6 +419,12 @@ const BlogH1 = styled.h1`
     font-style: italic;
     display: flex;
     font-family: 'Raleway', sans-serif;
+    transition: 0.375s;
+
+    @media screen and (max-width: 480px){
+        font-size: 35px;
+        transition: 0.375s;
+    }
 
 
 `
@@ -445,6 +461,10 @@ const BlogSection = styled.div`
     height: 2000px;
     transition: 0.375s;
 
+    @media screen and (max-width: 480px){
+        height: 1710px;
+    }
+
 `
 
 //all sections to blog 
@@ -475,6 +495,12 @@ const BlogSectionCoding = styled.div`
     @media screen and (max-width: 1100px){
         transition: 0.375s;
         width: 480px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 350px;
+        height: 520px; 
     }
 `
 
@@ -509,6 +535,12 @@ const BlogSectionMusic = styled.div`
         width: 480px;
     }
 
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 350px;
+        height: 770px;
+    }
+
 `
 
 const BlogSectionAcademic = styled.div`
@@ -536,6 +568,12 @@ const BlogSectionAcademic = styled.div`
     @media screen and (max-width: 1100px){
         transition: 0.375s;
         width: 480px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 350px;
+        height: 490px;
     }
 
 `
@@ -568,6 +606,12 @@ const BlogSectionPersonality = styled.div`
         transition: 0.375s;
         width: 480px;
     }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 350px;
+        height: 660px;
+    }
 `
 
 const BlogSectionAthletic = styled.div`
@@ -596,6 +640,12 @@ const BlogSectionAthletic = styled.div`
     @media screen and (max-width: 1100px){
         transition: 0.375s;
         width: 480px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 350px;
+        height: 430px;
     }
 
 `
@@ -627,6 +677,12 @@ const BlogSectionGame = styled.div`
     @media screen and (max-width: 1100px){
         transition: 0.375s;
         width: 480px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 350px;
+        height: 480px;
     }
 `
 
@@ -671,6 +727,14 @@ const TitleSocialDivCoding = styled.div`
         font-weight: 400;
         font-size: 1.7rem;
         line-height: 1.6;
+        transition: 0.375s;
+
+
+        @media screen and (max-width: 480px){
+            font-size: 1.3rem;
+            transition: 0.375s;
+
+        }
     }
 
     @media screen and (max-width: 1700px){
@@ -682,6 +746,12 @@ const TitleSocialDivCoding = styled.div`
         transition: 0.375s;
         width: 400px;
         height: 530px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+        height: 460px;
     }
 
 `
@@ -708,6 +778,13 @@ const SocialDivMainCoding = styled.div`
         width: 400px;
         height: 100px;
     }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+        height: 100px;
+    }
+
 `
 
 const SocialDivCoding = styled.div`
@@ -724,9 +801,20 @@ const SocialDivCoding = styled.div`
         position: relative;
         margin-left: 2rem;
         top: 0.7rem;
+        transition: 0.375s;
+
 
         @media screen and (max-width: 1350px){
             font-size: 1.6rem;
+            transition: 0.375s;
+
+        }
+
+        @media screen and (max-width: 480px){
+            font-size: 1.3rem;
+            margin-left: 1rem;
+            transition: 0.375s;
+
         }
     }
 
@@ -738,6 +826,11 @@ const SocialDivCoding = styled.div`
     @media screen and (max-width: 1350px){
         transition: 0.375s;
         width: 380px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 310px;
     }
 
 `
@@ -768,6 +861,14 @@ const TitleSocialDivPersonality = styled.div`
         font-weight: 400;
         font-size: 1.7rem;
         line-height: 1.6;
+        transition: 0.375s;
+
+
+        @media screen and (max-width: 480px){
+            font-size: 1.3rem;
+            transition: 0.375s;
+
+        }
     }
 
 
@@ -780,6 +881,12 @@ const TitleSocialDivPersonality = styled.div`
         transition: 0.375s;
         width: 400px;
         height: 680px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+        height: 590px;
     }
 
 
@@ -809,6 +916,12 @@ const SocialDivMainPersonality = styled.div`
         height: 100px;
     }
 
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+    }
+
+
 `
 
 const SocialDivPersonality = styled.div`    
@@ -827,9 +940,20 @@ const SocialDivPersonality = styled.div`
         margin-left: 2rem;
         top: 0.7rem;
         font-weight: 400;
+        transition: 0.375s;
+
 
         @media screen and (max-width: 1350px){
             font-size: 1.6rem;
+            transition: 0.375s;
+
+        }
+
+        @media screen and (max-width: 480px){
+            font-size: 1.3rem;
+            margin-left: 1rem;
+            transition: 0.375s;
+
         }
     }
 
@@ -841,6 +965,11 @@ const SocialDivPersonality = styled.div`
     @media screen and (max-width: 1350px){
         transition: 0.375s;
         width: 380px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 310px;
     }
 
 `
@@ -872,6 +1001,12 @@ const TitleSocialDivAthletics  = styled.div`
         font-weight: 400;
         font-size: 1.7rem;
         line-height: 1.6;
+        transition: 0.375s;
+
+        @media screen and (max-width: 480px){
+            font-size: 1.3rem;
+            transition: 0.375s;
+        }
     }
 
     @media screen and (max-width: 1700px){
@@ -883,6 +1018,12 @@ const TitleSocialDivAthletics  = styled.div`
         transition: 0.375s;
         width: 400px;
         height: 410px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+        height: 350px;
     }
 
 `
@@ -909,6 +1050,11 @@ const SocialDivMainAthletics = styled.div`
         width: 400px;
         height: 100px;
     }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+    }
 `
 
 const SocialDivAthletics = styled.div`
@@ -926,9 +1072,20 @@ const SocialDivAthletics = styled.div`
         margin-left: 2rem;
         top: 0.7rem;
         font-weight: 400;
+        transition: 0.375s;
+
 
         @media screen and (max-width: 1350px){
             font-size: 1.6rem;
+            transition: 0.375s;
+
+        }
+
+        @media screen and (max-width: 480px){
+            font-size: 1.3rem;
+            margin-left: 1rem;
+            transition: 0.375s;
+
         }
     }
 
@@ -940,6 +1097,11 @@ const SocialDivAthletics = styled.div`
     @media screen and (max-width: 1350px){
         transition: 0.375s;
         width: 380px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 310px;
     }
 
 
@@ -971,6 +1133,12 @@ const TitleSocialDivGames = styled.div`
         font-weight: 400;
         font-size: 1.7rem;
         line-height: 1.6;
+        transition: 0.375s;
+
+        @media screen and (max-width: 480px){
+            font-size: 1.3rem;
+            transition: 0.375s;
+        }
     }
 
     @media screen and (max-width: 1700px){
@@ -982,6 +1150,12 @@ const TitleSocialDivGames = styled.div`
         transition: 0.375s;
         width: 400px;
         height: 490px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+        height: 430px;
     }
 
 `
@@ -1008,6 +1182,11 @@ const SocialDivMainGames = styled.div`
         width: 400px;
         height: 100px;
     }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+    }
 `
 
 const SocialDivGames = styled.div`
@@ -1025,9 +1204,18 @@ const SocialDivGames = styled.div`
         margin-left: 2rem;
         top: 0.7rem;
         font-weight: 400;
+        transition: 0.375s;
 
         @media screen and (max-width: 1350px){
             font-size: 1.6rem;
+            margin-left: 1rem;
+            transition: 0.375s;
+        }
+
+        @media screen and (max-width: 480px){
+            font-size: 1.1rem;
+            margin-left: 1rem;
+            transition: 0.375s;
         }
     }
 
@@ -1039,6 +1227,11 @@ const SocialDivGames = styled.div`
     @media screen and (max-width: 1350px){
         transition: 0.375s;
         width: 380px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 310px;
     }
 
 `
@@ -1069,6 +1262,11 @@ const TitleSocialDivAcademics = styled.div`
         font-weight: 400;
         font-size: 1.7rem;
         line-height: 1.6;
+
+        @media screen and (max-width: 480px){
+            font-size: 1.3rem;
+            transition: 0.375s;
+        }   
     }
 
     @media screen and (max-width: 1700px){
@@ -1080,6 +1278,12 @@ const TitleSocialDivAcademics = styled.div`
         transition: 0.375s;
         width: 400px;
         height: 490px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+        height: 430px;
     }
 
 `
@@ -1106,6 +1310,11 @@ const SocialDivMainAcademics = styled.div`
         width: 400px;
         height: 100px;
     }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+    }
 `
 
 const SocialDivAcademics = styled.div`
@@ -1127,6 +1336,12 @@ const SocialDivAcademics = styled.div`
         @media screen and (max-width: 1350px){
             font-size: 1.6rem;
         }
+
+        @media screen and (max-width: 480px){
+            font-size: 1.3rem;
+            margin-left: 1rem;
+            transition: 0.375s;
+        }
     }
 
     @media screen and (max-width: 1700px){
@@ -1137,6 +1352,11 @@ const SocialDivAcademics = styled.div`
     @media screen and (max-width: 1350px){
         transition: 0.375s;
         width: 380px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 310px;
     }
 
 `
@@ -1166,6 +1386,13 @@ const TitleSocialDivMusic = styled.div`
         color: white;
         font-size: 1.7rem;
         line-height: 2.9rem;
+        transition: 0.375s;
+
+        @media screen and (max-width: 480px){
+            font-size: 1.3rem;
+            transition: 0.375s;
+            line-height: 2.2rem;
+        }
     }
 
     p{
@@ -1173,6 +1400,11 @@ const TitleSocialDivMusic = styled.div`
         font-family: "Raleway", sans-serif;
         font-weight: 400;
         font-size: 1.7rem;
+
+        @media screen and (max-width: 480px){
+            font-size: 1.3rem;
+            transition: 0.375s;
+        }
     }
 
     @media screen and (max-width: 1700px){
@@ -1184,6 +1416,12 @@ const TitleSocialDivMusic = styled.div`
         transition: 0.375s;
         width: 400px;
         height: 850px;
+    }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+        height: 690px;
     }
 
 `
@@ -1210,6 +1448,12 @@ const SocialDivMainMusic = styled.div`
         width: 400px;
         height: 310px;
     }
+
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 320px;
+        height: 270px;
+    }
 `
 
 const MusicDetails = styled.div`
@@ -1227,10 +1471,20 @@ const MusicDetails = styled.div`
         font-size: 1.4rem;
         margin-top: 2rem;
         padding-left: 0.8rem;
+        transition: 0.375s;
+
 
         @media screen and (max-width: 1700px){
             margin-top: 0;
+            transition: 0.375s;
+
         }
+
+        @media screen and (max-width: 480px){
+            font-size: 1rem;
+            transition: 0.375s;
+        }
+
 
     }
 
@@ -1243,6 +1497,12 @@ const MusicDetails = styled.div`
         padding-top: 0;
         bottom: 1.1rem;
         padding-left: 0.8rem;
+        transition: 0.375s;
+
+        @media screen and (max-width: 480px){
+            font-size: 1rem;
+            transition: 0.375s;
+        }
 
 
     }
@@ -1262,6 +1522,11 @@ const MusicDetails = styled.div`
             font-size: 1.2rem;
         }
 
+        @media screen and (max-width: 480px){
+            font-size: 1rem;
+            line-height: 1.2;
+        }
+
     }
 
     @media screen and (max-width: 1700px){
@@ -1269,7 +1534,10 @@ const MusicDetails = styled.div`
         width: 190px;
     }
 
-
-
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        width: 130px;
+        height: 130px;
+    }
 `
 

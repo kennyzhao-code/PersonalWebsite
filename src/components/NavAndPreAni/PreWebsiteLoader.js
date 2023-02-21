@@ -4,21 +4,21 @@ import Layout from "../LayoutForWeb/layout"
 import Seo from "../SEO/seo"
 import HeroSection from "../HeroSection"
 import InfoSection from "../InfoSection"
-
-import { aboutMePage } from "../InfoSection/DataInfo"
-import { languagesData} from "../Languages(coding)/DataLanguages"
-import { emotions } from "../emotions/DataEmotions"
-import { blogData } from '../blog(skills)/blogData'
-import { projectData} from '../Projects/projectData'
-import { experiencesData } from '../Experiences/experienceData'
-import { contactData } from '../Contact/contactData'
-
 import Blog from "../blog(skills)"
 import Experiences from "../Experiences"
 import Projects from "../Projects"
 import Language from "../Languages(coding)"
 import Emotions from "../emotions/emotions"
 import ContactUs from "../Contact/contactIndex"
+
+import { aboutMePage } from "../InfoSection/DataInfo"
+import { languagesData } from "../Languages(coding)/DataLanguages"
+import { emotions } from "../emotions/DataEmotions"
+import { blogData } from '../blog(skills)/blogData'
+import { projectData} from '../Projects/projectData'
+import { experiencesData } from '../Experiences/experienceData'
+import { contactData } from '../Contact/contactData'
+
 //import * as preLoadingAnimation from '../../images/9329-loading.json'
 //import styled from "styled-components"
 

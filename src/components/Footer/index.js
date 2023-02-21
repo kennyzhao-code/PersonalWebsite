@@ -77,6 +77,12 @@ export const FooterWrap = styled.div`
         max-width: 400px;
         transition: 0.375s;
     }
+
+    @media screen and (max-width: 480px)
+    {
+        max-width: 300px;
+        transition: 0.375s;
+    }
 `
 
 export const SocialMedia = styled.section`

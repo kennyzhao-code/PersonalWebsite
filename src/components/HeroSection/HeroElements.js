@@ -135,7 +135,7 @@ export const Button = styled(Link)`
     }
 
     @media screen and (max-width: 480px){
-        top: 0.45rem;
+        right: 0.45rem;
     }
     
 `
