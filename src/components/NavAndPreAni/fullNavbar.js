@@ -146,7 +146,7 @@ const SidebarLinkHome = styled(LinkS)`
     font-size: 1.5rem;
     text-decoration: none;
     transition: 0.375s;
-    color: white; 
+    color: ${colors.navHomeDark}; 
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -155,7 +155,7 @@ const SidebarLinkHome = styled(LinkS)`
 
 
     &.active {
-        color: ${colors.navHomeDark};
+        color: #fff;
     }
 `
 
@@ -166,7 +166,7 @@ const SidebarLinkIntro = styled(LinkS)`
     font-size: 1.5rem;
     text-decoration: none;
     transition: 0.375s;
-    color: #fff; 
+    color: ${colors.navIntroDark}; 
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -174,7 +174,7 @@ const SidebarLinkIntro = styled(LinkS)`
     position: relative;
 
     &.active {
-        color: ${colors.navIntroDark};
+        color: #fff;
     }
 
    
@@ -187,7 +187,7 @@ const SidebarLinkHobbies = styled(LinkS)`
     font-size: 1.5rem;
     text-decoration: none;
     transition: 0.375s;
-    color: #fff; 
+    color: ${colors.navHobbiesDark}; 
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -195,7 +195,7 @@ const SidebarLinkHobbies = styled(LinkS)`
     position: relative;
 
     &.active {
-        color: ${colors.navHobbiesDark};
+        color: #fff;
     }
 
    
@@ -208,7 +208,7 @@ const SidebarLinkProject = styled(LinkS)`
     font-size: 1.5rem;
     text-decoration: none;
     transition: 0.375s;
-    color: #fff; 
+    color: ${colors.navProjectDark}; 
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -216,7 +216,7 @@ const SidebarLinkProject = styled(LinkS)`
     position: relative;
 
     &.active {
-        color: ${colors.navProjectDark};
+        color: #fff;
     }
 
     
@@ -229,7 +229,7 @@ const SidebarLinkSkills = styled(LinkS)`
     font-size: 1.5rem;
     text-decoration: none;
     transition: 0.375s;
-    color: #fff; 
+    color: ${colors.navSkillsDark}; 
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -237,7 +237,7 @@ const SidebarLinkSkills = styled(LinkS)`
     position: relative;
 
     &.active {
-        color: ${colors.navSkillsDark};
+        color: #fff;
     }
 
   
@@ -250,7 +250,7 @@ const SidebarLinkContact = styled(LinkS)`
     font-size: 1.5rem;
     text-decoration: none;
     transition: 0.375s;
-    color: #fff; 
+    color: ${colors.navContactDark}; 
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -258,7 +258,7 @@ const SidebarLinkContact = styled(LinkS)`
     position: relative;
 
     &.active {
-        color: ${colors.navContactDark};
+        color: #fff;
     }
 
 `
@@ -285,7 +285,7 @@ const NavbarContainer = styled.div`
     justify-content: space-between; 
     height: 80px;
     z-index: 1;
-    width: 100%
+    width: 100%;
     padding: 0 24px; 
     max-width: 1100px;
 
