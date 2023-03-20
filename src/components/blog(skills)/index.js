@@ -691,7 +691,7 @@ const BlogSectionGame = styled.div`
 const CopyIcon = styled(AiOutlineCopy)`
     color: white;
     width: 30px;
-    height 30px;
+    height: 30px;
     cursor: pointer;
     position: fixed;
     

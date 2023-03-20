@@ -13,7 +13,10 @@ const Footer = () => {
                 <SocialMedia>
                     <SocialMediaWrap>
                         <SocialLogo to = 'hero' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {-500}>Kenny Zhao</SocialLogo>
-                        <WebsiteRights>Kenny Zhao © {new Date().getFullYear()} </WebsiteRights>
+                        <WebsiteRights>Kenny Zhao © {new Date().getFullYear()} 
+                            <span>Designed in collaboration with <a href = 'https://www.instagram.com/jaydench4n/' target = '_blank' rel = 'noreferrer'>@JaydenChan</a> </span>
+                        </WebsiteRights>
+                        
                         
                         <SocialIcons>
 
@@ -128,6 +131,24 @@ export const WebsiteRights = styled.small`
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 16px; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    span {
+        font-size: 0.9rem;
+        font-weight: 300;
+        margin-top: 5px;
+        color: ${colors.secondaryPurple};
+
+        a {
+            color: ${colors.secondaryPurple};
+            text-decoration: none;
+            font-weight: 400;
+            transition: 0.5s ease;
+        }
+    }
+
 
 `
 
