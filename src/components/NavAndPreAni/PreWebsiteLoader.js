@@ -58,7 +58,6 @@ const PreWebsiteLoader = () => {
                     <Layout>
                         <Seo title="Kenny Zhao" />
                         <HeroSection/>
-                        <InfoSection {...aboutMePage}/>
                         <Language {...languagesData}/>
                         <Emotions {...emotions} />
                         <Blog {...blogData}/>
