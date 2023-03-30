@@ -23,7 +23,22 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                     
                     <InfoRow data-aos-once='true' data-aos="fade-up" imgStart={imgStart}>
 
-                        <Column1>
+                    <Column1>
+                            <ImgWrap>
+                            <StaticImage
+                                className = 'Myself'
+                                src= '../../images/myself.jpg'
+                                alt="me"
+                                placeholder="blurred"
+                                formats={["auto", "webp", "avif"]}
+                                quality= {100}
+                                imgStyle = {{borderRadius: '10px'}}
+               
+                                />
+                            </ImgWrap>
+                        </Column1>
+
+                        {/*<Column1>
                             
                             <TextWrapper>                     
                                 
@@ -45,7 +60,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                                     
 
                             </TextWrapper>
-                        </Column1>
+    </Column1>*/}
                         
                         <Column2 >
                             <ImgWrap>
