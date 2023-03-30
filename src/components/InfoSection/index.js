@@ -23,22 +23,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                     
                     <InfoRow data-aos-once='true' data-aos="fade-up" imgStart={imgStart}>
 
-                    <Column1>
-                            <ImgWrap>
-                            <StaticImage
-                                className = 'Myself'
-                                src= '../../images/myself.jpg'
-                                alt="me"
-                                placeholder="blurred"
-                                formats={["auto", "webp", "avif"]}
-                                quality= {100}
-                                imgStyle = {{borderRadius: '10px'}}
-               
-                                />
-                            </ImgWrap>
-                        </Column1>
-
-                        {/*<Column1>
+                        <Column1>
                             
                             <TextWrapper>                     
                                 
@@ -55,16 +40,8 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                                             </div>
                                     </div>
                                 </TopLine>
-
-                                <Subtitle  darkText={darkText}>{description} <br/><br/> {description2}</Subtitle>
-                                    
-
-                            </TextWrapper>
-    </Column1>*/}
-                        
-                        <Column2 >
-                        <TextWrapper>                     
                                 
+                                {/*<Subtitle  darkText={darkText}>{description} <br/><br/> {description2}</Subtitle>*/}
                                 <TopLine >
                                     {topLine}
 
@@ -79,10 +56,22 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                                     </div>
                                 </TopLine>
 
-                                <Subtitle  darkText={darkText}>{description} <br/><br/> {description2}</Subtitle>
-                                    
-
                             </TextWrapper>
+                        </Column1>
+                        
+                        <Column2 >
+                            <ImgWrap>
+                            <StaticImage
+                                className = 'Myself'
+                                src= '../../images/myself.jpg'
+                                alt="me"
+                                placeholder="blurred"
+                                formats={["auto", "webp", "avif"]}
+                                quality= {100}
+                                imgStyle = {{borderRadius: '10px'}}
+               
+                                />
+                            </ImgWrap>
                         </Column2>
 
                     </InfoRow>
