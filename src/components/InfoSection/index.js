@@ -63,18 +63,26 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
     </Column1>*/}
                         
                         <Column2 >
-                            <ImgWrap>
-                            <StaticImage
-                                className = 'Myself'
-                                src= '../../images/myself.jpg'
-                                alt="me"
-                                placeholder="blurred"
-                                formats={["auto", "webp", "avif"]}
-                                quality= {100}
-                                imgStyle = {{borderRadius: '10px'}}
-               
-                                />
-                            </ImgWrap>
+                        <TextWrapper>                     
+                                
+                                <TopLine >
+                                    {topLine}
+
+                                    <div class="notification-box">
+                                        <span class="notification-count">1</span>
+                                            <div class="notification-bell">
+                                                <span class="bell-top"></span>
+                                                <span class="bell-middle"></span>
+                                                <span class="bell-bottom"></span>
+                                                <span class="bell-rad"></span>
+                                            </div>
+                                    </div>
+                                </TopLine>
+
+                                <Subtitle  darkText={darkText}>{description} <br/><br/> {description2}</Subtitle>
+                                    
+
+                            </TextWrapper>
                         </Column2>
 
                     </InfoRow>
