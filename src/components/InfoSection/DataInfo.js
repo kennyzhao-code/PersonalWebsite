@@ -6,7 +6,7 @@ export const aboutMePage = {
     lightText: true, 
     lightTextDesc: true, 
     topLine: 'Who am I?', 
-    description: 'Hello! Or for my French mates out there, Bonjour! My name is Kenny Zhao and I am a McMaster University student who currently lives in Ontario. I am currently in First Year planning to graduate in 2027 with a B.A.Sc. Degree in Computer Science.',    
+    description: 'Hello! My name is Kenny Zhao, a first-year student at McMaster University located in Ontario. I am pursuing a B.A.Sc. Degree in Computer Science with an expected graduation date of 2027.',    
     description2: 'Ever since I started programming when I was a little kid, I immediately fell in love with it and continue to code to this day. I have a passion for not only computer science but also learning new things every single day. Below you can check out my top four (coding) languages!', 
     imgStart: false, 
     dark: true,

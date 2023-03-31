@@ -25,8 +25,11 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
 
                         <Column1>
                             
-                            <TextWrapper>                     
-                                
+                            <TextWrapper>
+
+
+                                <>
+
                                 <TopLine >
                                     {topLine}
 
@@ -41,8 +44,12 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                                     </div>
                                 </TopLine>
 
-                                <Subtitle  darkText={darkText}>{description} <br/><br/> {description2}</Subtitle>
-                                    
+                               <Subtitle  darkText={darkText}>{description} <br/><br/> {description2}</Subtitle>
+
+                                </>
+    
+                                
+                                
 
                             </TextWrapper>
                         </Column1>
