@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import {colors} from '../globals/colors'
-import '../globals/font.css'
+import styled from 'styled-components';
+import {colors} from '../globals/colors';
+import '../globals/font.css';
 //progress bar 
 
 export const PBarContainer = styled.div`
@@ -48,7 +48,7 @@ export const PBarContainer = styled.div`
         color: ${colors.mainPurple};
     }
 
-`
+`;
 export const PBar = styled.div`
     background: ${colors.mainGreen};
     border-radius: 20px; 
@@ -60,7 +60,7 @@ export const PBar = styled.div`
     width: 0; 
     transition: 4s ease;
     
-`
+`;
 
 export const PBarC = styled.div`
     background: ${colors.mainRed};
@@ -72,7 +72,7 @@ export const PBarC = styled.div`
     height: 100%; 
     width: 0; 
     transition: 4s ease; 
-`
+`;
 
 export const PBarCss = styled.div`
     background: ${colors.mainPurple};
@@ -84,7 +84,7 @@ export const PBarCss = styled.div`
     height: 100%; 
     width: 0; 
     transition: 4s ease; 
-`
+`;
 
 export const PBarJavaScript = styled.div`
     background: ${colors.mainBlue};
@@ -96,4 +96,4 @@ export const PBarJavaScript = styled.div`
     height: 100%; 
     width: 0; 
     transition: 4s ease; 
-`
+`;

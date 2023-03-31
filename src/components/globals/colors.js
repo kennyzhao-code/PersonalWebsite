@@ -32,4 +32,4 @@ export const colors = {
 
     navContact: "#7CBABF",
     navContactDark: "#5C9297",
-}
+};

@@ -3,9 +3,9 @@ export const languagesData = {
     lightBg: true, 
     lightText: true, 
     lightTextDesc: true, 
-    description: 'I am a very extroverted person who absolutely loves to talk and work with others. When I am not coding, you can catch me playing video games with friends, playing music with my guitar or piano, or even at the pool swimming. I have only started my journey into computer science and I cannot wait to explore and dive deeper into a world that I am so passionate about.',    
-    imgStart: true, 
+    description: 'As a highly extroverted individual, I derive immense satisfaction from collaborative engagements. My interests encompass an array of leisure activities, including video gaming with friends, music-making on the piano or guitar, and swimming at the pool. Although I am a neophyte in the world of computer science, I am profoundly intrigued and eager to delve deeper into this field that ignites my passion.',    
+    col1Start: true, 
     dark: true,
     primary: true, 
     darkText: false, 
-}
+};

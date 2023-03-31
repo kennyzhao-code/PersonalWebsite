@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import CountUp from 'react-countup'
+import CountUp from 'react-countup';
 
 
-import {PBarContainer, PBarCss} from './LanguageElements.js'
+import {PBarContainer, PBarCss} from './LanguageElements.js';
 
 const ProgressBarCss= ({done}) => {
 
@@ -16,7 +16,7 @@ const ProgressBarCss= ({done}) => {
     const newStyle = {
       opacity: 1,
       width: `${done}%`
-    }
+    };
       setStyle(newStyle); 
     }, 1200); 
 
@@ -29,10 +29,10 @@ const ProgressBarCss= ({done}) => {
       <PBarCss style={style} />
       <p>HTML/CSS/Boostrap <span style={{position: 'absolute', right: '0'}}> <CountUp end={52} duration={3}/>%</span> </p>
     </PBarContainer>
-  ) 
-}
+  ); 
+};
 
-export default ProgressBarCss
+export default ProgressBarCss;
 
 
 

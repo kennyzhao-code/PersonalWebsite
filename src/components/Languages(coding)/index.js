@@ -1,16 +1,16 @@
 // all imports 
-import "aos/dist/aos.css"
-import Aos from "aos"
-import React, { useEffect } from 'react'
-import styled from "styled-components"
-import ProgressBar from "./ProgressBar"
-import ProgressBarCss from "./ProgressBarCss"
-import ProgressBarC from "./ProgressBarC"
-import ProgressBarJavaScript from "./ProgressBarJavaScript"
-import '../globals/font.css'
+import "aos/dist/aos.css";
+import Aos from "aos";
+import React, { useEffect } from 'react';
+import styled from "styled-components";
+import ProgressBar from "./ProgressBar";
+import ProgressBarCss from "./ProgressBarCss";
+import ProgressBarC from "./ProgressBarC";
+import ProgressBarJavaScript from "./ProgressBarJavaScript";
+import '../globals/font.css';
 
 
-const Language = ({lightBg, id, imgStart, darkText, description}) => {
+const Language = ({lightBg, id, col1Start, darkText, description}) => {
     
     //controls fade in animation time 
     useEffect(() => {
@@ -24,7 +24,7 @@ const Language = ({lightBg, id, imgStart, darkText, description}) => {
             
                 <LanguageWrapper>
                     
-                    <LanguageRow data-aos-once='true' data-aos="fade-up" imgStart={imgStart}>
+                    <LanguageRow data-aos-once='true' data-aos="fade-up" imgStart={col1Start}>
 
                         <Column1 >
                             
@@ -56,10 +56,10 @@ const Language = ({lightBg, id, imgStart, darkText, description}) => {
                 </LanguageWrapper>
             </LanguageContainer>
         </>
-    )
-}
+    );
+};
 
-export default Language
+export default Language;
 
 
 /**<AboutMeIcons data-aos-once='true' data-aos="fade-up">
@@ -94,7 +94,7 @@ const LanguageContainer = styled.div`
 
     @media screen and (max-width: 1700px){
         width: 100%;
-        height: 900px;
+        height: 950px;
         transition: 0.375s;
     }
 
@@ -108,7 +108,7 @@ const LanguageContainer = styled.div`
         height: 1200px;
         transition: 0.375s;
     }
-`
+`;
 
 //main wrapper
 const LanguageWrapper = styled.div`
@@ -127,7 +127,7 @@ const LanguageWrapper = styled.div`
         margin-left: 4rem;
         transition: 0.375s;
     }
-`
+`;
 
 //main row
 const LanguageRow = styled.div`
@@ -154,7 +154,7 @@ const LanguageRow = styled.div`
         grid-column-gap: 0;
         transition: 0.375s;
     }
-`
+`;
 
 //column 1
 const Column1 = styled.div`
@@ -192,9 +192,7 @@ const Column1 = styled.div`
         margin-left: 4.6rem;
 
     }
-
-    
-`
+`;
 
 //column 2
 const Column2 = styled.div`
@@ -229,7 +227,7 @@ const Column2 = styled.div`
         bottom: 7rem;
     }
 
-`
+`;
 
 //text wrapper
 const TextWrapper = styled.div`
@@ -253,9 +251,9 @@ const TextWrapper = styled.div`
         transition: 0.375s;
         right: 0rem;
         left: 3rem; 
-        bottom: 0rem;
+        bottom: 5rem;
     }
-`
+`;
 
 
 
@@ -308,7 +306,7 @@ const LanguageWrap = styled.div`
         right: 4rem;
     }
 
-`
+`;
 
 
 
