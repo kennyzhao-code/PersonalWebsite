@@ -1,9 +1,9 @@
 import React, { useRef, useEffect} from 'react';
-import Aos from "aos"
+import Aos from "aos";
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import {colors} from '../globals/colors';
-import '../globals/font.css'
+import '../globals/font.css';
 
 //fix emailjs
 const ContactUs = ({lightBg, id, topLine, description, quote}) => {
@@ -141,15 +141,12 @@ const MainDiv = styled.div`
     }
 
     @media screen and (max-width: 1100px) {
-      height: 1350px;
+      height: 1200px;
       transition: 0.375s;
   }
 
-  @media screen and (max-width: 480px) {
-    height: 1200px;
-    transition: 0.375s;
-}
-`
+  
+`;
 
 const ContactFormSection = styled.div`
     height: 100%;
@@ -167,7 +164,7 @@ const ContactFormSection = styled.div`
       transition: 0.375s;
       right: 55px;
   }
-`
+`;
 
 const ContactFormSectionForm = styled.div`
     height: 100%;
@@ -187,7 +184,7 @@ const ContactFormSectionForm = styled.div`
     transition: 0.375s;
     right: 55px;
 }
-`
+`;
 
 const ContactFormDiv = styled.div`
     display: flex;
@@ -214,7 +211,7 @@ const ContactFormDiv = styled.div`
       width: 320px;
       transition: 0.375s;
     }
-  `
+  `;
 
 const ContactFormBox = styled.div`
     padding: 5rem;
@@ -225,6 +222,11 @@ const ContactFormBox = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
     transition: 0.375s;
+
+    &:hover {
+      transition: 0.375s;
+      scale: 1.01;
+    }
 
 
     @media screen and (max-width: 1100px) {
@@ -238,7 +240,7 @@ const ContactFormBox = styled.div`
     }
 
 
-`
+`;
 const ContactTitle = styled.h1`
     font-size: 4rem;
     font-family: 'Raleway', sans-serif;
@@ -252,7 +254,7 @@ const ContactTitle = styled.h1`
       font-size: 3rem; 
       transition: 0.375s;
     }
-`
+`;
 
 const ContactDescription = styled.p`
     font-family: 'Raleway', sans-serif;
@@ -276,7 +278,7 @@ const ContactDescription = styled.p`
       transition: 0.375s;
 
     }
-    `
+    `;
 const ContactQuote = styled.p`
     font-family: 'Raleway', sans-serif;
     color: white;
@@ -293,7 +295,7 @@ const ContactQuote = styled.p`
       transition: 0.375s;
 
     }
-    `
+    `;
 
 
 const StyledContactForm = styled.div`
@@ -426,4 +428,4 @@ const StyledContactForm = styled.div`
 
     }
   }
-`
+`;

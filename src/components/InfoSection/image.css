@@ -61,7 +61,7 @@
     height: 50px;
     text-align: center;
     left: 0.5rem;
-    bottom: 0.7rem;
+    bottom: 1.5rem;
   }
   .notification-bell {
     animation: bell 1s 1s both infinite;
@@ -69,7 +69,7 @@
   .notification-bell * {
     display: block;
     margin: 0 auto;
-    background-color: #7CBABF;
+    background-color: #D5D274;
   }
   .bell-top {
     width: 6px;
@@ -96,13 +96,13 @@
   }
   .bell-bottom::before {
     left: 1px;
-    border-bottom: 4px solid #7CBABF;
+    border-bottom: 4px solid #D5D274;
     border-right: 0 solid transparent;
     border-left: 4px solid transparent;
   }
   .bell-bottom::after {
     right: 1px;
-    border-bottom: 4px solid #7CBABF;
+    border-bottom: 4px solid #D5D274;
     border-right: 4px solid transparent;
     border-left: 0 solid transparent;
   }

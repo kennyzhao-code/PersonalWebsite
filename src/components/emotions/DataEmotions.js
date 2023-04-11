@@ -1,4 +1,6 @@
 
+//emotions data
+
 export const emotions = {
     id: 'emotions', 
     lightBg: true, 
@@ -7,4 +9,4 @@ export const emotions = {
     dark: true,
     primary: true, 
     darkText: false, 
-}
+};

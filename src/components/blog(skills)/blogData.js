@@ -1,3 +1,4 @@
+//Data for the blog section of the website
 
 export const blogData = {
     id: 'blog', 
@@ -14,6 +15,6 @@ export const blogData = {
     dark: true,
     primary: true, 
     darkText: false, 
-}
+};
 
 

@@ -1,4 +1,4 @@
-
+//project data for the projects section
 export const projectData = {
     id: 'project', 
     lightBg: true, 
@@ -13,4 +13,4 @@ export const projectData = {
     dark: true,
     primary: true, 
     darkText: false, 
-}
+};

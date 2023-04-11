@@ -1,3 +1,4 @@
+//experience data for the experiences section
 export const experiencesData = {
     id: 'blog', 
     lightBg: true, 
@@ -8,7 +9,7 @@ export const experiencesData = {
     dark: true,
     primary: true, 
     darkText: false, 
-}
+};
 
 
 

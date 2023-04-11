@@ -1,14 +1,15 @@
 // all imports 
-import "aos/dist/aos.css"
-import Aos from "aos"
-import React, { useEffect } from 'react'
-import styled from "styled-components"
-import { StaticImage } from "gatsby-plugin-image"
-import './image.css'
-import '../globals/font.css'
+import "aos/dist/aos.css";
+import Aos from "aos";
+import React, { useEffect } from 'react';
+import styled from "styled-components";
+import { StaticImage } from "gatsby-plugin-image";
+import './image.css';
+import '../globals/font.css';
 
 
-const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, description2}) => {
+//main function 
+const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, description2}) => {
     
     //controls fade in animation time 
     useEffect(() => {
@@ -21,16 +22,15 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                 
                 <InfoWrapper>
                     
-                    <InfoRow data-aos-once='true' data-aos="fade-up" imgStart={imgStart}>
+                    <InfoRow data-aos-once='true' data-aos="fade-up" imgStart={col1Start}>
 
                         <Column1>
                             
                             <TextWrapper>
 
-
-                                <>
-
-                                <TopLine >
+                               <Subtitle  darkText={darkText}>
+                                
+                               <TopLine >
                                     {topLine}
 
                                     <div class="notification-box">
@@ -43,13 +43,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                                             </div>
                                     </div>
                                 </TopLine>
-
-                               <Subtitle  darkText={darkText}>{description} <br/><br/> {description2}</Subtitle>
-
-                                </>
-    
-                                
-                                
+                                {description} <br/><br/> {description2}</Subtitle>
 
                             </TextWrapper>
                         </Column1>
@@ -58,7 +52,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                             <ImgWrap>
                             <StaticImage
                                 className = 'Myself'
-                                src= '../../images/myself.jpg'
+                                src= '../../images/kenny.jpg'
                                 alt="me"
                                 placeholder="blurred"
                                 formats={["auto", "webp", "avif"]}
@@ -73,66 +67,39 @@ const InfoSection = ({lightBg, id, imgStart, topLine, darkText, description, des
                 </InfoWrapper>
             </InfoContainer>
         </>
-    )
-}
+    );
+};
 
-export default InfoSection
+export default InfoSection;
 
-
-/**<AboutMeIcons data-aos-once='true' data-aos="fade-up">
-
-                                    <AboutMeIconsLinkInsta href = 'https://www.instagram.com/kennyzhao_/' target = '_blank' aria-label="Instagram">
-                                        <FaInstagram />
-                                    </AboutMeIconsLinkInsta>
-
-                                    <AboutMeIconsLinkLink href = 'https://www.linkedin.com/in/kenny-zhao-283b73213/' target = '_blank' aria-label="Linkedin">
-                                        <FaLinkedin/>
-                                    </AboutMeIconsLinkLink>
-
-                                    <AboutMeIconsLinkGit href = 'https://github.com/kennyzhao-code' target = '_blank' aria-label="Github">
-                                        <FaGithub />
-                                    </AboutMeIconsLinkGit>
-
-                                    <AboutMeIconsLinkDis href = 'https://twitter.com/KennyZhao20' target = '_blank' aria-label="Twitter">
-                                        <FaTwitter/>
-                                    </AboutMeIconsLinkDis>
-                                
-                                    </AboutMeIcons> */
-
-
-// all styling 
-
-
+//all styling 
 //main container 
 const InfoContainer = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
-    height: 700px;
+    height: 780px;
     transition: 0.375s;
 
-
-
-
     @media screen and (max-width: 1700px){
-        height: 700px;
+        height: 750px;
         transition: 0.375s;
     }
 
     @media screen and (max-width: 1350px){
-        height: 850px;
+        height: 825px;
         transition: 0.375s;
     }
 
     @media screen and (max-width: 1100px){
-        height: 1450px;
+        height: 1350px;
         transition: 0.375s;
     }
 
     @media screen and (max-width: 480px){
-        height: 1050px;
+        height: 1040px;
         transition: 0.375s;
     }
-`
+`;
 
 //main wrapper
 const InfoWrapper = styled.div`
@@ -140,14 +107,11 @@ const InfoWrapper = styled.div`
     z-index: 1; 
     height: 900px; 
     width: 100%; 
-    margin-right: auto; 
-    margin-left: auto; 
     padding: 0 24px; 
     justify-content: center; 
     position: relative;
-    bottom: 7rem;
+    bottom: 4rem;
     transition: 0.375s;
-
 
     @media screen and (max-width: 1100px){
         margin-left: 4rem;
@@ -161,7 +125,8 @@ const InfoWrapper = styled.div`
         padding-right: 0;
         transition: 0.375s;
     }
-`
+
+`;
 
 //main row
 const InfoRow = styled.div`
@@ -174,7 +139,6 @@ const InfoRow = styled.div`
     width: 100%;
     transition: 0.375s;
 
-
     @media screen and (max-width: 1700px) {
         grid-column-gap: 0;
         transition: 0.375s;
@@ -185,7 +149,7 @@ const InfoRow = styled.div`
         transition: 0.375s;
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
     }
-`
+`;
 
 //column 1
 const Column1 = styled.div`
@@ -194,38 +158,49 @@ const Column1 = styled.div`
     grid-area: col1; 
     transition: 0.375s;
     
-    
     @media screen and (max-width: 1700px){
         margin-top: 5rem;
         transition: 0.375s;
     }
 
-    
-    @media screen and (max-width: 480px){
-        margin-top: 7rem;
-        margin-left: 1.8rem;
+    @media screen and (max-width: 1350px){
+        margin-top: 6rem;
         transition: 0.375s;
     }
-    
 
-    
-`
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        height: 650px;
+    }
+
+    @media screen and (max-width: 480px){
+        margin-top: 5rem;
+        margin-left: 1.8rem;
+        transition: 0.375s;
+        height: 620px;
+    }
+`;
 
 //column 2
 const Column2 = styled.div`
-    margin-top: 5rem;
+    margin-top: 3.5rem;
     grid-area: col2; 
     position: relative;
     right: 0.7rem;
     transition: 0.375s;
 
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        margin-top: 11rem;
+    }
+
     @media screen and (max-width: 480px){
         margin-top: 0;
         transition: 0.375s;
         margin-left: 1.8rem;
+        margin-top: 0rem;
     }
-
-`
+`;
 
 //text wrapper
 const TextWrapper = styled.div`
@@ -233,15 +208,14 @@ const TextWrapper = styled.div`
     padding-bottom: 0; 
     transition: 0.375s;
 
-
     @media screen and (max-width: 480px){
         position: relative;
         right: 1rem;
         transition: 0.375s;
-
     }
-`
+`;
 
+//title 
 const TopLine = styled.p`
     color: #897CBF; 
     font-size: 65px; 
@@ -252,14 +226,19 @@ const TopLine = styled.p`
     font-style: italic;
     display: flex;
     transition: 0.375s;
+    margin-bottom: 3rem;
+    margin-left: -0.9rem;
 
     @media screen and (max-width: 480px){
         transition: 0.375s;
         font-size: 45px;
+        margin-bottom: 1.5rem; 
+        margin-left: -0.6rem;
+
     }
-`
+`;
 
-
+//subtitle
 const Subtitle = styled.p`
     width: 750px; 
     margin-bottom: 2rem;
@@ -271,7 +250,6 @@ const Subtitle = styled.p`
     transition: 0.375s;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')};
 
-
     @media screen and (max-width: 1700px){
         transition: 0.375s;
         width: 600px;  
@@ -280,6 +258,7 @@ const Subtitle = styled.p`
     @media screen and (max-width: 1350px){
         transition: 0.375s;
         width: 430px;  
+        font-size: 25px;
     }
 
     @media screen and (max-width: 480px){
@@ -288,11 +267,9 @@ const Subtitle = styled.p`
         font-size: 20px;
         line-height: 30px;     
     }
+`;
 
-`
-
-
-
+//image wrapper
 const ImgWrap = styled.div`
     width: 680px; 
     height: 415px;
@@ -301,34 +278,15 @@ const ImgWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-`
-
-
-/*const Subtitle2 = styled.p`
-    width: 750px; 
-    margin-bottom: 2rem;
-    margin-top: 2rem; 
-    margin-left:  0.5rem;
-    font-size: 30px; 
-    line-height: 40px; 
-    font-family: 'OktaNeueLight', sans-serif;
-    font-weight: bold;
     transition: 0.375s;
-    color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')};
-    
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 600px;  
-    }
 
-    @media screen and (max-width: 1350px){
+    &:hover {
         transition: 0.375s;
-        width: 430px;  
+        scale: 1.05;
     }
+`;
 
-  
-`*/ 
+
 
 
 
