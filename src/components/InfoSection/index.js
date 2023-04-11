@@ -27,10 +27,9 @@ const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, de
                             
                             <TextWrapper>
 
-
+                               <Subtitle  darkText={darkText}>
                                 
-
-                               {/* <TopLine >
+                               <TopLine >
                                     {topLine}
 
                                     <div class="notification-box">
@@ -42,14 +41,8 @@ const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, de
                                                 <span class="bell-rad"></span>
                                             </div>
                                     </div>
-                                </TopLine>*/}
-
-                               <Subtitle  darkText={darkText}>{description} <br/><br/> {description2}</Subtitle>
-
-                                
-    
-                                
-                                
+                                </TopLine>
+                                {description} <br/><br/> {description2}</Subtitle>
 
                             </TextWrapper>
                         </Column1>
@@ -213,7 +206,7 @@ const Column1 = styled.div`
 
 //column 2
 const Column2 = styled.div`
-    margin-top: 5rem;
+    margin-top: 3.5rem;
     grid-area: col2; 
     position: relative;
     right: 0.7rem;
@@ -251,6 +244,8 @@ const TopLine = styled.p`
     font-style: italic;
     display: flex;
     transition: 0.375s;
+    margin-bottom: 3rem;
+    margin-left: -0.9rem;
 
     @media screen and (max-width: 480px){
         transition: 0.375s;
