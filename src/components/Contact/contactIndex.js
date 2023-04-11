@@ -223,6 +223,11 @@ const ContactFormBox = styled.div`
     grid-column-gap: 2rem;
     transition: 0.375s;
 
+    &:hover {
+      transition: 0.375s;
+      scale: 1.01;
+    }
+
 
     @media screen and (max-width: 1100px) {
       grid-template-columns: 1fr;
