@@ -28,9 +28,9 @@ const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, de
                             <TextWrapper>
 
 
-                                <>
+                                
 
-                                <TopLine >
+                               {/* <TopLine >
                                     {topLine}
 
                                     <div class="notification-box">
@@ -42,11 +42,11 @@ const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, de
                                                 <span class="bell-rad"></span>
                                             </div>
                                     </div>
-                                </TopLine>
+                                </TopLine>*/}
 
                                <Subtitle  darkText={darkText}>{description} <br/><br/> {description2}</Subtitle>
 
-                                </>
+                                
     
                                 
                                 
@@ -58,7 +58,7 @@ const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, de
                             <ImgWrap>
                             <StaticImage
                                 className = 'Myself'
-                                src= '../../images/myself.jpg'
+                                src= '../../images/kenny.png'
                                 alt="me"
                                 placeholder="blurred"
                                 formats={["auto", "webp", "avif"]}
