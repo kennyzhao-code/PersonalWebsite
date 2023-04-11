@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react'
-import Aos from "aos"
-import styled from "styled-components"
-import { colors } from "../globals/colors"
-import { StaticImage } from 'gatsby-plugin-image'
-import './bg.css'
-import '../globals/font.css'
+import React, {useEffect} from 'react';
+import Aos from "aos";
+import styled from "styled-components";
+import { colors } from "../globals/colors";
+import { StaticImage } from 'gatsby-plugin-image';
+import './bg.css';
+import '../globals/font.css';
 
 
 const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, description}) => {
@@ -44,7 +44,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             formats={["auto", "webp", "avif"]}
                                             quality= {100}
                                             className = "htn"
-                                            imgStyle = {{borderRadius: '10px'}}
+                                            imgStyle = {{borderRadius: '15px'}}
                                         />                                      
                                     </CoverDiv>
                                     <LogoContainer>
@@ -74,7 +74,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             formats={["auto", "webp", "avif"]}
                                             quality= {100}
                                             className = "uoft"
-                                            imgStyle = {{borderRadius: '10px'}}
+                                            imgStyle = {{borderRadius: '15px'}}
                                         />  
                                     </CoverDiv>
                                     <LogoContainer style = {{width: '330px'}}>
@@ -105,7 +105,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             className='delta'
                                             formats={["auto", "webp", "avif"]}
                                             quality= {100}
-                                            imgStyle = {{borderRadius: '10px'}}
+                                            imgStyle = {{borderRadius: '15px'}}
                                         />  
                                     </CoverDiv>
                                     <LogoContainer style = {{width: '320px'}}>
@@ -133,7 +133,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             formats={["auto", "webp", "avif"]}
                                             className = "ohsea"
                                             quality= {100}
-                                            imgStyle = {{borderRadius: '10px'}}
+                                            imgStyle = {{borderRadius: '15px'}}
                                         />  
                                     </CoverDiv>
                                     <LogoContainer style = {{width: '250px'}}>
@@ -158,21 +158,31 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
 
         </ProjectContainer>
         </>
-    )
-}
+    );
+};
 
-export default Projects
+export default Projects;
 
 
 //main container 
 const ProjectContainer = styled.div`
     width: 100%;
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')}; 
-    height: 1250px;   
+    height: 1300px;   
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.375s;
+
+    @media screen and (max-width: 1700px){
+        height: 1325px;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        height: 1310px;
+        transition: 0.375s;
+    }
 
     @media screen and (max-width: 1100px){
         height: 2550px;
@@ -184,7 +194,7 @@ const ProjectContainer = styled.div`
         transition: 0.375s;
     }
     
-`
+`;
 
 const SecondaryProjectContainer = styled.div`
     height: 100%;
@@ -214,7 +224,7 @@ const SecondaryProjectContainer = styled.div`
     }
 
 
-`
+`;
 
 const Description = styled.h1`
     color: ${colors.mainGreen}; 
@@ -232,7 +242,7 @@ const Description = styled.h1`
         transition: 0.375s;
     }
 
-`
+`;
 
 const SecondaryDescription = styled.p`
     font-size: 1.8rem;
@@ -249,14 +259,14 @@ const SecondaryDescription = styled.p`
 
 
 
-`
+`;
 
 
 //div covers for project 
 const MainCoverDiv = styled.div`
     width: 100%;
     height: 100%;
-`
+`;
 
 const CoverDiv = styled.a`
     width: 100%;
@@ -301,7 +311,7 @@ const ContentWrapper = styled.div`
         grid-row-gap: 0rem;
 
     }
-`
+`;
 
 const LogoContainer = styled.div`
     display: flex;
@@ -325,7 +335,7 @@ const LogoContainer = styled.div`
             transition: 0.375s;
         }
     }
-`
+`;
 
 //project sections 
 const ProjectRow = styled.div`
@@ -335,7 +345,7 @@ const ProjectRow = styled.div`
         height: 965px;
     }
    
-`
+`;
 
 const ProjectOne = styled.div`
     height: 450px;
@@ -347,6 +357,11 @@ const ProjectOne = styled.div`
     align-items: center;
     transition: 0.375s;
 
+    &:hover{
+        transition: 0.375s;
+        scale: 1.02;
+    }
+
 
     @media screen and (max-width: 1700px){
         width: 585px; 
@@ -367,7 +382,7 @@ const ProjectOne = styled.div`
         width: 350px; 
         transition: 0.375s;
     }
-`
+`;
 const ProjectTwo = styled.div`
     height: 450px;
     width: 720px;
@@ -379,7 +394,10 @@ const ProjectTwo = styled.div`
     align-items: center;
     transition: 0.375s;
 
-
+    &:hover{
+        transition: 0.375s;
+        scale: 1.02;
+    }
 
     @media screen and (max-width: 1700px){
         width: 585px; 
@@ -400,7 +418,8 @@ const ProjectTwo = styled.div`
         width: 350px; 
         transition: 0.375s;
     }
-`
+`;
+
 const ProjectThree = styled.div`
     height: 450px;
     width: 720px;
@@ -411,7 +430,10 @@ const ProjectThree = styled.div`
     align-items: center;
     transition: 0.375s;
 
-
+    &:hover{
+        transition: 0.375s;
+        scale: 1.02;
+    }
 
     @media screen and (max-width: 1700px){
         width: 585px; 
@@ -432,7 +454,7 @@ const ProjectThree = styled.div`
         width: 350px; 
         transition: 0.375s;
     }
-`
+`;
 const ProjectFour = styled.div`
     height: 450px;
     width: 720px;
@@ -444,6 +466,11 @@ const ProjectFour = styled.div`
     align-items: center;
     transition: 0.375s;
 
+    &:hover{
+        transition: 0.375s;
+        scale: 1.02;
+    }
+
     @media screen and (max-width: 1700px){
         width: 585px; 
         transition: 0.375s;
@@ -464,35 +491,4 @@ const ProjectFour = styled.div`
         transition: 0.375s;
     }
 
-`
-
-
-
-
-
-/*
-const FinalText = styled.a`
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-    font-family: 'Poppins', sans-serif;     
-    font-size: 24px;
-    padding-left: 2rem;
-    padding-top: 2rem;
-    color: black;
-    text-decoration: none;
-    position: relative;
-    top: 2.5rem;
-
-    &:hover {
-        cursor: pointer;
-        color: purple;
-    }
-`
-
-*/
-
-/* <FinalText href ='/' data-aos-once='true' data-aos="fade-up"> 
-            Check out more projects at my Github 
-            </FinalText>
-
- */
-
+`;

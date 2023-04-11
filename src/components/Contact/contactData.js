@@ -1,4 +1,4 @@
-
+//contact data for contact section
 export const contactData = {
     id: 'emotions', 
     lightBg: true, 

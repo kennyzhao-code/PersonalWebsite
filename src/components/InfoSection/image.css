@@ -61,7 +61,7 @@
     height: 50px;
     text-align: center;
     left: 0.5rem;
-    bottom: 0.7rem;
+    bottom: 1.5rem;
   }
   .notification-bell {
     animation: bell 1s 1s both infinite;

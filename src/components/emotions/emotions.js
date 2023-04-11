@@ -1,11 +1,11 @@
 // all imports 
-import "aos/dist/aos.css"
-import Aos from "aos"
-import React, { useEffect } from 'react'
-import styled from "styled-components"
-import {colors} from "../../components/globals/colors"
-import './emotions.css'
-import '../globals/font.css'
+import "aos/dist/aos.css";
+import Aos from "aos";
+import React, { useEffect } from 'react';
+import styled from "styled-components";
+import {colors} from "../../components/globals/colors";
+import './emotions.css';
+import '../globals/font.css';
 
 const Emotions = ({lightBg, id}) => {
     
@@ -63,36 +63,12 @@ const Emotions = ({lightBg, id}) => {
 
             </EmotionsContainer>
         </>
-    )
-}
+    );
+};
 
-export default Emotions
-
-
-/**<AboutMeIcons data-aos-once='true' data-aos="fade-up">
-
-                                    <AboutMeIconsLinkInsta href = 'https://www.instagram.com/kennyzhao_/' target = '_blank' aria-label="Instagram">
-                                        <FaInstagram />
-                                    </AboutMeIconsLinkInsta>
-
-                                    <AboutMeIconsLinkLink href = 'https://www.linkedin.com/in/kenny-zhao-283b73213/' target = '_blank' aria-label="Linkedin">
-                                        <FaLinkedin/>
-                                    </AboutMeIconsLinkLink>
-
-                                    <AboutMeIconsLinkGit href = 'https://github.com/kennyzhao-code' target = '_blank' aria-label="Github">
-                                        <FaGithub />
-                                    </AboutMeIconsLinkGit>
-
-                                    <AboutMeIconsLinkDis href = 'https://twitter.com/KennyZhao20' target = '_blank' aria-label="Twitter">
-                                        <FaTwitter/>
-                                    </AboutMeIconsLinkDis>
-                                
-                                    </AboutMeIcons> */
-
+export default Emotions;
 
 // all styling 
-
-
 //main container 
 const EmotionsContainer = styled.div`
     color: #fff;
@@ -104,7 +80,7 @@ const EmotionsContainer = styled.div`
     @media screen and (max-width: 1100px){
         height: 500px;
     }
-`
+`;
 
 //main wrapper
 const EmotionsWrapper = styled.div`
@@ -117,7 +93,7 @@ const EmotionsWrapper = styled.div`
     justify-content: center; 
     position: relative;
     bottom: 15rem;
-`
+`;
 
 //main row
 const EmotionsRow = styled.div`
@@ -140,7 +116,7 @@ const EmotionsRow = styled.div`
         transition: 0.375s;
         margin-left: 3rem;
     }
-`
+`;
 
 //styling for emotions
 const EmotionsBlock = styled.div`
@@ -163,7 +139,9 @@ const EmotionsBlock = styled.div`
         width: 305px; 
     }
     
-`
+`;
+
+//inner emotion div 
 const EmotionSecondBlock = styled.div`
     display: flex;
     justify-content: center;

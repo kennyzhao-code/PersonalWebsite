@@ -8,6 +8,7 @@ import './image.css';
 import '../globals/font.css';
 
 
+//main function 
 const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, description2}) => {
     
     //controls fade in animation time 
@@ -51,7 +52,7 @@ const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, de
                             <ImgWrap>
                             <StaticImage
                                 className = 'Myself'
-                                src= '../../images/kenny.png'
+                                src= '../../images/kenny.jpg'
                                 alt="me"
                                 placeholder="blurred"
                                 formats={["auto", "webp", "avif"]}
@@ -71,31 +72,7 @@ const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, de
 
 export default InfoSection;
 
-
-/**<AboutMeIcons data-aos-once='true' data-aos="fade-up">
-
-                                    <AboutMeIconsLinkInsta href = 'https://www.instagram.com/kennyzhao_/' target = '_blank' aria-label="Instagram">
-                                        <FaInstagram />
-                                    </AboutMeIconsLinkInsta>
-
-                                    <AboutMeIconsLinkLink href = 'https://www.linkedin.com/in/kenny-zhao-283b73213/' target = '_blank' aria-label="Linkedin">
-                                        <FaLinkedin/>
-                                    </AboutMeIconsLinkLink>
-
-                                    <AboutMeIconsLinkGit href = 'https://github.com/kennyzhao-code' target = '_blank' aria-label="Github">
-                                        <FaGithub />
-                                    </AboutMeIconsLinkGit>
-
-                                    <AboutMeIconsLinkDis href = 'https://twitter.com/KennyZhao20' target = '_blank' aria-label="Twitter">
-                                        <FaTwitter/>
-                                    </AboutMeIconsLinkDis>
-                                
-                                    </AboutMeIcons> */
-
-
-// all styling 
-
-
+//all styling 
 //main container 
 const InfoContainer = styled.div`
     color: #fff;
@@ -103,26 +80,23 @@ const InfoContainer = styled.div`
     height: 780px;
     transition: 0.375s;
 
-
-
-
     @media screen and (max-width: 1700px){
-        height: 700px;
+        height: 750px;
         transition: 0.375s;
     }
 
     @media screen and (max-width: 1350px){
-        height: 850px;
+        height: 825px;
         transition: 0.375s;
     }
 
     @media screen and (max-width: 1100px){
-        height: 1450px;
+        height: 1350px;
         transition: 0.375s;
     }
 
     @media screen and (max-width: 480px){
-        height: 1050px;
+        height: 1040px;
         transition: 0.375s;
     }
 `;
@@ -139,7 +113,6 @@ const InfoWrapper = styled.div`
     bottom: 4rem;
     transition: 0.375s;
 
-
     @media screen and (max-width: 1100px){
         margin-left: 4rem;
         transition: 0.375s;
@@ -153,10 +126,6 @@ const InfoWrapper = styled.div`
         transition: 0.375s;
     }
 
-    @media screen and (max-width: 700px){
-        transition: 0.375s;
-        bottom: 7.5rem;
-    }
 `;
 
 //main row
@@ -169,7 +138,6 @@ const InfoRow = styled.div`
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )}; 
     width: 100%;
     transition: 0.375s;
-
 
     @media screen and (max-width: 1700px) {
         grid-column-gap: 0;
@@ -190,17 +158,26 @@ const Column1 = styled.div`
     grid-area: col1; 
     transition: 0.375s;
     
-    
     @media screen and (max-width: 1700px){
         margin-top: 5rem;
         transition: 0.375s;
     }
 
-    
+    @media screen and (max-width: 1350px){
+        margin-top: 6rem;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        height: 650px;
+    }
+
     @media screen and (max-width: 480px){
-        margin-top: 7rem;
+        margin-top: 5rem;
         margin-left: 1.8rem;
         transition: 0.375s;
+        height: 620px;
     }
 `;
 
@@ -212,10 +189,16 @@ const Column2 = styled.div`
     right: 0.7rem;
     transition: 0.375s;
 
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        margin-top: 11rem;
+    }
+
     @media screen and (max-width: 480px){
         margin-top: 0;
         transition: 0.375s;
         margin-left: 1.8rem;
+        margin-top: 0rem;
     }
 `;
 
@@ -225,15 +208,14 @@ const TextWrapper = styled.div`
     padding-bottom: 0; 
     transition: 0.375s;
 
-
     @media screen and (max-width: 480px){
         position: relative;
         right: 1rem;
         transition: 0.375s;
-
     }
 `;
 
+//title 
 const TopLine = styled.p`
     color: #897CBF; 
     font-size: 65px; 
@@ -250,10 +232,13 @@ const TopLine = styled.p`
     @media screen and (max-width: 480px){
         transition: 0.375s;
         font-size: 45px;
+        margin-bottom: 1.5rem; 
+        margin-left: -0.6rem;
+
     }
 `;
 
-
+//subtitle
 const Subtitle = styled.p`
     width: 750px; 
     margin-bottom: 2rem;
@@ -265,7 +250,6 @@ const Subtitle = styled.p`
     transition: 0.375s;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')};
 
-
     @media screen and (max-width: 1700px){
         transition: 0.375s;
         width: 600px;  
@@ -274,6 +258,7 @@ const Subtitle = styled.p`
     @media screen and (max-width: 1350px){
         transition: 0.375s;
         width: 430px;  
+        font-size: 25px;
     }
 
     @media screen and (max-width: 480px){
@@ -282,11 +267,9 @@ const Subtitle = styled.p`
         font-size: 20px;
         line-height: 30px;     
     }
-
 `;
 
-
-
+//image wrapper
 const ImgWrap = styled.div`
     width: 680px; 
     height: 415px;
@@ -295,34 +278,15 @@ const ImgWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.375s;
 
+    &:hover {
+        transition: 0.375s;
+        scale: 1.05;
+    }
 `;
 
 
-/*const Subtitle2 = styled.p`
-    width: 750px; 
-    margin-bottom: 2rem;
-    margin-top: 2rem; 
-    margin-left:  0.5rem;
-    font-size: 30px; 
-    line-height: 40px; 
-    font-family: 'OktaNeueLight', sans-serif;
-    font-weight: bold;
-    transition: 0.375s;
-    color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')};
-    
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 600px;  
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 430px;  
-    }
-
-  
-`*/ 
 
 
 

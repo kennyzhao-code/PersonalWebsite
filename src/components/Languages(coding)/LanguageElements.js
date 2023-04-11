@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import {colors} from '../globals/colors';
 import '../globals/font.css';
-//progress bar 
 
+//progress bar styles
 export const PBarContainer = styled.div`
     position: relative; 
     height: 15px;
@@ -49,6 +49,7 @@ export const PBarContainer = styled.div`
     }
 
 `;
+ 
 export const PBar = styled.div`
     background: ${colors.mainGreen};
     border-radius: 20px; 

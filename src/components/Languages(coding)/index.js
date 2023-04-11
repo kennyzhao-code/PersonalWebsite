@@ -9,7 +9,6 @@ import ProgressBarC from "./ProgressBarC";
 import ProgressBarJavaScript from "./ProgressBarJavaScript";
 import '../globals/font.css';
 
-
 const Language = ({lightBg, id, col1Start, darkText, description}) => {
     
     //controls fade in animation time 
@@ -38,18 +37,19 @@ const Language = ({lightBg, id, col1Start, darkText, description}) => {
                         </Column1>
                         
                         <Column2 >
+
                             <LanguageWrap>
 
-                                <ProgressBar done='60'/> 
+                            <ProgressBar done='60'/> 
 
-                                <ProgressBarC done = '56'/>
+                            <ProgressBarC done = '56'/>
 
-                                <ProgressBarCss done = '52'/>
+                            <ProgressBarCss done = '52'/>
 
+                            <ProgressBarJavaScript done = '68'/>
 
-                                <ProgressBarJavaScript done = '68'/>
-                                
                             </LanguageWrap>
+                            
                         </Column2>
 
                     </LanguageRow>
@@ -61,31 +61,7 @@ const Language = ({lightBg, id, col1Start, darkText, description}) => {
 
 export default Language;
 
-
-/**<AboutMeIcons data-aos-once='true' data-aos="fade-up">
-
-                                    <AboutMeIconsLinkInsta href = 'https://www.instagram.com/kennyzhao_/' target = '_blank' aria-label="Instagram">
-                                        <FaInstagram />
-                                    </AboutMeIconsLinkInsta>
-
-                                    <AboutMeIconsLinkLink href = 'https://www.linkedin.com/in/kenny-zhao-283b73213/' target = '_blank' aria-label="Linkedin">
-                                        <FaLinkedin/>
-                                    </AboutMeIconsLinkLink>
-
-                                    <AboutMeIconsLinkGit href = 'https://github.com/kennyzhao-code' target = '_blank' aria-label="Github">
-                                        <FaGithub />
-                                    </AboutMeIconsLinkGit>
-
-                                    <AboutMeIconsLinkDis href = 'https://twitter.com/KennyZhao20' target = '_blank' aria-label="Twitter">
-                                        <FaTwitter/>
-                                    </AboutMeIconsLinkDis>
-                                
-                                    </AboutMeIcons> */
-
-
 // all styling 
-
-
 //main container 
 const LanguageContainer = styled.div`
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
@@ -94,18 +70,23 @@ const LanguageContainer = styled.div`
 
     @media screen and (max-width: 1700px){
         width: 100%;
-        height: 950px;
+        height: 1000px;
         transition: 0.375s;
     }
 
+    @media screen and (max-width: 1350px){
+        height: 850px;
+        transition: 0.375s;
+    }
+
+
     @media screen and (max-width: 1100px){
-        width: 100%;
         height: 1350px;
         transition: 0.375s;
     }
 
     @media screen and (max-width: 480px){
-        height: 1200px;
+        height: 1170px;
         transition: 0.375s;
     }
 `;
@@ -164,7 +145,7 @@ const Column1 = styled.div`
     position: relative;
     left: 1rem;
     transition: 0.375s;
-    bottom: 10rem;
+    bottom: 13.3rem;
 
 
     @media screen and (max-width: 1700px){
@@ -227,6 +208,11 @@ const Column2 = styled.div`
         bottom: 7rem;
     }
 
+    @media screen and (max-width: 480px){
+        transition: 0.375s;
+        bottom: 10rem;
+    }
+
 `;
 
 //text wrapper
@@ -256,7 +242,7 @@ const TextWrapper = styled.div`
 `;
 
 
-
+//subtext
 const Subtitle = styled.p`
     width: 650px; 
     margin-bottom: 2rem;
@@ -278,6 +264,7 @@ const Subtitle = styled.p`
     @media screen and (max-width: 1350px){
         width: 430px;
         transition: 0.375s;
+        font-size: 25px;
     }
 
     
@@ -289,7 +276,7 @@ const Subtitle = styled.p`
     }
 `
 
-
+//language wrapper
 const LanguageWrap = styled.div`
     width: 700px; 
     height: 430px;
@@ -307,44 +294,3 @@ const LanguageWrap = styled.div`
     }
 
 `;
-
-
-
-
-
-
-
-/**<LanguageRow>
-
-                <LanguageRowContainer>
-
-                    <ProgressBarTitleDiv>
-                        <ProgressBarTitle>Python<CountUp end={50} duration={3.5}/>%</ProgressBarTitle>
-                    </ProgressBarTitleDiv>
-
-                    <ProgressBarTitleDiv>
-                        <ProgressBarTitle>HTML/CSS/Bootstrap&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<CountUp end={55} duration={3.5}/>%</ProgressBarTitle>
-                    </ProgressBarTitleDiv>
-
-                    <ProgressBarTitleDiv>
-                        <ProgressBarTitle>Java&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;<CountUp end={80} duration={3.5}/>%</ProgressBarTitle>
-                    </ProgressBarTitleDiv>
-
-                    <ProgressBarTitleDiv>
-                        <ProgressBarTitle>JavaScript&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<CountUp end={60} duration={3.5}/>%</ProgressBarTitle>
-                    </ProgressBarTitleDiv>
-
-               </LanguageRowContainer>
-
-            </LanguageRow>
-
-
-
-            <ProgressBar done='50'/> 
-
-                    <ProgressBarCss done = '55'/>
-
-                    <ProgressBarJava done = '60'/>
-
-                    <ProgressBarJavaScript done = '60'/>
- */

@@ -1,22 +1,22 @@
-import React, {useCallback, useState, useEffect} from 'react'
-import Aos from "aos"
-import { StaticImage } from 'gatsby-plugin-image'
-import { colors } from '../globals/colors'
-import styled from "styled-components"
-import { CopyToClipboard } from 'react-copy-to-clipboard'
-import { SocialIcon } from 'react-social-icons'
-import { AiOutlineCopy } from "react-icons/ai"
+import React, {useCallback, useState, useEffect} from 'react';
+import Aos from "aos";
+import { StaticImage } from 'gatsby-plugin-image';
+import { colors } from '../globals/colors';
+import styled from "styled-components";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { SocialIcon } from 'react-social-icons';
+import { AiOutlineCopy } from "react-icons/ai";
 import AudioPlayer from 'react-modern-audio-player';
-import song from '../../images/doodle.mp3'
-import './icons.css'
-import '../globals/font.css'
+import song from '../../images/doodle.mp3';
+import './icons.css';
+import '../globals/font.css';
 
 const playList = [
     {
       src: song,
       id: 1,
     },
-  ]
+  ];
 
 const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics, personality}) => {
 
@@ -31,7 +31,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
     const [isAlertVisibleGit, setIsAlertVisibleGit] = useState(false);
     const handleButtonClickGit = () => {
         setIsAlertVisibleGit(true); 
-    }
+    };
 
     setTimeout(() => {
         setIsAlertVisibleGit(false);}, 4000);
@@ -39,7 +39,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
     const [isAlertVisibleMac, setIsAlertVisibleMac] = useState(false);
     const handleButtonClickMac = () => {
         setIsAlertVisibleMac(true); 
-    }
+    };
 
     setTimeout(() => {
         setIsAlertVisibleMac(false);}, 4000);
@@ -47,7 +47,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
     const [isAlertVisibleInsta, setIsAlertVisibleInsta] = useState(false);
     const handleButtonClickInsta = () => {
         setIsAlertVisibleInsta(true); 
-    }
+    };
 
     setTimeout(() => {
         setIsAlertVisibleInsta(false);}, 4000);
@@ -56,7 +56,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
     const [isAlertVisibleSnap, setIsAlertVisibleSnap] = useState(false);
     const handleButtonClickSnap = () => {
         setIsAlertVisibleSnap(true); 
-    }
+    };
 
     setTimeout(() => {
         setIsAlertVisibleSnap(false);}, 4000);
@@ -64,7 +64,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
     const [isAlertVisibleTwitter, setIsAlertVisibleTwitter] = useState(false);
     const handleButtonClickTwitter = () => {
         setIsAlertVisibleTwitter(true); 
-    }
+    };
 
     setTimeout(() => {
         setIsAlertVisibleTwitter(false);}, 4000);
@@ -72,7 +72,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
     const [isAlertVisibleDiscord, setIsAlertVisibleDiscord] = useState(false);
     const handleButtonClickDiscord = () => {
         setIsAlertVisibleDiscord(true); 
-    }
+    };
 
     setTimeout(() => {
         setIsAlertVisibleDiscord(false);}, 4000);
@@ -80,7 +80,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
     const [isAlertVisibleLinkedin, setIsAlertVisibleLinkedin] = useState(false);
     const handleButtonClickLinkedin = () => {
         setIsAlertVisibleLinkedin(true); 
-    }
+    };
 
     setTimeout(() => {
         setIsAlertVisibleLinkedin(false);}, 4000);
@@ -97,11 +97,10 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
     const [copied, setCopied] = useState(false);
     const onCopy = useCallback(() => {
         setCopied(true);
-    }, [])
+    }, []);
 
 
     return (
-        <>
         <BlogContainer name = 'hobbies' id ={id} lightBg = {lightBg}>
             <BlogSecondaryContainer>
 
@@ -143,15 +142,17 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                     <p>My current favorite song!</p>
                                     
                                     <SocialDivMainMusic>
-                                        <StaticImage
-                                            src= '../../images/doodle.jpg'
-                                            alt="doodleAlbum"
-                                            placeholder="blurred"
-                                            formats={["auto", "webp", "avif"]}
-                                            className = "albumCover"
-                                            imgStyle = {{borderRadius: '10px'}}
-                                        />  
 
+                                      
+                                            <StaticImage
+                                                src= '../../images/doodle.jpg'
+                                                alt="doodleAlbum"
+                                                placeholder="blurred"
+                                                formats={["auto", "webp", "avif"]}
+                                                className = "albumCover"
+                                                imgStyle = {{borderRadius: '10px'}}
+                                            />  
+ 
                                         <MusicDetails>
                                             <h3>Doodle (feat. Yerin Baek)</h3>
                                             <h4>Punchnello</h4>
@@ -160,6 +161,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
 
                                         {typeof window !== 'undefined' && AudioPlayer && 
                                              <AudioPlayer
+                                                rootContainerProps={{colorScheme: "dark"}}                                                
                                                 playList={playList}
                                                 audioInitialState={{
                                                 volume: 0.5,
@@ -347,16 +349,15 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
             </BlogSecondaryContainer>
 
         </BlogContainer>
-        </>
-    )
-}
+    );
+};
 
-export default Blog
+export default Blog;
 
 
 //main container 
 const BlogContainer = styled.div`
-    height: 2100px;
+    height: 2150px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -366,21 +367,22 @@ const BlogContainer = styled.div`
     transition: 0.375s;
 
 
+
     @media screen and (max-width: 1350px){
         transition: 0.375s;
-        height: 2320px;
+        height: 2360px;
     }
 
     @media screen and (max-width: 1100px){
         transition: 0.375s;
-        height: 4600px;
+        height: 4640px;
     }
 
     @media screen and (max-width: 480px){
         transition: 0.375s;
         height: 3700px;
     }
-`
+`;
 
 //secondary container
 const BlogSecondaryContainer = styled.div`
@@ -403,11 +405,11 @@ const BlogSecondaryContainer = styled.div`
         width: 480px;
     }
 
-    @media screen and (max-width: 1100px){
+    @media screen and (max-width: 480px){
         transition: 0.375s;
         width: 350px;
     }
-`
+`;
 
 const BlogH1 = styled.h1`
     color: #897CBF; 
@@ -425,9 +427,8 @@ const BlogH1 = styled.h1`
         font-size: 35px;
         transition: 0.375s;
     }
+`;
 
-
-`
 //grid-template-columns: 1fr, the amount of fr will determine the items in each row
 const BlogWrapper = styled.div`
     margin: 0 auto; 
@@ -455,7 +456,7 @@ const BlogWrapper = styled.div`
 
     }
 
-`
+`;
 
 const BlogSection = styled.div`
     height: 2000px;
@@ -465,7 +466,7 @@ const BlogSection = styled.div`
         height: 1710px;
     }
 
-`
+`;
 
 //all sections to blog 
 //blog1
@@ -479,6 +480,10 @@ const BlogSectionCoding = styled.div`
     justify-content: center;
     transition: 0.375s;
 
+    &:hover{
+        transition: 0.375s;
+        scale: 1.02;
+    }
 
     
     @media screen and (max-width: 1700px){
@@ -502,7 +507,7 @@ const BlogSectionCoding = styled.div`
         width: 350px;
         height: 520px; 
     }
-`
+`;
 
 
 
@@ -517,6 +522,16 @@ const BlogSectionMusic = styled.div`
     align-items: center;
     justify-content: center;
     transition: 0.375s;
+
+    &:hover{
+       transition: 0.375s;
+       scale: 1.02;
+
+       .rm-audio-player-provider{
+            transform: scale(1.01);
+            transition: 0.375s;
+        }
+    }
 
 
     @media screen and (max-width: 1700px){
@@ -541,7 +556,7 @@ const BlogSectionMusic = styled.div`
         height: 770px;
     }
 
-`
+`;
 
 const BlogSectionAcademic = styled.div`
     height: 490px;
@@ -553,6 +568,11 @@ const BlogSectionAcademic = styled.div`
     align-items: center;
     justify-content: center;
     transition: 0.375s;
+
+    &:hover{
+        transition: 0.375s;
+        scale: 1.02;
+    }
 
 
     @media screen and (max-width: 1700px){
@@ -576,7 +596,7 @@ const BlogSectionAcademic = styled.div`
         height: 490px;
     }
 
-`
+`;
 
 //blog 2
 
@@ -589,6 +609,11 @@ const BlogSectionPersonality = styled.div`
     align-items: center;
     justify-content: center;
     transition: 0.375s;
+
+    &:hover{
+        transition: 0.375s;
+        scale: 1.02;
+    }
 
 
     @media screen and (max-width: 1700px){
@@ -612,7 +637,7 @@ const BlogSectionPersonality = styled.div`
         width: 350px;
         height: 660px;
     }
-`
+`;
 
 const BlogSectionAthletic = styled.div`
     height: 470px;
@@ -624,6 +649,11 @@ const BlogSectionAthletic = styled.div`
     align-items: center;
     justify-content: center;
     transition: 0.375s;
+
+    &:hover{
+        transition: 0.375s;
+        scale: 1.02;
+    }
 
 
     @media screen and (max-width: 1700px){
@@ -648,7 +678,7 @@ const BlogSectionAthletic = styled.div`
         height: 430px;
     }
 
-`
+`;
 
 
 const BlogSectionGame = styled.div`
@@ -661,6 +691,11 @@ const BlogSectionGame = styled.div`
     align-items: center;
     justify-content: center;
     transition: 0.375s;
+
+    &:hover{
+        transition: 0.375s;
+        scale: 1.02;
+    }
 
 
     @media screen and (max-width: 1700px){
@@ -684,7 +719,7 @@ const BlogSectionGame = styled.div`
         width: 350px;
         height: 480px;
     }
-`
+`;
 
 
 //copy icon 
@@ -699,7 +734,7 @@ const CopyIcon = styled(AiOutlineCopy)`
         scale: 1.1;
     }
 
-`
+`;
 
 
 //coding boxes 
@@ -754,7 +789,7 @@ const TitleSocialDivCoding = styled.div`
         height: 460px;
     }
 
-`
+`;
 
 const SocialDivMainCoding = styled.div`
     height: 150px;
@@ -785,7 +820,7 @@ const SocialDivMainCoding = styled.div`
         height: 100px;
     }
 
-`
+`;
 
 const SocialDivCoding = styled.div`
     width: 500px;
@@ -833,7 +868,7 @@ const SocialDivCoding = styled.div`
         width: 310px;
     }
 
-`
+`;
 
 //personality boxes 
 const TitleSocialDivPersonality = styled.div`
@@ -890,7 +925,7 @@ const TitleSocialDivPersonality = styled.div`
     }
 
 
-`
+`;
 
 const SocialDivMainPersonality = styled.div`
     height: 150px;
@@ -922,7 +957,7 @@ const SocialDivMainPersonality = styled.div`
     }
 
 
-`
+`;
 
 const SocialDivPersonality = styled.div`    
     width: 500px;
@@ -972,7 +1007,7 @@ const SocialDivPersonality = styled.div`
         width: 310px;
     }
 
-`
+`;
 
 
 //athletics boxes
@@ -1026,7 +1061,7 @@ const TitleSocialDivAthletics  = styled.div`
         height: 350px;
     }
 
-`
+`;
 
 const SocialDivMainAthletics = styled.div`
     height: 150px;
@@ -1055,7 +1090,7 @@ const SocialDivMainAthletics = styled.div`
         transition: 0.375s;
         width: 320px;
     }
-`
+`;
 
 const SocialDivAthletics = styled.div`
     width: 500px;
@@ -1105,7 +1140,7 @@ const SocialDivAthletics = styled.div`
     }
 
 
-`
+`;
 
 //Games boxes
 const TitleSocialDivGames = styled.div`
@@ -1158,7 +1193,7 @@ const TitleSocialDivGames = styled.div`
         height: 430px;
     }
 
-`
+`;
 
 const SocialDivMainGames = styled.div`
     height: 150px;
@@ -1187,7 +1222,7 @@ const SocialDivMainGames = styled.div`
         transition: 0.375s;
         width: 320px;
     }
-`
+`;
 
 const SocialDivGames = styled.div`
     width: 500px;
@@ -1234,7 +1269,7 @@ const SocialDivGames = styled.div`
         width: 310px;
     }
 
-`
+`;
 
 //academics boxes
 const TitleSocialDivAcademics = styled.div`
@@ -1286,7 +1321,7 @@ const TitleSocialDivAcademics = styled.div`
         height: 430px;
     }
 
-`
+`;
 
 const SocialDivMainAcademics = styled.div`
     height: 150px;
@@ -1315,7 +1350,7 @@ const SocialDivMainAcademics = styled.div`
         transition: 0.375s;
         width: 320px;
     }
-`
+`;
 
 const SocialDivAcademics = styled.div`
     width: 500px;
@@ -1359,7 +1394,7 @@ const SocialDivAcademics = styled.div`
         width: 310px;
     }
 
-`
+`;
 
 //Music boxes 
 const TitleSocialDivMusic = styled.div`
@@ -1424,7 +1459,7 @@ const TitleSocialDivMusic = styled.div`
         height: 690px;
     }
 
-`
+`;
 
 const SocialDivMainMusic = styled.div`
     height: 325px;
@@ -1454,7 +1489,7 @@ const SocialDivMainMusic = styled.div`
         width: 320px;
         height: 270px;
     }
-`
+`;
 
 const MusicDetails = styled.div`
     width: 290px;
@@ -1539,5 +1574,5 @@ const MusicDetails = styled.div`
         width: 130px;
         height: 130px;
     }
-`
+`;
 

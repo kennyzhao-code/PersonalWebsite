@@ -1,5 +1,5 @@
-
 /*faces*/
+
 .face {
     position: absolute;
     width: 100px;
@@ -9,8 +9,14 @@
     z-index: 2;
     animation: bounce 1s ease-in infinite;
     right: 0;
+    transition: 0.375s;
 
   }
+
+.face:hover {
+    transition: 0.375s;
+    scale: 1.1;
+}
 
 .faceMeh {
     position: absolute;
@@ -21,8 +27,13 @@
     z-index: 2;
     animation: bounce 1s ease-in infinite;
     right: 0;
-
+    transition: 0.375s;
   }
+
+.faceMeh:hover {
+    transition: 0.375s;
+    scale: 1.1;
+}
 
 .faceSad {
     position: absolute;
@@ -33,7 +44,12 @@
     z-index: 2;
     animation: bounce 1s ease-in infinite;
     right: 0;
+    transition: 0.375s;
+}
 
+.faceSad:hover {
+  transition: 0.375s;
+  scale: 1.1;
 }
 
 .eye {
@@ -83,22 +99,12 @@
     left: 44.5%;
 }
 
-
-
-
-
+/*Animations*/
 @keyframes bounce {
     50% {
        transform: translateY(-10px);
     }
   }
-
-
-
-
-
-
-
 /*
   .shadow {
     position: absolute;

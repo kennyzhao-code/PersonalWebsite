@@ -1,3 +1,4 @@
+/*clipboard styles*/
 .scale:hover{
     scale: 1.1;
     transition: 0.3s ease;
@@ -43,7 +44,7 @@
 
 
 /*Audio styles*/
-#rm-audio-player{
+.rm-audio-player-provider{
     margin-bottom: 1rem;
     position: relative;
     --rm-audio-player-interface-container: #4F457A;
@@ -52,7 +53,6 @@
     --rm-audio-player-theme-default: white;
 
 }
-
 
 
 .albumCover{
@@ -78,9 +78,9 @@
 @media screen and (max-width: 1350px) {
     .albumCover{
         position: relative;
-        top: 3rem;
+        bottom: 0rem;
         width: 180px;
-        height: 180px;
+        height: 275px;
         transition: 0.375s;
 
     }
@@ -88,10 +88,8 @@
 
 @media screen and (max-width: 480px) {
     .albumCover{
-        position: relative;
-        top: 3rem;
         width: 140px;
-        height: 140px;
+        height: 235px;
         transition: 0.375s;
 
     }

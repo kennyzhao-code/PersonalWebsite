@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import CountUp from 'react-countup';
 
-
 import {PBarContainer, PBar} from './LanguageElements.js';
 
 
 const ProgressBar= ({done}) => {
+
 
   const[style, setStyle] = useState({});
 

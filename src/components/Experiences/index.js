@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react'
-import Aos from "aos"
-import styled from "styled-components"
-import { colors } from "../globals/colors"
-import { FiExternalLink } from 'react-icons/fi'
-import '../globals/font.css'
+import React, {useEffect} from 'react';
+import Aos from "aos";
+import styled from "styled-components";
+import { colors } from "../globals/colors";
+import { FiExternalLink } from 'react-icons/fi';
+import '../globals/font.css';
 
 
 const Experiences = ({lightBg, id, topLine, description}) => {
@@ -37,7 +37,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                                       • Reponsible for representing all first year students in the society</SubDescription>
                       <ExternalSource target = "_blank" rel="noreferrer" href = "https://mcmastercs.ca/">
                           <ExternalLogo/>
-                          <h1>Our Website</h1>
+                          <h1>mcmastercs.ca</h1>
                       </ExternalSource>
                   </InnerDivMacCss>
                 </ExperienceSectionMacCss>
@@ -52,12 +52,32 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                                       • Work with the technology chair on any techology advancements</SubDescription>
                       <ExternalSource target = "_blank" rel="noreferrer" href = "https://trudeaumusic.wixsite.com/peths">
                           <ExternalLogo/>
-                          <h1>Our Website</h1>
+                          <h1>trudeaumusic.com</h1>
                       </ExternalSource>
                   </InnerDivTrudeauMusic>
                 </ExperienceSectionMusicCouncil>
 
-                <ExperienceSectionMarketyze >
+
+                <ExperienceSectionAvgl>
+                <InnerDivAvgl>
+                      <TitleHeader>AVGL  - <span style={{color: `${colors.secondaryRed}` }}>QA Tester & Tournament Organizer</span></TitleHeader>
+                      <SubTitle>May 2021 - March 2023</SubTitle>
+                      <SubDescription>• Tournament organizer during tournaments and events such as Intel Inspires and TEXSef <br/>
+                                      • Data digging for important information to grow Student Leaders and AVGL <br/>
+                                      • Helped improve speed and efficiency of the organization’s website as a QA tester <br/>
+                                      • Aiding other tournament organizers during events and tournament planning </SubDescription>
+                      <ExternalSource target = "_blank" rel="noreferrer" href = "https://avgl.org/">
+                          <ExternalLogo/>
+                          <h1>avgl.org</h1>
+                      </ExternalSource>
+                  </InnerDivAvgl>
+                </ExperienceSectionAvgl>
+
+            </ExperienceSection>
+
+            <ExperienceSection>
+
+            <ExperienceSectionMarketyze >
                   <InnerDivMarketyze>
                           <TitleHeader>Marketyze  - <span style={{color: `${colors.secondaryRed}` }}>Head Of Technology</span></TitleHeader>
                           <SubTitle>October 2022 - Present</SubTitle>
@@ -65,41 +85,25 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                                           • Manage and supervise all technology related components from emails, website and equipment for events <br/>
                                           • Provide any technological advice and implement new technologies during events <br/>
                                           • Collaborate with the CEO on potential new technologies</SubDescription>
-                          <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/marketyze.ca/">
+                          <ExternalSource target = "_blank" rel="noreferrer" href = "https://marketyze-org.notion.site/marketyze-org/Volunteer-with-Marketyze-3593c98f73be4f5c97b6d1147589b16e">
                               <ExternalLogo/>
-                              <h1>Instagram</h1>
+                              <h1>marketyze.org</h1>
                           </ExternalSource>
                       </InnerDivMarketyze>
                 </ExperienceSectionMarketyze>
-            </ExperienceSection>
-
-            <ExperienceSection>
-                <ExperienceSectionAvgl>
-                <InnerDivAvgl>
-                      <TitleHeader>AVGL  - <span style={{color: `${colors.secondaryRed}` }}>QA Tester & Tournament Organizer</span></TitleHeader>
-                      <SubTitle>May 2021 - Present</SubTitle>
-                      <SubDescription>• Tournament organizer during tournaments and events such as Intel Inspires and TEXSef <br/>
-                                      • Data digging for important information to grow Student Leaders and AVGL <br/>
-                                      • Helped improve speed and efficiency of the organization’s website as a QA tester <br/>
-                                      • Aiding other tournament organizers during events and tournament planning </SubDescription>
-                      <ExternalSource target = "_blank" rel="noreferrer" href = "https://avgl.org/">
-                          <ExternalLogo/>
-                          <h1>Our Website</h1>
-                      </ExternalSource>
-                  </InnerDivAvgl>
-                </ExperienceSectionAvgl>
+                
 
                 <ExperienceSectionOhsea >
                   <InnerDivOhsea>
                         <TitleHeader>OHSEA  - <span style={{color: `${colors.secondaryRed}` }}>Co-Founder & Lead Tech Dev</span></TitleHeader>
-                        <SubTitle>May 2021 - Present</SubTitle>
+                        <SubTitle>May 2021 - March 2023</SubTitle>
                         <SubDescription>• Responible for organizing and preparing tournaments and events <br/>
                                         • Responible for tech related issues during tournaments and events <br/>
                                         • Responible for aiding and managing tech related software such as tournament bots <br/>
                                         • Tournament organizer during tournaments and events </SubDescription>
                         <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/ohseagg/">
                             <ExternalLogo/>
-                            <h1>Instagram</h1>
+                            <h1>@ohseagg</h1>
                         </ExternalSource>
                     </InnerDivOhsea>
                 </ExperienceSectionOhsea>
@@ -114,7 +118,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                                         • Collabrate with other executives on creating new and exciting projects</SubDescription>
                         <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/petcsclub/">
                             <ExternalLogo/>
-                            <h1>Instagram</h1>
+                            <h1>@petcsclub</h1>
                         </ExternalSource>
                     </InnerDivPethsCSS>
                 </ExperienceSectionTrudeauCs>
@@ -128,14 +132,14 @@ const Experiences = ({lightBg, id, topLine, description}) => {
         </MasterTab>
         </>
 
-    )
-}
+    );
+};
 
-export default Experiences
+export default Experiences;
 
 //Master Tab
 const MasterTab = styled.div`
-    height: 2050px;
+    height: 2120px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -145,13 +149,13 @@ const MasterTab = styled.div`
     transition: 0.375s;
 
     @media screen and (max-width: 1350px){
-      height: 2270px;
+      height: 2320px;
       transition: 0.375s;
    }
 
 
    @media screen and (max-width: 1100px){
-    height: 4500px;
+    height: 4650px;
     transition: 0.375s;
  }
 
@@ -159,7 +163,7 @@ const MasterTab = styled.div`
   height: 4530px;
   transition: 0.375s;
 }
-`
+`;
 
 const SecondaryTab = styled.div`
   height: 100%;
@@ -185,7 +189,7 @@ const SecondaryTab = styled.div`
     width: 350px;
     transition: 0.375s;
   }
-`
+`;
 
 //Tab inner container 
 const TabContainer = styled.div`
@@ -210,12 +214,13 @@ const TabContainer = styled.div`
     transition: 0.375s;
     grid-template-columns: 1fr; 
   }
-`
+  
+`;
 
 //column sections 
 const ExperienceSection = styled.div`
   height: 2000px;
-`
+`;
 
 //Title
 const TabH1 = styled.p`
@@ -236,7 +241,7 @@ const TabH1 = styled.p`
   }
  
 
-`
+`;
 
 const SecondaryDescription = styled.p`
     font-size: 1.8rem;
@@ -251,7 +256,7 @@ const SecondaryDescription = styled.p`
       transition: 0.375s;
     }
 
-`
+`;
 
 
 
@@ -267,6 +272,11 @@ const ExperienceSectionMacCss = styled.div`
     align-items: center;
     transition: 0.375s;
 
+    &:hover{
+      transition: 0.375s;
+      scale: 1.02;
+    }
+
 
     @media screen and (max-width: 1700px){
        width: 585px;
@@ -280,7 +290,7 @@ const ExperienceSectionMacCss = styled.div`
       transition: 0.375s;
    }
 
-   @media screen and (max-width: 1350px){
+   @media screen and (max-width: 1100px){
     width: 480px;
     transition: 0.375s;
    }
@@ -290,7 +300,7 @@ const ExperienceSectionMacCss = styled.div`
       transition: 0.375s;
  }
 
-`
+`;
 
 const ExperienceSectionMusicCouncil = styled.div`
     height: 620px;
@@ -302,6 +312,11 @@ const ExperienceSectionMusicCouncil = styled.div`
     justify-content: center;
     align-items: center;
     transition: 0.375s;
+
+    &:hover{
+      transition: 0.375s;
+      scale: 1.02;
+    }
 
 
     @media screen and (max-width: 1700px){
@@ -315,7 +330,7 @@ const ExperienceSectionMusicCouncil = styled.div`
     transition: 0.375s;
  }
 
- @media screen and (max-width: 1350px){
+ @media screen and (max-width: 1100px){
   width: 480px;
   transition: 0.375s;
  }
@@ -324,7 +339,7 @@ const ExperienceSectionMusicCouncil = styled.div`
   width: 350px;
   transition: 0.375s;
 }
-`
+`;
 
 const ExperienceSectionTrudeauCs = styled.div`
     height: 540px;
@@ -336,6 +351,11 @@ const ExperienceSectionTrudeauCs = styled.div`
     justify-content: center;
     align-items: center;
     transition: 0.375s;
+
+    &:hover{
+      transition: 0.375s;
+      scale: 1.02;
+    }
 
 
     @media screen and (max-width: 1700px){
@@ -349,7 +369,7 @@ const ExperienceSectionTrudeauCs = styled.div`
     transition: 0.375s;
  }
 
- @media screen and (max-width: 1350px){
+ @media screen and (max-width: 1100px){
   width: 480px;
   transition: 0.375s;
  }
@@ -358,7 +378,7 @@ const ExperienceSectionTrudeauCs = styled.div`
   transition: 0.375s;
 }
 
-`
+`;
 
 //experience 2
 const ExperienceSectionAvgl = styled.div`
@@ -369,7 +389,14 @@ const ExperienceSectionAvgl = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
     transition: 0.375s;
+    
+
+    &:hover{
+      transition: 0.375s;
+      scale: 1.02;
+    }
 
 
     @media screen and (max-width: 1700px){
@@ -379,11 +406,11 @@ const ExperienceSectionAvgl = styled.div`
 
    @media screen and (max-width: 1350px){
     width: 510px;
-    height: 660px;
+    height: 680px;
     transition: 0.375s;
  }
 
- @media screen and (max-width: 1350px){
+ @media screen and (max-width: 1100px){
   width: 480px;
   transition: 0.375s;
  }
@@ -393,7 +420,7 @@ const ExperienceSectionAvgl = styled.div`
   transition: 0.375s;
 }
 
-`
+`;
 
 const ExperienceSectionOhsea = styled.div`
     height: 600px;
@@ -405,6 +432,11 @@ const ExperienceSectionOhsea = styled.div`
     justify-content: center;
     align-items: center;
     transition: 0.375s;
+
+    &:hover{
+      transition: 0.375s;
+      scale: 1.02;
+    }
 
 
     @media screen and (max-width: 1700px){
@@ -419,7 +451,7 @@ const ExperienceSectionOhsea = styled.div`
     transition: 0.375s;
  }
 
- @media screen and (max-width: 1350px){
+ @media screen and (max-width: 1100px){
   width: 480px;
   transition: 0.375s;
  }
@@ -430,18 +462,22 @@ const ExperienceSectionOhsea = styled.div`
 }
 
 
-`
+`;
 
 const ExperienceSectionMarketyze = styled.div`
     height: 600px;
     width: 720px;   
     background: ${colors.mainRed};
     border-radius: 15px;
-    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.375s;
+
+    &:hover{
+      transition: 0.375s;
+      scale: 1.02;
+    }
 
 
     @media screen and (max-width: 1700px){
@@ -463,10 +499,11 @@ const ExperienceSectionMarketyze = styled.div`
  @media screen and (max-width: 480px){
   width: 350px;
   transition: 0.375s;
+  margin-top: 2rem;
 }
 
 
-`
+`;
 
 //inner box components 
 const TitleHeader = styled.h1`
@@ -478,7 +515,7 @@ const TitleHeader = styled.h1`
     font-size: 2rem;
   }
 
-`
+`;
 
 const SubTitle = styled.h2`
   font-family: "Raleway", sans-serif;
@@ -488,7 +525,7 @@ const SubTitle = styled.h2`
   @media screen and (max-width: 480px){
     font-size: 1.5rem;
   }
-`
+`;
 
 const SubDescription = styled.p`
   font-family: "Raleway", sans-serif;
@@ -501,7 +538,7 @@ const SubDescription = styled.p`
     font-size: 1.2rem;
   }
 
-`
+`;
 
 const ExternalSource = styled.a`
     height: 70px;
@@ -533,13 +570,13 @@ const ExternalSource = styled.a`
       transition: all 0.4s ease;
       cursor: pointer;
     }
-`
+`;
 
 const ExternalLogo = styled(FiExternalLink)`
     font-size: 2rem;
     color: white;
  
-`
+`;
 
 
 const InnerDivMacCss = styled.div`
@@ -565,7 +602,7 @@ const InnerDivMacCss = styled.div`
   height: 540px;
   transition: 0.375s;
 }
-`
+`;
 
 const InnerDivTrudeauMusic = styled.div`
   height: 400px;
@@ -587,7 +624,7 @@ const InnerDivTrudeauMusic = styled.div`
   width: 320px;
   transition: 0.375s;
 }
-`
+`;
 
 const InnerDivPethsCSS = styled.div`
   height: 440px;
@@ -610,7 +647,7 @@ const InnerDivPethsCSS = styled.div`
   width: 320px;
   transition: 0.375s;
 }
-`
+`;
 
 const InnerDivAvgl = styled.div`
   height: 520px;
@@ -633,7 +670,7 @@ const InnerDivAvgl = styled.div`
   height: 630px;
   transition: 0.375s;
 }
-`
+`;
 
 const InnerDivOhsea = styled.div`
   height: 450px;
@@ -657,7 +694,7 @@ const InnerDivOhsea = styled.div`
   height: 500px;
   transition: 0.375s;
 }
-`
+`;
 
 const InnerDivMarketyze = styled.div`
   height: 450px;
@@ -680,4 +717,4 @@ const InnerDivMarketyze = styled.div`
   width: 320px;
   transition: 0.375s;
 }
-`
+`;

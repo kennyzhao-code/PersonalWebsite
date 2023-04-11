@@ -1,3 +1,5 @@
+//reusable variables for the languages section
+
 export const languagesData = {
     id: 'languages', 
     lightBg: true, 
