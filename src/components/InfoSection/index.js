@@ -6,7 +6,8 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import './image.css';
 import '../globals/font.css';
-
+import { colors } from '../globals/colors';
+import resume from '../../images/resume.pdf';
 
 //main function 
 const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, description2}) => {
@@ -43,7 +44,7 @@ const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, de
                                             </div>
                                     </div>
                                 </TopLine>
-                                {description} <br/><br/> {description2}</Subtitle>
+                                {description} <span>You can click <a target = '_blank' rel="noreferrer" href={resume}>here</a> to see my resume!</span><br/><br/> {description2}</Subtitle>
 
                             </TextWrapper>
                         </Column1>
@@ -170,14 +171,14 @@ const Column1 = styled.div`
 
     @media screen and (max-width: 1100px){
         transition: 0.375s;
-        height: 650px;
+        height: 680px;
     }
 
     @media screen and (max-width: 480px){
         margin-top: 5rem;
         margin-left: 1.8rem;
         transition: 0.375s;
-        height: 620px;
+        height: 655px;
     }
 `;
 
@@ -250,6 +251,11 @@ const Subtitle = styled.p`
     transition: 0.375s;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')};
 
+    a{
+        text-decoration: none;
+        color: ${colors.secondaryPurple};
+    }
+
     @media screen and (max-width: 1700px){
         transition: 0.375s;
         width: 600px;  
@@ -267,6 +273,8 @@ const Subtitle = styled.p`
         font-size: 20px;
         line-height: 30px;     
     }
+
+
 `;
 
 //image wrapper

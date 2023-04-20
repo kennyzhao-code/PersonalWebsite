@@ -16,10 +16,14 @@ Welcome to the README.md of my personal website! I am probably going to add in p
 
 **`TODO for next Version; V. 2.2.0`**
   - Add in new home page 
-  - add extra pages for projects 
   - darkmode??
   - 404 page
   - language bar viewport fix 
+  - migrate plugins to gatsby v4
+
+**`Future additions`**
+  - add extra pages for projects 
+  - 3d animations? (Spline, three.js)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

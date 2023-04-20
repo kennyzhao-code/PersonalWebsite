@@ -288,6 +288,12 @@ const NavbarContainer = styled.div`
     width: 100%;
     padding: 0 24px; 
     max-width: 1100px;
+    transition: 0.375s;
+
+    @media screen and (max-width: 768px) {
+        transition: 0.375s;
+        justify-content: center;
+    }
 
  
 `
@@ -312,10 +318,11 @@ const FullIcon = styled.div`
         @media screen and (max-width: 768px) {
             transition: 0.375s;
             rotate: 90deg;
-            margin-left: 0.5rem; 
+            margin-left: 0rem; 
             top: 0;
-        }
-
+            position: relative;
+            right: 0.9rem;
+       }
 `
 
 
