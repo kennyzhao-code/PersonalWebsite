@@ -237,6 +237,10 @@ const ContactFormBox = styled.div`
 
     @media screen and (max-width: 480px) {
       width: 350px;
+
+      &:hover{
+            scale: 1;
+    }
     }
 
 

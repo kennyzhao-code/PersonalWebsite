@@ -381,6 +381,10 @@ const ProjectOne = styled.div`
     @media screen and (max-width: 480px){
         width: 350px; 
         transition: 0.375s;
+
+        &:hover{
+            scale: 1;
+    }
     }
 `;
 const ProjectTwo = styled.div`
@@ -417,6 +421,10 @@ const ProjectTwo = styled.div`
     @media screen and (max-width: 480px){
         width: 350px; 
         transition: 0.375s;
+
+        &:hover{
+            scale: 1;
+    }
     }
 `;
 
@@ -453,6 +461,10 @@ const ProjectThree = styled.div`
     @media screen and (max-width: 480px){
         width: 350px; 
         transition: 0.375s;
+
+        &:hover{
+            scale: 1;
+    }
     }
 `;
 const ProjectFour = styled.div`
@@ -489,6 +501,10 @@ const ProjectFour = styled.div`
     @media screen and (max-width: 480px){
         width: 350px; 
         transition: 0.375s;
+
+        &:hover{
+            scale: 1;
+    }
     }
 
 `;

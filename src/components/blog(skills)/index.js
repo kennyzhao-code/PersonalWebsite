@@ -506,6 +506,10 @@ const BlogSectionCoding = styled.div`
         transition: 0.375s;
         width: 350px;
         height: 520px; 
+
+        &:hover{
+            scale: 1;
+        }
     }
 `;
 
@@ -554,6 +558,16 @@ const BlogSectionMusic = styled.div`
         transition: 0.375s;
         width: 350px;
         height: 770px;
+
+
+        &:hover{
+        scale: 1;
+
+        .rm-audio-player-provider{
+                transform: scale(1);
+                transition: 0.375s;
+            }
+        }
     }
 
 `;
@@ -594,6 +608,11 @@ const BlogSectionAcademic = styled.div`
         transition: 0.375s;
         width: 350px;
         height: 490px;
+
+        &:hover{
+            scale: 1;
+        }
+
     }
 
 `;
@@ -636,6 +655,10 @@ const BlogSectionPersonality = styled.div`
         transition: 0.375s;
         width: 350px;
         height: 660px;
+
+        &:hover{
+            scale: 1;
+        }
     }
 `;
 
@@ -676,6 +699,10 @@ const BlogSectionAthletic = styled.div`
         transition: 0.375s;
         width: 350px;
         height: 430px;
+
+        &:hover{
+            scale: 1;
+        }
     }
 
 `;
@@ -718,6 +745,10 @@ const BlogSectionGame = styled.div`
         transition: 0.375s;
         width: 350px;
         height: 480px;
+
+        &:hover{
+            scale: 1;
+        }
     }
 `;
 
