@@ -292,6 +292,12 @@ const ImgWrap = styled.div`
         transition: 0.375s;
         scale: 1.05;
     }
+
+    @media screen and (max-width: 480px){
+        &:hover{
+            scale: 1;
+        }
+    }
 `;
 
 

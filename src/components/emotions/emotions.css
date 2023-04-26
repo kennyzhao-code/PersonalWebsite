@@ -128,3 +128,19 @@
     }
   }
 */
+
+
+@media screen and (max-width: 480px) {
+  .face:hover{
+    scale: 1;
+  }
+
+  .faceMeh:hover{
+    scale: 1;
+
+  }
+
+  .faceSad:hover{
+    scale: 1;
+  }
+}

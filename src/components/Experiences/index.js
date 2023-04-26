@@ -298,6 +298,10 @@ const ExperienceSectionMacCss = styled.div`
     @media screen and (max-width: 480px){
       width: 350px;
       transition: 0.375s;
+
+      &:hover{
+            scale: 1;
+    }
  }
 
 `;
@@ -338,6 +342,10 @@ const ExperienceSectionMusicCouncil = styled.div`
  @media screen and (max-width: 480px){
   width: 350px;
   transition: 0.375s;
+
+  &:hover{
+            scale: 1;
+    }
 }
 `;
 
@@ -376,6 +384,10 @@ const ExperienceSectionTrudeauCs = styled.div`
  @media screen and (max-width: 480px){
   width: 350px;
   transition: 0.375s;
+
+  &:hover{
+            scale: 1;
+    }
 }
 
 `;
@@ -418,6 +430,10 @@ const ExperienceSectionAvgl = styled.div`
   width: 350px;
   height: 720px;
   transition: 0.375s;
+
+  &:hover{
+            scale: 1;
+    }
 }
 
 `;
@@ -459,6 +475,10 @@ const ExperienceSectionOhsea = styled.div`
   width: 350px;
   height: 600px;
   transition: 0.375s;
+
+  &:hover{
+            scale: 1;
+    }
 }
 
 
@@ -500,6 +520,10 @@ const ExperienceSectionMarketyze = styled.div`
   width: 350px;
   transition: 0.375s;
   margin-top: 2rem;
+
+  &:hover{
+            scale: 1;
+    }
 }
 
 
