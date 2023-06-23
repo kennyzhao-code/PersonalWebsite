@@ -10,20 +10,19 @@
 
 Welcome to the README.md of my personal website! I am probably going to add in patch notes and to do list in this read me file for personal reasons. This is so I can keep track of what needs to be changed and etc.
 
-**`Patch Notes: 12/11/2021; V. 2.1.5`**
+**`Patch Notes: 12/11/2021; V. 2.2.0`**
   - fixed more bugs
   - minor updates
-
-**`TODO for next Version; V. 2.2.0`**
-  - Add in new home page 
-  - darkmode??
-  - 404 page
-  - language bar viewport fix 
-  - migrate plugins to gatsby v4
+  - 404 page update
+  - home page update 
+  - language viewport fixed
 
 **`Future additions`**
   - add extra pages for projects 
   - 3d animations? (Spline, three.js)
+  - darkmode
+  - different pages for projects
+  - fix gatsby warnings
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
