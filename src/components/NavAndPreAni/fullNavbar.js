@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import { IoHome, IoPersonCircleSharp, IoFlash } from "react-icons/io5";
 import { AiFillProject, AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { MdContactMail } from "react-icons/md";
 import styled from "styled-components";
-import {Link as LinkS } from "react-scroll"
-import {MdArrowForwardIos} from 'react-icons/md'
-import {colors} from '../globals/colors'
+import {Link as LinkS } from "react-scroll";
+import {MdArrowForwardIos} from 'react-icons/md';
+import {colors} from '../globals/colors';
 
 //onClick={toggle} inside sidebar link will make it so that when you click it will close the nav automatically
 

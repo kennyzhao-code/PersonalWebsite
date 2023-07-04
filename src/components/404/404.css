@@ -126,10 +126,11 @@
     transition: 0.375s;
     width: 80px;
     height: 80px;
+    margin-left: 1.6rem;
+
   }
 
   .shadow404 {
-    margin-left: 0.4rem;
     transition: 0.375s;
     top: 53.5%;
     width: 8rem;
