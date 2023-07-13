@@ -64,7 +64,7 @@
     width: 35px;
     height: 100px;
     background: #fff;
-    border: 3px solid #673C63;
+    border: 3px solid #897CBF;
     border-bottom: 0px;
     border-radius: 3px;
     transform-origin: center right;
@@ -127,10 +127,10 @@
     position: absolute;
     left: 40%;
     top: 20%;
-    width: 0px;
-    height: 0px;
-    border-radius: 20px;
-    background: #673C63;
+    width: 7px;
+    height: 5px;
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
+    background-color: #673C63;
     transform: translate(-50%, -50%);
     animation: blow 3s linear;
   }
@@ -183,7 +183,6 @@
     display: inline-block;
     border: 0px solid #673C63;
     border-radius: 100%;
-    float: left;
     background: #673C63;
     transform: translate(-80%, 0%);
     animation: changeto-lower 3s  linear;
@@ -198,7 +197,6 @@
     display: inline-block;
     border: 0px solid #673C63;
     border-radius: 100%;
-    float: left;
     background: #673C63;
     transform: translate(-80%, 0%);
     animation: changeto-greater 3s linear;
@@ -318,25 +316,33 @@
       height: 0px;
     }
     50%,54% {
+      background: #673C63;
+      border-radius: 100%;
       width: 15px;
       height: 15px;
       left: 30%;
     }
     59% {
+      background: #673C63;
+      border-radius: 100%;
       width: 5px;
       height: 5px;
       left: 20%;
     }
     62% {
+      background: #673C63;
+      border-radius: 100%;
       width: 2px;
       height: 2px;
       left: 20%;
     }
     67% {
+      background: #673C63;
       width: 0px;
       height: 0px;
       left: 30%;
     }
+
   }
 
   @keyframes sad {

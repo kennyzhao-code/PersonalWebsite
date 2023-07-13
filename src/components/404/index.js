@@ -26,7 +26,7 @@ const Four0Four = ({lightBg, id}) => {
           <div class="eye right404"></div>
           <div class="mouth sad404"></div>
         </div>
-        <div class="shadow404 move404"></div>
+        <div class="shadow404 scale404"></div>
       </FaceContainer>
 
 
@@ -117,6 +117,9 @@ const TextContainer = styled.div`
 
 const FaceContainer = styled.div`
   margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const ButtonWrapper = styled(Link)`

@@ -15,6 +15,7 @@ Welcome to the README.md of my personal website! I am probably going to add in p
   - minor updates
   - 404 page update
   - home page update 
+  - language viewport fixed
 
 **`Future additions`**
   - add extra pages for projects 
@@ -22,8 +23,6 @@ Welcome to the README.md of my personal website! I am probably going to add in p
   - darkmode
   - different pages for projects
   - fix gatsby warnings
-  - language viewport fixed
-  - 404 page bug fix 
 
 
 <!-- AUTO-GENERATED-CONTENT:END -->
