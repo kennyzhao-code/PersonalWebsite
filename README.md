@@ -22,7 +22,7 @@ Welcome to the README.md of my personal website! I am probably going to add in p
   - 3d animations? (Spline, three.js)
   - darkmode
   - different pages for projects
-  - fix gatsby warnings
+  - fix gatsby warnings, scaling changes with scale transition? 
 
 
 <!-- AUTO-GENERATED-CONTENT:END -->

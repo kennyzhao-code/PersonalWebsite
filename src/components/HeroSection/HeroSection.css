@@ -818,5 +818,11 @@
   width: 7px;
   height: 7px;
 }
+
+.wrapper{
+  transition: 0.375s;
+  scale: 0.8;
+  left: 54%;
+}
 }
   
