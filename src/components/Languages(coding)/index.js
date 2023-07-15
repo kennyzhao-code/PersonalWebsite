@@ -3,11 +3,14 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import React, { useEffect } from 'react';
 import styled from "styled-components";
-import ProgressBar from "./ProgressBar";
-import ProgressBarCss from "./ProgressBarCss";
-import ProgressBarC from "./ProgressBarC";
-import ProgressBarJavaScript from "./ProgressBarJavaScript";
 import '../globals/font.css';
+import VisibilitySensor from "react-visibility-sensor";
+import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import './language.css'
+import CountUp from 'react-countup';
+import {colors} from '../globals/colors.js'
+
 
 const Language = ({lightBg, id, col1Start, darkText, description}) => {
     
@@ -29,10 +32,8 @@ const Language = ({lightBg, id, col1Start, darkText, description}) => {
                             
                             <TextWrapper>                     
                                 
-
                                 <Subtitle darkText={darkText}>{description}</Subtitle>
-                                    
-
+                                
                             </TextWrapper>
                         </Column1>
                         
@@ -40,14 +41,131 @@ const Language = ({lightBg, id, col1Start, darkText, description}) => {
 
                             <LanguageWrap>
 
-                            <ProgressBar done='60'/> 
+                                <LanguageSubWrap>
 
-                            <ProgressBarC done = '56'/>
+                                    <VisibilitySensor>
+                                        {({ isVisible }) => {
+                                        const percentage = isVisible ? 45 : 0;
+                                        const count = isVisible ? 45 : 0;
+                                        return (
+                                            <CircularProgressbarWithChildren className = "bar"
+                                            value={percentage}
+                                            styles={buildStyles({pathTransitionDuration: 1,
+                                                                 pathColor: `${colors.secondaryGreen}`,
+                                            })}
+                                            >
+                                                <LanguageInnerTextDiv style={{color: `${colors.mainGreen}`}}>
+                                                    <div style={{flexDirection: 'row', marginBottom: '0.5rem'}}> 
+                                                    <CountUp
+                                                    start={0}
+                                                    end={count}
+                                                    duration={2}
+                                                    redraw={true}
+                                                    />
+                                                    %
+                                                    </div>
+                                                    R
+                                                </LanguageInnerTextDiv>
+                                            
+                                            </CircularProgressbarWithChildren>
+                                        );
+                                        }}
+                                    </VisibilitySensor> 
 
-                            <ProgressBarCss done = '52'/>
+                                    <VisibilitySensor>
+                                        {({ isVisible }) => {
+                                        const percentage = isVisible ? 66 : 0;
+                                        const count = isVisible ? 66 : 0;
+                                        return (
+                                            <CircularProgressbarWithChildren className = "bar"
+                                            value={percentage}
+                                            styles={buildStyles({pathTransitionDuration: 1,
+                                                                 pathColor: `${colors.secondaryBlue}`,
+                                            })}
+                                            >                                              
+                                                <LanguageInnerTextDiv style={{color: `${colors.mainBlue}`}}>
+                                                    <div style={{flexDirection: 'row', marginBottom: '0.5rem'}}> 
+                                                    <CountUp
+                                                    start={0}
+                                                    end={count}
+                                                    duration={2}
+                                                    redraw={true}
+                                                    />
+                                                    %
+                                                    </div>
+                                                    Python
+                                                </LanguageInnerTextDiv>
+                                            
+                                            </CircularProgressbarWithChildren>
+                                        );
+                                        }}
+                                    </VisibilitySensor> 
 
-                            <ProgressBarJavaScript done = '68'/>
+                                    
 
+                            </LanguageSubWrap>
+                            <LanguageSubWrap style={{marginTop: '2rem'}}>
+
+                                    <VisibilitySensor>
+                                        {({ isVisible }) => {
+                                        const percentage = isVisible ? 60 : 0;
+                                        const count = isVisible ? 60 : 0;
+                                        return (
+                                            <CircularProgressbarWithChildren className = "bar"
+                                            value={percentage}
+                                            styles={buildStyles({pathTransitionDuration: 1,
+                                                                 pathColor: `${colors.secondaryRed}`,
+                                            })}
+                                            >                                               
+                                                <LanguageInnerTextDiv style={{color: `${colors.mainRed}`}}>
+                                                    <div style={{flexDirection: 'row', marginBottom: '0.5rem'}}> 
+                                                    <CountUp
+                                                    start={0}
+                                                    end={count}
+                                                    duration={2}
+                                                    redraw={true}
+                                                    />
+                                                    %
+                                                    </div>
+                                                    JavaScript
+                                                </LanguageInnerTextDiv>
+                                            
+                                            </CircularProgressbarWithChildren>
+                                        );
+                                        }}
+                                    </VisibilitySensor> 
+
+                                    <VisibilitySensor>
+                                        {({ isVisible }) => {
+                                        const percentage = isVisible ? 55 : 0;
+                                        const count = isVisible ? 55 : 0;
+                                        return (
+                                            <CircularProgressbarWithChildren className = "bar"
+                                            value={percentage}
+                                            styles={buildStyles({pathTransitionDuration: 1,
+                                                                 pathColor: `${colors.secondaryPurple}`,
+                                            })}
+                                            >                                             
+                                                <LanguageInnerTextDiv style={{color: `${colors.mainPurple}`}}>
+                                                    <div style={{flexDirection: 'row', marginBottom: '0.5rem'}}> 
+                                                    <CountUp
+                                                    start={0}
+                                                    end={count}
+                                                    duration={2}
+                                                    redraw={true}
+                                                    />
+                                                    %
+                                                    </div>
+                                                    C/C++
+                                                </LanguageInnerTextDiv>
+                                            
+                                            </CircularProgressbarWithChildren>
+                                        );
+                                        }}
+                                    </VisibilitySensor> 
+
+                            </LanguageSubWrap>
+                            
                             </LanguageWrap>
                             
                         </Column2>
@@ -294,3 +412,56 @@ const LanguageWrap = styled.div`
     }
 
 `;
+
+//language sub wrapper
+const LanguageSubWrap = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    gap: 10rem;
+    transition: 0.375s;
+
+    @media screen and (max-width: 1700px){
+        margin-top: 10rem;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1350px){
+        margin-top: 2rem;
+        transition: 0.375s;
+        gap: 7rem;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        gap: 5rem;
+    }
+
+    @media screen and (max-width: 480px){
+        margin-top: 5rem;
+        transition: 0.375s;
+        gap: 2rem;
+    }
+
+`
+
+//language inner text
+const LanguageInnerTextDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: 0.375s;
+    font-weight: 500;
+
+    @media screen and (max-width: 1350px){
+        font-size: 1.3rem;
+        transition: 0.375s;
+    }
+
+    @media screen and (max-width: 1100px){
+        font-size: 1.1rem;
+        transition: 0.375s;
+    }
+`

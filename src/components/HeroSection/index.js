@@ -9,7 +9,7 @@ const HeroSection = () => {
     return (
         <div name = "hero" class='body'>
             <div class='intro'>Hello!</div>
-            <div class='secondary'>My Name is Kenny Zhao.</div>
+            <div class='secondary'>My name is Kenny Zhao.</div>
             <div class="wrapper">
                 <div class="candles">
                     {/*<div class="light__wave"></div>*/}
@@ -23,6 +23,8 @@ const HeroSection = () => {
                     </div>
                     <div class="candle1__stick"></div>
                     </div>
+
+                    {/*<div class="candle1__fire"/>*/}
                     
                     <div class="candle2">
                     <div class="candle2__body">
@@ -41,8 +43,10 @@ const HeroSection = () => {
 
                 </div>
                 <div class="floor"/>
+
+                <div class='endText'>and welcome to my website!</div>
+
             </div>
-            <div class='endText'>and welcome to my website!</div>
 
             <LinkToIntro to = 'aboutMe' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true'>
                 <div class="mouse"/> 

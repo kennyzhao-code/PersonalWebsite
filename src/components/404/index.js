@@ -116,7 +116,7 @@ const TextContainer = styled.div`
 `
 
 const FaceContainer = styled.div`
-  margin-top: 3rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
