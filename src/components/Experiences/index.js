@@ -85,7 +85,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                                           • Manage and supervise all technology related components from emails, website and equipment for events <br/>
                                           • Provide any technological advice and implement new technologies during events <br/>
                                           • Collaborate with the CEO on potential new technologies</SubDescription>
-                          <ExternalSource target = "_blank" rel="noreferrer" href = "https://marketyze-org.notion.site/marketyze-org/Volunteer-with-Marketyze-3593c98f73be4f5c97b6d1147589b16e">
+                          <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.marketyze.org/">
                               <ExternalLogo/>
                               <h1>marketyze.org</h1>
                           </ExternalSource>

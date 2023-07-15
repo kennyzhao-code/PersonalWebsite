@@ -1,67 +1,75 @@
 import React from 'react';
-//useState
-import { HeroContainer, HeroP2, VideoBg, Button, ButtonWrapper, MobileImage} from './HeroElements.js';
 import './HeroSection.css';
-import Video from '../../images/original.mp4';
-import mobileI from '../../images/imageForMobile.png'
-
-//import {CgProfile} from "react-icons/cg"
-
-//import TextAnimation from '../animations/TextAnimation'
-
-//hover ? <icon/> : <icon/> to change icon over hover 
-
-
-/*
-    <HeroH1> <TextAnimation/> </HeroH1>
-
-
-
-    <div className ='heroContent delay' >
-
-                <HeroP>
-                    <CgProfile style ={{display: 'block', fontSize: '60px', marginBottom: '10px'}}/>
-                    KZ
-                </HeroP>
-                <ProgressBar done='100'/>
-
-     </div>
-
-
-    */
-
-
-     /**
-      * const [hover, setHover] = useState (false); 
-      * const onHover = () => {
-        setHover(!hover)
-    }
-      */
+import '../../components/globals/font.css'
+import {Link as LinkS } from "react-scroll";
+import styled from "styled-components";
 
 const HeroSection = () => {
 
     return (
-        <HeroContainer name ="hero">
+        <div name = "hero" class='body'>
+            <div class='intro'>Hello!</div>
+            <div class='secondary'>My name is Kenny Zhao.</div>
+            <div class="wrapper">
+                <div class="candles">
+                    {/*<div class="light__wave"></div>*/}
+                    <div class="candle1">
+                    <div class="candle1__body">
+                        <div class="candle1__eyes">
+                        <span class="candle1__eyes-one"></span>
+                        <span class="candle1__eyes-two"></span>
+                        </div>
+                        <div class="candle1__mouth"></div>
+                    </div>
+                    <div class="candle1__stick"></div>
+                    </div>
+
+                    {/*<div class="candle1__fire"/>*/}
+                    
+                    <div class="candle2">
+                    <div class="candle2__body">
+                        <div class="candle2__eyes">
+                        <div class="candle2__eyes-one"></div>
+                        <div class="candle2__eyes-two"></div>
+                        </div>
+                        <div class='candle2__mouth'></div>
+                    </div>
+                    <div class="candle2__stick"></div>
+                    </div>
+
+                    <div class="candle2__fire"/>
+                    <div class="candle__smoke-one"/>
+                    <div class="candle__smoke-two"/>
+
+                </div>
+                <div class="floor"/>
+
+                <div class='endText'>and welcome to my website!</div>
+
+            </div>
+
+            <LinkToIntro to = 'aboutMe' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true'>
+                <div class="mouse"/> 
+            </LinkToIntro>
             
-            <div className ='mobileBG'>
-                <MobileImage src={mobileI}/>
-            </div>
-                
-            <VideoBg playsinline preload="auto" autoPlay muted src={Video} type = 'video/mp4' />
 
-            <div className ='heroContentP delay'>
-                <HeroP2>
-                    My name is Kenny Zhao, a student from Ontario, Canada currently attending McMaster University and welcome to my website.
-                </HeroP2>
-
-                <ButtonWrapper to = 'aboutMe' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {100}>
-                    <Button to = 'aboutMe' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {100}>Explore</Button>
-                </ButtonWrapper>
-
-            </div>
-
-        </HeroContainer>
+        </div>
     )
 }
 
-export default HeroSection
+export default HeroSection;
+
+
+const LinkToIntro = styled(LinkS)`
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 40px;
+    top: 92%;
+    left: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+
+`

@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
+//import React, {useEffect, useState} from 'react'
 //import Lottie from 'react-lottie';
 import Layout from "../LayoutForWeb/layout"
 import Seo from "../SEO/seo"
@@ -34,14 +35,7 @@ const defaultPreLoadAnimation = {
 */
 
 const PreWebsiteLoader = () => {
-    const [completed, setcompleted] = useState(undefined);
-
-    useEffect(() => {
-        setTimeout(() => {
-            setcompleted(true); 
-        }, 4000); 
-    }, []);
-
+    
     return (
         <>
         {/* 
@@ -71,7 +65,7 @@ const PreWebsiteLoader = () => {
     );
 }
 
-export default PreWebsiteLoader
+export default PreWebsiteLoader;
 
 /*
 const LottieContainer = styled.div`
@@ -79,4 +73,13 @@ const LottieContainer = styled.div`
     margin: auto;
     top: 40%;
 `
+
+const [completed, setcompleted] = useState(undefined);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setcompleted(true); 
+        }, 4000); 
+    }, []);
+
 */

@@ -13,7 +13,7 @@ export const colors = {
     neutralFaceYellow: '#D5D274',
     sadFaceRed: '#D66A6A',
 
-    backfill: '#F8FCFF ',
+    backfill: '#F8FCFF',
 
     navHome: "#D5BB77", 
     navHomeDark: "#BFA45C", 
