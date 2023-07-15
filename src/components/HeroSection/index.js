@@ -2,7 +2,7 @@ import React from 'react';
 import './HeroSection.css';
 import '../../components/globals/font.css'
 import {Link as LinkS } from "react-scroll";
-import styled from "styled-components"
+import styled from "styled-components";
 
 const HeroSection = () => {
 
