@@ -10,6 +10,8 @@
 
 Welcome to the README.md of my personal website! I am probably going to add in patch notes and to do list in this read me file for personal reasons. This is so I can keep track of what needs to be changed and etc.
 
+Visit website click <a href="https://kennyzhao.dev/">here</a>
+
 **`Patch Notes: 12/11/2021; V. 2.2.0`**
   - fixed more bugs
   - minor updates
