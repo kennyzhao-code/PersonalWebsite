@@ -148,7 +148,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                 src= '../../images/doodle.jpg'
                                                 alt="doodleAlbum"
                                                 placeholder="blurred"
-                                                formats={["auto", "webp", "avif"]}
+                                                formats={["auto", "webp"]}
                                                 className = "albumCover"
                                                 imgStyle = {{borderRadius: '10px'}}
                                             />  

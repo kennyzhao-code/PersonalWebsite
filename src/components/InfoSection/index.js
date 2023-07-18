@@ -56,7 +56,7 @@ const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, de
                                 src= '../../images/kenny.jpg'
                                 alt="me"
                                 placeholder="blurred"
-                                formats={["auto", "webp", "avif"]}
+                                formats={["auto", "webp"]}
                                 quality= {100}
                                 imgStyle = {{borderRadius: '10px'}}
                
