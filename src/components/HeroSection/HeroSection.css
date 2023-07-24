@@ -6,15 +6,16 @@
 
 .intro{
     color: #897CBF;
-    font-size: 13rem;
+    font-size: 18rem;
     position: relative;
     left: 2rem;
-    top: 2rem;
+    top: 6rem;
     transition: 0.375s;
     width: 100%;
     padding-right: 2.5rem;
 }
 
+/*
 .secondary{
     color: #F8FCFF;
     font-size: 9rem;
@@ -26,6 +27,7 @@
     padding-right: 2.5rem;
 
 }
+*/
 
 .endText{
     color: #F8FCFF;
@@ -733,14 +735,16 @@
 
 @media screen and (max-width: 1700px){
   .intro{
-    font-size: 11rem;
+    font-size: 16rem;
     transition: 0.375s;
   }
 
+  /*
   .secondary{
     font-size: 7rem;
     transition: 0.375s;
   }
+  */
 
   .endText{
     transition: 0.375s;
@@ -750,14 +754,16 @@
 
 @media screen and (max-width: 1350px){
   .intro{
-    font-size: 9.5rem;
+    font-size: 15rem;
     transition: 0.375s;
   }
 
+  /*
   .secondary{
     font-size: 5.5rem;
     transition: 0.375s;
   }
+  */
 
   .endText{
     transition: 0.375s;
@@ -767,18 +773,26 @@
 
 @media screen and (max-width: 1100px){
   .intro{
-    font-size: 8.5rem;
+    font-size: 13rem;
     transition: 0.375s;
   }
 
+  /*
   .secondary{
     font-size: 4.5rem;
     transition: 0.375s;
   }
+  */
 
 }
 
 @media screen and (max-width: 880px){
+
+  .intro{
+    font-size: 10rem;
+    transition: 0.375s;
+  }
+  
   .endText{
     transition: 0.375s;
     font-size: 1.7rem;
@@ -796,10 +810,12 @@
     font-size: 7rem;
   }
 
+  /*
   .secondary{
     font-size: 2.5rem;
     transition: 0.375s;
   }
+  */
 
   .endText{
     transition: 0.375s;

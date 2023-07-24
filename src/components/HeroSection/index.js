@@ -9,7 +9,7 @@ const HeroSection = () => {
     return (
         <div name = "hero" class='body'>
             <div class='intro'>Hello!</div>
-            <div class='secondary'>My name is Kenny Zhao.</div>
+            {/*<div class='secondary'>My name is Kenny Zhao.</div>*/}
             <div class="wrapper">
                 <div class="candles">
                     {/*<div class="light__wave"></div>*/}
@@ -44,7 +44,7 @@ const HeroSection = () => {
                 </div>
                 <div class="floor"/>
 
-                <div class='endText'>and welcome to my website!</div>
+                <div class='endText'>My name is Kenny Zhao</div>
 
             </div>
 
