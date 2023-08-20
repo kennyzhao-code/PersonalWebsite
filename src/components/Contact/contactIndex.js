@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import {colors} from '../globals/colors';
 import '../globals/font.css';
+import API_KEYS from "./apiConfig.js";
 
 //fix emailjs
 const ContactUs = ({lightBg, id, topLine, description, quote}) => {
@@ -51,10 +52,10 @@ const ContactUs = ({lightBg, id, topLine, description, quote}) => {
       e.preventDefault();
       
       emailjs.sendForm(
-        'service_0vs4pmo', 
-        'template_r5x6iag', 
+        API_KEYS.API1, 
+        API_KEYS.API2, 
         form.current, 
-        'cLQasyeWZPPPe4Gbu')
+        API_KEYS.API3)
 
       .then((result) => {
           console.log(result.text);
