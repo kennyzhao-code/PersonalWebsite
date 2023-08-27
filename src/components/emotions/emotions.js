@@ -23,7 +23,7 @@ const Emotions = ({lightBg, id}) => {
                             
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
-                                <EmotionText>Status?</EmotionText>
+                                <EmotionText>Mood?</EmotionText>
                                     <div class="face">
                                         <div class="eye"></div>
                                         <div class="eye right"></div>
@@ -38,7 +38,7 @@ const Emotions = ({lightBg, id}) => {
 
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
-                                    <EmotionText>Workload?</EmotionText>
+                                    <EmotionText>Sleep?</EmotionText>
                                     <div class="faceMeh">
                                             <div class="eye"></div>
                                             <div class="eye right"></div>
@@ -49,7 +49,7 @@ const Emotions = ({lightBg, id}) => {
 
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
-                                    <EmotionText>University?</EmotionText>
+                                    <EmotionText>Workload?</EmotionText>
                                         <div class="faceSad">
                                             <div class="eye"></div>
                                             <div class="eye right"></div>

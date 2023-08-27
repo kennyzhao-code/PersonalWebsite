@@ -277,6 +277,8 @@ const CoverDiv = styled.a`
     opacity: 0.1;
     border-radius: 15px;
     background: ${colors.primaryGreen};
+    transition: 0.5s ease;
+
 
     &:hover{
         background: ${colors.secondaryGreen};
