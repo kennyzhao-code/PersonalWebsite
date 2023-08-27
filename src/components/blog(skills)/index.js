@@ -7,7 +7,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { SocialIcon } from 'react-social-icons';
 import { AiOutlineCopy } from "react-icons/ai";
 import AudioPlayer from 'react-modern-audio-player';
-import song from '../../images/doodle.mp3';
+import song from '../../images/until.mp3';
 import './icons.css';
 import '../globals/font.css';
 
@@ -145,8 +145,8 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
 
                                       
                                             <StaticImage
-                                                src= '../../images/doodle.jpg'
-                                                alt="doodleAlbum"
+                                                src= '../../images/song.jpg'
+                                                alt="UntilIFoundYouAlbum"
                                                 placeholder="blurred"
                                                 formats={["auto", "webp"]}
                                                 className = "albumCover"
@@ -154,8 +154,8 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                             />  
  
                                         <MusicDetails>
-                                            <h3>Doodle (feat. Yerin Baek)</h3>
-                                            <h4>Punchnello</h4>
+                                            <h3>Until I Found You</h3>
+                                            <h4>Stephen Sanchez & Em Beihold</h4>
 
                                         <div>
 
@@ -1558,7 +1558,7 @@ const MusicDetails = styled.div`
         font-family: "Raleway", sans-serif;
         color: ${colors.mainPurple};
         font-weight: 400;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         position: relative;
         padding-top: 0;
         bottom: 1.1rem;
@@ -1584,7 +1584,9 @@ const MusicDetails = styled.div`
             text-decoration: none;
         }
 
-        @media screen and (max-width: 1350px){
+        @media screen and (max-width: 1700px){
+            position: relative;
+            bottom: 0.6rem;
             font-size: 1.2rem;
         }
 

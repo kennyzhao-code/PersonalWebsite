@@ -1,4 +1,8 @@
 /*clipboard styles*/
+.scale{
+    transition: 0.3s ease;
+}
+
 .scale:hover{
     scale: 1.1;
     transition: 0.3s ease;
@@ -92,6 +96,11 @@
         height: 235px;
         transition: 0.375s;
 
+    }
+
+    .scale:hover{
+        scale: 1;
+        transition: 0.3s ease;
     }
 }
 

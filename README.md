@@ -24,8 +24,6 @@ Visit website click <a href="https://kennyzhao.dev/">here</a>
   - 3d animations? (Spline, three.js)
   - darkmode
   - different pages for projects
-  - fix gatsby warnings, scaling changes with scale transition? 
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
