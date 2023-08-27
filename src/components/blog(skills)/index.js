@@ -1558,15 +1558,20 @@ const MusicDetails = styled.div`
         font-family: "Raleway", sans-serif;
         color: ${colors.mainPurple};
         font-weight: 400;
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         position: relative;
         padding-top: 0;
         bottom: 1.1rem;
         padding-left: 0.8rem;
         transition: 0.375s;
 
+        @media screen and (max-width: 1350px){
+            font-size: 1.05rem;
+            transition: 0.375s;
+        }
+
         @media screen and (max-width: 480px){
-            font-size: 1rem;
+            font-size: 0.8rem;
             transition: 0.375s;
         }
 
@@ -1591,7 +1596,7 @@ const MusicDetails = styled.div`
         }
 
         @media screen and (max-width: 480px){
-            font-size: 1rem;
+            font-size: 0.9rem;
             line-height: 1.2;
         }
 
