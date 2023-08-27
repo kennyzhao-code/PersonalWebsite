@@ -49,7 +49,7 @@
 
 /*Audio styles*/
 .rm-audio-player-provider{
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     position: relative;
     --rm-audio-player-interface-container: #4F457A;
     --rm-audio-player-progress-bar: white;
@@ -75,6 +75,11 @@
         height: 280px;
         transition: 0.375s;
 
+    }
+
+    .rm-audio-player-provider{
+        margin-bottom: 1rem;
+    
     }
 }
     
