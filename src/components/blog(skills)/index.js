@@ -7,7 +7,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { SocialIcon } from 'react-social-icons';
 import { AiOutlineCopy } from "react-icons/ai";
 import AudioPlayer from 'react-modern-audio-player';
-import song from '../../images/until.mp3';
+import song from '../../images/gone.mp3';
 import './icons.css';
 import '../globals/font.css';
 
@@ -146,7 +146,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                       
                                             <StaticImage
                                                 src= '../../images/song.jpg'
-                                                alt="UntilIFoundYouAlbum"
+                                                alt="goneAlbum"
                                                 placeholder="blurred"
                                                 formats={["auto", "webp"]}
                                                 className = "albumCover"
@@ -154,8 +154,8 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                             />  
  
                                         <MusicDetails>
-                                            <h3>Until I Found You</h3>
-                                            <h4>Stephen Sanchez & Em Beihold</h4>
+                                            <h3>Gone</h3>
+                                            <h4>Rosé</h4>
 
                                         <div>
 
@@ -1558,7 +1558,7 @@ const MusicDetails = styled.div`
         font-family: "Raleway", sans-serif;
         color: ${colors.mainPurple};
         font-weight: 400;
-        font-size: 1.15rem;
+        font-size: 1.3rem;
         position: relative;
         padding-top: 0;
         bottom: 1.1rem;
@@ -1566,12 +1566,12 @@ const MusicDetails = styled.div`
         transition: 0.375s;
 
         @media screen and (max-width: 1350px){
-            font-size: 1.05rem;
+            font-size: 1.2rem;
             transition: 0.375s;
         }
 
         @media screen and (max-width: 480px){
-            font-size: 0.8rem;
+            font-size: 1rem;
             transition: 0.375s;
         }
 
@@ -1591,7 +1591,6 @@ const MusicDetails = styled.div`
 
         @media screen and (max-width: 1700px){
             position: relative;
-            bottom: 0.6rem;
             font-size: 1.2rem;
         }
 
