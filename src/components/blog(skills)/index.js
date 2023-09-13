@@ -573,7 +573,7 @@ const BlogSectionMusic = styled.div`
 `;
 
 const BlogSectionAcademic = styled.div`
-    height: 490px;
+    height: 510px;
     width: 720px;
     background: ${colors.mainPurple};
     border-radius: 15px;
@@ -591,6 +591,7 @@ const BlogSectionAcademic = styled.div`
 
     @media screen and (max-width: 1700px){
         width: 580px;
+        height: 490px;
         transition: 0.375s;
     }
 
@@ -637,6 +638,7 @@ const BlogSectionPersonality = styled.div`
 
     @media screen and (max-width: 1700px){
         width: 580px;
+        height: 790px;
         transition: 0.375s;
     }
 
@@ -663,7 +665,7 @@ const BlogSectionPersonality = styled.div`
 `;
 
 const BlogSectionAthletic = styled.div`
-    height: 470px;
+    height: 490px;
     width: 720px;
     background: ${colors.mainPurple};
     border-radius: 15px;
@@ -1043,7 +1045,7 @@ const SocialDivPersonality = styled.div`
 
 //athletics boxes
 const TitleSocialDivAthletics  = styled.div`
-    height: 400px;
+    height: 440px;
     width: 620px; 
     transition: 0.375s;
 

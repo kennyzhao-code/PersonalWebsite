@@ -27,8 +27,8 @@ const Experiences = ({lightBg, id, topLine, description}) => {
           <TabContainer data-aos-once='true' data-aos="fade-up">
 
             <ExperienceSection>
-                <ExperienceSectionMacCss>
-                  <InnerDivMacCss>
+                <ExperienceSectionTab1>
+                  <InnerDivTab1>
                       <TitleHeader>McMaster CSS - <span style={{color: `${colors.secondaryRed}` }}>First Year Rep</span></TitleHeader>
                       <SubTitle>October 2022 - Present</SubTitle>
                       <SubDescription>• Responible for organizing and aiding in events <br/>
@@ -39,27 +39,26 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                           <ExternalLogo/>
                           <h1>mcmastercs.ca</h1>
                       </ExternalSource>
-                  </InnerDivMacCss>
-                </ExperienceSectionMacCss>
+                  </InnerDivTab1>
+                </ExperienceSectionTab1>
 
-                <ExperienceSectionMusicCouncil>
-                <InnerDivTrudeauMusic>
-                      <TitleHeader>Trudeau Music - <span style={{color: `${colors.secondaryRed}` }}>Web Developer</span></TitleHeader>
-                      <SubTitle>November 2020 - June 2022</SubTitle>
-                      <SubDescription>• Reponsible for managing the council Website and links <br/>
-                                      • Aiding other executives and representatives during event planning <br/>
-                                      • Reponsible for maintaning the quality of instruments and deal with any music related issues <br/>
-                                      • Work with the technology chair on any techology advancements</SubDescription>
-                      <ExternalSource target = "_blank" rel="noreferrer" href = "https://trudeaumusic.wixsite.com/peths">
-                          <ExternalLogo/>
-                          <h1>trudeaumusic.com</h1>
-                      </ExternalSource>
-                  </InnerDivTrudeauMusic>
-                </ExperienceSectionMusicCouncil>
+                <ExperienceSectionTab2 >
+                  <InnerDivTab2>
+                          <TitleHeader>Marketyze  - <span style={{color: `${colors.secondaryRed}` }}>Head Of Technology</span></TitleHeader>
+                          <SubTitle>September 2022 - September 2023</SubTitle>
+                          <SubDescription>• Responsible for working with the team UI/UX designer on revamping the organization’s website <br/>
+                                          • Manage and supervise all technology related components from emails, website and equipment for events <br/>
+                                          • Provide any technological advice and implement new technologies during events <br/>
+                                          • Collaborate with the CEO on potential new technologies</SubDescription>
+                          <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.marketyze.org/">
+                              <ExternalLogo/>
+                              <h1>marketyze.org</h1>
+                          </ExternalSource>
+                      </InnerDivTab2>
+                </ExperienceSectionTab2>
 
-
-                <ExperienceSectionAvgl>
-                <InnerDivAvgl>
+                <ExperienceSectionTab3>
+                <InnerDivTab3>
                       <TitleHeader>AVGL  - <span style={{color: `${colors.secondaryRed}` }}>QA Tester & Tournament Organizer</span></TitleHeader>
                       <SubTitle>May 2021 - March 2023</SubTitle>
                       <SubDescription>• Tournament organizer during tournaments and events such as Intel Inspires and TEXSef <br/>
@@ -70,31 +69,30 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                           <ExternalLogo/>
                           <h1>avgl.org</h1>
                       </ExternalSource>
-                  </InnerDivAvgl>
-                </ExperienceSectionAvgl>
+                  </InnerDivTab3>
+                </ExperienceSectionTab3>
 
             </ExperienceSection>
 
             <ExperienceSection>
-
-            <ExperienceSectionMarketyze >
-                  <InnerDivMarketyze>
-                          <TitleHeader>Marketyze  - <span style={{color: `${colors.secondaryRed}` }}>Head Of Technology</span></TitleHeader>
-                          <SubTitle>October 2022 - Present</SubTitle>
-                          <SubDescription>• Responsible for working with the team UI/UX designer on revamping the organization’s website <br/>
-                                          • Manage and supervise all technology related components from emails, website and equipment for events <br/>
-                                          • Provide any technological advice and implement new technologies during events <br/>
-                                          • Collaborate with the CEO on potential new technologies</SubDescription>
-                          <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.marketyze.org/">
-                              <ExternalLogo/>
-                              <h1>marketyze.org</h1>
-                          </ExternalSource>
-                      </InnerDivMarketyze>
-                </ExperienceSectionMarketyze>
-                
-
-                <ExperienceSectionOhsea >
-                  <InnerDivOhsea>
+            
+            <ExperienceSectionTab4>
+                <InnerDivTab4>
+                      <TitleHeader>MIST - <span style={{color: `${colors.secondaryRed}` }}>MOC Software Developer</span></TitleHeader>
+                      <SubTitle>September 2023 - Present</SubTitle>
+                      <SubDescription>• Creating software to enable remote command and control operations for both ground stations and satellites <br/>
+                                      • Receiving, parsing, and storing experimental data and telemetry received from the ground station(s) <br/>
+                                      • Maintain virtual servers for enabling continuous data collection and communication with both the satellite and mission control <br/>
+                                      • Work with other departments to ensure success of the satellites</SubDescription>
+                      <ExternalSource target = "_blank" rel="noreferrer" href = "https://mcmasterneudose.ca/">
+                          <ExternalLogo/>
+                          <h1>mcmasterneudose.ca</h1>
+                      </ExternalSource>
+                  </InnerDivTab4>
+                </ExperienceSectionTab4>
+                        
+                <ExperienceSectionTab5 >
+                  <InnerDivTab5>
                         <TitleHeader>OHSEA  - <span style={{color: `${colors.secondaryRed}` }}>Co-Founder & Lead Tech Dev</span></TitleHeader>
                         <SubTitle>May 2021 - March 2023</SubTitle>
                         <SubDescription>• Responible for organizing and preparing tournaments and events <br/>
@@ -105,11 +103,11 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                             <ExternalLogo/>
                             <h1>@ohseagg</h1>
                         </ExternalSource>
-                    </InnerDivOhsea>
-                </ExperienceSectionOhsea>
+                    </InnerDivTab5>
+                </ExperienceSectionTab5>
 
-                <ExperienceSectionTrudeauCs >
-                  <InnerDivPethsCSS>
+                <ExperienceSectionTab6 >
+                  <InnerDivTab6>
                         <TitleHeader>Trudeau CS  - <span style={{color: `${colors.secondaryRed}` }}>Executive</span></TitleHeader>
                         <SubTitle>June 2021 - June 2022</SubTitle>
                         <SubDescription>• Responsible for teaching and preparing lessons <br/>
@@ -120,8 +118,8 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                             <ExternalLogo/>
                             <h1>@petcsclub</h1>
                         </ExternalSource>
-                    </InnerDivPethsCSS>
-                </ExperienceSectionTrudeauCs>
+                    </InnerDivTab6>
+                </ExperienceSectionTab6>
             </ExperienceSection>
 
           </TabContainer>
@@ -155,12 +153,12 @@ const MasterTab = styled.div`
 
 
    @media screen and (max-width: 1100px){
-    height: 4650px;
+    height: 4720px;
     transition: 0.375s;
  }
 
  @media screen and (max-width: 480px){
-  height: 4530px;
+  height: 4620px;
   transition: 0.375s;
 }
 `;
@@ -262,7 +260,7 @@ const SecondaryDescription = styled.p`
 
 //all sections to experience
 //experience
-const ExperienceSectionMacCss = styled.div`
+const ExperienceSectionTab1 = styled.div`
     height: 520px;
     width: 720px;
     background: ${colors.mainRed};
@@ -306,12 +304,11 @@ const ExperienceSectionMacCss = styled.div`
 
 `;
 
-const ExperienceSectionMusicCouncil = styled.div`
-    height: 620px;
+const ExperienceSectionTab4 = styled.div`
+    height: 640px;
     width: 720px;
     background: ${colors.mainRed};
     border-radius: 15px;
-    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,23 +322,28 @@ const ExperienceSectionMusicCouncil = styled.div`
 
     @media screen and (max-width: 1700px){
       width: 585px;
+      height: 680px;
       transition: 0.375s;
    }
 
    @media screen and (max-width: 1350px){
     width: 510px;
-    height: 620px;
+    height: 720px;
     transition: 0.375s;
  }
 
  @media screen and (max-width: 1100px){
   width: 480px;
   transition: 0.375s;
+  margin-top: 2.5rem;
  }
 
  @media screen and (max-width: 480px){
   width: 350px;
   transition: 0.375s;
+  margin-top: 7rem;
+
+
 
   &:hover{
             scale: 1;
@@ -349,8 +351,8 @@ const ExperienceSectionMusicCouncil = styled.div`
 }
 `;
 
-const ExperienceSectionTrudeauCs = styled.div`
-    height: 540px;
+const ExperienceSectionTab6 = styled.div`
+    height: 520px;
     width: 720px;
     background: ${colors.mainRed};
     border-radius: 15px;
@@ -393,7 +395,7 @@ const ExperienceSectionTrudeauCs = styled.div`
 `;
 
 //experience 2
-const ExperienceSectionAvgl = styled.div`
+const ExperienceSectionTab3 = styled.div`
     height: 600px;
     width: 720px;
     background: ${colors.mainRed};
@@ -418,7 +420,7 @@ const ExperienceSectionAvgl = styled.div`
 
    @media screen and (max-width: 1350px){
     width: 510px;
-    height: 680px;
+    height: 650px;
     transition: 0.375s;
  }
 
@@ -438,8 +440,8 @@ const ExperienceSectionAvgl = styled.div`
 
 `;
 
-const ExperienceSectionOhsea = styled.div`
-    height: 600px;
+const ExperienceSectionTab5 = styled.div`
+    height: 560px;
     width: 720px;
     background: ${colors.mainRed};
     border-radius: 15px;
@@ -457,7 +459,7 @@ const ExperienceSectionOhsea = styled.div`
 
     @media screen and (max-width: 1700px){
       width: 585px;
-      height: 630px;
+      height: 580px;
       transition: 0.375s;
    }
 
@@ -484,12 +486,13 @@ const ExperienceSectionOhsea = styled.div`
 
 `;
 
-const ExperienceSectionMarketyze = styled.div`
+const ExperienceSectionTab2 = styled.div`
     height: 600px;
     width: 720px;   
     background: ${colors.mainRed};
     border-radius: 15px;
     display: flex;
+    margin-top: 2rem;
     justify-content: center;
     align-items: center;
     transition: 0.375s;
@@ -503,23 +506,22 @@ const ExperienceSectionMarketyze = styled.div`
     @media screen and (max-width: 1700px){
       width: 585px;
       transition: 0.375s;
-      height: 600px;
+      height: 630px;
    }
 
    @media screen and (max-width: 1350px){
     width: 510px;
-    height: 670px;
+    height: 700px;
     transition: 0.375s;
  }
 
- @media screen and (max-width: 1350px){
+ @media screen and (max-width: 1100px){
   width: 480px;
   transition: 0.375s;
  }
  @media screen and (max-width: 480px){
   width: 350px;
   transition: 0.375s;
-  margin-top: 2rem;
 
   &:hover{
             scale: 1;
@@ -582,6 +584,11 @@ const ExternalSource = styled.a`
       font-weight: 400;
       transition: 0.375s;
 
+      @media screen and (max-width: 1350px){
+        font-size: 1.8rem;
+        transition: 0.375s;
+      }
+
       @media screen and (max-width: 480px){
         font-size: 1.5rem;
         transition: 0.375s;
@@ -603,7 +610,7 @@ const ExternalLogo = styled(FiExternalLink)`
 `;
 
 
-const InnerDivMacCss = styled.div`
+const InnerDivTab1 = styled.div`
   height: 420px;
   width: 600px;
   transition: 0.375s;
@@ -628,20 +635,21 @@ const InnerDivMacCss = styled.div`
 }
 `;
 
-const InnerDivTrudeauMusic = styled.div`
-  height: 400px;
+const InnerDivTab4 = styled.div`
+  height: 520px;
   width: 600px;
   transition: 0.375s;
 
 
   @media screen and (max-width: 1700px){
     width: 480px;
-    height: 540px;
+    height: 600px;
     transition: 0.375s;
  }
 
  @media screen and (max-width: 1350px){
   width: 390px;
+  height: 660px;
   transition: 0.375s;
 }
 @media screen and (max-width: 480px){
@@ -650,7 +658,7 @@ const InnerDivTrudeauMusic = styled.div`
 }
 `;
 
-const InnerDivPethsCSS = styled.div`
+const InnerDivTab6 = styled.div`
   height: 440px;
   width: 600px;
   transition: 0.375s;
@@ -673,7 +681,7 @@ const InnerDivPethsCSS = styled.div`
 }
 `;
 
-const InnerDivAvgl = styled.div`
+const InnerDivTab3 = styled.div`
   height: 520px;
   width: 600px;
   transition: 0.375s;
@@ -686,7 +694,7 @@ const InnerDivAvgl = styled.div`
 
  @media screen and (max-width: 1350px){
   width: 390px;
-  height: 600px;
+  height: 585px;
   transition: 0.375s;
 }
 @media screen and (max-width: 480px){
@@ -696,8 +704,8 @@ const InnerDivAvgl = styled.div`
 }
 `;
 
-const InnerDivOhsea = styled.div`
-  height: 450px;
+const InnerDivTab5 = styled.div`
+  height: 470px;
   width: 600px;
   transition: 0.375s;
 
@@ -720,7 +728,7 @@ const InnerDivOhsea = styled.div`
 }
 `;
 
-const InnerDivMarketyze = styled.div`
+const InnerDivTab2 = styled.div`
   height: 450px;
   width: 600px;
   transition: 0.375s;
@@ -734,7 +742,7 @@ const InnerDivMarketyze = styled.div`
 
  @media screen and (max-width: 1350px){
   width: 390px;
-  height: 610px;
+  height: 640px;
   transition: 0.375s;
 }
 @media screen and (max-width: 480px){
