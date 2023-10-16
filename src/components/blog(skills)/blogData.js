@@ -7,7 +7,7 @@ export const blogData = {
     lightTextDesc: true, 
     topLine: 'hey...again (skills and hobbies).', 
     coding: 'I have been learning about computer science for over 4 years and currently I am working on multiple projects from game development, to creating more websites for other extracurriculars that I am proud to be representing.',   
-    athletics: 'I love being active. As of now, I am currently training for the Toronto Waterfront Marathon in October 2023. I also enjoy other sports such as snowboarding.',
+    athletics: 'I love being active. As of now, I currently just ran the Toronto Waterfront Half-Marathon in October 2023 with a time of 2:06:00! I also enjoy other sports such as skiing, swimming etc.',
     music: 'Music plays a big role in my life. During my free time in high school, I use to play the bass clarinet for my school band. As of now, I occasionally play the piano and now play the guitar often whenever I want to enjoy some music.',
     games: 'Video games continue to be one of my favorite hobbies to relax and chill with friends. At the moment, I am not playing much because of academics, but if you are ever down play, just add me on discord!',
     academics: 'Competitions are where I strive the most as it forces me to become better. As of now, I am preparing for future events, such as hackathons, coding compeititons, etc., to further my skills.', 
