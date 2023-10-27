@@ -168,7 +168,7 @@ export default Projects;
 const ProjectContainer = styled.div`
     width: 100%;
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')}; 
-    height: 1300px;   
+    height: 1280px;   
     display: flex;
     justify-content: center;
     align-items: center;
