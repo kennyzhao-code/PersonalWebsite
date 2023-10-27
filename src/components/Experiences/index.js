@@ -158,7 +158,7 @@ const MasterTab = styled.div`
 
 
    @media screen and (max-width: 1100px){
-    height: 4590px;
+    height: 4540px;
     transition: 0.375s;
  }
 
@@ -390,6 +390,7 @@ const ExperienceSectionTab6 = styled.div`
 
  @media screen and (max-width: 1100px){
   width: 480px;
+  height: 580px;
   transition: 0.375s;
  }
  @media screen and (max-width: 480px){
@@ -688,6 +689,12 @@ const InnerDivTab6 = styled.div`
  @media screen and (max-width: 1350px){
   width: 390px;
   height: 530px;
+  transition: 0.375s;
+}
+
+@media screen and (max-width: 1350px){
+  width: 390px;
+  height: 520px;
   transition: 0.375s;
 }
 @media screen and (max-width: 480px){
