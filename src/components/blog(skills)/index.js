@@ -375,12 +375,12 @@ const BlogContainer = styled.div`
 
     @media screen and (max-width: 1100px){
         transition: 0.375s;
-        height: 4640px;
+        height: 4540px;
     }
 
     @media screen and (max-width: 480px){
         transition: 0.375s;
-        height: 3700px;
+        height: 3660px;
     }
 `;
 
@@ -651,12 +651,13 @@ const BlogSectionPersonality = styled.div`
     @media screen and (max-width: 1100px){
         transition: 0.375s;
         width: 480px;
+        height: 730px;
     }
 
     @media screen and (max-width: 480px){
         transition: 0.375s;
         width: 350px;
-        height: 660px;
+        height: 610px;
 
         &:hover{
             scale: 1;
@@ -816,6 +817,7 @@ const TitleSocialDivCoding = styled.div`
         height: 530px;
     }
 
+
     @media screen and (max-width: 480px){
         transition: 0.375s;
         width: 320px;
@@ -951,10 +953,16 @@ const TitleSocialDivPersonality = styled.div`
         height: 680px;
     }
 
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        height: 650px;
+    }
+
     @media screen and (max-width: 480px){
         transition: 0.375s;
         width: 320px;
-        height: 590px;
+        height: 560px;
     }
 
 
