@@ -484,6 +484,7 @@ const ExperienceSectionTab5 = styled.div`
  @media screen and (max-width: 1100px){
   width: 480px;
   transition: 0.375s;
+  height: 585px;
  }
  @media screen and (max-width: 480px){
   width: 350px;
@@ -743,6 +744,11 @@ const InnerDivTab5 = styled.div`
  @media screen and (max-width: 1350px){
   width: 390px;
   height: 520px;
+  transition: 0.375s;
+}
+
+@media screen and (max-width: 1100px){
+  height: 510px;
   transition: 0.375s;
 }
 @media screen and (max-width: 480px){
