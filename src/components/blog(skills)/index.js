@@ -375,7 +375,7 @@ const BlogContainer = styled.div`
 
     @media screen and (max-width: 1100px){
         transition: 0.375s;
-        height: 4540px;
+        height: 4470px;
     }
 
     @media screen and (max-width: 480px){
@@ -696,6 +696,7 @@ const BlogSectionAthletic = styled.div`
     @media screen and (max-width: 1100px){
         transition: 0.375s;
         width: 480px;
+        height: 580px;
     }
 
     @media screen and (max-width: 480px){
@@ -742,6 +743,7 @@ const BlogSectionGame = styled.div`
     @media screen and (max-width: 1100px){
         transition: 0.375s;
         width: 480px;
+        height: 580px;
     }
 
     @media screen and (max-width: 480px){
@@ -1096,6 +1098,11 @@ const TitleSocialDivAthletics  = styled.div`
         height: 490px;
     }
 
+    @media screen and (max-width: 1350px){
+        transition: 0.375s;
+        height: 500px;
+    }
+
     @media screen and (max-width: 480px){
         transition: 0.375s;
         width: 320px;
@@ -1226,6 +1233,11 @@ const TitleSocialDivGames = styled.div`
         transition: 0.375s;
         width: 400px;
         height: 490px;
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.375s;
+        height: 505px;
     }
 
     @media screen and (max-width: 480px){
@@ -1491,7 +1503,7 @@ const TitleSocialDivMusic = styled.div`
     @media screen and (max-width: 1350px){
         transition: 0.375s;
         width: 400px;
-        height: 850px;
+        height: 830px;
     }
 
     @media screen and (max-width: 480px){
