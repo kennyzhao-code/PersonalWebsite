@@ -89,22 +89,22 @@ const ContactUs = ({lightBg, id, topLine, description, quote}) => {
                 <StyledContactForm>
                     <form ref={form} onSubmit={sendEmail}>
 
-                        <label>Name
-                            <input type="text" name="user_name" required/>
+                        <label htmlFor="user_name" >Name
+                            <input id="user_name" type="text" name="user_name" required/>
                         </label>
 
-                        <label style = {{marginTop: "1rem"}}>Email
-                            <input type="email" name="user_email" required/>
+                        <label htmlFor="user_email" style = {{marginTop: "1rem"}}>Email
+                            <input id="user_email" type="email" name="user_email" required/>
                         </label>
 
           
-                        <label style = {{marginTop: "1rem"}}>Message
-                            <textarea name="message" required/>
+                        <label htmlFor="message" style = {{marginTop: "1rem"}}>Message
+                            <textarea id="message" name="message" required/>
                         </label>
 
-                          <label>
-                              <input type="submit" value="Send" />
-                          </label>
+                        <SendDiv>
+                          <input type="submit" value="Send" />
+                        </SendDiv>
                     </form>
                 </StyledContactForm>
 
@@ -310,6 +310,7 @@ const StyledContactForm = styled.div`
   font-weight: 400;
   position: relative;
   transition: 0.375s;
+  border: 1px solid black;
  
   @media screen and (max-width: 1700px) {
     width: 500px;
@@ -418,19 +419,19 @@ const StyledContactForm = styled.div`
       font-size: 1.3rem;
       border-radius: 10px;
       background: white;
-      position: absolute;
-      right: 0;
    
-
       &:hover {
         scale: 1.05;
         transition: all 0.3s ease;
         color: ${colors.secondaryBlue};
       }
-
-
-
-
     }
   }
 `;
+
+const SendDiv = styled.div`
+  width: 100%;
+  border: 1px solid blue;
+  display: flex; 
+  justify-content: flex-end; 
+`
