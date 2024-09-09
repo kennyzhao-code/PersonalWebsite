@@ -1,15 +1,17 @@
-import React from 'react'
-import {FaInstagram, FaLinkedin, FaGithub, FaTwitter, FaSnapchat} from 'react-icons/fa'
-import styled from 'styled-components'
-import { Link } from 'react-scroll'
-import { colors } from '../globals/colors'
-import '../globals/font.css'
+/* Imports */
+import React from 'react';
+import {FaInstagram, FaLinkedin, FaGithub, FaTwitter} from 'react-icons/fa';
+import styled from 'styled-components';
+import { Link } from 'react-scroll';
+import { colors } from '../globals/colors';
+import '../globals/font.css';
 
+/* Main */
 const Footer = () => {
     return (
         <FooterContainer>
             <FooterWrap>
-
+    
                 <SocialMedia>
                     <SocialMediaWrap>
                         <SocialLogo to = 'hero' smooth = 'linear' duration = {500} spy = {true} exact ='true' offset = {-500}>Kenny Zhao</SocialLogo>
@@ -20,26 +22,22 @@ const Footer = () => {
                         
                         <SocialIcons>
 
-                        <SocialIconLinkInsta href = 'https://www.instagram.com/kennyzhao_/' target = '_blank' aria-label="Instagram"  rel="noreferrer">
+                        <SocialIconLink color = "#f08080" href = 'https://www.instagram.com/kennyzhao_/' target = '_blank' aria-label="Instagram"  rel="noreferrer">
                             <FaInstagram />
-                        </SocialIconLinkInsta>
+                        </SocialIconLink>
 
-                        <SocialIconLinkLink href = 'https://www.linkedin.com/in/kenny-zhao-283b73213/' target = '_blank' aria-label="Linkedin"  rel="noreferrer">
+                        <SocialIconLink color = "#71a5de" href = 'https://www.linkedin.com/in/kenny-zhao-283b73213/' target = '_blank' aria-label="Linkedin"  rel="noreferrer">
                             <FaLinkedin />
-                        </SocialIconLinkLink>
+                        </SocialIconLink>
 
-                        <SocialIconLinkGit href = 'https://github.com/kennyzhao-code' target = '_blank' aria-label="Github" rel="noreferrer">
+                        <SocialIconLink color = "#9381ff" href = 'https://github.com/kennyzhao-code' target = '_blank' aria-label="Github" rel="noreferrer">
                             <FaGithub />
-                        </SocialIconLinkGit>
+                        </SocialIconLink>
 
-                        <SocialIconLinkDis href = 'https://twitter.com/KennyZhao20' target = '_blank' aria-label="Twitter"  rel="noreferrer">
+                        <SocialIconLink color = "#1DA1F2" href = 'https://twitter.com/KennyZhao20' target = '_blank' aria-label="Twitter"  rel="noreferrer">
                             <FaTwitter />
-                        </SocialIconLinkDis>
+                        </SocialIconLink>
 
-                        <SocialIconLinkSnap href = 'https://t.snapchat.com/EAyH5MmN' target = '_blank' aria-label="Snapchat"  rel="noreferrer">
-                            <FaSnapchat />
-                        </SocialIconLinkSnap>
-                    
                         </SocialIcons>
                         
                     </SocialMediaWrap>
@@ -48,13 +46,14 @@ const Footer = () => {
             </FooterWrap>
         </FooterContainer>
     )
-}
+};
 
-export default Footer
+export default Footer;
 
+/* Styles */
 export const FooterContainer = styled.footer`
     background-color: ${colors.backfill};
-`
+`;
 
 export const FooterWrap = styled.div`
     padding: 48px 24px; 
@@ -86,12 +85,12 @@ export const FooterWrap = styled.div`
         max-width: 300px;
         transition: 0.375s;
     }
-`
+`;
 
 export const SocialMedia = styled.section`
     max-width: 1000px; 
     width: 100%; 
-`
+`;
 
 export const SocialMediaWrap = styled.div`
     display: flex; 
@@ -104,7 +103,7 @@ export const SocialMediaWrap = styled.div`
     {
         flex-direction: column;
     }
-`
+`;
 
 export const SocialLogo = styled(Link)`
     font-family: 'Raleway', sans-serif;
@@ -122,8 +121,7 @@ export const SocialLogo = styled(Link)`
         color: ${colors.secondaryPurple};
         transition: 0.5s ease;
     }
-
-`
+`;
 
 export const WebsiteRights = styled.small`
     font-family: 'Raleway', sans-serif;
@@ -148,74 +146,26 @@ export const WebsiteRights = styled.small`
             transition: 0.5s ease;
         }
     }
-
-
-`
+`;
 
 export const SocialIcons = styled.div`
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    width: 120px; 
-    margin-bottom: 30px;
-    margin-right: 70px;
+    width: 170px; 
+    gap: 1rem;
+    margin-bottom: 1rem;
+    /* border: 1px solid red; */
 
 `
-
 //icons 
-export const SocialIconLinkInsta = styled.a`
-    color: #f08080;
-    font-size: 30px; 
+export const SocialIconLink = styled.a`
+  color: ${(props) => props.color || '#000'}; /* Default color is black if not provided */
+  font-size: 30px;
 
-    &:hover {
-        scale: 1.1;
-        transition: 0.3s ease;
-    }
-`
-
-export const SocialIconLinkLink = styled.a`
-    color: #71a5de;
-    font-size: 30px;
-    margin-left: 10px; 
-
-    &:hover {
-        scale: 1.1;
-        transition: 0.3s ease;
-    }
-`
-
-export const SocialIconLinkGit = styled.a`
-    color: #9381ff;
-    font-size: 30px; 
-    margin-left: 10px; 
-
-    
-    &:hover {
-        scale: 1.1;
-        transition: 0.3s ease;
-    }
-`
-
-export const SocialIconLinkDis = styled.a`
-    color: 	#1DA1F2;
-    font-size: 30px; 
-    margin-left: 10px; 
-
-
-    &:hover {
-        scale: 1.1;
-        transition: 0.3s ease;
-    }
-`
-
-export const SocialIconLinkSnap = styled.a`
-    color: #FEF24E;
-    font-size: 30px; 
-    margin-left: 10px; 
-
-    &:hover {
-        scale: 1.1;
-        transition: 0.3s ease;
-    }
-`
+  &:hover {
+    scale: 1.1;
+    transition: 0.3s ease;
+  }
+`;
 

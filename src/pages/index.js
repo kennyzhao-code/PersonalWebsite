@@ -1,8 +1,43 @@
-import * as React from "react"
+//import React, {useEffect, useState} from 'react'
+//import Lottie from 'react-lottie';
+import React from 'react'
+import Layout from "../components/LayoutForWeb/layout"
+import Seo from "../components/SEO/seo"
+
+import HeroSection from "../components/HeroSection/index"
+import InfoSection from "../components/InfoSection/index"
+import Blog from "../components/blog(skills)/index"
+import Experiences from "../components/Experiences/index"
+import Projects from "../components/Projects/index"
+import Language from "../components/Languages(coding)/index"
+import Emotions from "../components/emotions/emotions"
+import ContactUs from "../components/Contact/contactIndex"
+
+import { aboutMePage } from "../components/InfoSection/DataInfo"
+import { languagesData } from "../components/Languages(coding)/DataLanguages"
+import { emotions } from "../components/emotions/DataEmotions"
+import { blogData } from '../components/blog(skills)/blogData'
+import { projectData} from '../components/Projects/projectData'
+import { experiencesData } from '../components/Experiences/experienceData'
+import { contactData } from '../components/Contact/contactData'
 //import { Link } from "gatsby"
 //import { StaticImage } from "gatsby-plugin-image"
 
-import PreWebsiteLoader from "../components/NavAndPreAni/PreWebsiteLoader"
+
+//import * as preLoadingAnimation from '../../images/9329-loading.json'
+//import styled from "styled-components"
+
+/*
+const defaultPreLoadAnimation = {
+    loop: true,
+    autoplay: true, 
+    animationData: preLoadingAnimation.default,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+*/
+
 
 /*<StaticImage
       src="../images/gatsby-astronaut.png"
@@ -21,12 +56,49 @@ import PreWebsiteLoader from "../components/NavAndPreAni/PreWebsiteLoader"
     </p> */
 
 
-//gatsby develop -H 0.0.0.0 to run website on phone through local network
-
-
 const IndexPage = () => (
-  <PreWebsiteLoader/>
+  <>
+        {/* 
+            {!completed ? (
+                <div style={{backgroundColor: 'black', height: '100vh', width: '100vw'}}>
+                    <Seo title="Kenny Zhao" />
+                    <LottieContainer>
+                        <Lottie style ={{height: '200px', width: '200px', margin: 'auto'}} options={defaultPreLoadAnimation}  />
+                    </LottieContainer>
+                </div>
+            ) : (
+
+        */}
+                    <Layout>
+                        <Seo title="Kenny Zhao" />
+                        <HeroSection/>
+                        <InfoSection {...aboutMePage}/>
+                        <Language {...languagesData}/>
+                        <Emotions {...emotions} />
+                        <Blog {...blogData}/>
+                        <Projects {...projectData}/>
+                        <Experiences {...experiencesData}/>
+                        <ContactUs {...contactData} />
+                    </Layout> 
+         {/* )} */}
+        </>
 )
 
 export default IndexPage
 
+/*
+const LottieContainer = styled.div`
+    position: relative;
+    margin: auto;
+    top: 40%;
+`
+
+const [completed, setcompleted] = useState(undefined);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setcompleted(true); 
+        }, 4000); 
+    }, []);
+
+*/

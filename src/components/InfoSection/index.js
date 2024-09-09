@@ -1,4 +1,4 @@
-// all imports 
+/* Imports */
 import "aos/dist/aos.css";
 import Aos from "aos";
 import React, { useEffect } from 'react';
@@ -9,7 +9,7 @@ import '../globals/font.css';
 import { colors } from '../globals/colors';
 import resume from '../../images/resume.pdf';
 
-//main function 
+/* Main */
 const InfoSection = ({lightBg, id, col1Start, topLine, darkText, description, description2}) => {
     
     //controls fade in animation time 
@@ -273,8 +273,6 @@ const Subtitle = styled.p`
         font-size: 20px;
         line-height: 30px;     
     }
-
-
 `;
 
 //image wrapper

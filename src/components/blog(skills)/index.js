@@ -1,3 +1,4 @@
+/* Imports */
 import React, {useCallback, useState, useEffect} from 'react';
 import Aos from "aos";
 import { StaticImage } from 'gatsby-plugin-image';
@@ -16,8 +17,9 @@ const playList = [
       src: song,
       id: 1,
     },
-  ];
+];
 
+/* Main */
 const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics, personality}) => {
 
 
@@ -354,7 +356,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
 
 export default Blog;
 
-
+/* styles */
 //main container 
 const BlogContainer = styled.div`
     height: 2150px;
@@ -365,8 +367,6 @@ const BlogContainer = styled.div`
     justify-content: center;
     align-items: center;
     transition: 0.375s;
-
-
 
     @media screen and (max-width: 1350px){
         transition: 0.375s;
@@ -512,9 +512,6 @@ const BlogSectionCoding = styled.div`
         }
     }
 `;
-
-
-
 
 const BlogSectionMusic = styled.div`
     height: 800px;

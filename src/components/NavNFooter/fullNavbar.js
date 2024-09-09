@@ -1,3 +1,4 @@
+/* Imports */
 import React, {useState} from 'react';
 import { IoHome, IoPersonCircleSharp, IoFlash } from "react-icons/io5";
 import { AiFillProject, AiOutlineFundProjectionScreen } from "react-icons/ai";
@@ -9,6 +10,7 @@ import {colors} from '../globals/colors';
 
 //onClick={toggle} inside sidebar link will make it so that when you click it will close the nav automatically
 
+/* Main */
 const Navbar = () => {
 
     //toggles states for navbar
@@ -38,35 +40,35 @@ const Navbar = () => {
             <SidebarWrapper>
                 <SidebarMenu>
 
-                    <SidebarLinkHome style = {{background: `${colors.navHome}`, border: `2.5px solid ${colors.navHomeDark}`}} activeClass = "active" to = 'hero' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-500} >
+                    <SidebarLink color = {colors.navHomeDark} background = {colors.navHome} border = {`2.5px solid ${colors.navHomeDark}`} activeClass = "active" to = 'hero' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-500} >
                         <IoHome />
                         {/*<SideBarText className ='text1'>Home</SideBarText>*/}
-                    </SidebarLinkHome>
+                    </SidebarLink>
 
-                    <SidebarLinkIntro style = {{background: `${colors.navIntro}`, border: `2.5px solid ${colors.navIntroDark}`}} activeClass = "active" to = 'aboutMe' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' >
+                    <SidebarLink color = {colors.navIntroDark} background = {colors.navIntro} border = {`2.5px solid ${colors.navIntroDark}`} activeClass = "active" to = 'aboutMe' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' >
                         <IoPersonCircleSharp />
                         {/*<SideBarText className ='text1'>About Me</SideBarText>*/}
-                    </SidebarLinkIntro>
+                    </SidebarLink>
 
-                    <SidebarLinkHobbies style = {{background: `${colors.navHobbies}`, border: `2.5px solid ${colors.navHobbiesDark}`}} activeClass = "active" to = 'hobbies' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-100}> 
+                    <SidebarLink color = {colors.navHobbiesDark} background = {colors.navHobbies} border = {`2.5px solid ${colors.navHobbiesDark}`} activeClass = "active" to = 'hobbies' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-100}> 
                         <IoFlash />
                         {/*<SideBarText className ='text1'>Hobbies</SideBarText>*/}
-                    </SidebarLinkHobbies>
+                    </SidebarLink>
 
-                    <SidebarLinkProject style = {{background: `${colors.navProject}`, border: `2.5px solid ${colors.navProjectDark}`}} activeClass = "active" to = 'projects' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-100}>
+                    <SidebarLink color = {colors.navProjectDark} background = {colors.navProject} border = {`2.5px solid ${colors.navProjectDark}`} activeClass = "active" to = 'projects' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-100}>
                         <AiOutlineFundProjectionScreen />
                         {/*<SideBarText className ='text1'>projects</SideBarText>*/}
-                    </SidebarLinkProject>
+                    </SidebarLink>
 
-                    <SidebarLinkSkills style = {{background: `${colors.navSkills}`, border: `2.5px solid ${colors.navSkillsDark}`}} activeClass = "active" to = 'skills' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-100}>
+                    <SidebarLink color = {colors.navSkillsDark} background = {colors.navSkills} border = {`2.5px solid ${colors.navSkillsDark}`} activeClass = "active" to = 'skills' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' offset = {-100}>
                         <AiFillProject />
                         {/*<SideBarText className ='text1'>Experiences</SideBarText>*/}
-                    </SidebarLinkSkills>
+                    </SidebarLink>
 
-                    <SidebarLinkContact style = {{background: `${colors.navContact}`, border: `2.5px solid ${colors.navContactDark}`}} activeClass = "active" to = 'contact' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' >
+                    <SidebarLink color = {colors.navContactDark} background = {colors.navContact} border = {`2.5px solid ${colors.navContactDark}`} activeClass = "active" to = 'contact' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' >
                         <MdContactMail />
                         {/*<SideBarText className ='text1'>Contact</SideBarText>*/}
-                    </SidebarLinkContact>
+                    </SidebarLink>
 
                 </SidebarMenu>
 
@@ -79,10 +81,11 @@ const Navbar = () => {
         </NavbarContainer>
     </Nav>
     )
-}
+};
 
 export default Navbar
 
+/* Styles */
 //top controls where the sidebar comes from, in this case from the top
 const SidebarContainer = styled.div`
     position: fixed;
@@ -96,7 +99,7 @@ const SidebarContainer = styled.div`
     scale: ${({isOpen }) => (isOpen ? "1" : "0")}; 
     opacity: ${({isOpen }) => (isOpen ? "100%" : "0")}; 
    /* border: 1px solid blue; */
-    margin-left: 5.5rem;
+    margin-left: 5rem;
     width: 370px;
     height: 80px;
 
@@ -107,11 +110,7 @@ const SidebarContainer = styled.div`
         margin-top: 3.5rem;
         translate: ${({isOpen }) => (isOpen ? "0" : "0 -50%")};
     }
-
-
-`
-
-
+`;
 
 const SidebarWrapper = styled.div`
    /* border: 1px solid red; */ 
@@ -119,9 +118,7 @@ const SidebarWrapper = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    
-
-`
+`;
 
 const SidebarMenu = styled.div`
     display: grid; 
@@ -135,18 +132,18 @@ const SidebarMenu = styled.div`
         grid-row-gap: 1.5rem;
 
     }
+`;
 
-
-`
-
-const SidebarLinkHome = styled(LinkS)`
+const SidebarLink = styled(LinkS)`
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     text-decoration: none;
     transition: 0.375s;
-    color: ${colors.navHomeDark}; 
+    color: ${(props) => props.color || '#000'}; /* Default color is black if not provided */
+    background: ${(props) => props.background|| '#000'}; /* Default color is black if not provided */
+    border: ${(props) => props.border || '2.5px solid #000'}; /* Default color is black if not provided */
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -157,115 +154,9 @@ const SidebarLinkHome = styled(LinkS)`
     &.active {
         color: #fff;
     }
-`
-
-const SidebarLinkIntro = styled(LinkS)`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: 0.375s;
-    color: ${colors.navIntroDark}; 
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    position: relative;
-
-    &.active {
-        color: #fff;
-    }
-
-   
-`
-
-const SidebarLinkHobbies = styled(LinkS)`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: 0.375s;
-    color: ${colors.navHobbiesDark}; 
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    position: relative;
-
-    &.active {
-        color: #fff;
-    }
-
-   
-`
-
-const SidebarLinkProject = styled(LinkS)`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: 0.375s;
-    color: ${colors.navProjectDark}; 
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    position: relative;
-
-    &.active {
-        color: #fff;
-    }
-
-    
-`
-
-const SidebarLinkSkills = styled(LinkS)`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: 0.375s;
-    color: ${colors.navSkillsDark}; 
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    position: relative;
-
-    &.active {
-        color: #fff;
-    }
-
-  
-`
-
-const SidebarLinkContact = styled(LinkS)`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: 0.375s;
-    color: ${colors.navContactDark}; 
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    position: relative;
-
-    &.active {
-        color: #fff;
-    }
-
-`
-
+`;
 
 //nav 
-
 const Nav = styled.nav`
     height: 0.1px; 
     display: flex; 
@@ -278,7 +169,7 @@ const Nav = styled.nav`
     {
         transition: 0.8s all ease; 
     }
-`
+`;
 
 const NavbarContainer = styled.div`
     display: flex; 
@@ -294,9 +185,7 @@ const NavbarContainer = styled.div`
         transition: 0.375s;
         justify-content: center;
     }
-
- 
-`
+`;
 
 const FullIcon = styled.div`
         display: block;
@@ -309,6 +198,7 @@ const FullIcon = styled.div`
         margin-top: 0.6rem;
         transition: 0.375s;
         color: ${colors.mainPurple};
+        right: 0.9rem;
     
         &:hover {
             opacity: 1;
@@ -321,9 +211,8 @@ const FullIcon = styled.div`
             margin-left: 0rem; 
             top: 0;
             position: relative;
-            right: 0.9rem;
        }
-`
+`;
 
 
 //styles for text

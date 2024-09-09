@@ -1,3 +1,4 @@
+/* Imports */
 import React, {useEffect} from 'react';
 import Aos from "aos";
 import styled from "styled-components";
@@ -6,8 +7,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 import './bg.css';
 import '../globals/font.css';
 
-
-const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, description}) => {
+/* Main */
+const Projects = ({lightBg, id, topLine, delta, uoft, uoft2, hackthenorth, description}) => {
 
 
     //controls fade in animation time 
@@ -33,7 +34,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                         
                         <ProjectRow>
 
-                            <ProjectOne>
+                            <ProjectDiv>
 
                                 <MainCoverDiv>
                                     <CoverDiv target = "_blank" rel="noreferrer" href = "https://github.com/HTN-heAR">
@@ -62,9 +63,9 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                     </LogoContainer>
                                 </MainCoverDiv>
                                 
-                            </ProjectOne>
+                            </ProjectDiv>
 
-                            <ProjectTwo>
+                            <ProjectDiv style = {{marginTop: '2rem'}}>
                                 <MainCoverDiv>
                                     <CoverDiv target = "_blank" rel="noreferrer" href = "https://github.com/UofTHacks-HealthExplore">
                                         <StaticImage
@@ -90,12 +91,12 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                         <h1>{uoft}</h1>
                                     </LogoContainer>
                                 </MainCoverDiv>
-                            </ProjectTwo>
+                            </ProjectDiv>
                             
                         </ProjectRow>
 
                         <ProjectRow>
-                            <ProjectThree>
+                            <ProjectDiv>
                                 <MainCoverDiv>
                                     <CoverDiv target = "_blank" rel="noreferrer" href = "https://github.com/DeltaHacks-WebOfLife">
                                         <StaticImage
@@ -121,14 +122,14 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                         <h1>{delta}</h1>
                                     </LogoContainer>
                                 </MainCoverDiv>
-                            </ProjectThree>
+                            </ProjectDiv>
 
-                            <ProjectFour>
+                            <ProjectDiv style = {{marginTop: '2rem'}}>
                                 <MainCoverDiv>
-                                    <CoverDiv target = "_blank" rel="noreferrer" href = "https://github.com/ohseagg">
+                                    <CoverDiv target = "_blank" rel="noreferrer" href = "https://github.com/UofTHacks-XI">
                                         <StaticImage
-                                            src= '../../images/ohseaBg.png'
-                                            alt="ohsea"
+                                            src= '../../images/uoft2.jpg'
+                                            alt="uoft2"
                                             placeholder="blurred"
                                             formats={["auto", "webp"]}
                                             className = "ohsea"
@@ -136,21 +137,20 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
                                             imgStyle = {{borderRadius: '15px'}}
                                         />  
                                     </CoverDiv>
-                                    <LogoContainer style = {{width: '250px'}}>
+                                    <LogoContainer style = {{width: '330px'}}>
                                         <StaticImage
-                                            src= '../../images/ohsea.png'
-                                            alt="ohseaLogo"
+                                            src= '../../images/uoftHacks.png'
+                                            alt="uoftLogo"
                                             placeholder="blurred"
                                             formats={["auto", "webp"]}
                                             layout="fixed"
                                             quality= {100}
-                                            width={60}
-                                            imgStyle = {{borderRadius: '10px'}}
+                                            width={70}
                                         />             
-                                        <h1>{ohsea}</h1>
+                                        <h1>{uoft2}</h1>
                                     </LogoContainer>
                                 </MainCoverDiv>
-                            </ProjectFour>
+                            </ProjectDiv>
                         </ProjectRow>
 
                     </ContentWrapper>
@@ -163,7 +163,7 @@ const Projects = ({lightBg, id, topLine, delta, uoft, ohsea, hackthenorth, descr
 
 export default Projects;
 
-
+/* Styles */
 //main container 
 const ProjectContainer = styled.div`
     width: 100%;
@@ -173,6 +173,7 @@ const ProjectContainer = styled.div`
     justify-content: center;
     align-items: center;
     transition: 0.375s;
+    /* border: 1px solid black; */
 
     @media screen and (max-width: 1700px){
         height: 1325px;
@@ -190,10 +191,9 @@ const ProjectContainer = styled.div`
     }
 
     @media screen and (max-width: 480px){
-        height: 2400px;
+        height: 2320px;
         transition: 0.375s;
     }
-    
 `;
 
 const SecondaryProjectContainer = styled.div`
@@ -222,8 +222,6 @@ const SecondaryProjectContainer = styled.div`
         transition: 0.375s;
         width: 350px;
     }
-
-
 `;
 
 const Description = styled.h1`
@@ -241,7 +239,6 @@ const Description = styled.h1`
         font-size: 35px;
         transition: 0.375s;
     }
-
 `;
 
 const SecondaryDescription = styled.p`
@@ -256,11 +253,7 @@ const SecondaryDescription = styled.p`
         font-size: 1.5rem;
         transition: 0.375s;
     }
-
-
-
 `;
-
 
 //div covers for project 
 const MainCoverDiv = styled.div`
@@ -286,7 +279,7 @@ const CoverDiv = styled.a`
         cursor: pointer;
         transition: 0.5s ease;
     }
-`
+`;
 
 const ContentWrapper = styled.div`
     margin: 0 auto; 
@@ -349,8 +342,8 @@ const ProjectRow = styled.div`
    
 `;
 
-const ProjectOne = styled.div`
-    height: 450px;
+const ProjectDiv = styled.div`
+height: 450px;
     width: 720px;
     background: ${colors.mainGreen};
     border-radius: 15px;
@@ -389,124 +382,4 @@ const ProjectOne = styled.div`
     }
     }
 `;
-const ProjectTwo = styled.div`
-    height: 450px;
-    width: 720px;
-    background: ${colors.mainGreen};
-    border-radius: 15px;
-    margin-top: 2rem;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    transition: 0.375s;
 
-    &:hover{
-        transition: 0.375s;
-        scale: 1.02;
-    }
-
-    @media screen and (max-width: 1700px){
-        width: 585px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1350px){
-        width: 510px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1100px){
-        width: 480px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 480px){
-        width: 350px; 
-        transition: 0.375s;
-
-        &:hover{
-            scale: 1;
-    }
-    }
-`;
-
-const ProjectThree = styled.div`
-    height: 450px;
-    width: 720px;
-    background: ${colors.mainGreen};
-    border-radius: 15px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    transition: 0.375s;
-
-    &:hover{
-        transition: 0.375s;
-        scale: 1.02;
-    }
-
-    @media screen and (max-width: 1700px){
-        width: 585px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1350px){
-        width: 510px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1100px){
-        width: 480px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 480px){
-        width: 350px; 
-        transition: 0.375s;
-
-        &:hover{
-            scale: 1;
-    }
-    }
-`;
-const ProjectFour = styled.div`
-    height: 450px;
-    width: 720px;
-    background: ${colors.mainGreen};
-    border-radius: 15px;
-    margin-top: 2rem;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    transition: 0.375s;
-
-    &:hover{
-        transition: 0.375s;
-        scale: 1.02;
-    }
-
-    @media screen and (max-width: 1700px){
-        width: 585px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1350px){
-        width: 510px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1100px){
-        width: 480px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 480px){
-        width: 350px; 
-        transition: 0.375s;
-
-        &:hover{
-            scale: 1;
-    }
-    }
-
-`;

@@ -10,4 +10,4 @@ export const contactData = {
     dark: true,
     primary: true, 
     darkText: false, 
-}
+};

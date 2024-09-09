@@ -1,4 +1,4 @@
-// all imports 
+/* Imports */
 import "aos/dist/aos.css";
 import Aos from "aos";
 import React, { useEffect } from 'react';
@@ -7,6 +7,7 @@ import {colors} from "../../components/globals/colors";
 import './emotions.css';
 import '../globals/font.css';
 
+/* Main */
 const Emotions = ({lightBg, id}) => {
     
     //controls fade in animation time 
@@ -68,7 +69,7 @@ const Emotions = ({lightBg, id}) => {
 
 export default Emotions;
 
-// all styling 
+/* Styles */
 //main container 
 const EmotionsContainer = styled.div`
     color: #fff;
@@ -148,9 +149,8 @@ const EmotionSecondBlock = styled.div`
     align-items: center;
     position: absolute;
     width: 280px;
-    height: 50px;
-    
-`
+    height: 50px;    
+`;
 
 //text 
 const EmotionText = styled.p`
@@ -159,8 +159,7 @@ const EmotionText = styled.p`
     position: absolute;
     left: 0;
     padding-left: 1rem;
-    top: 0.5rem;
-   
-`
+    top: 0.5rem; 
+`;
 
 

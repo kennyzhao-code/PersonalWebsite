@@ -26,100 +26,172 @@ const Experiences = ({lightBg, id, topLine, description}) => {
 
           <TabContainer data-aos-once='true' data-aos="fade-up">
 
+            {/* Column 1 */}
             <ExperienceSection>
-                <ExperienceSectionTab1>
-                  <InnerDivTab1>
-                      <TitleHeader>McMaster CSS - <span style={{color: `${colors.secondaryRed}` }}>First Year Rep</span></TitleHeader>
-                      <SubTitle>October 2022 - Present</SubTitle>
-                      <SubDescription>• Facilitated communication with CS students as a representative of the CSS<br/>
-                                      • Successfully orchestrated coordination between courses, instructors, academic departments, and CS students, resulting in a substantial 50% increase in student engagement in classes <br/>
-                                      • Contributed valuable feedback when organizing events for first-year students and played an integral role in planning and suggesting events tailored to their needs <br/>
+
+                {/* Tab 1 */}
+                <ExperienceSectionTab mainHeight = "580px" mainWidth = "720px" 
+                                   mainHeight1 = "650px" mainWidth1 = "585px"
+                                   mainHeight2 = "620px" mainWidth2 = "510px"
+                                   mainHeight3 = "620px" mainWidth3 = "480px"
+                                   mainHeight4 = "590px" mainWidth4 = "350px"
+                                   marginTop3 = "0.5rem" marginTop4 = "3rem"
+                                   >
+                  <InnerDivTab mainHeight = "480px" mainWidth = "600px" 
+                                   mainHeight1 = "570px" mainWidth1 = "480px"
+                                   mainHeight2 = "585px" mainWidth2 = "390px"
+                                   mainHeight3 = "585px" mainWidth3 = "390px"
+                                   mainHeight4 = "530px" mainWidth4 = "320px">
+                      <TitleHeader>MacU - <span style={{color: `${colors.secondaryRed}` }}>Software Research Development Specialist Intern</span></TitleHeader>
+                      <SubTitle>May 2024 - August 2024</SubTitle>
+                      <SubDescription>• Led software development efforts as a Software Research Development Specialist at the McMaster Interdisciplinary Satellite Team, overseeing the creation of Mission and Operations Control Software<br/>
+                                      • Engineered a robust Dashboard for the team's HASP 2024 test integration and flight in Texas, which resulted in a 30% increase in data accessibility and efficiency <br/>
                                       </SubDescription>
-                      <ExternalSource target = "_blank" rel="noreferrer" href = "https://mcmastercs.ca/">
-                          <ExternalLogo/>
-                          <h1>mcmastercs.ca</h1>
+                      <ExternalSource target = "_blank" rel="noreferrer" href = "https://mcmasterneudose.ca/">
+                        <ExternalLogo/>
+                        <h1>mcmasterneudose.ca</h1>
                       </ExternalSource>
-                  </InnerDivTab1>
-                </ExperienceSectionTab1>
+                  </InnerDivTab>
+                </ExperienceSectionTab>
 
-                <ExperienceSectionTab2 >
-                  <InnerDivTab2>
-                          <TitleHeader>Marketyze  - <span style={{color: `${colors.secondaryRed}` }}>Head Of Technology</span></TitleHeader>
-                          <SubTitle>September 2022 - September 2023</SubTitle>
-                          <SubDescription>• Collaborated with the UI/UX designer to redesign the organization's website, resulting in an impressive 87% increase in monthly visitors <br/>
-                                          • Oversaw and supervised all technology-related aspects, including emails, website maintenance, and event equipment management <br/>
-                                          • Offered technology expertise and implemented new technological solutions during events <br/>
+                {/* Tab 2 */}
+                <ExperienceSectionTab mainHeight = "590px" mainWidth = "720px" 
+                                   mainHeight1 = "610px" mainWidth1 = "585px"
+                                   mainHeight2 = "620px" mainWidth2 = "510px"
+                                   mainHeight3 = "620px" mainWidth3 = "480px"
+                                   mainHeight4 = "620px" mainWidth4 = "350px"
+                                   marginTop3 = "2rem" marginTop4 = "2rem"
+
+                                   style = {{marginTop: "2rem"}}
+                                   >
+                  <InnerDivTab mainHeight = "470px" mainWidth = "600px" 
+                                   mainHeight1 = "540px" mainWidth1 = "480px"
+                                   mainHeight2 = "540px" mainWidth2 = "390px"
+                                   mainHeight3 = "540px" mainWidth3 = "390px"
+                                   mainHeight4 = "535px" mainWidth4 = "320px">
+                          <TitleHeader>MacU  - <span style={{color: `${colors.secondaryRed}` }}>Teaching Assistant</span></TitleHeader>
+                          <SubTitle>September 2024 - Present</SubTitle>
+                          <SubDescription>• Supported the instruction of tutorials for COMPSCI 2GA3 - Computer Architecture, mentoring students on advanced topics like logic gates, computer arithmetic, and assembly programming to deepen their grasp of foundational computer architecture concepts <br/>
+                                          • Provided one-on-one support to students, clarifying concepts related to computer architecture, which improved student test scores by 25% <br/>
                                           </SubDescription>
-                          <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.marketyze.org/">
+                          <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.eng.mcmaster.ca/cas/">
                               <ExternalLogo/>
-                              <h1>marketyze.org</h1>
+                              <h1>mcmaster.ca</h1>
                           </ExternalSource>
-                      </InnerDivTab2>
-                </ExperienceSectionTab2>
+                      </InnerDivTab>
+                </ExperienceSectionTab>
 
-                <ExperienceSectionTab3>
-                <InnerDivTab3>
+                {/* Tab 3 */}
+                <ExperienceSectionTab mainHeight = "630px" mainWidth = "720px" 
+                                   mainHeight1 = "670px" mainWidth1 = "585px"
+                                   mainHeight2 = "650px" mainWidth2 = "510px"
+                                   mainHeight3 = "650px" mainWidth3 = "480px"
+                                   mainHeight4 = "640px" mainWidth4 = "350px"
+                                   marginTop3 = "2rem" marginTop4 = "2rem"
+
+                                   style = {{marginTop: "2rem"}}
+                                   >
+                <InnerDivTab mainHeight = "545px" mainWidth = "600px" 
+                                   mainHeight1 = "590px" mainWidth1 = "480px"
+                                   mainHeight2 = "570px" mainWidth2 = "390px"
+                                   mainHeight3 = "570px" mainWidth3 = "390px"
+                                   mainHeight4 = "590px" mainWidth4 = "320px">
                       <TitleHeader>AVGL  - <span style={{color: `${colors.secondaryRed}` }}>QA Tester & Tournament Organizer</span></TitleHeader>
                       <SubTitle>May 2021 - May 2023</SubTitle>
                       <SubDescription>• Assisting fellow student leaders at events and providing support to competitors during tournaments, achieving a 100% participant satisfaction rate <br/>
-                                      • Enhanced the organization's website and features by more than 50% through rigorous QA testing, contributing to improved speed and efficiency <br/>
-                                      • Demonstrated strong ability to work under pressure and remain composed in high-stress situations while overseeing and managing multiple competitions <br/>
+                                      • Enhanced the organization's website and features by more than 50% through rigorous QA testing, contributing to improved speed and efficiency and demonstrated strong ability to remain composed in high-stress situations while overseeing and managing multiple competitions <br/>
                                       </SubDescription>
                       <ExternalSource target = "_blank" rel="noreferrer" href = "https://avgl.org/">
                           <ExternalLogo/>
                           <h1>avgl.org</h1>
                       </ExternalSource>
-                  </InnerDivTab3>
-                </ExperienceSectionTab3>
+                  </InnerDivTab>
+                </ExperienceSectionTab>
 
             </ExperienceSection>
 
+            {/* Column 2 */}
             <ExperienceSection>
-            
-            <ExperienceSectionTab4>
-                <InnerDivTab4>
-                      <TitleHeader>MIST - <span style={{color: `${colors.secondaryRed}` }}>MOC Software Developer</span></TitleHeader>
-                      <SubTitle>September 2023 - Present</SubTitle>
-                      <SubDescription>• Oversaw the development of software in collaboration with the Canadian Space Agency, enabling remote command and control capabilities for ground stations and satellites  <br/>
-                                      • Managed the reception, parsing, and storage of experimental data and telemetry from ground station(s), resulting in a 67% increase in operational efficiency <br/>
-                                      • Maintained a variety of critical virtual servers essential for ensuring uninterrupted data collection and communication between satellites and mission control <br/>
+
+            {/* Tab 4 */}
+            <ExperienceSectionTab mainHeight = "660px" mainWidth = "720px" 
+                                   mainHeight1 = "710px" mainWidth1 = "585px"
+                                   mainHeight2 = "650px" mainWidth2 = "510px"
+                                   mainHeight3 = "650px" mainWidth3 = "480px"
+                                   mainHeight4 = "650px" mainWidth4 = "350px"
+                                   marginTop3 = "0px" marginTop4 = "0px"
+                                   >
+                <InnerDivTab mainHeight = "550px" mainWidth = "600px" 
+                                   mainHeight1 = "640px" mainWidth1 = "480px"
+                                   mainHeight2 = "595px" mainWidth2 = "390px"
+                                   mainHeight3 = "595px" mainWidth3 = "390px"
+                                   mainHeight4 = "595px" mainWidth4 = "320px">
+                      <TitleHeader>MIST - <span style={{color: `${colors.secondaryRed}` }}>Project Manager</span></TitleHeader>
+                      <SubTitle>April 2024 - Present</SubTitle>
+                      <SubDescription>• Contribute to documentation efforts and provide software support across various project phases, demonstrating versatility and commitment to advancing both managerial and technical aspects of satellite development  <br/>
+                                      • Aid in developing standardized processes and templates for the systems team, enhancing project efficiency by 30%. Furthermore, spearhead budget tracking and management of around $350,000 for developing a satellite for
+                                      space launch, ensuring efficient allocation of resources and adherence to financial targets <br/>
                                       </SubDescription>
                       <ExternalSource target = "_blank" rel="noreferrer" href = "https://mcmasterneudose.ca/">
                           <ExternalLogo/>
                           <h1>mcmasterneudose.ca</h1>
                       </ExternalSource>
-                  </InnerDivTab4>
-                </ExperienceSectionTab4>
-                        
-                <ExperienceSectionTab5 >
-                  <InnerDivTab5>
-                        <TitleHeader>OHSEA  - <span style={{color: `${colors.secondaryRed}` }}>Co-Founder & Lead Tech Dev</span></TitleHeader>
-                        <SubTitle>May 2021 - May 2023</SubTitle>
-                        <SubDescription>• Accountable for assisting and overseeing technology-related software and projects, achieving a 100% uptime on essential technologies <br/>
-                                        • Exhibit exceptional leadership capabilities in the management of the technology team, ensuring timely project delivery <br/>
-                                        • Contribute to tournament planning and offer technological guidance as necessary <br/>
-                                         </SubDescription>
-                        <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/ohseagg/">
-                            <ExternalLogo/>
-                            <h1>@ohseagg</h1>
-                        </ExternalSource>
-                    </InnerDivTab5>
-                </ExperienceSectionTab5>
+                  </InnerDivTab>
+                </ExperienceSectionTab>
+                
+                {/* Tab 5 */}
+                <ExperienceSectionTab mainHeight = "570px" mainWidth = "720px" 
+                                   mainHeight1 = "620px" mainWidth1 = "585px"
+                                   mainHeight2 = "610px" mainWidth2 = "510px"
+                                   mainHeight3 = "585px" mainWidth3 = "480px"
+                                   mainHeight4 = "540px" mainWidth4 = "350px"
+                                   marginTop3 = "2rem" marginTop4 = "2rem"
 
-                <ExperienceSectionTab6 >
-                  <InnerDivTab6>
-                        <TitleHeader>Trudeau CS  - <span style={{color: `${colors.secondaryRed}` }}>Executive</span></TitleHeader>
-                        <SubTitle>June 2021 - June 2022</SubTitle>
-                        <SubDescription>• Contributed to the organization and execution of events, including Gamejams and Hackathons <br/>
-                                        • Took on the responsibility of designing lessons and instructing students on a range of Computer Science topics, including Python, HTML, CSS, React, and more <br/>
-                                        • Collaborated with fellow executives on club projects and effectively communicated any club-related concerns to the president <br/>
-                                        </SubDescription>
-                        <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/petcsclub/">
+                                   style = {{marginTop: "2rem"}}
+                                   >
+                  <InnerDivTab mainHeight = "460px" mainWidth = "600px" 
+                                   mainHeight1 = "550px" mainWidth1 = "480px"
+                                   mainHeight2 = "540px" mainWidth2 = "390px"
+                                   mainHeight3 = "530px" mainWidth3 = "390px"
+                                   mainHeight4 = "490px" mainWidth4 = "320px">
+                        <TitleHeader>Mac CSS - <span style={{color: `${colors.secondaryRed}` }}>Year Representative</span></TitleHeader>
+                        <SubTitle>October 2022 - Present</SubTitle>
+                        <SubDescription>• Facilitate communication with CS students and successfully orchestrate coordination between courses, instructors, academic departments, and CS students, resulting in a substantial 50% increase in student engagement in classes <br/>
+                                        • Contribute valuable feedback when organizing events for first-year students and played an integral role in planning and suggesting events tailored to their needs <br/>
+                                         </SubDescription>
+                        <ExternalSource target = "_blank" rel="noreferrer" href = "https://mcmastercs.ca/">
                             <ExternalLogo/>
-                            <h1>@petcsclub</h1>
+                            <h1>mcmastercs.ca</h1>
                         </ExternalSource>
-                    </InnerDivTab6>
-                </ExperienceSectionTab6>
+                    </InnerDivTab>
+                </ExperienceSectionTab>
+
+                <ExperienceSectionTab mainHeight = "570px" mainWidth = "720px" 
+                                   mainHeight1 = "600px" mainWidth1 = "585px"
+                                   mainHeight2 = "630px" mainWidth2 = "510px"
+                                   mainHeight3 = "580px" mainWidth3 = "480px"
+                                   mainHeight4 = "600px" mainWidth4 = "350px"
+                                   marginTop3 = "2rem" marginTop4 = "2rem"
+
+                                   style = {{marginTop: "2rem"}}
+                                   >
+                  <InnerDivTab mainHeight = "460px" mainWidth = "600px" 
+                                   mainHeight1 = "550px" mainWidth1 = "480px"
+                                   mainHeight2 = "550px" mainWidth2 = "390px"
+                                   mainHeight3 = "520px" mainWidth3 = "390px"
+                                   mainHeight4 = "520px" mainWidth4 = "320px">
+                        <TitleHeader>Marketyze  - <span style={{color: `${colors.secondaryRed}` }}>Head of Technology</span></TitleHeader>
+                        <SubTitle>September 2022 - September 2023</SubTitle>
+                        <SubDescription>• Worked closely with the UI/UX designer to revamp the organization’s website, leading to an 87% increase in monthly visitors. Additionally, supported ongoing maintenance and implemented new features as needed <br/>
+                                        • Oversaw and supervised all technology-related aspects and Offered technology expertise and implemented new technological solutions during events <br/>
+                                        </SubDescription>
+                        <ExternalSource target = "_blank" rel="noreferrer" href = "https://www.instagram.com/marketyze.ca/">
+                            <ExternalLogo/>
+                            <h1>@marketyze.ca</h1>
+                        </ExternalSource>
+                    </InnerDivTab>
+                </ExperienceSectionTab>
+
             </ExperienceSection>
 
           </TabContainer>
@@ -264,284 +336,52 @@ const SecondaryDescription = styled.p`
 
 `;
 
-
-
 //all sections to experience
 //experience
-const ExperienceSectionTab1 = styled.div`
-    height: 600px;
-    width: 720px;
-    background: ${colors.mainRed};
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.375s;
-
-    &:hover{
-      transition: 0.375s;
-      scale: 1.02;
-    }
-
-
-    @media screen and (max-width: 1700px){
-       width: 585px;
-       height: 650px;
-       transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1350px){
-      width: 510px;
-      height: 620px;
-      transition: 0.375s;
-   }
-
-   @media screen and (max-width: 1100px){
-    width: 480px;
-    margin-top: 0.5rem;
-    transition: 0.375s;
-   }
-
-    @media screen and (max-width: 480px){
-      width: 350px;
-      height: 590px;
-      transition: 0.375s;
-      margin-top: 3rem;
-
-
-      &:hover{
-            scale: 1;
-    }
- }
-
-`;
-
-const ExperienceSectionTab4 = styled.div`
-    height: 640px;
-    width: 720px;
-    background: ${colors.mainRed};
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.375s;
-
-    &:hover{
-      transition: 0.375s;
-      scale: 1.02;
-    }
-
-
-    @media screen and (max-width: 1700px){
-      width: 585px;
-      height: 710px;
-      transition: 0.375s;
-   }
-
-   @media screen and (max-width: 1350px){
-    width: 510px;
-    height: 650px;
-    transition: 0.375s;
- }
-
- @media screen and (max-width: 1100px){
-  width: 480px;
-  transition: 0.375s;
- }
-
- @media screen and (max-width: 480px){
-  width: 350px;
+const ExperienceSectionTab = styled.div`
+  height: ${(props) => props.mainHeight || '0px'}; 
+  width: ${(props) => props.mainWidth || '0px'}; 
+  background: ${colors.mainRed};
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.375s;
 
   &:hover{
-            scale: 1;
-    }
-}
-`;
+    transition: 0.375s;
+    scale: 1.02;
+  }
 
-const ExperienceSectionTab6 = styled.div`
-    height: 560px;
-    width: 720px;
-    background: ${colors.mainRed};
-    border-radius: 15px;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @media screen and (max-width: 1700px){
+      height: ${(props) => props.mainHeight1 || '0px'};
+      width: ${(props) => props.mainWidth1 || '0px'}; 
+      transition: 0.375s;
+  }
+
+  @media screen and (max-width: 1350px){
+    height: ${(props) => props.mainHeight2 || '0px'};
+    width: ${(props) => props.mainWidth2 || '0px'}; 
+    transition: 0.375s;
+  }
+
+  @media screen and (max-width: 1100px){
+    height: ${(props) => props.mainHeight3 || '0px'};
+    width: ${(props) => props.mainWidth3 || '0px'}; 
+    margin-top: ${(props) => props.marginTop3 || '0px'}; 
+    transition: 0.375s;
+  }
+
+  @media screen and (max-width: 480px){
+    height: ${(props) => props.mainHeight4 || '0px'};
+    width: ${(props) => props.mainWidth4 || '0px'}; 
+    margin-top: ${(props) => props.marginTop4 || '0px'}; 
     transition: 0.375s;
 
     &:hover{
-      transition: 0.375s;
-      scale: 1.02;
+          scale: 1;
     }
-
-
-    @media screen and (max-width: 1700px){
-      width: 585px;
-      height: 600px;
-      transition: 0.375s;
-   }
-
-   @media screen and (max-width: 1350px){
-    width: 510px;
-    height: 630px;
-    transition: 0.375s;
- }
-
- @media screen and (max-width: 1100px){
-  width: 480px;
-  height: 580px;
-  transition: 0.375s;
- }
- @media screen and (max-width: 480px){
-  width: 350px;
-  height: 600px;
-  transition: 0.375s;
-
-  &:hover{
-            scale: 1;
-    }
-}
-
-`;
-
-//experience 2
-const ExperienceSectionTab3 = styled.div`
-    height: 630px;
-    width: 720px;
-    background: ${colors.mainRed};
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    transition: 0.375s;
-    
-
-    &:hover{
-      transition: 0.375s;
-      scale: 1.02;
-    }
-
-
-    @media screen and (max-width: 1700px){
-      width: 585px;
-      transition: 0.375s;
-      height: 700px;
-   }
-
-   @media screen and (max-width: 1350px){
-    width: 510px;
-    height: 650px;
-    transition: 0.375s;
- }
-
- @media screen and (max-width: 1100px){
-  width: 480px;
-  transition: 0.375s;
- }
- @media screen and (max-width: 480px){
-  width: 350px;
-  height: 640px;
-  transition: 0.375s;
-
-  &:hover{
-            scale: 1;
-    }
-}
-
-`;
-
-const ExperienceSectionTab5 = styled.div`
-    height: 600px;
-    width: 720px;
-    background: ${colors.mainRed};
-    border-radius: 15px;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.375s;
-
-    &:hover{
-      transition: 0.375s;
-      scale: 1.02;
-    }
-
-
-    @media screen and (max-width: 1700px){
-      width: 585px;
-      height: 620px;
-      transition: 0.375s;
-   }
-
-   @media screen and (max-width: 1350px){
-    width: 510px;
-    height: 610px;
-    transition: 0.375s;
- }
-
- @media screen and (max-width: 1100px){
-  width: 480px;
-  transition: 0.375s;
-  height: 585px;
- }
- @media screen and (max-width: 480px){
-  width: 350px;
-  height: 540px;
-  transition: 0.375s;
-
-  &:hover{
-            scale: 1;
-    }
-}
-
-
-`;
-
-const ExperienceSectionTab2 = styled.div`
-    height: 570px;
-    width: 720px;   
-    background: ${colors.mainRed};
-    border-radius: 15px;
-    display: flex;
-    margin-top: 2rem;
-    justify-content: center;
-    align-items: center;
-    transition: 0.375s;
-
-    &:hover{
-      transition: 0.375s;
-      scale: 1.02;
-    }
-
-
-    @media screen and (max-width: 1700px){
-      width: 585px;
-      transition: 0.375s;
-      height: 580px;
-   }
-
-   @media screen and (max-width: 1350px){
-    width: 510px;
-    height: 620px;
-    transition: 0.375s;
- }
-
- @media screen and (max-width: 1100px){
-  width: 480px;
-  transition: 0.375s;
- }
- @media screen and (max-width: 480px){
-  width: 350px;
-  transition: 0.375s;
-
-  &:hover{
-            scale: 1;
-    }
-}
-
-
+  }
 `;
 
 //inner box components 
@@ -626,158 +466,33 @@ const ExternalLogo = styled(FiExternalLink)`
  
 `;
 
-
-const InnerDivTab1 = styled.div`
-  height: 510px;
-  width: 600px;
+const InnerDivTab = styled.div`
+  height: ${(props) => props.mainHeight || '0px'}; 
+  width: ${(props) => props.mainWidth || '0px'}; 
   transition: 0.375s;
 
-
   @media screen and (max-width: 1700px){
-    width: 480px;
-    height: 570px;
+    height: ${(props) => props.mainHeight1 || '0px'}; 
+    width: ${(props) => props.mainWidth1 || '0px'}; 
+    transition: 0.375s;
+  }  
+
+ @media screen and (max-width: 1350px){
+    height: ${(props) => props.mainHeight2 || '0px'}; 
+    width: ${(props) => props.mainWidth2 || '0px'}; 
+    transition: 0.375s;
+  }
+  
+  @media screen and (max-width: 1100px){
+    height: ${(props) => props.mainHeight3 || '0px'}; 
+    width: ${(props) => props.mainWidth3 || '0px'}; 
     transition: 0.375s;
  }
 
- @media screen and (max-width: 1350px){
-  width: 390px;
-  height: 560px;
-  transition: 0.375s;
-}
-
-@media screen and (max-width: 480px){
-  width: 320px;
-  height: 530px;
-  transition: 0.375s;
-}
-`;
-
-const InnerDivTab4 = styled.div`
-  height: 520px;
-  width: 600px;
-  transition: 0.375s;
-
-
-  @media screen and (max-width: 1700px){
-    width: 480px;
-    height: 640px;
+  @media screen and (max-width: 480px){
+    height: ${(props) => props.mainHeight4 || '0px'}; 
+    width: ${(props) => props.mainWidth4 || '0px'}; 
     transition: 0.375s;
- }
+  }
 
- @media screen and (max-width: 1350px){
-  width: 390px;
-  height: 595px;
-  transition: 0.375s;
-}
-@media screen and (max-width: 480px){
-  width: 320px;
-  transition: 0.375s;
-}
-`;
-
-const InnerDivTab6 = styled.div`
-  height: 470px;
-  width: 600px;
-  transition: 0.375s;
-
-
-  @media screen and (max-width: 1700px){
-    width: 480px;
-    height: 500px;
-    transition: 0.375s;
- }
-
- @media screen and (max-width: 1350px){
-  width: 390px;
-  height: 530px;
-  transition: 0.375s;
-}
-
-@media screen and (max-width: 1350px){
-  width: 390px;
-  height: 520px;
-  transition: 0.375s;
-}
-@media screen and (max-width: 480px){
-  width: 320px;
-  height: 550px;
-  transition: 0.375s;
-}
-`;
-
-const InnerDivTab3 = styled.div`
-  height: 545px;
-  width: 600px;
-  transition: 0.375s;
-
-
-  @media screen and (max-width: 1700px){
-    width: 480px;
-    height: 640px;
-    transition: 0.375s;
- }
-
- @media screen and (max-width: 1350px){
-  width: 390px;
-  height: 585px;
-  transition: 0.375s;
-}
-@media screen and (max-width: 480px){
-  width: 320px;
-  height: 590px;
-  transition: 0.375s;
-}
-`;
-
-const InnerDivTab5 = styled.div`
-  height: 510px;
-  width: 600px;
-  transition: 0.375s;
-
-
-  @media screen and (max-width: 1700px){
-    width: 480px;
-    height: 550px;
-    transition: 0.375s;
- }
-
- @media screen and (max-width: 1350px){
-  width: 390px;
-  height: 520px;
-  transition: 0.375s;
-}
-
-@media screen and (max-width: 1100px){
-  height: 510px;
-  transition: 0.375s;
-}
-@media screen and (max-width: 480px){
-  width: 320px;
-  height: 470px;
-  transition: 0.375s;
-}
-`;
-
-const InnerDivTab2 = styled.div`
-  height: 470px;
-  width: 600px;
-  transition: 0.375s;
-
-
-  @media screen and (max-width: 1700px){
-    width: 480px;
-    height: 520px;
-    transition: 0.375s;
- }
-
- @media screen and (max-width: 1350px){
-  width: 390px;
-  height: 565px;
-  transition: 0.375s;
-}
-@media screen and (max-width: 480px){
-  width: 320px;
-  height: 545px;
-  transition: 0.375s;
-}
 `;

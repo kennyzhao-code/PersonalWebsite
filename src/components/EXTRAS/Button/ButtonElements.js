@@ -5,7 +5,7 @@ export const Button = styled(Link)`
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
     font-family: 'Poppins', sans-serif;
     border-radius: 50px; 
-    background: '#BEE5B0'; 
+    background: #BEE5B0; 
     white-space: nowrap; 
     color: #010606;
     font-size: 20px;

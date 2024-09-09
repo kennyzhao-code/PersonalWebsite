@@ -1,9 +1,11 @@
+/* Styles */
 import React from 'react';
 import './HeroSection.css';
-import '../../components/globals/font.css'
+import '../../components/globals/font.css';
 import {Link as LinkS } from "react-scroll";
 import styled from "styled-components";
 
+/* Main */
 const HeroSection = () => {
 
     return (
@@ -55,11 +57,11 @@ const HeroSection = () => {
 
         </div>
     )
-}
+};
 
 export default HeroSection;
 
-
+/* Styles */
 const LinkToIntro = styled(LinkS)`
     display: flex;
     position: absolute;
@@ -71,5 +73,4 @@ const LinkToIntro = styled(LinkS)`
     left: 50%;
     cursor: pointer;
     transform: translate(-50%, -50%);
-
-`
+`;

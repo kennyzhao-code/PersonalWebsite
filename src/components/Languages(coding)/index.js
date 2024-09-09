@@ -1,4 +1,4 @@
-// all imports 
+/* Imports */
 import "aos/dist/aos.css";
 import Aos from "aos";
 import React, { useEffect } from 'react';
@@ -7,11 +7,11 @@ import '../globals/font.css';
 import VisibilitySensor from "react-visibility-sensor";
 import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import './language.css'
+import './language.css';
 import CountUp from 'react-countup';
 import {colors} from '../globals/colors.js'
 
-
+/* Main */
 const Language = ({lightBg, id, col1Start, darkText, description}) => {
     
     //controls fade in animation time 
@@ -179,7 +179,7 @@ const Language = ({lightBg, id, col1Start, darkText, description}) => {
 
 export default Language;
 
-// all styling 
+/* Styles */
 //main container 
 const LanguageContainer = styled.div`
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
@@ -240,14 +240,10 @@ const LanguageRow = styled.div`
     transition: 0.375s;
     position: relative;
 
-
-
-
     @media screen and (max-width: 1100px) {
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
         transition: 0.375s;
     }
-
 
     @media screen and (max-width: 1700px){
         grid-column-gap: 0;
@@ -392,7 +388,7 @@ const Subtitle = styled.p`
         font-size: 20px;
         line-height: 30px;
     }
-`
+`;
 
 //language wrapper
 const LanguageWrap = styled.div`
@@ -442,8 +438,7 @@ const LanguageSubWrap = styled.div`
         transition: 0.375s;
         gap: 2rem;
     }
-
-`
+`;
 
 //language inner text
 const LanguageInnerTextDiv = styled.div`
@@ -464,4 +459,4 @@ const LanguageInnerTextDiv = styled.div`
         font-size: 1.1rem;
         transition: 0.375s;
     }
-`
+`;

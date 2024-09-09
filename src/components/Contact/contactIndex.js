@@ -1,3 +1,4 @@
+/* Imports */
 import React, { useRef, useEffect} from 'react';
 import Aos from "aos";
 import emailjs from '@emailjs/browser';
@@ -6,7 +7,7 @@ import {colors} from '../globals/colors';
 import '../globals/font.css';
 import API_KEYS from "./apiConfig.js";
 
-//fix emailjs
+/* Main */
 const ContactUs = ({lightBg, id, topLine, description, quote}) => {
 
     //controls fade in animation time 
@@ -14,7 +15,6 @@ const ContactUs = ({lightBg, id, topLine, description, quote}) => {
       Aos.init({duration: 1000}); 
     }, []); 
 
-  
 /*
 //checking for empty entires 
   const checkForm = (form) => {
@@ -66,8 +66,6 @@ const ContactUs = ({lightBg, id, topLine, description, quote}) => {
           console.log(error.text);
       });
     
-
-   
   };
 
   return (
@@ -119,8 +117,9 @@ const ContactUs = ({lightBg, id, topLine, description, quote}) => {
   );
 };
 
-export default ContactUs
+export default ContactUs;
 
+/* Styles */
 // main div
 const MainDiv = styled.div`
     justify-content: center;
@@ -246,6 +245,7 @@ const ContactFormBox = styled.div`
 
 
 `;
+
 const ContactTitle = styled.h1`
     font-size: 4rem;
     font-family: 'Raleway', sans-serif;
@@ -283,7 +283,8 @@ const ContactDescription = styled.p`
       transition: 0.375s;
 
     }
-    `;
+`;
+
 const ContactQuote = styled.p`
     font-family: 'Raleway', sans-serif;
     color: white;
@@ -300,7 +301,7 @@ const ContactQuote = styled.p`
       transition: 0.375s;
 
     }
-    `;
+`;
 
 
 const StyledContactForm = styled.div`
@@ -310,14 +311,12 @@ const StyledContactForm = styled.div`
   font-weight: 400;
   position: relative;
   transition: 0.375s;
-  border: 1px solid black;
+  /* border: 1px solid black; */
  
   @media screen and (max-width: 1700px) {
     width: 500px;
     transition: 0.375s;
   }
-
-  
 
   form {
     display: flex;
@@ -431,7 +430,7 @@ const StyledContactForm = styled.div`
 
 const SendDiv = styled.div`
   width: 100%;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex; 
   justify-content: flex-end; 
-`
+`;
