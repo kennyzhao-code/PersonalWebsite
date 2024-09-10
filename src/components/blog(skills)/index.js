@@ -55,13 +55,13 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
         setIsAlertVisibleInsta(false);}, 4000);
 
         
-    const [isAlertVisibleSnap, setIsAlertVisibleSnap] = useState(false);
-    const handleButtonClickSnap = () => {
-        setIsAlertVisibleSnap(true); 
+    const [isAlertVisibleGuitar, setIsAlertVisibleGuitar] = useState(false);
+    const handleButtonClickGuitar = () => {
+        setIsAlertVisibleGuitar(true); 
     };
 
     setTimeout(() => {
-        setIsAlertVisibleSnap(false);}, 4000);
+        setIsAlertVisibleGuitar(false);}, 4000);
 
     const [isAlertVisibleTwitter, setIsAlertVisibleTwitter] = useState(false);
     const handleButtonClickTwitter = () => {
@@ -90,7 +90,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
     //copy clipboard functions 
     const [valueGit] = useState("kennyzhao-code");
     const [valueInsta] = useState("kennyzhao_"); 
-    const [valueSnap] = useState("spider_boy2004");
+    const [valueGuitar] = useState("kennyzhao_guitar");
     const [valueTwitter] = useState("KennyZhao20");
     const [valueInstaMac] = useState("mcmastersports");
     const [valueDiscord] = useState("REALLY!?#4206");
@@ -110,15 +110,51 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
 
                     <BlogWrapper data-aos-once='true' data-aos="fade-up">
 
+                        {/* Column 1 */}
                         <BlogSection>
 
-                            <BlogSectionCoding>
-                                <TitleSocialDivCoding>
+                            {/* Coding */}
+                            <BlogSectionDiv mainHeight = "550px" mainWidth = "720px" 
+                                   mainHeight1 = "550px" mainWidth1 = "580px"
+                                   mainHeight2 = "620px" mainWidth2 = "510px"
+                                   mainHeight3 = "620px" mainWidth3 = "480px"
+                                   mainHeight4 = "520px" mainWidth4 = "350px" 
+                                   isScaled={false}>
+                                <TitleSocialDiv mainHeight = "460px" mainWidth = "620px" 
+                                   mainHeight1 = "460px" mainWidth1 = "500px"
+                                   mainHeight2 = "530px" mainWidth2 = "400px"
+                                   mainHeight3 = "530px" mainWidth3 = "400px"
+                                   mainHeight4 = "460px" mainWidth4 = "320px" 
+                                   
+                                   codingSocialTitle={true}
+                                   personalitySocialTitle={false}
+                                   athleticsSocialTitle={false}
+                                   gamesSocialTitle={false}
+                                   academicsSocialTitle={false}
+                                   musicSocialTitle={false}
+                                   >
+
                                     <h1>Coding <span>(duh)</span></h1>
                                     <p>{coding}</p>
                                     
-                                    <SocialDivMainCoding>
-                                        <SocialDivCoding>
+                                    <SocialDivMain mainHeight = "150px" mainWidth = "620px" 
+                                                   mainHeight1 = "130px" mainWidth1 = "500px"
+                                                   mainHeight2 = "100px" mainWidth2 = "400px"
+                                                   mainHeight3 = "100px" mainWidth3 = "400px"
+                                                   mainHeight4 = "100px" mainWidth4 = "320px" 
+                                                   >
+                                        <SocialDiv mainHeight = "auto" mainWidth = "500px" 
+                                                   mainHeight1 = "auto" mainWidth1 = "470px"
+                                                   mainHeight2 = "auto" mainWidth2 = "380px"
+                                                   mainHeight3 = "auto" mainWidth3 = "380px"
+                                                   mainHeight4 = "auto" mainWidth4 = "310px" 
+
+                                                   codingSocial = {true}
+                                                   personalitySocial = {false}
+                                                   athleticsSocial = {false}
+                                                   gamesSocial = {false}       
+                                                   academicsSocial = {false}                                                                                                                                                                                                                
+                                                   >
                                             <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://github.com/kennyzhao-code" network = "github" bgColor="black" fgColor = "white" style = {{height: 75, width: 75}} />
                                             <h1>kennyzhao-code</h1>
                                             <div className = 'copy'>
@@ -132,18 +168,43 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                 </div>
                                                     : null} 
                                             </div> 
-                                        </SocialDivCoding>
-                                    </SocialDivMainCoding>
-                                </TitleSocialDivCoding>
-                            </BlogSectionCoding>
-
-                            <BlogSectionMusic >
-                                <TitleSocialDivMusic>
+                                        </SocialDiv>
+                                    </SocialDivMain>
+                                </TitleSocialDiv>
+                            </BlogSectionDiv>
+                            
+                            {/* Music */}
+                            <BlogSectionDiv mainHeight = "800px" mainWidth = "720px" 
+                                   mainHeight1 = "800px" mainWidth1 = "580px"
+                                   mainHeight2 = "900px" mainWidth2 = "510px"
+                                   mainHeight3 = "900px" mainWidth3 = "480px"
+                                   mainHeight4 = "770px" mainWidth4 = "350px" 
+                                   isScaled={true}
+                                   
+                                   style = {{marginTop: '2rem'}}>
+                                 <TitleSocialDiv mainHeight = "720px" mainWidth = "620px" 
+                                   mainHeight1 = "720px" mainWidth1 = "500px"
+                                   mainHeight2 = "830px" mainWidth2 = "400px"
+                                   mainHeight3 = "830px" mainWidth3 = "400px"
+                                   mainHeight4 = "690px" mainWidth4 = "320px" 
+                                   
+                                   codingSocialTitle={false}
+                                   personalitySocialTitle={false}
+                                   athleticsSocialTitle={false}
+                                   gamesSocialTitle={false}
+                                   academicsSocialTitle={false}
+                                   musicSocialTitle={true}
+                                   >
                                     <h1>Music <span>:3</span></h1>
                                     <h2>{music}</h2>
                                     <p>My current favorite song!</p>
                                     
-                                    <SocialDivMainMusic>
+                                    <SocialDivMain mainHeight = "325px" mainWidth = "620px" 
+                                                   mainHeight1 = "310px" mainWidth1 = "500px"
+                                                   mainHeight2 = "310px" mainWidth2 = "400px"
+                                                   mainHeight3 = "310px" mainWidth3 = "400px"
+                                                   mainHeight4 = "270px" mainWidth4 = "320px"     
+                                                   style = {{ paddingTop: '1rem', paddingLeft: '1rem', display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'stretch' }}>
 
                                       
                                             <StaticImage
@@ -195,19 +256,54 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
 
                                         </MusicDetails>
                                     
-                                    </SocialDivMainMusic>
+                                    </SocialDivMain>
 
-
-                                </TitleSocialDivMusic>
-                            </BlogSectionMusic>
-
-                            <BlogSectionAcademic >
-                                <TitleSocialDivAcademics>
+                                </TitleSocialDiv>
+                            </BlogSectionDiv>
+                            
+                            {/* Academics */}
+                            <BlogSectionDiv mainHeight = "510px" mainWidth = "720px" 
+                                   mainHeight1 = "490px" mainWidth1 = "580px"
+                                   mainHeight2 = "550px" mainWidth2 = "510px"
+                                   mainHeight3 = "550px" mainWidth3 = "480px"
+                                   mainHeight4 = "490px" mainWidth4 = "350px" 
+                                   isScaled={false}
+                                   
+                                   style = {{marginTop: '2rem'}}>
+                                 <TitleSocialDiv mainHeight = "430px" mainWidth = "620px" 
+                                   mainHeight1 = "430px" mainWidth1 = "500px"
+                                   mainHeight2 = "490px" mainWidth2 = "400px"
+                                   mainHeight3 = "490px" mainWidth3 = "400px"
+                                   mainHeight4 = "430px" mainWidth4 = "320px" 
+                                   
+                                   codingSocialTitle={false}
+                                   personalitySocialTitle={false}
+                                   athleticsSocialTitle={false}
+                                   gamesSocialTitle={false}
+                                   academicsSocialTitle={true}
+                                   musicSocialTitle={false}
+                                   >
                                         <h1>Academics <span>&gt;:)</span></h1>
                                         <p>{academics}</p>
                                         
-                                        <SocialDivMainAcademics>
-                                            <SocialDivAcademics>
+                                        <SocialDivMain mainHeight = "150px" mainWidth = "620px" 
+                                                   mainHeight1 = "130px" mainWidth1 = "500px"
+                                                   mainHeight2 = "100px" mainWidth2 = "400px"
+                                                   mainHeight3 = "100px" mainWidth3 = "400px"
+                                                   mainHeight4 = "100px" mainWidth4 = "320px" 
+                                                   >
+                                            <SocialDiv mainHeight = "auto" mainWidth = "500px" 
+                                                   mainHeight1 = "auto" mainWidth1 = "470px"
+                                                   mainHeight2 = "auto" mainWidth2 = "380px"
+                                                   mainHeight3 = "auto" mainWidth3 = "380px"
+                                                   mainHeight4 = "auto" mainWidth4 = "310px" 
+
+                                                   codingSocial = {false}
+                                                   personalitySocial = {false}
+                                                   athleticsSocial = {false}
+                                                   gamesSocial = {false}       
+                                                   academicsSocial = {true}                                                                                                                                                                                                                
+                                                   >
                                                 <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.linkedin.com/in/kenny-zhao-283b73213/" network = "linkedin" fgColor = "white" style = {{height: 75, width: 75}} />
                                                 <h1>Kenny Zhao</h1>
                                                 <div className = 'copy'>
@@ -221,22 +317,62 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                     </div>
                                                         : null} 
                                                 </div>                                             
-                                            </SocialDivAcademics>
-                                        </SocialDivMainAcademics>
-                                    </TitleSocialDivAcademics>
-                            </BlogSectionAcademic>
+                                            </SocialDiv>
+                                        </SocialDivMain>
+                                    </TitleSocialDiv>
+                            </BlogSectionDiv>
 
                         </BlogSection>
-
+                        
+                        {/* Column 2 */}
                         <BlogSection>
+                            
+                            {/* Personality */}
+                            <BlogSectionDiv mainHeight = "810px" mainWidth = "720px" 
+                                   mainHeight1 = "790px" mainWidth1 = "580px"
+                                   mainHeight2 = "850px" mainWidth2 = "510px"
+                                   mainHeight3 = "730px" mainWidth3 = "480px"
+                                   mainHeight4 = "610px" mainWidth4 = "350px" 
+                                   isScaled={false}
 
-                            <BlogSectionPersonality >
-                                <TitleSocialDivPersonality>
+                                   >
+                                <TitleSocialDiv mainHeight = "720px" mainWidth = "620px" 
+                                   mainHeight1 = "720px" mainWidth1 = "500px"
+                                   mainHeight2 = "680px" mainWidth2 = "400px"
+                                   mainHeight3 = "650px" mainWidth3 = "400px"
+                                   mainHeight4 = "560px" mainWidth4 = "320px" 
+                                   
+                                   codingSocialTitle={false}
+                                   personalitySocialTitle={true}
+                                   athleticsSocialTitle={false}
+                                   gamesSocialTitle={false}
+                                   academicsSocialTitle={false}
+                                   musicSocialTitle={false}
+                                   >
+
                                     <h1>Personality <span>&lt;3</span></h1>
                                     <p>{personality}</p>
                                         
-                                    <SocialDivMainPersonality  style = {{borderRadius: '15px 15px 0 0'}}>
-                                        <SocialDivPersonality>
+                                    <SocialDivMain mainHeight = "150px" mainWidth = "620px" 
+                                                   mainHeight1 = "140px" mainWidth1 = "500px"
+                                                   mainHeight2 = "100px" mainWidth2 = "400px"
+                                                   mainHeight3 = "100px" mainWidth3 = "400px"
+                                                   mainHeight4 = "100px" mainWidth4 = "320px" 
+
+                                                   style = {{borderRadius: '15px 15px 0 0', flexDirection: 'column'}}>
+                                        
+                                        <SocialDiv mainHeight = "auto" mainWidth = "500px" 
+                                                   mainHeight1 = "auto" mainWidth1 = "470px"
+                                                   mainHeight2 = "auto" mainWidth2 = "380px"
+                                                   mainHeight3 = "auto" mainWidth3 = "380px"
+                                                   mainHeight4 = "auto" mainWidth4 = "310px" 
+
+                                                   codingSocial = {false}
+                                                   personalitySocial = {true}
+                                                   athleticsSocial = {false}
+                                                   gamesSocial = {false}
+                                                   academicsSocial = {false}                                                                                                                                               
+                                                   >
                                             <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.instagram.com/kennyzhao_/" network = "instagram" fgColor='white' style = {{height: 75, width: 75}} />
                                             <h1>kennyzhao_</h1>
                                             <div className = 'copy'>
@@ -250,31 +386,61 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                 </div>
                                                     : null}  
                                             </div>
-                                        </SocialDivPersonality>
-                                    </SocialDivMainPersonality>
+                                        </SocialDiv>
+                                    </SocialDivMain>
 
+                                    <SocialDivMain mainHeight = "150px" mainWidth = "620px" 
+                                                   mainHeight1 = "140px" mainWidth1 = "500px"
+                                                   mainHeight2 = "100px" mainWidth2 = "400px"
+                                                   mainHeight3 = "100px" mainWidth3 = "400px"
+                                                   mainHeight4 = "100px" mainWidth4 = "320px"   
+                                                   style = {{borderRadius: '0', flexDirection: 'column'}}>
+                                         <SocialDiv mainHeight = "auto" mainWidth = "500px" 
+                                                   mainHeight1 = "auto" mainWidth1 = "470px"
+                                                   mainHeight2 = "auto" mainWidth2 = "380px"
+                                                   mainHeight3 = "auto" mainWidth3 = "380px"
+                                                   mainHeight4 = "auto" mainWidth4 = "310px" 
 
-
-                                    <SocialDivMainPersonality  style = {{borderRadius: '0'}}>
-                                        <SocialDivPersonality>
-                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://t.snapchat.com/EAyH5MmN" network = "snapchat" fgColor = 'white' style = {{height: 75, width: 75}} />
-                                            <h1>spider_boy2004</h1>
+                                                   codingSocial = {false}
+                                                   personalitySocial = {true}
+                                                   athleticsSocial = {false}
+                                                   gamesSocial = {false}
+                                                   academicsSocial = {false}                                                                                                                                               
+                                                   >
+                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.instagram.com/kennyzhao_guitar/" network = "instagram" fgColor='white' style = {{height: 75, width: 75}} />
+                                            <h1>kennyzhao_guitar</h1>
                                             <div className = 'copy'>
-                                                <CopyToClipboard onCopy={onCopy} text={valueSnap}>
-                                                    <CopyIcon  onClick={handleButtonClickSnap}/>
+                                                <CopyToClipboard onCopy={onCopy} text={valueGuitar}>
+                                                    <CopyIcon  onClick={handleButtonClickGuitar}/>
                                                 </CopyToClipboard>
-                                                {copied && isAlertVisibleSnap ? 
+                                                {copied && isAlertVisibleGuitar ? 
                                                 <div>
                                                     <div class="bubble">Copied</div>
                                                     <div class="pointer"></div>
                                                 </div>
                                                     : null}   
                                             </div>                                       
-                                        </SocialDivPersonality>
-                                    </SocialDivMainPersonality>
+                                        </SocialDiv>
+                                    </SocialDivMain>
 
-                                    <SocialDivMainPersonality  style = {{borderRadius: '0 0 15px 15px'}}>
-                                        <SocialDivPersonality>
+                                    <SocialDivMain mainHeight = "150px" mainWidth = "620px" 
+                                                   mainHeight1 = "140px" mainWidth1 = "500px"
+                                                   mainHeight2 = "100px" mainWidth2 = "400px"
+                                                   mainHeight3 = "100px" mainWidth3 = "400px"
+                                                   mainHeight4 = "100px" mainWidth4 = "320px"     
+                                                   style = {{borderRadius: '0 0 15px 15px', flexDirection: 'column'}}>
+                                         <SocialDiv mainHeight = "auto" mainWidth = "500px" 
+                                                   mainHeight1 = "auto" mainWidth1 = "470px"
+                                                   mainHeight2 = "auto" mainWidth2 = "380px"
+                                                   mainHeight3 = "auto" mainWidth3 = "380px"
+                                                   mainHeight4 = "auto" mainWidth4 = "310px" 
+
+                                                   codingSocial = {false}
+                                                   personalitySocial = {true}
+                                                   athleticsSocial = {false}
+                                                   gamesSocial = {false}
+                                                   academicsSocial = {false}                                                                                                                                               
+                                                   >
                                             <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://twitter.com/KennyZhao20" network = "twitter" fgColor = "white" style = {{height: 75, width: 75}} />
                                             <h1>KennyZhao20</h1>
                                             <div className = 'copy'>
@@ -288,20 +454,56 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                 </div>
                                                     : null} 
                                             </div>                                        
-                                        </SocialDivPersonality>
-                                    </SocialDivMainPersonality>
+                                        </SocialDiv>
+                                    </SocialDivMain>
 
                                         
-                                </TitleSocialDivPersonality>
-                            </BlogSectionPersonality>
+                                </TitleSocialDiv>
+                            </BlogSectionDiv>
+                            
+                            {/* Athletics */}
+                            <BlogSectionDiv mainHeight = "490px" mainWidth = "720px" 
+                                   mainHeight1 = "490px" mainWidth1 = "580px"
+                                   mainHeight2 = "600px" mainWidth2 = "510px"
+                                   mainHeight3 = "580px" mainWidth3 = "480px"
+                                   mainHeight4 = "430px" mainWidth4 = "350px" 
+                                   isScaled={false}
 
-                            <BlogSectionAthletic>
-                                <TitleSocialDivAthletics>
+                                   style = {{marginTop: '2rem'}}>
+                                <TitleSocialDiv mainHeight = "420px" mainWidth = "620px" 
+                                   mainHeight1 = "450px" mainWidth1 = "500px"
+                                   mainHeight2 = "490px" mainWidth2 = "400px"
+                                   mainHeight3 = "460px" mainWidth3 = "400px"
+                                   mainHeight4 = "390px" mainWidth4 = "320px" 
+                                   
+                                   codingSocialTitle={false}
+                                   personalitySocialTitle={false}
+                                   athleticsSocialTitle={true}
+                                   gamesSocialTitle={false}
+                                   academicsSocialTitle={false}
+                                   musicSocialTitle={false}
+                                   >
                                         <h1>Athletics <span>:0</span></h1>
                                         <p>{athletics}</p>
                                         
-                                        <SocialDivMainAthletics>
-                                            <SocialDivAthletics>
+                                        <SocialDivMain mainHeight = "150px" mainWidth = "620px" 
+                                                   mainHeight1 = "140px" mainWidth1 = "500px"
+                                                   mainHeight2 = "100px" mainWidth2 = "400px"
+                                                   mainHeight3 = "100px" mainWidth3 = "400px"
+                                                   mainHeight4 = "100px" mainWidth4 = "320px" 
+                                                   >
+                                            <SocialDiv mainHeight = "auto" mainWidth = "500px" 
+                                                   mainHeight1 = "auto" mainWidth1 = "470px"
+                                                   mainHeight2 = "auto" mainWidth2 = "380px"
+                                                   mainHeight3 = "auto" mainWidth3 = "380px"
+                                                   mainHeight4 = "auto" mainWidth4 = "310px" 
+
+                                                   codingSocial = {false}
+                                                   personalitySocial = {false}
+                                                   athleticsSocial = {true}
+                                                   gamesSocial = {false}
+                                                   academicsSocial = {false}                                                                                                                                               
+                                                   >
                                                 <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.instagram.com/mcmastersports/" network = "instagram" fgColor = "white" style = {{height: 75, width: 75}} />
                                                 <h1>mcmastersports</h1>
                                                 <div className = 'copy'>
@@ -315,18 +517,54 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                     </div>
                                                         : null}     
                                                 </div>                                         
-                                            </SocialDivAthletics>
-                                        </SocialDivMainAthletics>
-                                    </TitleSocialDivAthletics>
-                            </BlogSectionAthletic>
+                                            </SocialDiv>
+                                        </SocialDivMain>
+                                    </TitleSocialDiv>
+                            </BlogSectionDiv>
+                            
+                            {/* Games */}
+                            <BlogSectionDiv mainHeight = "560px" mainWidth = "720px" 
+                                   mainHeight1 = "560px" mainWidth1 = "580px"
+                                   mainHeight2 = "620px" mainWidth2 = "510px"
+                                   mainHeight3 = "580px" mainWidth3 = "480px"
+                                   mainHeight4 = "480px" mainWidth4 = "350px" 
+                                   isScaled={false}
 
-                            <BlogSectionGame>
-                                <TitleSocialDivGames>
+                                   style = {{marginTop: '2rem'}}>
+                                <TitleSocialDiv mainHeight = "480px" mainWidth = "620px" 
+                                   mainHeight1 = "480px" mainWidth1 = "500px"
+                                   mainHeight2 = "490px" mainWidth2 = "400px"
+                                   mainHeight3 = "505px" mainWidth3 = "400px"
+                                   mainHeight4 = "430px" mainWidth4 = "320px" 
+                                   
+                                   codingSocialTitle={false}
+                                   personalitySocialTitle={false}
+                                   athleticsSocialTitle={false}
+                                   gamesSocialTitle={true}
+                                   academicsSocialTitle={false}
+                                   musicSocialTitle={false}
+                                   >
                                         <h1>Games <span>:P</span></h1>
                                         <p>{games}</p>
                                         
-                                        <SocialDivMainGames>
-                                            <SocialDivGames>
+                                        <SocialDivMain mainHeight = "150px" mainWidth = "620px" 
+                                                   mainHeight1 = "140px" mainWidth1 = "500px"
+                                                   mainHeight2 = "100px" mainWidth2 = "400px"
+                                                   mainHeight3 = "100px" mainWidth3 = "400px"
+                                                   mainHeight4 = "100px" mainWidth4 = "320px" 
+                                                   >
+                                             <SocialDiv mainHeight = "auto" mainWidth = "500px" 
+                                                   mainHeight1 = "auto" mainWidth1 = "470px"
+                                                   mainHeight2 = "auto" mainWidth2 = "380px"
+                                                   mainHeight3 = "auto" mainWidth3 = "380px"
+                                                   mainHeight4 = "auto" mainWidth4 = "310px" 
+
+                                                   codingSocial = {false}
+                                                   personalitySocial = {false}
+                                                   athleticsSocial = {false}
+                                                   gamesSocial = {true}     
+                                                   academicsSocial = {false}                                                                                                                                               
+                                                   >
                                                 <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://discord.com/" network = "discord" fgColor = "white" style = {{height: 75, width: 75}} />
                                                 <h1>REALLY!?#4206</h1>
                                                 <div className = 'copy'>
@@ -340,10 +578,10 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                     </div>
                                                         : null}   
                                                 </div>                                          
-                                            </SocialDivGames>
-                                        </SocialDivMainGames>
-                                    </TitleSocialDivGames>
-                            </BlogSectionGame>
+                                            </SocialDiv>
+                                        </SocialDivMain>
+                                    </TitleSocialDiv>
+                            </BlogSectionDiv>
 
                         </BlogSection>
 
@@ -458,6 +696,7 @@ const BlogWrapper = styled.div`
 
 `;
 
+//all sections to blog 
 const BlogSection = styled.div`
     height: 2000px;
     transition: 0.375s;
@@ -467,12 +706,9 @@ const BlogSection = styled.div`
     }
 
 `;
-
-//all sections to blog 
-//blog1
-const BlogSectionCoding = styled.div`
-    height: 550px;
-    width: 720px;
+const BlogSectionDiv = styled.div`
+    height: ${(props) => props.mainHeight || '0px'}; 
+    width: ${(props) => props.mainWidth || '0px'}; 
     background: ${colors.mainPurple};
     border-radius: 15px;
     display: flex; 
@@ -483,277 +719,50 @@ const BlogSectionCoding = styled.div`
     &:hover{
         transition: 0.375s;
         scale: 1.02;
+
+        ${({ isScaled }) => isScaled &&
+        `.rm-audio-player-provider {
+                transform: scale(1.01);
+                transition: 0.375s;
+            }`
+        }
     }
 
-    
     @media screen and (max-width: 1700px){
-        width: 580px;
+        height: ${(props) => props.mainHeight1 || '0px'}; 
+        width: ${(props) => props.mainWidth1 || '0px'}; 
         transition: 0.375s;
     }
 
     @media screen and (max-width: 1350px){
+        height: ${(props) => props.mainHeight2 || '0px'}; 
+        width: ${(props) => props.mainWidth2 || '0px'}; 
         transition: 0.375s;
-        width: 510px;
-        height: 620px;
     }
 
     @media screen and (max-width: 1100px){
+        height: ${(props) => props.mainHeight3 || '0px'}; 
+        width: ${(props) => props.mainWidth3 || '0px'}; 
         transition: 0.375s;
-        width: 480px;
     }
 
     @media screen and (max-width: 480px){
+        height: ${(props) => props.mainHeight4 || '0px'}; 
+        width: ${(props) => props.mainWidth4 || '0px'}; 
         transition: 0.375s;
-        width: 350px;
-        height: 520px; 
 
         &:hover{
             scale: 1;
-        }
-    }
-`;
 
-const BlogSectionMusic = styled.div`
-    height: 800px;
-    width: 720px;
-    background: ${colors.mainPurple};
-    border-radius: 15px;
-    margin-top: 2rem;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    transition: 0.375s;
-
-    &:hover{
-       transition: 0.375s;
-       scale: 1.02;
-
-       .rm-audio-player-provider{
-            transform: scale(1.01);
-            transition: 0.375s;
-        }
-    }
-
-
-    @media screen and (max-width: 1700px){
-        width: 580px;
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 510px;
-        height: 900px;
-    }
-
-    @media screen and (max-width: 1100px){
-        transition: 0.375s;
-        width: 480px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 350px;
-        height: 770px;
-
-
-        &:hover{
-        scale: 1;
-
-        .rm-audio-player-provider{
-                transform: scale(1);
-                transition: 0.375s;
+            ${({ isScaled }) => isScaled &&
+            `.rm-audio-player-provider {
+                    transform: scale(1);
+                    transition: 0.375s;
+                }`
             }
         }
     }
-
 `;
-
-const BlogSectionAcademic = styled.div`
-    height: 510px;
-    width: 720px;
-    background: ${colors.mainPurple};
-    border-radius: 15px;
-    margin-top: 2rem;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    transition: 0.375s;
-
-    &:hover{
-        transition: 0.375s;
-        scale: 1.02;
-    }
-
-
-    @media screen and (max-width: 1700px){
-        width: 580px;
-        height: 490px;
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 510px;
-        height: 550px;
-    }
-    @media screen and (max-width: 1100px){
-        transition: 0.375s;
-        width: 480px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 350px;
-        height: 490px;
-
-        &:hover{
-            scale: 1;
-        }
-
-    }
-
-`;
-
-//blog 2
-
-const BlogSectionPersonality = styled.div`
-    height: 810px;
-    width: 720px;   
-    background: ${colors.mainPurple};
-    border-radius: 15px;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    transition: 0.375s;
-
-    &:hover{
-        transition: 0.375s;
-        scale: 1.02;
-    }
-
-
-    @media screen and (max-width: 1700px){
-        width: 580px;
-        height: 790px;
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 510px;
-        height: 850px;
-    }
-
-    @media screen and (max-width: 1100px){
-        transition: 0.375s;
-        width: 480px;
-        height: 730px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 350px;
-        height: 610px;
-
-        &:hover{
-            scale: 1;
-        }
-    }
-`;
-
-const BlogSectionAthletic = styled.div`
-    height: 490px;
-    width: 720px;
-    background: ${colors.mainPurple};
-    border-radius: 15px;
-    margin-top: 2rem;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    transition: 0.375s;
-
-    &:hover{
-        transition: 0.375s;
-        scale: 1.02;
-    }
-
-
-    @media screen and (max-width: 1700px){
-        width: 580px;
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 510px;
-        height: 600px;
-    }
-
-    @media screen and (max-width: 1100px){
-        transition: 0.375s;
-        width: 480px;
-        height: 580px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 350px;
-        height: 430px;
-
-        &:hover{
-            scale: 1;
-        }
-    }
-
-`;
-
-
-const BlogSectionGame = styled.div`
-    height: 560px;
-    width: 720px;
-    background: ${colors.mainPurple};
-    border-radius: 15px;
-    margin-top: 2rem;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    transition: 0.375s;
-
-    &:hover{
-        transition: 0.375s;
-        scale: 1.02;
-    }
-
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 580px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 510px;
-        height: 620px;
-    }
-
-    @media screen and (max-width: 1100px){
-        transition: 0.375s;
-        width: 480px;
-        height: 580px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 350px;
-        height: 480px;
-
-        &:hover{
-            scale: 1;
-        }
-    }
-`;
-
 
 //copy icon 
 const CopyIcon = styled(AiOutlineCopy)`
@@ -769,485 +778,222 @@ const CopyIcon = styled(AiOutlineCopy)`
 
 `;
 
-
-//coding boxes 
-const TitleSocialDivCoding = styled.div`
-    height: 460px;
-    width: 620px; 
+const TitleSocialDiv = styled.div`
+    height: ${(props) => props.mainHeight || '0px'}; 
+    width: ${(props) => props.mainWidth || '0px'}; 
     transition: 0.375s;
 
 
-    h1{
-        font-family: "Raleway", sans-serif;
-        font-weight: 700;
-        color: white;
+    ${({ codingSocialTitle }) => codingSocialTitle &&
+        `h1{
+            font-family: "Raleway", sans-serif;
+            font-weight: 700;
+            color: white;
 
-        span{
+            span{
+                font-family: "Raleway", sans-serif;
+                font-weight: 400;
+            }
+        }
+
+        p{
+            color: white;
             font-family: "Raleway", sans-serif;
             font-weight: 400;
-        }
-
-    }
-
-    p{
-        color: white;
-        font-family: "Raleway", sans-serif;
-        font-weight: 400;
-        font-size: 1.7rem;
-        line-height: 1.6;
-        transition: 0.375s;
-
-
-        @media screen and (max-width: 480px){
-            font-size: 1.3rem;
+            font-size: 1.7rem;
+            line-height: 1.6;
             transition: 0.375s;
 
-        }
+
+            @media screen and (max-width: 480px){
+                font-size: 1.3rem;
+                transition: 0.375s;
+            }
+        }`
     }
 
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 500px;
-    }
+    ${({ personalitySocialTitle }) => personalitySocialTitle &&
+        `h1{
+            font-family: "Raleway", sans-serif;
+            font-weight: 700;
+            color: white;
 
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 400px;
-        height: 530px;
-    }
-
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 320px;
-        height: 460px;
-    }
-
-`;
-
-const SocialDivMainCoding = styled.div`
-    height: 150px;
-    width: 620px;
-    border-radius: 15px;
-    background: ${colors.secondaryPurple};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.375s;
-
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 500px;
-        height: 130px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 400px;
-        height: 100px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 320px;
-        height: 100px;
-    }
-
-`;
-
-const SocialDivCoding = styled.div`
-    width: 500px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    transition: 0.375s;
-    
-
-    h1{
-        font-family: 'Raleway', sans-serif;
-        font-weight: 400;
-        position: relative;
-        margin-left: 2rem;
-        top: 0.7rem;
-        transition: 0.375s;
-
-
-        @media screen and (max-width: 1350px){
-            font-size: 1.6rem;
-            transition: 0.375s;
-
+            span{
+                font-family: "Raleway", sans-serif;
+                font-weight: 400;
+            }
         }
 
-        @media screen and (max-width: 480px){
-            font-size: 1.3rem;
-            margin-left: 1rem;
-            transition: 0.375s;
-
-        }
-    }
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 470px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 380px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 310px;
-    }
-
-`;
-
-//personality boxes 
-const TitleSocialDivPersonality = styled.div`
-    height: 720px;
-    width: 620px; 
-    transition: 0.375s;
-
-
-
-    h1{
-        font-family: "Raleway", sans-serif;
-        font-weight: 700;
-        color: white;
-
-        span{
+        p{
+            color: white;
             font-family: "Raleway", sans-serif;
             font-weight: 400;
-        }
-
-    }
-
-    p{
-        color: white;
-        font-family: "Raleway", sans-serif;
-        font-weight: 400;
-        font-size: 1.7rem;
-        line-height: 1.6;
-        transition: 0.375s;
-
-
-        @media screen and (max-width: 480px){
-            font-size: 1.3rem;
+            font-size: 1.7rem;
+            line-height: 1.6;
             transition: 0.375s;
 
-        }
+
+            @media screen and (max-width: 480px){
+                font-size: 1.3rem;
+                transition: 0.375s;
+
+            }
+        }`
     }
-
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 500px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 400px;
-        height: 680px;
-    }
-
-
-    @media screen and (max-width: 1100px){
-        transition: 0.375s;
-        height: 650px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 320px;
-        height: 560px;
-    }
-
-
-`;
-
-const SocialDivMainPersonality = styled.div`
-    height: 150px;
-    width: 620px;
-    border-radius: 15px;
-    background: ${colors.secondaryPurple};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 0.375s;
-
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 500px;
-        height: 140px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 400px;
-        height: 100px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 320px;
-    }
-
-
-`;
-
-const SocialDivPersonality = styled.div`    
-    width: 500px;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    transition: 0.375s;
-
     
-    
+    ${({ athleticsSocialTitle }) => athleticsSocialTitle &&
 
-    h1{
-        font-family: 'Raleway', sans-serif;
-        position: relative;
-        margin-left: 2rem;
-        top: 0.7rem;
-        font-weight: 400;
-        transition: 0.375s;
+        `h1{
+                font-family: "Raleway", sans-serif;
+                font-weight: 700;
+                color: white;
 
+                span{
+                    font-family: "Raleway", sans-serif;
+                    font-weight: 400;
+                }
 
-        @media screen and (max-width: 1350px){
-            font-size: 1.6rem;
-            transition: 0.375s;
+            }
 
-        }
-
-        @media screen and (max-width: 480px){
-            font-size: 1.3rem;
-            margin-left: 1rem;
-            transition: 0.375s;
-
-        }
-    }
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 470px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 380px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 310px;
-    }
-
-`;
-
-
-//athletics boxes
-const TitleSocialDivAthletics  = styled.div`
-    height: 420px;
-    width: 620px; 
-    transition: 0.375s;
-
-
-
-    h1{
-        font-family: "Raleway", sans-serif;
-        font-weight: 700;
-        color: white;
-
-        span{
+        p{
+            color: white;
             font-family: "Raleway", sans-serif;
             font-weight: 400;
-        }
-
-    }
-
-    p{
-        color: white;
-        font-family: "Raleway", sans-serif;
-        font-weight: 400;
-        font-size: 1.7rem;
-        line-height: 1.6;
-        transition: 0.375s;
-
-        @media screen and (max-width: 480px){
-            font-size: 1.3rem;
+            font-size: 1.7rem;
+            line-height: 1.6;
             transition: 0.375s;
-        }
+
+            @media screen and (max-width: 480px){
+                font-size: 1.3rem;
+                transition: 0.375s;
+            }
+        }`
     }
 
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 500px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 400px;
-        height: 490px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        height: 500px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 320px;
-        height: 380px;
-    }
-
-`;
-
-const SocialDivMainAthletics = styled.div`
-    height: 150px;
-    width: 620px;
-    border-radius: 15px;
-    background: ${colors.secondaryPurple};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.375s;
-
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 500px;
-        height: 140px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 400px;
-        height: 100px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 320px;
-    }
-`;
-
-const SocialDivAthletics = styled.div`
-    width: 500px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    transition: 0.375s;
-
+    ${({ gamesSocialTitle }) => gamesSocialTitle &&
     
+        `h1{
+            font-family: "Raleway", sans-serif;
+            font-weight: 700;
+            color: white;
 
-    h1{
-        font-family: 'Raleway', sans-serif;
-        position: relative;
-        margin-left: 2rem;
-        top: 0.7rem;
-        font-weight: 400;
-        transition: 0.375s;
-
-
-        @media screen and (max-width: 1350px){
-            font-size: 1.6rem;
-            transition: 0.375s;
-
+            span{
+                font-family: "Raleway", sans-serif;
+                font-weight: 400;
+            }
         }
 
-        @media screen and (max-width: 480px){
-            font-size: 1.3rem;
-            margin-left: 1rem;
-            transition: 0.375s;
-
-        }
-    }
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 470px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 380px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 310px;
-    }
-
-
-`;
-
-//Games boxes
-const TitleSocialDivGames = styled.div`
-    height: 480px;
-    width: 620px; 
-    transition: 0.375s;
-
-
-
-    h1{
-        font-family: "Raleway", sans-serif;
-        font-weight: 700;
-        color: white;
-
-        span{
+        p{
+            color: white;
             font-family: "Raleway", sans-serif;
             font-weight: 400;
-        }
+            font-size: 1.7rem;
+            line-height: 1.6;
+            transition: 0.375s;
 
+            @media screen and (max-width: 480px){
+                font-size: 1.3rem;
+                transition: 0.375s;
+            }
+        }`
     }
 
-    p{
-        color: white;
-        font-family: "Raleway", sans-serif;
-        font-weight: 400;
-        font-size: 1.7rem;
-        line-height: 1.6;
-        transition: 0.375s;
+    ${({ academicsSocialTitle }) => academicsSocialTitle &&
 
-        @media screen and (max-width: 480px){
-            font-size: 1.3rem;
-            transition: 0.375s;
+        `h1{
+            font-family: "Raleway", sans-serif;
+            font-weight: 700;
+            color: white;
+
+            span{
+                font-family: "Raleway", sans-serif;
+                font-weight: 400;
+            }
+
         }
+
+        p{
+            color: white;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            font-size: 1.7rem;
+            line-height: 1.6;
+
+            @media screen and (max-width: 480px){
+                font-size: 1.3rem;
+                transition: 0.375s;
+            }   
+        }`
+    }
+
+    ${({ musicSocialTitle }) => musicSocialTitle &&
+        `h1{
+            font-family: "Raleway", sans-serif;
+            color: white;
+            font-weight: 700;
+
+            span{
+                font-family: "Raleway", sans-serif;
+                font-weight: 400;
+            }
+        }
+
+        h2{
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            color: white;
+            font-size: 1.7rem;
+            line-height: 2.9rem;
+            transition: 0.375s;
+
+            @media screen and (max-width: 480px){
+                font-size: 1.3rem;
+                transition: 0.375s;
+                line-height: 2.2rem;
+            }
+        }
+
+        p{
+            color: ${colors.secondaryPurple};
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            font-size: 1.7rem;
+
+            @media screen and (max-width: 480px){
+                font-size: 1.3rem;
+                transition: 0.375s;
+            }
+        }`
     }
 
     @media screen and (max-width: 1700px){
+        height: ${(props) => props.mainHeight1 || '0px'}; 
+        width: ${(props) => props.mainWidth1 || '0px'}; 
         transition: 0.375s;
-        width: 500px;
     }
 
     @media screen and (max-width: 1350px){
+        height: ${(props) => props.mainHeight2 || '0px'}; 
+        width: ${(props) => props.mainWidth2 || '0px'}; 
         transition: 0.375s;
-        width: 400px;
-        height: 490px;
     }
 
     @media screen and (max-width: 1100px){
+        height: ${(props) => props.mainHeight3 || '0px'}; 
+        width: ${(props) => props.mainWidth3 || '0px'}; 
         transition: 0.375s;
-        height: 505px;
     }
 
     @media screen and (max-width: 480px){
+        height: ${(props) => props.mainHeight4 || '0px'}; 
+        width: ${(props) => props.mainWidth4 || '0px'}; 
         transition: 0.375s;
-        width: 320px;
-        height: 430px;
     }
-
 `;
 
-const SocialDivMainGames = styled.div`
-    height: 150px;
-    width: 620px;
+const SocialDivMain = styled.div`
+    height: ${(props) => props.mainHeight || '0px'}; 
+    width: ${(props) => props.mainWidth || '0px'}; 
     border-radius: 15px;
     background: ${colors.secondaryPurple};
     display: flex;
@@ -1257,290 +1003,175 @@ const SocialDivMainGames = styled.div`
 
 
     @media screen and (max-width: 1700px){
+        height: ${(props) => props.mainHeight1 || '0px'}; 
+        width: ${(props) => props.mainWidth1 || '0px'}; 
         transition: 0.375s;
-        width: 500px;
-        height: 140px;
     }
 
     @media screen and (max-width: 1350px){
+        height: ${(props) => props.mainHeight2 || '0px'}; 
+        width: ${(props) => props.mainWidth2 || '0px'}; 
         transition: 0.375s;
-        width: 400px;
-        height: 100px;
+    }
+
+    @media screen and (max-width: 1100px){
+        height: ${(props) => props.mainHeight3 || '0px'}; 
+        width: ${(props) => props.mainWidth3 || '0px'}; 
+        transition: 0.375s;
     }
 
     @media screen and (max-width: 480px){
+        height: ${(props) => props.mainHeight4 || '0px'}; 
+        width: ${(props) => props.mainWidth4 || '0px'}; 
         transition: 0.375s;
-        width: 320px;
     }
 `;
 
-const SocialDivGames = styled.div`
-    width: 500px;
+const SocialDiv = styled.div`
+    height: ${(props) => props.mainHeight || '0px'}; 
+    width: ${(props) => props.mainWidth || '0px'}; 
     position: absolute;
     display: flex;
     align-items: center;
     transition: 0.375s;
-
     
-
-    h1{
-        font-family: 'Raleway', sans-serif;
-        position: relative;
-        margin-left: 2rem;
-        top: 0.7rem;
-        font-weight: 400;
-        transition: 0.375s;
-
-        @media screen and (max-width: 1350px){
-            font-size: 1.6rem;
-            margin-left: 1rem;
-            transition: 0.375s;
-        }
-
-        @media screen and (max-width: 480px){
-            font-size: 1.1rem;
-            margin-left: 1rem;
-            transition: 0.375s;
-        }
-    }
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 470px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 380px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 310px;
-    }
-
-`;
-
-//academics boxes
-const TitleSocialDivAcademics = styled.div`
-    height: 430px;
-    width: 620px; 
-    transition: 0.375s;
-
-
-
-    h1{
-        font-family: "Raleway", sans-serif;
-        font-weight: 700;
-        color: white;
-
-        span{
-            font-family: "Raleway", sans-serif;
+    ${({ codingSocial }) => codingSocial &&
+        `h1{
+            font-family: 'Raleway', sans-serif;
             font-weight: 400;
-        }
-
-    }
-
-    p{
-        color: white;
-        font-family: "Raleway", sans-serif;
-        font-weight: 400;
-        font-size: 1.7rem;
-        line-height: 1.6;
-
-        @media screen and (max-width: 480px){
-            font-size: 1.3rem;
+            position: relative;
+            margin-left: 2rem;
+            top: 0.7rem;
             transition: 0.375s;
-        }   
+
+            @media screen and (max-width: 1350px){
+                font-size: 1.6rem;
+                transition: 0.375s;
+            }
+
+            @media screen and (max-width: 480px){
+                font-size: 1.3rem;
+                margin-left: 1rem;
+                transition: 0.375s;
+
+            }
+        }`
     }
 
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 500px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 400px;
-        height: 490px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 320px;
-        height: 430px;
-    }
-
-`;
-
-const SocialDivMainAcademics = styled.div`
-    height: 150px;
-    width: 620px;
-    border-radius: 15px;
-    background: ${colors.secondaryPurple};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.375s;
-
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 500px;
-        height: 130px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 400px;
-        height: 100px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 320px;
-    }
-`;
-
-const SocialDivAcademics = styled.div`
-    width: 500px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    transition: 0.375s;
-
-    
-
-    h1{
-        font-family: 'Raleway', sans-serif;
-        position: relative;
-        margin-left: 2rem;
-        top: 0.7rem;
-        font-weight: 400;
-
-        @media screen and (max-width: 1350px){
-            font-size: 1.6rem;
-        }
-
-        @media screen and (max-width: 480px){
-            font-size: 1.3rem;
-            margin-left: 1rem;
-            transition: 0.375s;
-        }
-    }
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 470px;
-    }
-
-    @media screen and (max-width: 1350px){
-        transition: 0.375s;
-        width: 380px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 310px;
-    }
-
-`;
-
-//Music boxes 
-const TitleSocialDivMusic = styled.div`
-    height: 720px;
-    width: 620px; 
-    transition: 0.375s;
-
-
-
-    h1{
-        font-family: "Raleway", sans-serif;
-        color: white;
-        font-weight: 700;
-
-        span{
-            font-family: "Raleway", sans-serif;
+    ${({ personalitySocial }) => personalitySocial &&
+        `h1{
+            font-family: 'Raleway', sans-serif;
+            position: relative;
+            margin-left: 2rem;
+            top: 0.7rem;
             font-weight: 400;
-        }
+            transition: 0.375s;
+
+            @media screen and (max-width: 1350px){
+                font-size: 1.6rem;
+                transition: 0.375s;
+            }
+
+            @media screen and (max-width: 480px){
+                font-size: 1.3rem;
+                margin-left: 1rem;
+                transition: 0.375s;
+
+            }
+        }`
+    }
+    ${({ athleticsSocial }) => athleticsSocial &&
+        `h1{
+            font-family: 'Raleway', sans-serif;
+            position: relative;
+            margin-left: 2rem;
+            top: 0.7rem;
+            font-weight: 400;
+            transition: 0.375s;
+
+            @media screen and (max-width: 1350px){
+                font-size: 1.6rem;
+                transition: 0.375s;
+
+            }
+
+            @media screen and (max-width: 480px){
+                font-size: 1.3rem;
+                margin-left: 1rem;
+                transition: 0.375s;
+            }
+        }`
     }
 
-    h2{
-        font-family: "Raleway", sans-serif;
-        font-weight: 400;
-        color: white;
-        font-size: 1.7rem;
-        line-height: 2.9rem;
-        transition: 0.375s;
-
-        @media screen and (max-width: 480px){
-            font-size: 1.3rem;
+    ${({ gamesSocial }) => gamesSocial &&
+        `h1{
+            font-family: 'Raleway', sans-serif;
+            position: relative;
+            margin-left: 2rem;
+            top: 0.7rem;
+            font-weight: 400;
             transition: 0.375s;
-            line-height: 2.2rem;
-        }
+
+            @media screen and (max-width: 1350px){
+                font-size: 1.6rem;
+                margin-left: 1rem;
+                transition: 0.375s;
+            }
+
+            @media screen and (max-width: 480px){
+                font-size: 1.1rem;
+                margin-left: 1rem;
+                transition: 0.375s;
+            }
+        }`
     }
 
-    p{
-        color: ${colors.secondaryPurple};
-        font-family: "Raleway", sans-serif;
-        font-weight: 400;
-        font-size: 1.7rem;
+    ${({ academicsSocial }) => academicsSocial &&
+        `h1{
+                font-family: 'Raleway', sans-serif;
+            position: relative;
+            margin-left: 2rem;
+            top: 0.7rem;
+            font-weight: 400;
 
-        @media screen and (max-width: 480px){
-            font-size: 1.3rem;
-            transition: 0.375s;
-        }
+            @media screen and (max-width: 1350px){
+                font-size: 1.6rem;
+            }
+
+            @media screen and (max-width: 480px){
+                font-size: 1.3rem;
+                margin-left: 1rem;
+                transition: 0.375s;
+            }
+        }`
     }
 
     @media screen and (max-width: 1700px){
+        height: ${(props) => props.mainHeight1 || '0px'}; 
+        width: ${(props) => props.mainWidth1 || '0px'}; 
         transition: 0.375s;
-        width: 500px;
     }
 
     @media screen and (max-width: 1350px){
+        height: ${(props) => props.mainHeight2 || '0px'}; 
+        width: ${(props) => props.mainWidth2 || '0px'}; 
         transition: 0.375s;
-        width: 400px;
-        height: 830px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 320px;
-        height: 690px;
-    }
-
-`;
-
-const SocialDivMainMusic = styled.div`
-    height: 325px;
-    width: 620px;
-    border-radius: 15px;
-    background: ${colors.secondaryPurple};
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    padding-left: 1rem;
-    padding-top: 1rem;
-
-    @media screen and (max-width: 1700px){
-        transition: 0.375s;
-        width: 500px;
-        height: 310px;
     }
 
     @media screen and (max-width: 1350px){
+        height: ${(props) => props.mainHeight3 || '0px'}; 
+        width: ${(props) => props.mainWidth3 || '0px'}; 
         transition: 0.375s;
-        width: 400px;
-        height: 310px;
     }
 
     @media screen and (max-width: 480px){
+        height: ${(props) => props.mainHeight4 || '0px'}; 
+        width: ${(props) => props.mainWidth4 || '0px'}; 
         transition: 0.375s;
-        width: 320px;
-        height: 270px;
     }
 `;
 
+/* For the music section */
 const MusicDetails = styled.div`
     width: 290px;
     height: 290px;
@@ -1558,20 +1189,15 @@ const MusicDetails = styled.div`
         padding-left: 0.8rem;
         transition: 0.375s;
 
-
         @media screen and (max-width: 1700px){
             margin-top: 0;
             transition: 0.375s;
-
         }
-        
 
         @media screen and (max-width: 480px){
             font-size: 1rem;
             transition: 0.375s;
         }
-
-
     }
 
     h4{
@@ -1594,8 +1220,6 @@ const MusicDetails = styled.div`
             font-size: 0.8rem;
             transition: 0.375s;
         }
-
-
     }
 
     h5{
@@ -1623,7 +1247,6 @@ const MusicDetails = styled.div`
             font-size: 0.9rem;
             line-height: 1.2;
         }
-
     }
 
     @media screen and (max-width: 1700px){
