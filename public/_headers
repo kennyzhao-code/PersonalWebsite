@@ -5,35 +5,73 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Referrer-Policy: same-origin
-/styles.ee330b0302fdacc3c1aa.css
+/static/resume-83fc0138c39ebbd6d236b4048e9f43d3.pdf
   Cache-Control: public, max-age=31536000, immutable
-/6728d85a-37af82a19cc93d544098.js
+/static/until-097af9c917fdb1fc71f79064e7c19422.mp3
   Cache-Control: public, max-age=31536000, immutable
-/e50e9c162871c1d91fba5ce567a5656e16dc6783-893caa830620e122f514.js
+/styles.a2c9098febbc5c2043da.css
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-404-js-16560cc22dc9a9be7a6b.js
+/108-296a6fe58e678c36c5e9.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
-/4be3e580-a9e2f7c378682d61add6.js
+/4be3e580-d26c14a52487c31a25fa.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
-/252f366e-daa0fa9eb683905e5c81.js
+/app-1695a4ebc5bada22a625.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
-/ae51ba48-b174bb93fd17a921a653.js
+/component---src-pages-index-js-b948e7ed14ac968e8ac2.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
-/5e2a4920-a838a49d42ed7aab67f3.js
+/framework-9d608f77b5c9a88afabd.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
-/1bfc9850-a7926e46a9d4956269b5.js
+/app-1695a4ebc5bada22a625.js
   Cache-Control: public, max-age=31536000, immutable
-/d7eeaac4-5fed4dcb00bc83965f6d.js
+/webpack-runtime-e02cf73f72e03d69852e.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-index-js-0122f1a2872f289624d7.js
+/component---src-pages-404-js-99c084b42da5d48d0c86.js
   Cache-Control: public, max-age=31536000, immutable
-/component---cache-caches-gatsby-plugin-offline-app-shell-js-e7ffd94a2e0dc219c609.js
+/component---src-pages-index-js-b948e7ed14ac968e8ac2.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-b782762b997569646dd9.js
+/108-296a6fe58e678c36c5e9.js
   Cache-Control: public, max-age=31536000, immutable
-/framework-9e7c55182d47a48144c3.js
+/452-c0ff3ab48c1cc3cab85a.js
   Cache-Control: public, max-age=31536000, immutable
-/app-e9a807719cee7b418acc.js
+/framework-9d608f77b5c9a88afabd.js
+  Cache-Control: public, max-age=31536000, immutable
+/fea29d9f-d15c9b18de1c3ec7eadc.js
+  Cache-Control: public, max-age=31536000, immutable
+/68c0a17d-57c2cf1786c9efa0d55c.js
+  Cache-Control: public, max-age=31536000, immutable
+/646e0218-dbcb555b7204cd54335d.js
+  Cache-Control: public, max-age=31536000, immutable
+/cb355538-499fb7baf11955cb6dc6.js
+  Cache-Control: public, max-age=31536000, immutable
+/2e3a845b-d9bfaf8f89a5086cd25b.js
+  Cache-Control: public, max-age=31536000, immutable
+/4be3e580-d26c14a52487c31a25fa.js
+  Cache-Control: public, max-age=31536000, immutable
+/app-1695a4ebc5bada22a625.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/webpack-runtime-e02cf73f72e03d69852e.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-404-js-99c084b42da5d48d0c86.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-index-js-b948e7ed14ac968e8ac2.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/108-296a6fe58e678c36c5e9.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/452-c0ff3ab48c1cc3cab85a.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/framework-9d608f77b5c9a88afabd.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/fea29d9f-d15c9b18de1c3ec7eadc.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/68c0a17d-57c2cf1786c9efa0d55c.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/646e0218-dbcb555b7204cd54335d.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/cb355538-499fb7baf11955cb6dc6.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/2e3a845b-d9bfaf8f89a5086cd25b.js.map
+  Cache-Control: public, max-age=31536000, immutable
+/4be3e580-d26c14a52487c31a25fa.js.map
   Cache-Control: public, max-age=31536000, immutable
 /static/*
   Cache-Control: public, max-age=31536000, immutable

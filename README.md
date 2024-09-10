@@ -12,7 +12,7 @@ Welcome to the README.md of my personal website! I am probably going to add in p
 
 Visit website click <a href="https://kennyzhao.dev/">here</a>
 
-**`Patch Notes: 12/11/2021; V. 2.2.0`**
+**`Patch Notes: 09/08/2024; V. 2.3.0`**
   - fixed more bugs
   - minor updates
   - 404 page update
@@ -23,7 +23,7 @@ Visit website click <a href="https://kennyzhao.dev/">here</a>
   - add extra pages for projects 
   - 3d animations? (Spline, three.js)
   - darkmode
-  - different pages for projects
+  - styling optimization
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

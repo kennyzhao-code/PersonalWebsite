@@ -1,4 +1,4 @@
-// all imports 
+/* Imports */
 import "aos/dist/aos.css";
 import Aos from "aos";
 import React, { useEffect } from 'react';
@@ -7,6 +7,7 @@ import {colors} from "../../components/globals/colors";
 import './emotions.css';
 import '../globals/font.css';
 
+/* Main */
 const Emotions = ({lightBg, id}) => {
     
     //controls fade in animation time 
@@ -68,7 +69,7 @@ const Emotions = ({lightBg, id}) => {
 
 export default Emotions;
 
-// all styling 
+/* Styles */
 //main container 
 const EmotionsContainer = styled.div`
     color: #fff;
@@ -98,9 +99,8 @@ const EmotionsWrapper = styled.div`
 //main row
 const EmotionsRow = styled.div`
     display: grid;
-    margin-right: 3rem;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 3rem;
+    grid-column-gap: 4.5rem;
     align-items: center;
     width: 100%;
     transition: 0.375s; 
@@ -114,7 +114,6 @@ const EmotionsRow = styled.div`
 
     @media screen and (max-width: 480px) {
         transition: 0.375s;
-        margin-left: 3rem;
     }
 `;
 
@@ -148,9 +147,8 @@ const EmotionSecondBlock = styled.div`
     align-items: center;
     position: absolute;
     width: 280px;
-    height: 50px;
-    
-`
+    height: 50px;    
+`;
 
 //text 
 const EmotionText = styled.p`
@@ -159,8 +157,7 @@ const EmotionText = styled.p`
     position: absolute;
     left: 0;
     padding-left: 1rem;
-    top: 0.5rem;
-   
-`
+    top: 0.5rem; 
+`;
 
 
