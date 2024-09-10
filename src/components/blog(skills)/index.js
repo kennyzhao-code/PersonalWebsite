@@ -340,7 +340,7 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                    mainHeight1 = "720px" mainWidth1 = "500px"
                                    mainHeight2 = "680px" mainWidth2 = "400px"
                                    mainHeight3 = "650px" mainWidth3 = "400px"
-                                   mainHeight4 = "560px" mainWidth4 = "320px" 
+                                   mainHeight4 = "590px" mainWidth4 = "320px" 
                                    
                                    codingSocialTitle={false}
                                    personalitySocialTitle={true}

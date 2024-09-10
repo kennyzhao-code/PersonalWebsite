@@ -76,7 +76,6 @@ export default InfoSection;
 //all styling 
 //main container 
 const InfoContainer = styled.div`
-    color: #fff;
     background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
     height: 780px;
     transition: 0.375s;
@@ -109,10 +108,13 @@ const InfoWrapper = styled.div`
     height: 900px; 
     width: 100%; 
     padding: 0 24px; 
+    margin-right: auto; 
+    margin-left: auto;
     justify-content: center; 
     position: relative;
     bottom: 4rem;
     transition: 0.375s;
+    /* border: 1px solid red; */
 
     @media screen and (max-width: 1100px){
         margin-left: 4rem;
@@ -120,10 +122,15 @@ const InfoWrapper = styled.div`
 
     }
 
-    @media screen and (max-width: 700px){
-        margin-left: 0;
-        right: 4.5rem;
-        padding-right: 0;
+    @media screen and (max-width: 480px){
+        margin-left: 1rem;
+        transition: 0.375s;
+    }
+
+    /* FIX */
+    @media screen and (max-width: 440px){
+        margin-left: 0rem;
+        padding: 0 1px;
         transition: 0.375s;
     }
 
@@ -132,13 +139,15 @@ const InfoWrapper = styled.div`
 //main row
 const InfoRow = styled.div`
     display: grid;
-    margin-left: 3rem;
     grid-auto-columns: minmax(auto, 1fr); 
-    grid-column-gap: 0.7rem;
+    grid-column-gap: 2rem;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )}; 
     width: 100%;
+    height: 100%;
+    position: relative;
     transition: 0.375s;
+    /* border: 1px solid black; */
 
     @media screen and (max-width: 1700px) {
         grid-column-gap: 0;
@@ -158,6 +167,7 @@ const Column1 = styled.div`
     padding: 0 15px; 
     grid-area: col1; 
     transition: 0.375s;
+    /* border: 1px solid blue; */
     
     @media screen and (max-width: 1700px){
         margin-top: 5rem;
@@ -176,7 +186,6 @@ const Column1 = styled.div`
 
     @media screen and (max-width: 480px){
         margin-top: 5rem;
-        margin-left: 1.8rem;
         transition: 0.375s;
         height: 655px;
     }
@@ -186,9 +195,11 @@ const Column1 = styled.div`
 const Column2 = styled.div`
     margin-top: 3.5rem;
     grid-area: col2; 
+    padding: 0 15px; 
     position: relative;
-    right: 0.7rem;
     transition: 0.375s;
+    /* border: 1px solid blue; */
+
 
     @media screen and (max-width: 1350px){
         transition: 0.375s;
@@ -198,7 +209,6 @@ const Column2 = styled.div`
     @media screen and (max-width: 480px){
         margin-top: 0;
         transition: 0.375s;
-        margin-left: 1.8rem;
         margin-top: 0rem;
     }
 `;
@@ -208,6 +218,7 @@ const TextWrapper = styled.div`
     padding-top: 4rem; 
     padding-bottom: 0; 
     transition: 0.375s;
+    /* border: 1px solid red; */
 
     @media screen and (max-width: 480px){
         position: relative;
@@ -241,15 +252,16 @@ const TopLine = styled.p`
 
 //subtitle
 const Subtitle = styled.p`
-    width: 750px; 
+    width: 700px; 
     margin-bottom: 2rem;
-    margin-left: 0.5rem;
     font-size: 30px; 
     line-height: 40px; 
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     transition: 0.375s;
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')};
+    /* border: 1px solid red; */
+
 
     a{
         text-decoration: none;
@@ -258,7 +270,8 @@ const Subtitle = styled.p`
 
     @media screen and (max-width: 1700px){
         transition: 0.375s;
-        width: 600px;  
+        width: 600px;
+        margin-left: 2.5rem;  
     }
 
     @media screen and (max-width: 1350px){

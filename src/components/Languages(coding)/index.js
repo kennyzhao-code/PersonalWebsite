@@ -221,6 +221,7 @@ const LanguageWrapper = styled.div`
     justify-content: center; 
     position: relative;
     transition: 0.375s;
+    /* border: 1px solid black; */
 
     @media screen and (max-width: 1100px){
         margin-left: 4rem;
@@ -239,16 +240,18 @@ const LanguageRow = styled.div`
     height: 100%;
     transition: 0.375s;
     position: relative;
+    /* border: 1px solid black; */
+
+    @media screen and (max-width: 1700px){
+        grid-column-gap: 0;
+        transition: 0.375s;
+    }
 
     @media screen and (max-width: 1100px) {
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
         transition: 0.375s;
     }
 
-    @media screen and (max-width: 1700px){
-        grid-column-gap: 0;
-        transition: 0.375s;
-    }
 `;
 
 //column 1
@@ -257,14 +260,12 @@ const Column1 = styled.div`
     padding: 0 15px; 
     grid-area: col1; 
     position: relative;
-    left: 1rem;
     transition: 0.375s;
-    bottom: 13.3rem;
-
+    bottom: 10.5rem;
+    /* border: 1px solid blue; */
 
     @media screen and (max-width: 1700px){
         transition: 0.375s;
-        left: 0;
         top: 0;
         margin-right: 6.5rem;
     }
@@ -295,11 +296,9 @@ const Column2 = styled.div`
     padding: 0 15px; 
     grid-area: col2; 
     position: relative;
-    right: 0.8rem;
     transition: 0.375s;
-    height: 400px;
-    bottom: 14rem;
-
+    bottom: 10rem;
+    /* border: 1px solid green; */
 
     @media screen and (max-width: 1700px){
         transition: 0.375s;
@@ -334,6 +333,7 @@ const TextWrapper = styled.div`
     padding-top: 3rem; 
     padding-bottom: 0; 
     transition: 0.375s;
+    /* border: 1px solid red; */
 
     @media screen and (max-width: 1700px){
         transition: 0.375s;
@@ -369,7 +369,6 @@ const Subtitle = styled.p`
     color: ${({darkText}) => (darkText ? 'white' : ' #897CBF')}; 
     transition: 0.375s;
 
-
     @media screen and (max-width: 1700px){
         width: 500px;
         transition: 0.375s;
@@ -400,6 +399,7 @@ const LanguageWrap = styled.div`
     align-items: center;
     flex-direction: column;
     margin-bottom: 4rem;
+    /* border: 1px solid red; */
    
 
     @media screen and (max-width: 1100px){
@@ -416,6 +416,7 @@ const LanguageSubWrap = styled.div`
     margin-top: 3rem;
     gap: 10rem;
     transition: 0.375s;
+
 
     @media screen and (max-width: 1700px){
         margin-top: 10rem;
@@ -449,6 +450,7 @@ const LanguageInnerTextDiv = styled.div`
     font-size: 1.5rem;
     transition: 0.375s;
     font-weight: 500;
+
 
     @media screen and (max-width: 1350px){
         font-size: 1.3rem;

@@ -41,7 +41,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                                    mainHeight1 = "570px" mainWidth1 = "480px"
                                    mainHeight2 = "585px" mainWidth2 = "390px"
                                    mainHeight3 = "585px" mainWidth3 = "390px"
-                                   mainHeight4 = "530px" mainWidth4 = "320px">
+                                   mainHeight4 = "540px" mainWidth4 = "320px">
                       <TitleHeader>MacU - <span style={{color: `${colors.secondaryRed}` }}>Software Research Development Specialist Intern</span></TitleHeader>
                       <SubTitle>May 2024 - August 2024</SubTitle>
                       <SubDescription>• Led software development efforts as a Software Research Development Specialist at the McMaster Interdisciplinary Satellite Team, overseeing the creation of Mission and Operations Control Software<br/>
@@ -152,8 +152,8 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                   <InnerDivTab mainHeight = "460px" mainWidth = "600px" 
                                    mainHeight1 = "550px" mainWidth1 = "480px"
                                    mainHeight2 = "540px" mainWidth2 = "390px"
-                                   mainHeight3 = "530px" mainWidth3 = "390px"
-                                   mainHeight4 = "490px" mainWidth4 = "320px">
+                                   mainHeight3 = "540px" mainWidth3 = "390px"
+                                   mainHeight4 = "495px" mainWidth4 = "320px">
                         <TitleHeader>Mac CSS - <span style={{color: `${colors.secondaryRed}` }}>Year Representative</span></TitleHeader>
                         <SubTitle>October 2022 - Present</SubTitle>
                         <SubDescription>• Facilitate communication with CS students and successfully orchestrate coordination between courses, instructors, academic departments, and CS students, resulting in a substantial 50% increase in student engagement in classes <br/>
@@ -166,6 +166,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                     </InnerDivTab>
                 </ExperienceSectionTab>
 
+                {/* Tab 6 */}
                 <ExperienceSectionTab mainHeight = "570px" mainWidth = "720px" 
                                    mainHeight1 = "600px" mainWidth1 = "585px"
                                    mainHeight2 = "630px" mainWidth2 = "510px"
@@ -178,7 +179,7 @@ const Experiences = ({lightBg, id, topLine, description}) => {
                   <InnerDivTab mainHeight = "460px" mainWidth = "600px" 
                                    mainHeight1 = "550px" mainWidth1 = "480px"
                                    mainHeight2 = "550px" mainWidth2 = "390px"
-                                   mainHeight3 = "520px" mainWidth3 = "390px"
+                                   mainHeight3 = "540px" mainWidth3 = "390px"
                                    mainHeight4 = "520px" mainWidth4 = "320px">
                         <TitleHeader>Marketyze  - <span style={{color: `${colors.secondaryRed}` }}>Head of Technology</span></TitleHeader>
                         <SubTitle>September 2022 - September 2023</SubTitle>

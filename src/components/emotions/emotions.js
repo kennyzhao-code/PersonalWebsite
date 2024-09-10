@@ -99,9 +99,8 @@ const EmotionsWrapper = styled.div`
 //main row
 const EmotionsRow = styled.div`
     display: grid;
-    margin-right: 3rem;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 3rem;
+    grid-column-gap: 4.5rem;
     align-items: center;
     width: 100%;
     transition: 0.375s; 
@@ -115,7 +114,6 @@ const EmotionsRow = styled.div`
 
     @media screen and (max-width: 480px) {
         transition: 0.375s;
-        margin-left: 3rem;
     }
 `;
 
