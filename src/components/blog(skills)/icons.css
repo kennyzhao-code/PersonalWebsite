@@ -1,13 +1,4 @@
 /*clipboard styles*/
-.scale{
-    transition: 0.3s ease;
-}
-
-.scale:hover{
-    scale: 1.1;
-    transition: 0.3s ease;
-}
-
 .copy{
     display: flex;
     flex-direction: column;
@@ -101,11 +92,6 @@
         height: 235px;
         transition: 0.375s;
 
-    }
-
-    .scale:hover{
-        scale: 1;
-        transition: 0.3s ease;
     }
 }
 
