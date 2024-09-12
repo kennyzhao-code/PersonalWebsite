@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://kennyzhao.dev/`,
   },
   plugins: [
-    `gatsby-plugin-netlify`,
+    `gatsby-adapter-netlify`,
     `gatsby-plugin-image`,
     
     {

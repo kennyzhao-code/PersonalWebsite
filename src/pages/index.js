@@ -70,7 +70,7 @@ const IndexPage = () => (
 
         */}
                     <Layout>
-                        <Seo title="Kenny Zhao" />
+                        <Seo />
                         <HeroSection/>
                         <InfoSection {...aboutMePage}/>
                         <Language {...languagesData}/>

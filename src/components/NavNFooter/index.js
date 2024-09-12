@@ -26,7 +26,7 @@ const Footer = () => {
                             <FaInstagram />
                         </SocialIconLink>
 
-                        <SocialIconLink color = "#71a5de" href = 'https://www.linkedin.com/in/kenny-zhao-283b73213/' target = '_blank' aria-label="Linkedin"  rel="noreferrer">
+                        <SocialIconLink color = "#0077B5" href = 'https://www.linkedin.com/in/kenny-zhao-283b73213/' target = '_blank' aria-label="Linkedin"  rel="noreferrer">
                             <FaLinkedin />
                         </SocialIconLink>
 

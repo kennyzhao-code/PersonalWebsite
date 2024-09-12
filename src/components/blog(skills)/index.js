@@ -5,7 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { colors } from '../globals/colors';
 import styled from "styled-components";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { SocialIcon } from 'react-social-icons';
+import {FaInstagram, FaStrava, FaGithub, FaTwitter, FaLinkedin, FaDiscord} from 'react-icons/fa';
 import { AiOutlineCopy } from "react-icons/ai";
 import AudioPlayer from 'react-modern-audio-player';
 import song from '../../images/until.mp3';
@@ -155,7 +155,9 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                    gamesSocial = {false}       
                                                    academicsSocial = {false}                                                                                                                                                                                                                
                                                    >
-                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://github.com/kennyzhao-code" network = "github" bgColor="black" fgColor = "white" style = {{height: 75, width: 75}} />
+                                            <SocialIconDiv color = 'white' backgroundColor = 'black' rel="noreferrer" target="_blank" href = "https://github.com/kennyzhao-code">
+                                                <FaGithub className = "icon"/>
+                                            </SocialIconDiv>
                                             <h1>kennyzhao-code</h1>
                                             <div className = 'copy'>
                                                 <CopyToClipboard onCopy={onCopy} text={valueGit}>
@@ -304,7 +306,9 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                    gamesSocial = {false}       
                                                    academicsSocial = {true}                                                                                                                                                                                                                
                                                    >
-                                                <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.linkedin.com/in/kenny-zhao-283b73213/" network = "linkedin" fgColor = "white" style = {{height: 75, width: 75}} />
+                                                <SocialIconDiv color = 'white' backgroundColor = '#0077B5' rel="noreferrer" target="_blank" href = "https://www.discord.com">
+                                                    <FaLinkedin className = "icon"/>
+                                                </SocialIconDiv>                                                
                                                 <h1>Kenny Zhao</h1>
                                                 <div className = 'copy'>
                                                     <CopyToClipboard onCopy={onCopy} text={valueLinkedin}>
@@ -373,7 +377,9 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                    gamesSocial = {false}
                                                    academicsSocial = {false}                                                                                                                                               
                                                    >
-                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.instagram.com/kennyzhao_/" network = "instagram" fgColor='white' style = {{height: 75, width: 75}} />
+                                            <SocialIconDiv color = 'white' backgroundColor = '#e1306c' rel="noreferrer" target="_blank" href = "https://www.instagram.com/kennyzhao_/">
+                                                <FaInstagram className = "icon"/>
+                                            </SocialIconDiv>
                                             <h1>kennyzhao_</h1>
                                             <div className = 'copy'>
                                                 <CopyToClipboard onCopy={onCopy} text={valueInsta}>
@@ -407,7 +413,9 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                    gamesSocial = {false}
                                                    academicsSocial = {false}                                                                                                                                               
                                                    >
-                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.instagram.com/kennyzhao_guitar/" network = "instagram" fgColor='white' style = {{height: 75, width: 75}} />
+                                            <SocialIconDiv color = 'white' backgroundColor = '#e1306c' rel="noreferrer" target="_blank" href = "https://www.instagram.com/kennyzhao_guitar/">
+                                                <FaInstagram className = "icon"/>
+                                            </SocialIconDiv>
                                             <h1>kennyzhao_guitar</h1>
                                             <div className = 'copy'>
                                                 <CopyToClipboard onCopy={onCopy} text={valueGuitar}>
@@ -441,7 +449,9 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                    gamesSocial = {false}
                                                    academicsSocial = {false}                                                                                                                                               
                                                    >
-                                            <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://twitter.com/KennyZhao20" network = "twitter" fgColor = "white" style = {{height: 75, width: 75}} />
+                                            <SocialIconDiv color = 'white' backgroundColor = '#1DA1F2' rel="noreferrer" target="_blank" href = "https://x.com/KennyZhao20">
+                                                <FaTwitter className = "icon"/>
+                                            </SocialIconDiv>
                                             <h1>KennyZhao20</h1>
                                             <div className = 'copy'>
                                                 <CopyToClipboard onCopy={onCopy} text={valueTwitter}>
@@ -504,8 +514,10 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                    gamesSocial = {false}
                                                    academicsSocial = {false}                                                                                                                                               
                                                    >
-                                                <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://www.instagram.com/mcmastersports/" network = "instagram" fgColor = "white" style = {{height: 75, width: 75}} />
-                                                <h1>mcmastersports</h1>
+                                                <SocialIconDiv color = 'white' backgroundColor = '#fc4c02' rel="noreferrer" target="_blank" href = "https://www.strava.com/athletes/66606475">
+                                                    <FaStrava className = "icon"/>
+                                                </SocialIconDiv>
+                                                <h1>Kenny Zhao</h1>
                                                 <div className = 'copy'>
                                                     <CopyToClipboard onCopy={onCopy} text={valueInstaMac}>
                                                     <CopyIcon  onClick={handleButtonClickMac}/>
@@ -565,7 +577,9 @@ const Blog = ({lightBg, id, topLine, coding, athletics, music, games, academics,
                                                    gamesSocial = {true}     
                                                    academicsSocial = {false}                                                                                                                                               
                                                    >
-                                                <SocialIcon className = "scale" rel="noreferrer" target="_blank" url = "https://discord.com/" network = "discord" fgColor = "white" style = {{height: 75, width: 75}} />
+                                                <SocialIconDiv color = 'white' backgroundColor = '#738adb' rel="noreferrer" target="_blank" href = "https://www.discord.com">
+                                                    <FaDiscord className = "icon"/>
+                                                </SocialIconDiv>
                                                 <h1>REALLY!?#4206</h1>
                                                 <div className = 'copy'>
                                                     <CopyToClipboard onCopy={onCopy} text={valueDiscord}>
@@ -774,9 +788,71 @@ const CopyIcon = styled(AiOutlineCopy)`
     
     &:hover{
         scale: 1.1;
+        transition: 0.3s ease;
+    }
+`;
+
+const SocialIconDiv = styled.a`
+    width: 75px;
+    height: 75px;
+    z-index: 10;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: ${(props) => props.backgroundColor || '#000'}; 
+    color: ${(props) => props.color || '#000'}; 
+    cursor: pointer;
+
+    .icon{
+        width: 40px;
+        height: 40px;
     }
 
-`;
+    &:hover{
+        scale: 1.1;
+        transition: 0.3s ease;
+    }
+
+    @media screen and (max-width: 1700px){
+        width: 70px;
+        height: 70px;
+        transition: 0.3s ease;
+
+        .icon{
+            width: 35px;
+            height: 35px;
+            transition: 0.3s ease;
+        }
+
+    }
+
+    @media screen and (max-width: 1350px){
+        width: 65px;
+        height: 65px;
+        transition: 0.3s ease;
+
+        .icon{
+            width: 35px;
+            height: 35px;
+            transition: 0.3s ease;
+        }
+
+    }
+
+    @media screen and (max-width: 480px){
+        width: 55px;
+        height: 55px;
+        transition: 0.3s ease;
+
+        .icon{
+            width: 30px;
+            height: 30px;
+            transition: 0.3s ease;
+        }
+
+    }
+`
 
 const TitleSocialDiv = styled.div`
     height: ${(props) => props.mainHeight || '0px'}; 
