@@ -813,6 +813,45 @@ const SocialIconDiv = styled.a`
         scale: 1.1;
         transition: 0.3s ease;
     }
+
+    @media screen and (max-width: 1700px){
+        width: 70px;
+        height: 70px;
+        transition: 0.3s ease;
+
+        .icon{
+            width: 35px;
+            height: 35px;
+            transition: 0.3s ease;
+        }
+
+    }
+
+    @media screen and (max-width: 1350px){
+        width: 65px;
+        height: 65px;
+        transition: 0.3s ease;
+
+        .icon{
+            width: 35px;
+            height: 35px;
+            transition: 0.3s ease;
+        }
+
+    }
+
+    @media screen and (max-width: 480px){
+        width: 55px;
+        height: 55px;
+        transition: 0.3s ease;
+
+        .icon{
+            width: 30px;
+            height: 30px;
+            transition: 0.3s ease;
+        }
+
+    }
 `
 
 const TitleSocialDiv = styled.div`
