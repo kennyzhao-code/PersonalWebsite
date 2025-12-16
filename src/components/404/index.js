@@ -1,10 +1,9 @@
 // all imports 
 import React from 'react';
 import styled from "styled-components";
-import {colors} from "../../components/globals/colors";
+import {colors} from "../../styles/colors";
 import {Link} from 'gatsby';
 import './404.css';
-import '../globals/font.css';
 import { GrHomeRounded } from "react-icons/gr";
 
 
