@@ -6,6 +6,7 @@ import bgImage from '../../images/me.jpg';
 
 import Typewriter from "./typewritter";
 import Shuffle from "./shuffle";
+import {HighlightText} from "./highlight-text";
 import { FaInstagram, FaDiscord, FaStrava, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiDevpost } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
@@ -27,7 +28,7 @@ const LandingSection = () => {
                                  playing video games (late night gaming sessions) and much more! 
                                 <br/>
                                 <br/>
-                                As of now, I am currently studying my fourth year, previously worked at the <div style={{background: 'linear-gradient(90deg, #3b82f6 0%, #a855f7 20%, #ec4899 50%, #a855f7 80%, #3b82f6 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>Canadian Space Agency </div>
+                                As of now, I am currently studying my fourth year, previously worked at the <HighlightText text="Canadian Space Agency" />
                     </LandingBody>
                 </LandingTextContainer>
 
@@ -125,7 +126,7 @@ const LandingTextContainer = styled.div`
 
 // main title
 const LandingTitle = styled.h1`
-    font-size: clamp(1rem, 4vw, 3rem);
+    font-size: clamp(1.5rem, 4vmin, 3rem);
     margin-left: 2rem;
     padding: 1rem;
     color: white; 
@@ -134,7 +135,7 @@ const LandingTitle = styled.h1`
 
 // body text
 const LandingBody = styled.p`
-    font-size: clamp(0.8rem, 2vw, 1.5rem);
+    font-size: clamp(0.8rem, 2.2vmin, 1.5rem);
     margin: 2rem;   
     margin-top: 0;
     padding: 1rem;
@@ -147,7 +148,7 @@ const ResumeContainer = styled.div`
     cursor: pointer;
     color: white;
     display: flex;
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1rem, 3vmin, 2rem);
 `;
 
 /* Footer styles */
