@@ -8,22 +8,16 @@
   kennyzhao.dev
 </h1>
 
-Welcome to the README.md of my personal website! I am probably going to add in patch notes and to do list in this read me file for personal reasons. This is so I can keep track of what needs to be changed and etc.
+Decided to ditch the old website (got to lazy to update it all the time) and make a simple minimalistic one until I figure out a new design maybe lol. You can still view my old website in the branch V. 2.3.0.
 
 Visit website click <a href="https://kennyzhao.dev/">here</a>
 
-**`Patch Notes: 09/08/2024; V. 2.3.0`**
-  - fixed more bugs
-  - minor updates
-  - 404 page update
-  - home page update 
-  - language viewport fixed
+**`Patch Notes: 16/12/2025; V. 3.0.0`**
+  - New minimalistic design
+  - minimialistic 404 page added
+  - minor animations
+  - file restructuring and code cleanup 
 
-**`Future additions`**
-  - add extra pages for projects 
-  - 3d animations? (Spline, three.js)
-  - darkmode
-  - styling optimization
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
