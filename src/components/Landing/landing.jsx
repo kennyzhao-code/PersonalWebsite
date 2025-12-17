@@ -2,20 +2,34 @@
 import React from 'react';
 import styled from "styled-components";
 import resume from '../../images/resume.pdf';
-import bgImage from '../../images/me.jpg';
 
 import Typewriter from "./typewritter";
 import Shuffle from "./shuffle";
-import {HighlightText} from "./highlight-text";
+import { StaticImage } from "gatsby-plugin-image"
 import { FaInstagram, FaDiscord, FaStrava, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiDevpost } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
+
+
+// add gatsby image here
 
 /* Main */
 const LandingSection = () => {
     
     return (
-        <>
+        <div className = 'grid'>
+
+            <StaticImage
+            src="../../images/me.jpg"
+            alt="kenny_zhao_bg"
+            placeholder="blurred"
+            layout="fullWidth"
+            quality={100}
+            // This makes the image fill the grid cell
+            className="col-start-1 row-start-1 h-[100dvh] w-full" 
+            // Optional: darken the image so text pops
+            style={{ zIndex: -1 }} 
+            />
             <LandingContainer >
                 <LandingTextContainer>
                     <LandingTitle>
@@ -28,8 +42,16 @@ const LandingSection = () => {
                                  playing video games (late night gaming sessions) and much more! 
                                 <br/>
                                 <br/>
-                                As of now, I am currently studying my fourth year, previously worked at the <HighlightText text="Canadian Space Agency" />
+                                As of now, I am currently studying my fourth year, previously worked at the <span style={{
+                                                                                                            background: 'linear-gradient(90deg, #3b82f6 0%, #a855f7 20%, #ec4899 50%, #a855f7 80%, #3b82f6 100%)',
+                                                                                                            WebkitBackgroundClip: 'text',
+                                                                                                            WebkitTextFillColor: 'transparent',
+                                                                                                            backgroundClip: 'text',
+                                                                                                            color: 'transparent',
+                                                                                                            display: 'inline-block' // Often needed to ensure the gradient renders correctly on some browsers
+                                                                                                            }}>Canadian Space Agency</span>
                     </LandingBody>
+
                 </LandingTextContainer>
 
                 <a href={resume} target="_blank" rel="noopener noreferrer">
@@ -82,7 +104,8 @@ const LandingSection = () => {
                         </FooterSocials>
                 </FooterContainer>
             </LandingContainer>
-        </>
+
+        </div>
     );
 };
 
@@ -91,23 +114,21 @@ export default LandingSection;
 // global container
 const LandingContainer = styled.div`
 
-    /* image url */
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
-        url(${bgImage});
+    /* col-start-1 row-start-1 */
+    grid-column: 1;
+    grid-row: 1;
 
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* relative */
+    position: relative;
 
-    /* ensure full screen on mobile/web */
-    width: 100%;
-    height: 100dvh;
-
+    /* flex flex-col justify-center items-center */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    display: flex;
+
+    /* bg-black/40 */
+    background-color: rgba(0, 0, 0, 0.55);
    
 `;
 
