@@ -126,7 +126,7 @@ const LandingTextContainer = styled.div`
 
 // main title
 const LandingTitle = styled.h1`
-    font-size: clamp(1.5rem, 4vmin, 3rem);
+    font-size: clamp(1.3rem, 4vmin, 3rem);
     margin-left: 2rem;
     padding: 1rem;
     color: white; 
