@@ -30,7 +30,10 @@
     "typescript": "^5.9.3"
   },
   "overrides": {
-    "msgpackr": "^1.11.2"
+    "msgpackr": "^1.11.2",
+    "cookie": "^1.1.1",
+    "tmp": "^0.2.5",
+    "workbox-build": "^7.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.23",
