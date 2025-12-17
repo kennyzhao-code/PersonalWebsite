@@ -17,6 +17,7 @@
     "gatsby-plugin-styled-components": "^6.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
+    "gsap": "^3.14.2",
     "motion": "^12.23.26",
     "npm": "^11.7.0",
     "react": "^18.3.1",

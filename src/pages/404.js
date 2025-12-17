@@ -1,16 +1,13 @@
 import React from "react";
-import Four0Four from '../components/404/index'
-import { fourfour } from '../components/404/404Data.js'
-//import Layout from "../components/layout";
+import Four0Four from '../components/four-zero-four'
 import Seo from "../components/seo.js";
-// import '../components/LayoutForWeb/layout.css';
 
 const NotFoundPage = () => {
   
   return (
     <>
       <Seo title="404: Not found" />
-      <Four0Four {...fourfour}/>
+      <Four0Four/>
     </>
   );
 }

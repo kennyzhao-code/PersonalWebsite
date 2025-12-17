@@ -18,24 +18,22 @@ Layout.propTypes = {
 
 export default Layout;
 
-/** <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>*/
+// <footer>
+//     © {new Date().getFullYear()}, Built with
+//     {` `}
+//     <a href="https://www.gatsbyjs.com">Gatsby</a>
+// </footer>
 
-/** 
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-  */
+
+// const data = useStaticQuery(graphql`
+//   query SiteTitleQuery {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `)
+
+
+  
