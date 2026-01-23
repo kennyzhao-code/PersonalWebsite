@@ -2,13 +2,12 @@
 import "aos/dist/aos.css";
 import Aos from "aos";
 import React, { useEffect } from 'react';
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import {colors} from "../../components/globals/colors";
-import './emotions.css';
 import '../globals/font.css';
 
 /* Main */
-const Emotions = ({lightBg, id}) => {
+const Emotions = () => {
     
     //controls fade in animation time 
     useEffect(() => {
@@ -17,7 +16,7 @@ const Emotions = ({lightBg, id}) => {
     
     return (
         <>
-            <EmotionsContainer name ="emotions" lightBg = {lightBg} id = {id}>
+            <EmotionsContainer name ="emotions" id="emotions">
             
                 <EmotionsWrapper data-aos-once='true' data-aos="fade-up">
                         <EmotionsRow>
@@ -25,11 +24,11 @@ const Emotions = ({lightBg, id}) => {
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
                                 <EmotionText>Mood?</EmotionText>
-                                    <div class="face">
-                                        <div class="eye"></div>
-                                        <div class="eye right"></div>
-                                        <div class="mouth happy"></div>
-                                    </div>
+                                    <Face happy>
+                                        <Eye />
+                                        <Eye right />
+                                        <Mouth happy />
+                                    </Face>
                                     </EmotionSecondBlock>
 
                                 {/*<div class="shadow scale"></div>*/}
@@ -40,22 +39,22 @@ const Emotions = ({lightBg, id}) => {
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
                                     <EmotionText>Sleep?</EmotionText>
-                                    <div class="faceMeh">
-                                            <div class="eye"></div>
-                                            <div class="eye right"></div>
-                                            <div class="mouth meh"></div>
-                                        </div>
+                                    <Face meh>
+                                            <Eye />
+                                            <Eye right />
+                                            <Mouth meh />
+                                        </Face>
                                 </EmotionSecondBlock>
                             </EmotionsBlock>
 
                             <EmotionsBlock>
                                 <EmotionSecondBlock>
                                     <EmotionText>Workload?</EmotionText>
-                                        <div class="faceSad">
-                                            <div class="eye"></div>
-                                            <div class="eye right"></div>
-                                            <div class="mouth sad"></div>
-                                        </div>
+                                        <Face sad>
+                                            <Eye />
+                                            <Eye right />
+                                            <Mouth sad />
+                                        </Face>
                                 </EmotionSecondBlock>
                             </EmotionsBlock>
                  
@@ -70,13 +69,94 @@ const Emotions = ({lightBg, id}) => {
 export default Emotions;
 
 /* Styles */
+// Animations
+const bounceAnimation = keyframes`
+    50% {
+       transform: translateY(-10px);
+    }
+`;
+
+// Faces
+const Face = styled.div`
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: ${({happy, meh, sad}) => 
+        happy ? '#6CBB6C' : 
+        meh ? '#D5D274' : 
+        sad ? '#D66A6A' : '#6CBB6C'};
+    border-radius: 50%;
+    z-index: 2;
+    animation: ${bounceAnimation} 1s ease-in infinite;
+    right: 0;
+    transition: 0.375s;
+
+    &:hover {
+        transition: 0.375s;
+        transform: scale(1.1);
+    }
+
+    @media screen and (max-width: 480px) {
+        &:hover{
+            transform: scale(1);
+        }
+    }
+`;
+
+const Eye = styled.div`
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+    top: 40%;
+    left: ${({right}) => right ? '55%' : '35%'};
+`;
+
+const Mouth = styled.div`
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    
+    /* Happy Mouth */
+    ${({happy}) => happy && `
+        top: 48%;
+        left: 44%;
+        border-radius: 50%;
+        border: 2px solid;
+        border-color: transparent white white transparent;
+        transform: rotate(45deg);
+    `}
+
+    /* Meh Mouth */
+    ${({meh}) => meh && `
+        border: 1px solid;
+        border-color: white;
+        border-radius: 0px;
+        height: 1px;
+        width: 12px;
+        left: 43%;
+        top: 51%;
+    `}
+
+    /* Sad Mouth */
+    ${({sad}) => sad && `
+        border-radius: 50%;
+        border: 2px solid;
+        border-color: transparent white white transparent;
+        transform: rotate(225deg);
+        top: 52%;
+        left: 44.5%;
+    `}
+`;
+
 //main container 
 const EmotionsContainer = styled.div`
     color: #fff;
-    background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')};
-    height: 50px;
+    background: #F8FCFF;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
+    border: 1px solid ${colors.mainPurple};
 
     @media screen and (max-width: 1100px){
         height: 500px;
@@ -93,7 +173,6 @@ const EmotionsWrapper = styled.div`
     padding: 0 24px; 
     justify-content: center; 
     position: relative;
-    bottom: 15rem;
 `;
 
 //main row

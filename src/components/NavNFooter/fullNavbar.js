@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import { IoHome, IoPersonCircleSharp, IoFlash } from "react-icons/io5";
 import { AiFillProject, AiOutlineFundProjectionScreen } from "react-icons/ai";
-import { MdContactMail } from "react-icons/md";
+
 import styled from "styled-components";
 import {Link as LinkS } from "react-scroll";
 import {MdArrowForwardIos} from 'react-icons/md';
@@ -65,10 +65,7 @@ const Navbar = () => {
                         {/*<SideBarText className ='text1'>Experiences</SideBarText>*/}
                     </SidebarLink>
 
-                    <SidebarLink color = {colors.navContactDark} background = {colors.navContact} border = {`2.5px solid ${colors.navContactDark}`} activeClass = "active" to = 'contact' smooth = 'easeInCubic' duration = {500} spy = {true} exact ='true' >
-                        <MdContactMail />
-                        {/*<SideBarText className ='text1'>Contact</SideBarText>*/}
-                    </SidebarLink>
+
 
                 </SidebarMenu>
 

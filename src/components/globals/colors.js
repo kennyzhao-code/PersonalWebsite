@@ -30,6 +30,5 @@ export const colors = {
     navSkills: "#BF7C7C", 
     navSkillsDark: "#7E3C3C", 
 
-    navContact: "#7CBABF",
-    navContactDark: "#5C9297",
+
 };
