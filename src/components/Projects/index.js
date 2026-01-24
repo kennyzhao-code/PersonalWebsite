@@ -1,26 +1,92 @@
 /* Imports */
-import React, {useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Aos from "aos";
 import styled from "styled-components";
 import { colors } from "../globals/colors";
-import { StaticImage } from 'gatsby-plugin-image';
-import './bg.css';
+import { FiExternalLink, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import '../globals/font.css';
 
 /* Main */
-const Projects = ({lightBg, id, topLine, delta, uoft, uoft2, hackthenorth, description}) => {
-
+const Projects = ({ lightBg, id, topLine, description }) => {
+    const [current, setCurrent] = useState(0);
 
     //controls fade in animation time 
     useEffect(() => {
-        Aos.init({duration: 1000}); 
-    }, []); 
+        Aos.init({ duration: 1000 });
+    }, []);
 
+    const projects = [
+        {
+            title: "Hack The North 2022",
+            link: "https://github.com/HTN-heAR",
+            desc: "HTN 2022"
+        },
+        {
+            title: "UofT Hacks X",
+            link: "https://github.com/UofTHacks-HealthExplore",
+            desc: "UofT Hacks X"
+        },
+        {
+            title: "DeltaHacks IX",
+            link: "https://github.com/DeltaHacks-WebOfLife",
+            desc: "DeltaHacks IX"
+        },
+        {
+            title: "UofT Hacks XI",
+            link: "https://github.com/UofTHacks-XI",
+            desc: "UofT Hacks XI"
+        }
+    ];
+
+    const length = projects.length;
+
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    };
+
+    const prevSlide = () => {
+        setCurrent(current === 0 ? length - 1 : current - 1);
+    };
+
+    if (!Array.isArray(projects) || projects.length <= 0) {
+        return null;
+    }
+
+    const getSlideStyle = (index) => {
+        const isActive = index === current;
+        const isPrev = index === (current - 1 + length) % length;
+        const isNext = index === (current + 1) % length;
+        
+        let transform = 'translateX(0) scale(0)';
+        let zIndex = 0;
+        let opacity = 0;
+        let pointerEvents = 'none'; // Default to non-clickable
+
+        if (isActive) {
+            transform = 'translateX(0) scale(1)';
+            zIndex = 10;
+            opacity = 1;
+            pointerEvents = 'auto'; // Only active is clickable
+        } else if (isPrev) {
+            transform = 'translateX(-45%) scale(0.8)'; // Extended out slightly (was 15%)
+            zIndex = 5;
+            opacity = 0.6;
+        } else if (isNext) {
+            transform = 'translateX(45%) scale(0.8)'; // Extended out slightly (was 15%)
+            zIndex = 5;
+            opacity = 0.6;
+        } else {
+            // For the 4th item (hidden/behind)
+             transform = 'scale(0.5)';
+             zIndex = 1;
+             opacity = 0;
+        }
+
+        return { transform, zIndex, opacity, pointerEvents };
+    };
 
     return (
-        <>
-         <ProjectContainer name = "projects"  id = {id} lightBg = {lightBg}>
-            
+        <ProjectContainer id={id} lightBg={lightBg}>
             <SecondaryProjectContainer>
                 <Description data-aos-once='true' data-aos="fade-up">
                     {topLine}
@@ -30,214 +96,69 @@ const Projects = ({lightBg, id, topLine, delta, uoft, uoft2, hackthenorth, descr
                     {description}
                 </SecondaryDescription>
 
-                    <ContentWrapper data-aos-once='true' data-aos="fade-up">
-                        
-                        <ProjectRow>
-
-                            <ProjectDiv>
-
-                                <MainCoverDiv>
-                                    <CoverDiv target = "_blank" rel="noreferrer" href = "https://github.com/HTN-heAR">
-                                        <StaticImage
-                                            src= '../../images/htnBg.png'
-                                            alt="htn"
-                                            placeholder="blurred"
-                                            formats={["auto", "webp"]}
-                                            quality= {100}
-                                            className = "htn"
-                                            imgStyle = {{borderRadius: '15px'}}
-                                        />                                      
-                                    </CoverDiv>
-                                    <LogoContainer>
-                                        <StaticImage
-                                            src= '../../images/htn.png'
-                                            alt="htn"
-                                            placeholder="blurred"
-                                            formats={["auto", "webp"]}
-                                            layout="fixed"
-                                            quality= {100}
-                                            width={60}
-                                            imgStyle = {{borderRadius: '30px'}}
-                                        />             
-                                        <h1>{hackthenorth}</h1>
-                                    </LogoContainer>
-                                </MainCoverDiv>
-                                
-                            </ProjectDiv>
-
-                            <ProjectDiv style = {{marginTop: '2rem'}}>
-                                <MainCoverDiv>
-                                    <CoverDiv target = "_blank" rel="noreferrer" href = "https://github.com/UofTHacks-HealthExplore">
-                                        <StaticImage
-                                            src= '../../images/uoft.jpeg'
-                                            alt="uoft"
-                                            placeholder="blurred"
-                                            formats={["auto", "webp"]}
-                                            quality= {100}
-                                            className = "uoft"
-                                            imgStyle = {{borderRadius: '15px'}}
-                                        />  
-                                    </CoverDiv>
-                                    <LogoContainer style = {{width: '330px'}}>
-                                        <StaticImage
-                                            src= '../../images/uoftHacks.png'
-                                            alt="uoftLogo"
-                                            placeholder="blurred"
-                                            formats={["auto", "webp"]}
-                                            layout="fixed"
-                                            quality= {100}
-                                            width={70}
-                                        />             
-                                        <h1>{uoft}</h1>
-                                    </LogoContainer>
-                                </MainCoverDiv>
-                            </ProjectDiv>
-                            
-                        </ProjectRow>
-
-                        <ProjectRow>
-                            <ProjectDiv>
-                                <MainCoverDiv>
-                                    <CoverDiv target = "_blank" rel="noreferrer" href = "https://github.com/DeltaHacks-WebOfLife">
-                                        <StaticImage
-                                            src= '../../images/deltaHacks.png'
-                                            alt="delta"
-                                            placeholder="blurred"
-                                            className='delta'
-                                            formats={["auto", "webp"]}
-                                            quality= {100}
-                                            imgStyle = {{borderRadius: '15px'}}
-                                        />  
-                                    </CoverDiv>
-                                    <LogoContainer style = {{width: '320px'}}>
-                                        <StaticImage
-                                            src= '../../images/deltaLogo.png'
-                                            alt="deltaLogo"
-                                            placeholder="blurred"
-                                            formats={["auto", "webp"]}
-                                            layout="fixed"
-                                            quality= {100}
-                                            width={60}
-                                        />             
-                                        <h1>{delta}</h1>
-                                    </LogoContainer>
-                                </MainCoverDiv>
-                            </ProjectDiv>
-
-                            <ProjectDiv style = {{marginTop: '2rem'}}>
-                                <MainCoverDiv>
-                                    <CoverDiv target = "_blank" rel="noreferrer" href = "https://github.com/UofTHacks-XI">
-                                        <StaticImage
-                                            src= '../../images/uoft2.jpg'
-                                            alt="uoft2"
-                                            placeholder="blurred"
-                                            formats={["auto", "webp"]}
-                                            className = "ohsea"
-                                            quality= {100}
-                                            imgStyle = {{borderRadius: '15px'}}
-                                        />  
-                                    </CoverDiv>
-                                    <LogoContainer style = {{width: '330px'}}>
-                                        <StaticImage
-                                            src= '../../images/uoftHacks.png'
-                                            alt="uoftLogo"
-                                            placeholder="blurred"
-                                            formats={["auto", "webp"]}
-                                            layout="fixed"
-                                            quality= {100}
-                                            width={70}
-                                        />             
-                                        <h1>{uoft2}</h1>
-                                    </LogoContainer>
-                                </MainCoverDiv>
-                            </ProjectDiv>
-                        </ProjectRow>
-
-                    </ContentWrapper>
+                <CarouselSection>
+                    <ArrowLeft onClick={prevSlide} />
+                    <ArrowRight onClick={nextSlide} />
+                    
+                    <SliderWrapper>
+                        {projects.map((project, index) => {
+                            const style = getSlideStyle(index);
+                            return (
+                                <Slide key={index} style={style}>
+                                    <ProjectCard href={project.link} target="_blank" rel="noreferrer">
+                                        <CardContent>
+                                            <ProjectTitle>{project.title}</ProjectTitle>
+                                            <ProjectDesc>{project.desc}</ProjectDesc>
+                                            <LinkIcon>
+                                                <FiExternalLink />
+                                                <span>View Repository</span>
+                                            </LinkIcon>
+                                        </CardContent>
+                                    </ProjectCard>
+                                </Slide>
+                            );
+                        })}
+                    </SliderWrapper>
+                </CarouselSection>
             </SecondaryProjectContainer>
-
         </ProjectContainer>
-        </>
     );
 };
 
 export default Projects;
 
 /* Styles */
-//main container 
 const ProjectContainer = styled.div`
     width: 100%;
-    background: ${({lightBg}) => (lightBg ? '#F8FCFF' : 'black')}; 
-    height: 1280px;   
+    background: ${({ lightBg }) => (lightBg ? '#F8FCFF' : 'black')};
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.375s;
-    /* border: 1px solid black; */
-
-    @media screen and (max-width: 1700px){
-        height: 1325px;
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1350px){
-        height: 1310px;
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1100px){
-        height: 2550px;
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 480px){
-        height: 2320px;
-        transition: 0.375s;
-    }
+    overflow-x: hidden;
 `;
 
 const SecondaryProjectContainer = styled.div`
-    height: 100%;
-    width: 1510px;
-    transition: 0.375s;
-
-    @media screen and (max-width: 1700px){
-        width: 1200px;
-        transition: 0.375s;
-
-    }
-
-    @media screen and (max-width: 1350px){
-        width: 1050px;
-        transition: 0.375s;
-
-    }
-
-    @media screen and (max-width: 1100px){
-        transition: 0.375s;
-        width: 480px;
-    }
-
-    @media screen and (max-width: 480px){
-        transition: 0.375s;
-        width: 350px;
-    }
+    width: 100%;
+    max-width: 1550px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const Description = styled.h1`
-    color: ${colors.mainGreen}; 
-    font-size: 60px; 
-    position: relative;
-    font-weight: 700; 
+    color: ${colors.mainGreen};
+    font-size: 60px;
+    font-weight: 700;
     width: 100%;
-    letter-spacing: 1.4px; 
+    letter-spacing: 1.4px;
     font-style: italic;
-    display: flex;
     font-family: "Raleway", sans-serif;
+    margin-bottom: 1rem;
+    text-align: left;
 
     @media screen and (max-width: 480px){
         font-size: 35px;
-        transition: 0.375s;
     }
 `;
 
@@ -247,139 +168,150 @@ const SecondaryDescription = styled.p`
     font-weight: 400;
     line-height: 1.5;
     color: ${colors.mainGreen};
-
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4rem;
 
     @media screen and (max-width: 480px){
         font-size: 1.5rem;
-        transition: 0.375s;
     }
 `;
 
-//div covers for project 
-const MainCoverDiv = styled.div`
+const CarouselSection = styled.div`
+    position: relative;
     width: 100%;
-    height: 100%;
-`;
-
-const CoverDiv = styled.a`
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+    height: 500px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    opacity: 0.1;
-    border-radius: 15px;
-    background: ${colors.primaryGreen};
-    transition: 0.5s ease;
-
-
-    &:hover{
-        background: ${colors.secondaryGreen};
-        opacity: 0.5;
-        cursor: pointer;
-        transition: 0.5s ease;
-    }
+    perspective: 1000px; /* Adds depth */
 `;
 
-const ContentWrapper = styled.div`
-    margin: 0 auto; 
-    margin-top: 2rem;
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-column-gap: 4rem;
-    grid-row-gap: 1.5rem;
-    align-items: center; 
-    padding: 0 50px;     
-    justify-content: center;
-    transition: 0.375s;
-
-
-    @media screen and (max-width: 1700px){
-        grid-column-gap: 2rem;
-        transition: 0.375s;
-
-    }
-
-    @media screen and (max-width: 1100px){
-        grid-template-columns: 1fr;
-        transition: 0.375s;
-        grid-row-gap: 0rem;
-
-    }
-`;
-
-const LogoContainer = styled.div`
+const SliderWrapper = styled.div`
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 6rem;    
-    padding-left: 2rem;
-    width: 390px;
-
-    h1{
-        font-family: "Raleway", sans-serif;
-        color: white;
-        font-weight: 400;
-        margin-left: 1.5rem;
-        margin-top: 1.2rem;
-        transition: 0.375s;
-
-
-        @media screen and (max-width: 480px){
-            font-size: 1.7rem;
-            transition: 0.375s;
-        }
-    }
 `;
 
-//project sections 
-const ProjectRow = styled.div`
-    height: 2000px;
-
-    @media screen and (max-width: 1100px){
-        height: 965px;
-    }
-   
-`;
-
-const ProjectDiv = styled.div`
-height: 450px;
-    width: 720px;
-    background: ${colors.mainGreen};
-    border-radius: 15px;
+const Slide = styled.div`
+    position: absolute;
+    width: 60%; 
+    max-width: 800px;
+    height: 400px;
+    transition: all 0.5s ease-in-out;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    /* Styles injected inline for dynamic transforms */
+`;
+
+const ArrowLeft = styled(FiChevronLeft)`
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    color: ${colors.mainGreen};
+    z-index: 20;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+
+    &:hover {
+        color: ${colors.secondaryGreen};
+        scale: 1.1;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 2.5rem;
+        left: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+    }
+`;
+
+const ArrowRight = styled(FiChevronRight)`
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    color: ${colors.mainGreen};
+    z-index: 20;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+
+    &:hover {
+        color: ${colors.secondaryGreen};
+        scale: 1.1;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 2.5rem;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+    }
+`;
+
+const ProjectCard = styled.a`
+    width: 100%;
+    height: 100%;
+    background: ${colors.mainGreen};
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+`;
+
+const CardContent = styled.div`
+    text-align: center;
+    color: white;
+    padding: 2rem;
+`;
+
+const ProjectTitle = styled.h2`
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+`;
+
+const ProjectDesc = styled.p`
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+`;
+
+const LinkIcon = styled.div`
     display: flex;
     align-items: center;
-    transition: 0.375s;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    background: rgba(255,255,255,0.2);
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
 
-    &:hover{
-        transition: 0.375s;
-        scale: 1.02;
-    }
-
-
-    @media screen and (max-width: 1700px){
-        width: 585px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1350px){
-        width: 510px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 1100px){
-        width: 480px; 
-        transition: 0.375s;
-    }
-
-    @media screen and (max-width: 480px){
-        width: 350px; 
-        transition: 0.375s;
-
-        &:hover{
-            scale: 1;
-    }
+    ${ProjectCard}:hover & {
+        background: rgba(255,255,255,0.3);
     }
 `;
 
