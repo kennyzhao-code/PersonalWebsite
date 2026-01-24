@@ -14,7 +14,7 @@ import Emotions from "../components/emotions/emotions";
 
 import { blogData } from "../components/blog(skills)/blogData";
 import { projectData } from "../components/Projects/projectData";
-import { experiencesData } from "../components/Experiences/experienceData";
+
 
 //import { Link } from "gatsby"
 //import { StaticImage } from "gatsby-plugin-image"
@@ -69,7 +69,7 @@ const IndexPage = () => (
       <Emotions />
       <Blog {...blogData} />
       <Projects {...projectData} />
-      <Experiences {...experiencesData} />
+      <Experiences />
     </Layout>
     {/* )} */}
   </>
