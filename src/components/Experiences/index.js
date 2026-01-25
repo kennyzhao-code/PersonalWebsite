@@ -105,17 +105,17 @@ const Experiences = () => {
 
     return (
         <ExperiencesContainer id="blog">
-            <HeaderWrapper data-aos="fade-up">
+            <HeaderWrapper >
                 <TopLine>my experiences, my life...</TopLine>
                 <Description>
                     As a person who loves interacting with others, I do my best to involve myself with society as much as possible. I believe that you can learn the most from others and that is why I strive to be a caring person. Below are my experiences.
                 </Description>
             </HeaderWrapper>
 
-            <TimelineContainer>
+            <TimelineContainer data-aos="fade-up">
                 <Line />
                 {experiences.map((exp, index) => (
-                    <TimelineItem key={index} data-aos="fade-up" position={index % 2 === 0 ? 'left' : 'right'}>
+                    <TimelineItem key={index} position={index % 2 === 0 ? 'left' : 'right'}>
                         <TimelineDot />
                         <TimelineContent position={index % 2 === 0 ? 'left' : 'right'}>
                             <Date>{exp.date}</Date>
