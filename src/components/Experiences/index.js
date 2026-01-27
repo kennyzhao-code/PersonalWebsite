@@ -115,9 +115,9 @@ const Experiences = () => {
             <TimelineContainer data-aos="fade-up">
                 <Line />
                 {experiences.map((exp, index) => (
-                    <TimelineItem key={index} position={index % 2 === 0 ? 'left' : 'right'}>
+                    <TimelineItem key={index}>
                         <TimelineDot />
-                        <TimelineContent position={index % 2 === 0 ? 'left' : 'right'}>
+                        <TimelineContent>
                             <Date>{exp.date}</Date>
                             <Card>
                                 <CardHeader>
@@ -255,7 +255,6 @@ const Card = styled.div`
     border-radius: 15px;
     padding: 1.5rem;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     
     &:hover {

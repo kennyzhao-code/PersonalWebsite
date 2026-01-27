@@ -66,7 +66,7 @@ const IndexPage = () => (
       <Seo />
       <HeroSection />
       <InfoSection />
-      <Emotions />
+      {/* <Emotions /> */}
       <Blog {...blogData} />
       <Projects {...projectData} />
       <Experiences />
