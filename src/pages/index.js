@@ -13,7 +13,7 @@ import Projects from "../components/Projects/index";
 
 
 
-import { projectData } from "../components/Projects/projectData";
+
 
 
 //import { Link } from "gatsby"
@@ -68,7 +68,7 @@ const IndexPage = () => (
       <InfoSection />
       {/* <Emotions /> */}
       <Blog />
-      <Projects {...projectData} />
+      <Projects />
       <Experiences />
     </Layout>
     {/* )} */}

@@ -7,7 +7,7 @@ import { FiExternalLink } from 'react-icons/fi';
 import '../globals/font.css';
 
 /* Main */
-const Projects = ({ lightBg, id, topLine, description }) => {
+const Projects = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     //controls fade in animation time 
@@ -17,40 +17,52 @@ const Projects = ({ lightBg, id, topLine, description }) => {
 
     const projects = [
         {
-            title: "Hack The North 2022",
+            title: "LavaLock",
             link: "https://github.com/HTN-heAR",
             desc: "HTN 2022",
             id: "01"
         },
         {
-            title: "UofT Hacks X",
+            title: "Celestial Classfier",
             link: "https://github.com/UofTHacks-HealthExplore",
             desc: "UofT Hacks X",
             id: "02"
         },
         {
-            title: "DeltaHacks IX",
+            title: "Nos Album",
             link: "https://github.com/DeltaHacks-WebOfLife",
             desc: "DeltaHacks IX",
             id: "03"
         },
         {
-            title: "UofT Hacks XI",
+            title: "HealthChain",
             link: "https://github.com/UofTHacks-XI",
             desc: "UofT Hacks XI",
             id: "04"
+        },
+        {
+            title: "a conversation...",
+            link: "https://github.com/",
+            desc: "Hack Western 8",
+            id: "05"
+        },
+        {
+            title: "heAR",
+            link: "https://github.com/",
+            desc: "WaffleHacks 2022",
+            id: "06"
         }
     ];
 
     return (
-        <ProjectContainer id={id} lightBg={lightBg}>
+        <ProjectContainer id="project">
             <SecondaryProjectContainer>
                 <Description data-aos-once='true' data-aos="fade-up">
-                    {topLine}
+                    my works; both present and past...
                 </Description>
 
                 <SecondaryDescription data-aos-once='true' data-aos="fade-up">
-                    {description}
+                    I find hackathons incredibly fun and engaging. Below are some of my favorite projects that I’ve worked on in the past. Click on any of them to explore their repositories and learn more!
                 </SecondaryDescription>
 
                 <AccordionContainer>
@@ -61,7 +73,6 @@ const Projects = ({ lightBg, id, topLine, description }) => {
                             onClick={() => setActiveIndex(index)}
                         >
                             <AccordionImageContainer active={index === activeIndex}>
-                                <ProjectNumber active={index === activeIndex}>{project.id}</ProjectNumber>
                                 {/* Placeholder for project image/gradient */}
                                 <ProjectVisual active={index === activeIndex} />
                                 <ProjectContent active={index === activeIndex}>
@@ -93,7 +104,7 @@ export default Projects;
 const ProjectContainer = styled.div`
     width: 100%;
     min-height: 800px;
-    background: ${({ lightBg }) => (lightBg ? '#F8FCFF' : 'black')};
+    background: #F8FCFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,7 +193,7 @@ const AccordionImageContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${({ active }) => active ? `linear-gradient(135deg, ${colors.secondaryGreen} 0%, ${colors.mainGreen} 100%)` : '#111'};
+    background: ${({ active }) => active ? colors.mainGreen : '#111'};
     transition: all 0.5s ease;
     opacity: ${({ active }) => (active ? '1' : '0')};
     display: flex;
@@ -306,19 +317,3 @@ const CollapsedNumber = styled.span`
          font-size: 1.2rem;
     }
 `;
-
-const ProjectNumber = styled.div`
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
-    font-family: "Raleway", sans-serif;
-    font-size: 8rem;
-    font-weight: 900;
-    color: rgba(255,255,255,0.1);
-    line-height: 1;
-    z-index: 0;
-    opacity: ${({ active }) => active ? 1 : 0};
-    transition: opacity 0.5s 0.2s;
-`;
-
-
