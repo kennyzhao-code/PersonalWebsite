@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react';
 import Aos from "aos";
 import styled from "styled-components";
 import { colors } from "../globals/colors";
-import { FiExternalLink, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FiExternalLink } from 'react-icons/fi';
 import '../globals/font.css';
 
 /* Main */
 const Projects = ({ lightBg, id, topLine, description }) => {
-    const [current, setCurrent] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     //controls fade in animation time 
     useEffect(() => {
@@ -19,71 +19,28 @@ const Projects = ({ lightBg, id, topLine, description }) => {
         {
             title: "Hack The North 2022",
             link: "https://github.com/HTN-heAR",
-            desc: "HTN 2022"
+            desc: "HTN 2022",
+            id: "01"
         },
         {
             title: "UofT Hacks X",
             link: "https://github.com/UofTHacks-HealthExplore",
-            desc: "UofT Hacks X"
+            desc: "UofT Hacks X",
+            id: "02"
         },
         {
             title: "DeltaHacks IX",
             link: "https://github.com/DeltaHacks-WebOfLife",
-            desc: "DeltaHacks IX"
+            desc: "DeltaHacks IX",
+            id: "03"
         },
         {
             title: "UofT Hacks XI",
             link: "https://github.com/UofTHacks-XI",
-            desc: "UofT Hacks XI"
+            desc: "UofT Hacks XI",
+            id: "04"
         }
     ];
-
-    const length = projects.length;
-
-    const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
-    };
-
-    const prevSlide = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1);
-    };
-
-    if (!Array.isArray(projects) || projects.length <= 0) {
-        return null;
-    }
-
-    const getSlideStyle = (index) => {
-        const isActive = index === current;
-        const isPrev = index === (current - 1 + length) % length;
-        const isNext = index === (current + 1) % length;
-        
-        let transform = 'translateX(0) scale(0)';
-        let zIndex = 0;
-        let opacity = 0;
-        let pointerEvents = 'none'; // Default to non-clickable
-
-        if (isActive) {
-            transform = 'translateX(0) scale(1)';
-            zIndex = 10;
-            opacity = 1;
-            pointerEvents = 'auto'; // Only active is clickable
-        } else if (isPrev) {
-            transform = 'translateX(-45%) scale(0.8)'; // Extended out slightly (was 15%)
-            zIndex = 5;
-            opacity = 0.6;
-        } else if (isNext) {
-            transform = 'translateX(45%) scale(0.8)'; // Extended out slightly (was 15%)
-            zIndex = 5;
-            opacity = 0.6;
-        } else {
-            // For the 4th item (hidden/behind)
-             transform = 'scale(0.5)';
-             zIndex = 1;
-             opacity = 0;
-        }
-
-        return { transform, zIndex, opacity, pointerEvents };
-    };
 
     return (
         <ProjectContainer id={id} lightBg={lightBg}>
@@ -96,30 +53,35 @@ const Projects = ({ lightBg, id, topLine, description }) => {
                     {description}
                 </SecondaryDescription>
 
-                <CarouselSection>
-                    <ArrowLeft onClick={prevSlide} />
-                    <ArrowRight onClick={nextSlide} />
-                    
-                    <SliderWrapper>
-                        {projects.map((project, index) => {
-                            const style = getSlideStyle(index);
-                            return (
-                                <Slide key={index} style={style}>
-                                    <ProjectCard href={project.link} target="_blank" rel="noreferrer">
-                                        <CardContent>
-                                            <ProjectTitle>{project.title}</ProjectTitle>
-                                            <ProjectDesc>{project.desc}</ProjectDesc>
-                                            <LinkIcon>
-                                                <FiExternalLink />
-                                                <span>View Repository</span>
-                                            </LinkIcon>
-                                        </CardContent>
-                                    </ProjectCard>
-                                </Slide>
-                            );
-                        })}
-                    </SliderWrapper>
-                </CarouselSection>
+                <AccordionContainer>
+                    {projects.map((project, index) => (
+                        <AccordionItem 
+                            key={index} 
+                            active={index === activeIndex} 
+                            onClick={() => setActiveIndex(index)}
+                        >
+                            <AccordionImageContainer active={index === activeIndex}>
+                                <ProjectNumber active={index === activeIndex}>{project.id}</ProjectNumber>
+                                {/* Placeholder for project image/gradient */}
+                                <ProjectVisual active={index === activeIndex} />
+                                <ProjectContent active={index === activeIndex}>
+                                    <ProjectTitle>{project.title}</ProjectTitle>
+                                    <ProjectDesc>{project.desc}</ProjectDesc>
+                                    <LinkButton href={project.link} target="_blank" rel="noreferrer">
+                                        <FiExternalLink />
+                                        <span>View Repository</span>
+                                    </LinkButton>
+                                </ProjectContent>
+                            </AccordionImageContainer>
+                            
+                            <CollapsedLabel active={index === activeIndex}>
+                                <VerticalText>{project.title}</VerticalText>
+                                <CollapsedNumber>{project.id}</CollapsedNumber>
+                            </CollapsedLabel>
+                        </AccordionItem>
+                    ))}
+                </AccordionContainer>
+
             </SecondaryProjectContainer>
         </ProjectContainer>
     );
@@ -130,11 +92,13 @@ export default Projects;
 /* Styles */
 const ProjectContainer = styled.div`
     width: 100%;
+    min-height: 800px;
     background: ${({ lightBg }) => (lightBg ? '#F8FCFF' : 'black')};
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
+    padding: 100px 0;
+    overflow: hidden;
 `;
 
 const SecondaryProjectContainer = styled.div`
@@ -177,127 +141,99 @@ const SecondaryDescription = styled.p`
     }
 `;
 
-const CarouselSection = styled.div`
-    position: relative;
-    width: 100%;
-    height: 500px;
+const AccordionContainer = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px; /* Adds depth */
+    width: 100%;
+    height: 600px;
+    gap: 10px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+    }
 `;
 
-const SliderWrapper = styled.div`
-    width: 100%;
+const AccordionItem = styled.div`
+    flex: ${({ active }) => (active ? '4' : '0.5')};
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-`;
-
-const Slide = styled.div`
-    position: absolute;
-    width: 60%; 
-    max-width: 800px;
-    height: 400px;
-    transition: all 0.5s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Styles injected inline for dynamic transforms */
-`;
-
-const ArrowLeft = styled(FiChevronLeft)`
-    position: absolute;
-    left: -5px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 4rem;
-    color: ${colors.mainGreen};
-    z-index: 20;
     cursor: pointer;
-    user-select: none;
-    transition: 0.3s;
-
-    &:hover {
-        color: ${colors.secondaryGreen};
-        scale: 1.1;
-    }
-
-    @media screen and (max-width: 600px) {
-        font-size: 2.5rem;
-        left: 10px;
-        background: rgba(255, 255, 255, 0.7);
-        border-radius: 50%;
-    }
-`;
-
-const ArrowRight = styled(FiChevronRight)`
-    position: absolute;
-    right: -5px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 4rem;
-    color: ${colors.mainGreen};
-    z-index: 20;
-    cursor: pointer;
-    user-select: none;
-    transition: 0.3s;
-
-    &:hover {
-        color: ${colors.secondaryGreen};
-        scale: 1.1;
-    }
-
-    @media screen and (max-width: 600px) {
-        font-size: 2.5rem;
-        right: 10px;
-        background: rgba(255, 255, 255, 0.7);
-        border-radius: 50%;
-    }
-`;
-
-const ProjectCard = styled.a`
-    width: 100%;
-    height: 100%;
-    background: ${colors.mainGreen};
-    border-radius: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: flex 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    background-color: #1a1a1a;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
 
     &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+         flex: ${({ active }) => (active ? '4' : '0.7')};
+    }
+
+    @media screen and (max-width: 768px) {
+        flex: none;
+        height: ${({ active }) => (active ? '500px' : '80px')};
+        transition: height 0.7s cubic-bezier(0.25, 1, 0.5, 1);
     }
 `;
 
-const CardContent = styled.div`
+const AccordionImageContainer = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ${({ active }) => active ? `linear-gradient(135deg, ${colors.secondaryGreen} 0%, ${colors.mainGreen} 100%)` : '#111'};
+    transition: all 0.5s ease;
+    opacity: ${({ active }) => (active ? '1' : '0')};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+`;
+
+const ProjectVisual = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 70%);
+    opacity: ${({ active }) => active ? 1 : 0};
+    transition: opacity 0.5s 0.3s;
+`;
+
+const ProjectContent = styled.div`
+    position: relative;
+    z-index: 10;
     text-align: center;
     color: white;
+    opacity: ${({ active }) => (active ? '1' : '0')};
+    transform: ${({ active }) => (active ? 'translateY(0)' : 'translateY(20px)')};
+    /* Transition: enter with delay, exit instantly */
+    transition: ${({ active }) => active ? 'opacity 0.5s 0.3s, transform 0.5s 0.3s' : 'opacity 0.1s 0s, transform 0.1s 0s'};
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px; /* Prevent text squeezing */
+    pointer-events: ${({ active }) => (active ? 'auto' : 'none')};
 `;
 
 const ProjectTitle = styled.h2`
     font-family: "Raleway", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: white;
 `;
 
 const ProjectDesc = styled.p`
     font-family: "Raleway", sans-serif;
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    color: rgba(255,255,255,0.9);
+    max-width: 600px;
 `;
 
-const LinkIcon = styled.div`
+const LinkButton = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,13 +241,84 @@ const LinkIcon = styled.div`
     font-size: 1.2rem;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
-    background: rgba(255,255,255,0.2);
-    padding: 10px 20px;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    padding: 12px 30px;
     border-radius: 30px;
     transition: 0.3s;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
 
-    ${ProjectCard}:hover & {
-        background: rgba(255,255,255,0.3);
+    &:hover {
+        background: rgba(0,0,0,0.5);
+        transform: translateY(-2px);
     }
 `;
+
+const CollapsedLabel = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    opacity: ${({ active }) => (active ? '0' : '1')};
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 2;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: row;
+        padding: 0 40px;
+        align-items: center;
+    }
+`;
+
+const VerticalText = styled.span`
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    white-space: nowrap;
+    letter-spacing: 2px;
+    
+    @media screen and (max-width: 768px) {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 1.5rem;
+    }
+`;
+
+const CollapsedNumber = styled.span`
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.3);
+    
+    @media screen and (max-width: 768px) {
+         font-size: 1.2rem;
+    }
+`;
+
+const ProjectNumber = styled.div`
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    font-family: "Raleway", sans-serif;
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.1);
+    line-height: 1;
+    z-index: 0;
+    opacity: ${({ active }) => active ? 1 : 0};
+    transition: opacity 0.5s 0.2s;
+`;
+
 

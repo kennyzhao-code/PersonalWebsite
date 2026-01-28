@@ -9,10 +9,10 @@ import InfoSection from "../components/InfoSection/index";
 import Blog from "../components/blog(skills)/index";
 import Experiences from "../components/Experiences/index";
 import Projects from "../components/Projects/index";
-import Emotions from "../components/emotions/emotions";
+// import Emotions from "../components/emotions/emotions";
 
 
-import { blogData } from "../components/blog(skills)/blogData";
+
 import { projectData } from "../components/Projects/projectData";
 
 
@@ -67,7 +67,7 @@ const IndexPage = () => (
       <HeroSection />
       <InfoSection />
       {/* <Emotions /> */}
-      <Blog {...blogData} />
+      <Blog />
       <Projects {...projectData} />
       <Experiences />
     </Layout>

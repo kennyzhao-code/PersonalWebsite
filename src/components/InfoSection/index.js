@@ -217,7 +217,7 @@ const NotificationCount = styled.span`
 const InfoContainer = styled.div`
     background: #F8FCFF;
     height: auto;
-    padding: 100px 0;
+    padding: 80px 0;
     transition: 0.375s;
 
     @media screen and (max-width: 1700px){
@@ -367,7 +367,7 @@ const TextWrapper = styled.div`
 
 //title 
 const TopLine = styled.p`
-    color: #897CBF; 
+    color: ${colors.navIntro}; 
     font-size: 65px; 
     position: relative;
     font-weight: 700;
@@ -397,13 +397,13 @@ const Subtitle = styled.p`
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     transition: 0.375s;
-    color: #897CBF;
+    color: ${colors.navIntro};
     /* border: 1px solid red; */
 
 
     a{
         text-decoration: none;
-        color: ${colors.secondaryPurple};
+        color: ${colors.navIntroDark};
     }
 
     @media screen and (max-width: 1700px){
@@ -430,7 +430,7 @@ const Subtitle = styled.p`
 const ImgWrap = styled.div`
     width: 680px; 
     height: 415px;
-    border: #897CBF;
+    border: ${colors.navIntro};
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -479,7 +479,7 @@ const SkillItem = styled.div`
 
 const TopSkillsHeader = styled.h3`
     font-size: 1.5rem;
-    color: #897CBF;
+    color: ${colors.navIntro};
     margin-bottom: 1rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
