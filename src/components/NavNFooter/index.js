@@ -2,7 +2,6 @@
 import React from 'react';
 
 import { FaInstagram, FaDiscord, FaStrava, FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiDevpost } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
 
 import styled from 'styled-components';
@@ -31,7 +30,6 @@ const Footer = () => {
                             <BsTwitterX color = "#000000" size={24} onClick={() => window.open("https://x.com/KennyZhao20","_blank")} style={{cursor: 'pointer'}} />
                             <FaGithub color = "#cf7cfc" size={24} onClick={() => window.open("https://github.com/kennyzhao-code","_blank")} style={{cursor: 'pointer'}} />
                             <FaLinkedin color = "#0072b1" size={24} onClick={() => window.open("https://www.linkedin.com/in/kennyy-zhao","_blank")} style={{cursor: 'pointer'}} />   
-                            <SiDevpost color = "#57C1FF" size={24} onClick={() => window.open("https://devpost.com/kennyzhao-code","_blank")} style={{cursor: 'pointer'}} />
                         
                         </SocialIcons>
                         

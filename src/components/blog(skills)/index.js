@@ -3,9 +3,9 @@ import React, { useEffect } from 'react';
 import Aos from "aos";
 import styled from "styled-components";
 import { colors } from '../globals/colors';
-import { FaInstagram, FaGithub, FaTwitter, FaLinkedin, FaDiscord, FaSpotify } from 'react-icons/fa'; // Added Spotify
+import { FaInstagram, FaGithub, FaTwitter, FaLinkedin, FaDiscord, FaSpotify, FaStrava } from 'react-icons/fa'; // Added Spotify and Running
 import '../globals/font.css';
-import { StaticImage } from 'gatsby-plugin-image';
+
 
 /* Component */
 const Blog = () => {
@@ -16,10 +16,10 @@ const Blog = () => {
     
     const data = {
         coding: 'I have been learning about computer science for over 4 years and currently I am working on multiple projects from game development, to creating more websites for other extracurriculars that I am proud to be representing.',   
-        music: 'Music plays a big role in my life. During my free time in high school, I use to play the bass clarinet for my school band. As of now, I occasionally play the piano and now play the guitar often whenever I want to enjoy some music.',
+        athletics: 'I also love to stay active and healthy. I often go to the gym to workout and run around the track. I also enjoy playing sports such as basketball, volleyball, and badminton with my friends.',
         games: 'Video games continue to be one of my favorite hobbies to relax and chill with friends. At the moment, I am not playing much because of academics, but if you are ever down play, just add me on discord!',
         academics: 'Competitions are where I strive the most as it forces me to become better. As of now, I am preparing for future events, such as hackathons, coding compeititons, etc., to further my skills.', 
-        personality: 'I would say I am a very outgoing and kind person. I would love to talk or even shoot me a private message on one of my socials. Also check out my guitar account!',  
+        personality: 'I would say I am a very outgoing and kind person. I would love to talk or even shoot me a private message on one of my socials. Also check out my guitar account! Music plays a big role in my life. During my free time in high school, I use to play the bass clarinet for my school band. As of now, I occasionally play the piano and now play the guitar often whenever I want to enjoy some music.',  
     }
 
     useEffect(() => {
@@ -48,6 +48,9 @@ const Blog = () => {
                                 </SocialItem>
                                 <SocialItem href="https://x.com/KennyZhao20" target="_blank">
                                     <FaTwitter /> <span>KennyZhao20</span>
+                                </SocialItem>
+                                <SocialItem href="https://open.spotify.com/user/kennyzhao2004" target="_blank">
+                                    <FaSpotify /> <span>@kenny-zhao</span>
                                 </SocialItem>
                             </SocialsList>
                         </CardBody>
@@ -97,21 +100,14 @@ const Blog = () => {
                             </CardBody>
                         </InfoCard>
 
-                        {/* Music */}
+                        {/* Athletics */}
                         <InfoCard data-aos="fade-up" delay="400" bgColor="#D5BB77">
                             <CardHeader>
-                                <CardTitle>Music <span>:3</span></CardTitle>
-                                <FaSpotify className="title-icon"/>
+                                <CardTitle>Athletics <span>:D</span></CardTitle>
+                                <FaStrava className="title-icon"/>
                             </CardHeader>
                             <CardBody>
-                                <p>{data.music}</p>
-                                <SocialLink href="https://open.spotify.com/user/kennyzhao2004" target="_blank">
-                                    @kenny-zhao
-                                </SocialLink>
-                                {/* Static image usage kept simple for the grid card */}
-                                <div style={{marginTop: '10px', borderRadius: '10px', overflow: 'hidden', height: '60px', width: '60px'}}>
-                                     <StaticImage src="../../images/song.jpg" alt="Song" layout="fixed" width={60} height={60} />
-                                </div>
+                                <p>{data.athletics}</p>
                             </CardBody>
                         </InfoCard>
                     </RightGrid>

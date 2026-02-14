@@ -189,8 +189,10 @@ const AccordionItem = styled.div`
     display: flex;
     flex-direction: column;
 
-    &:hover {
-         flex: ${({ active }) => (active ? '4' : '0.7')};
+    @media screen and (min-width: 769px) {
+        &:hover {
+             flex: ${({ active }) => (active ? '4' : '0.8')};
+        }
     }
 
     @media screen and (max-width: 768px) {
@@ -239,6 +241,11 @@ const ProjectContent = styled.div`
     align-items: center;
     min-width: 400px; /* Prevent text squeezing */
     pointer-events: ${({ active }) => (active ? 'auto' : 'none')};
+
+    @media screen and (max-width: 480px) {
+        min-width: 100%;
+        padding: 1rem;
+    }
 `;
 
 const ProjectTitle = styled.h2`
