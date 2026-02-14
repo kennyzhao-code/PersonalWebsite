@@ -11,7 +11,7 @@
 
 Welcome to my personal website! Below are the latest and upcoming updates to my website. Recently made a overhaul, some styling is broken.
 
-Visit website click <a href="https://kennyzhao.dev/">here </a>
+Visit website <a href="https://kennyzhao.dev/">here </a>
 
 **`Patch Notes: 14/02/2026; V. 2.3.0`**
 
