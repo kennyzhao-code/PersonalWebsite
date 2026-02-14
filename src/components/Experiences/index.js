@@ -31,7 +31,7 @@ const Experiences = () => {
                 "Lead of the Mission Operations and Control (MOC) team as a Data Engineer, responsible for storing, visualizing, and maintaining satellite data, as well as scheduling and executing commands during operations. Furthermore, manage the reception, parsing, and storage of experimental data, utilizing Python, C and telemetry from ground station(s), resulting in a 67% increase in operational efficiency."
             ],
             link: "http://mstri.ca/",
-            linkText: "Website",
+            linkText: "Learn More",
             img: mistLogo
         },
         {
@@ -42,7 +42,7 @@ const Experiences = () => {
                 "Led software development efforts as a research Data Engineer at the McMaster Interdisciplinary Satellite Team, overseeing the creation of Mission and Operations Control Software for the Team's CubeSat project, PRESET. Additionally, engineered a robust Dashboard for the team's HASP 2024 test integration and flight in Texas using React, Python, InfluxDB and Grafana to facilitating communication with the satellite for enhanced data visualization and transmission resulting in a 30% increase in data accessibility and efficiency."
             ],
             link: "http://mstri.ca/",
-            linkText: "Website",
+            linkText: "Learn More",
             img: presetLogo
         },
         {
@@ -53,7 +53,7 @@ const Experiences = () => {
                 "Supported the instruction of tutorials for COMPSCI 2GA3 - Computer Architecture, mentoring students on advanced topics like logic gates, computer arithmetic, and assembly and C programming to deepen their grasp of foundational computer architecture concepts.",
             ],
             link: "https://www.eng.mcmaster.ca/cas/",
-            linkText: "Website",
+            linkText: "Learn More",
             img: mcmasterLogo
         },
         {
@@ -61,10 +61,10 @@ const Experiences = () => {
             company: "Canadian Space Agency",
             date: "January 2025 - April 2025",
             description: [
-                "Developed technical documentation for the TICFIRE project, ensuring compliance with NASA, CSA, and contractor standards to maintain consistency and regulatory alignment across stakeholders. Moreover, designed and analyzed optical systems using MATLAB, enhancing test accuracy by 50% andproducing technical reports that optimized testing procedures and accelerated R&D efforts."
+                "Developed technical documentation for the TICFIRE project, ensuring compliance with NASA, CSA, and contractor standards to maintain consistency and regulatory alignment across stakeholders. Moreover, designed and analyzed optical systems using MATLAB, enhancing test accuracy by 50% and producing technical reports that optimized testing procedures and accelerated R&D efforts."
             ],
             link: "https://www.asc-csa.gc.ca/eng/",
-            linkText: "Website",
+            linkText: "Learn More",
             img: csaLogo
         },
 
@@ -76,7 +76,7 @@ const Experiences = () => {
                 "Designed and executed automated test procedures for microbolometer detectors in the TICFIRE project, leveraging Python-based test scripts and data processing pipelines to analyze over 150 hours of performance data in IR calibration environments. Moreover, developed and maintained software for embedded system validation, integrating C and Python tools to streamline data acquisition, automate hardware-in-the-loop testing, and improve test execution efficiency by 20%."
             ],
             link: "https://www.asc-csa.gc.ca/eng/",
-            linkText: "Website",
+            linkText: "Learn More",
             img: csaLogo
         },
         {
@@ -87,7 +87,7 @@ const Experiences = () => {
                 "Supported the instruction of tutorials for COMPSCI 2ME3 – Introduction to Software Development, mentoring students on object-oriented programming using Java, design patterns, documentation, testing, and development models to strengthen their grasp of core software engineering concepts."
             ],
             link: "https://www.eng.mcmaster.ca/cas/",
-            linkText: "Website",
+            linkText: "Learn More",
             img: mcmasterLogo
         },
         {
@@ -98,7 +98,7 @@ const Experiences = () => {
                 "Supported the instruction of tutorials for COMPSCI 1XD3 – Introduction to Software Design Using Web Programming, guiding students in identifying user needs, goals, and requirements, translating them into effective software solutions, and structuring and communicating software designs using web technologies such as HTML/Css/Php, protocols, types, and design patterns to improve reliability, readability, and adaptability.",
             ],
             link: "https://www.eng.mcmaster.ca/cas/",
-            linkText: "Website",
+            linkText: "Learn More",
             img: mcmasterLogo
         }
     ];
@@ -255,11 +255,6 @@ const Card = styled.div`
     border-radius: 15px;
     padding: 1.5rem;
     width: 100%;
-    transition: transform 0.3s ease;
-    
-    &:hover {
-        transform: translateY(-5px);
-    }
 `;
 
 const CardHeader = styled.div`

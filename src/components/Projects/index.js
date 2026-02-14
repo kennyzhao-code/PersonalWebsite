@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Aos from "aos";
 import styled from "styled-components";
 import { colors } from "../globals/colors";
-import { FiExternalLink } from 'react-icons/fi';
+import { FaGithub } from 'react-icons/fa';
+import { SiDevpost } from 'react-icons/si';
 import '../globals/font.css';
 
 /* Main */
@@ -18,38 +19,43 @@ const Projects = () => {
     const projects = [
         {
             title: "LavaLock",
-            link: "https://github.com/HTN-heAR",
-            desc: "HTN 2022",
+            github: "https://github.com/anthonyhana04/LavaLock_DH_XII",
+            devpost: "https://devpost.com/software/lavalock",
+            desc: "Security Powered by Real-World Chaos. Made and winner at DeltaHacks XII Hackathon.",
             id: "01"
         },
         {
             title: "Celestial Classfier",
-            link: "https://github.com/UofTHacks-HealthExplore",
-            desc: "UofT Hacks X",
+            github: "https://github.com/kennyzhao-code/Celestial-Classifier",
+            desc: "Charting Exoplanet Habitability. Created as the final project for COMPSCI 4AL3: Applications of Machine Learning.",
             id: "02"
         },
         {
             title: "Nos Album",
-            link: "https://github.com/DeltaHacks-WebOfLife",
-            desc: "DeltaHacks IX",
+            github: "https://github.com/UofTHacks-XI",
+            devpost: "https://devpost.com/software/nos-album",
+            desc: "Navigating Memories: A Spatial Journey Through Your Photo Story. Made during the UofTHacks XI Hackathon.",
             id: "03"
         },
         {
-            title: "HealthChain",
-            link: "https://github.com/UofTHacks-XI",
-            desc: "UofT Hacks XI",
-            id: "04"
-        },
-        {
             title: "a conversation...",
-            link: "https://github.com/",
-            desc: "Hack Western 8",
+            github: "https://github.com/UofTHacks-HealthExplore",
+            devpost: "https://devpost.com/software/peaceful-promenade",
+            desc: "AI-Powered Simulation for Mental Health and Inner Peace. Made during the UofTHacks X Hackathon.",
             id: "05"
         },
         {
+            title: "HealthChain",
+            github: "https://github.com/DeltaHacks-WebOfLife",
+            devpost: "https://devpost.com/software/healthchain-hybn8i",
+            desc: "Revolutionizing the Future of Digital Healthcare with Blockchain. Made and winner at DeltaHacks IX Hackathon.",
+            id: "04"
+        },
+        {
             title: "heAR",
-            link: "https://github.com/",
-            desc: "WaffleHacks 2022",
+            github: "https://github.com/HTN-heAR",
+            devpost: "https://devpost.com/software/hear-1pibsd",
+            desc: "Augmented Reality and NLP for Enhanced Communication. Made during the Hack The North 2022 Hackathon.",
             id: "06"
         }
     ];
@@ -78,10 +84,18 @@ const Projects = () => {
                                 <ProjectContent active={index === activeIndex}>
                                     <ProjectTitle>{project.title}</ProjectTitle>
                                     <ProjectDesc>{project.desc}</ProjectDesc>
-                                    <LinkButton href={project.link} target="_blank" rel="noreferrer">
-                                        <FiExternalLink />
-                                        <span>View Repository</span>
-                                    </LinkButton>
+                                    <IconContainer>
+                                        {project.github && (
+                                            <IconLink href={project.github} target="_blank" rel="noreferrer">
+                                                <FaGithub />
+                                            </IconLink>
+                                        )}
+                                        {project.devpost && (
+                                            <IconLink href={project.devpost} target="_blank" rel="noreferrer">
+                                                <SiDevpost />
+                                            </IconLink>
+                                        )}
+                                    </IconContainer>
                                 </ProjectContent>
                             </AccordionImageContainer>
                             
@@ -168,11 +182,10 @@ const AccordionItem = styled.div`
     flex: ${({ active }) => (active ? '4' : '0.5')};
     height: 100%;
     position: relative;
-    cursor: pointer;
     border-radius: 30px;
     overflow: hidden;
     transition: flex 0.7s cubic-bezier(0.25, 1, 0.5, 1);
-    background-color: #1a1a1a;
+    background-color: ${colors.secondaryGreen};
     display: flex;
     flex-direction: column;
 
@@ -244,25 +257,19 @@ const ProjectDesc = styled.p`
     max-width: 600px;
 `;
 
-const LinkButton = styled.a`
+const IconContainer = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    font-size: 1.2rem;
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    background: rgba(0,0,0,0.3);
+    gap: 1rem;
+    margin-top: 1rem;
+`;
+
+const IconLink = styled.a`
     color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
+    font-size: 3.5rem;
     transition: 0.3s;
-    text-decoration: none;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255,255,255,0.2);
+    opacity: 0.8;
 
     &:hover {
-        background: rgba(0,0,0,0.5);
         transform: translateY(-2px);
     }
 `;
