@@ -1,4 +1,5 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+
 <p align="center">
   <a href="https://kennyzhao.dev/">
     <img alt="personalLogo" src="./src/images/kz_logo.png" width="60" />
@@ -8,16 +9,20 @@
   kennyzhao.dev
 </h1>
 
-Decided to ditch the old website (got to lazy to update it all the time) and make a simple minimalistic one until I figure out a new design maybe lol. You can still view my old website in the branch V. 2.3.0.
+Welcome to my personal website! Below are the latest and upcoming updates to my website. Recently made a overhaul, some styling is broken.
 
-Visit website click <a href="https://kennyzhao.dev/">here</a>
+Visit website <a href="https://kennyzhao.dev/">here </a>
 
-**`Patch Notes: 16/12/2025; V. 3.0.0`**
-  - New minimalistic design
-  - minimialistic 404 page added
-  - minor animations
-  - file restructuring and code cleanup 
+**`Patch Notes: 14/02/2026; V. 2.3.0`**
 
+- WORK IN PROGRESS. Styling is still off
+- Updated styling in experience section, projects, personality and info section
+- Cleaned up minor bugs
+
+**`Update: TBD; V. 2.4.0`**
+
+- Clean up content
+- Clean up styling and dynamic styling
+- Hero page landing update
 
 <!-- AUTO-GENERATED-CONTENT:END -->
-

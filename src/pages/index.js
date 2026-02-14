@@ -1,11 +1,37 @@
-import React from 'react'
-import Layout from "../components/layout.jsx";
-import Seo from "../components/seo.js"
-import LandingSection from '../components/Landing/landing'
+//import React, {useEffect, useState} from 'react'
+//import Lottie from 'react-lottie';
+import React from "react";
+import Layout from "../components/LayoutForWeb/layout";
+import Seo from "../components/SEO/seo";
+
+import HeroSection from "../components/HeroSection/index";
+import InfoSection from "../components/InfoSection/index";
+import Blog from "../components/blog(skills)/index";
+import Experiences from "../components/Experiences/index";
+import Projects from "../components/Projects/index";
+// import Emotions from "../components/emotions/emotions";
+
+
+
+
+
 
 //import { Link } from "gatsby"
 //import { StaticImage } from "gatsby-plugin-image"
 
+//import * as preLoadingAnimation from '../../images/9329-loading.json'
+//import styled from "styled-components"
+
+/*
+const defaultPreLoadAnimation = {
+    loop: true,
+    autoplay: true, 
+    animationData: preLoadingAnimation.default,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+*/
 
 /*<StaticImage
       src="../images/gatsby-astronaut.png"
@@ -23,14 +49,47 @@ import LandingSection from '../components/Landing/landing'
       <Link to="/using-dsg">Go to "Using DSG"</Link>
     </p> */
 
-
 const IndexPage = () => (
-    <>
-        <Layout>
-            <Seo />
-            <LandingSection />
-        </Layout> 
-    </>
-)
+  <>
+    {/* 
+            {!completed ? (
+                <div style={{backgroundColor: 'black', height: '100vh', width: '100vw'}}>
+                    <Seo title="Kenny Zhao" />
+                    <LottieContainer>
+                        <Lottie style ={{height: '200px', width: '200px', margin: 'auto'}} options={defaultPreLoadAnimation}  />
+                    </LottieContainer>
+                </div>
+            ) : (
+
+        */}
+    <Layout>
+      <Seo />
+      <HeroSection />
+      <InfoSection />
+      {/* <Emotions /> */}
+      <Blog />
+      <Projects />
+      <Experiences />
+    </Layout>
+    {/* )} */}
+  </>
+);
 
 export default IndexPage;
+
+/*
+const LottieContainer = styled.div`
+    position: relative;
+    margin: auto;
+    top: 40%;
+`
+
+const [completed, setcompleted] = useState(undefined);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setcompleted(true); 
+        }, 4000); 
+    }, []);
+
+*/
